@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1089743464951129249}
   - component: {fileID: 4084853360274451204}
   - component: {fileID: 2257613159037198286}
+  - component: {fileID: 4689139432897964948}
   m_Layer: 0
   m_Name: Lampara de Camino FBX
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311974625133690395}
   m_LocalRotation: {x: -0, y: 0.8270228, z: -0, w: 0.56216836}
-  m_LocalPosition: {x: -34.20769, y: 0.016141176, z: 19.463663}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,3 +86,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4689139432897964948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311974625133690395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3992125, y: 4.1180544, z: 0.27547187}
+  m_Center: {x: 0.00915111, y: 2.0428843, z: -0.064783014}

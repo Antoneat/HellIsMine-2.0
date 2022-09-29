@@ -97,6 +97,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3077663030559869053}
+  - component: {fileID: 3349334108501419761}
   m_Layer: 0
   m_Name: SilladeTortura
   m_TagString: Untagged
@@ -111,7 +112,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2449358502824497863}
-  m_LocalRotation: {x: -0, y: 0.86303264, z: -0, w: 0.5051482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -75.13, y: 0.0000019073486, z: 66.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,7 +121,20 @@ Transform:
   - {fileID: 3100210645748307290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 119.318, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3349334108501419761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449358502824497863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3158035, y: 5.2952595, z: 1.9981918}
+  m_Center: {x: -0.0075645447, y: 2.6769753, z: -0.22686386}
 --- !u!1 &6978109203722925208
 GameObject:
   m_ObjectHideFlags: 0

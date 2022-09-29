@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7110659025862916833}
   - component: {fileID: 6125450886408107332}
   - component: {fileID: 8279039335859487118}
+  - component: {fileID: 3513342728536975505}
   m_Layer: 0
   m_Name: Bote Completo FBX
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7630771334209577051}
   m_LocalRotation: {x: -0, y: -0.9787081, z: -0, w: 0.2052572}
-  m_LocalPosition: {x: -46.16, y: -0.06999999, z: 11}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.44315, y: 0.44315, z: 0.44315}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3513342728536975505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630771334209577051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.3587546, y: 2.1148179, z: 9.32874}
+  m_Center: {x: -0.00000035762793, y: 1.0574085, z: -0.0000009536745}

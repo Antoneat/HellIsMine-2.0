@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4304157154987282682}
   - component: {fileID: 5462696979062900862}
   - component: {fileID: 6412726999386730527}
+  - component: {fileID: 8053107484152393822}
   m_Layer: 0
   m_Name: Reja_2_Rota
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8053107484152393822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573867707500485726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0179412, y: 2.5292616, z: 0.13465942}
+  m_Center: {x: -1.0089706, y: 1.2401261, z: 0}

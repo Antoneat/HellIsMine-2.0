@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1583192339658272615}
   - component: {fileID: 2717053164842942405}
   - component: {fileID: 7381524021283336963}
+  - component: {fileID: 4127003627313216977}
   m_Layer: 0
   m_Name: Piedra_Central
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7658067217146736115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.361, y: -0.11530003, z: 89.166}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.24808069, y: 0.24808069, z: 0.24808069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4127003627313216977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7658067217146736115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.726484, y: 5.1344285, z: 7.535503}
+  m_Center: {x: 0, y: 2.5220835, z: -0.0000009536743}

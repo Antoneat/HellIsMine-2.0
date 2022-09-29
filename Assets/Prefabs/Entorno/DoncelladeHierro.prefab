@@ -177,6 +177,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7399859034999707532}
+  - component: {fileID: 903497653868307608}
+  - component: {fileID: 2063015913204468110}
+  - component: {fileID: 4911862792491435630}
   m_Layer: 0
   m_Name: DoncelladeHierro
   m_TagString: Untagged
@@ -192,7 +195,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7924721512554106166}
   m_LocalRotation: {x: -0, y: 0.4492968, z: -0, w: 0.89338255}
-  m_LocalPosition: {x: -18.67, y: -0.0000009536743, z: 11.03}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -201,3 +204,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 53.397, z: 0}
+--- !u!65 &903497653868307608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924721512554106166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8777328, y: 4.663615, z: 1.0158561}
+  m_Center: {x: 0.09213664, y: 2.403163, z: -0.389423}
+--- !u!65 &2063015913204468110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924721512554106166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.71238923, y: 4.6240854, z: 1.2334882}
+  m_Center: {x: 1.4876094, y: 2.5057583, z: 0.7827084}
+--- !u!65 &4911862792491435630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924721512554106166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.45396543, y: 4.6957836, z: 1.2067854}
+  m_Center: {x: -1.5163606, y: 2.4603033, z: 0.85199654}

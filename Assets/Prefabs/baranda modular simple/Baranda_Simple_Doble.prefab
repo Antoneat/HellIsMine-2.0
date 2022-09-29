@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4492463056871653857}
   - component: {fileID: 7186149068328751071}
   - component: {fileID: 424135745760929250}
+  - component: {fileID: 4864446418968771177}
   m_Layer: 0
   m_Name: Baranda_Simple_Doble
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4864446418968771177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4744453128051594147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6746828, y: 1.4180114, z: 4.000001}
+  m_Center: {x: -0.00000019371514, y: 0.70375156, z: -2.0000005}

@@ -1255,6 +1255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2955017538899489181}
+  - component: {fileID: 2191731237123971981}
   m_Layer: 0
   m_Name: Cadaver
   m_TagString: Untagged
@@ -1270,7 +1271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2470651448733952807}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -11.480004, y: 8.969999, z: -34.720005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.42547992, y: 0.42548, z: 0.42547992}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1302,6 +1303,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2191731237123971981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470651448733952807}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.584949, y: 2.7342517, z: 0.91818655}
+  m_Center: {x: 0.13259052, y: 1.3006266, z: -0.9817647}
 --- !u!1 &2813571114541232366
 GameObject:
   m_ObjectHideFlags: 0

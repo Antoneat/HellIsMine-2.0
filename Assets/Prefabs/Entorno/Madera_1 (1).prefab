@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4245998284373271632}
   - component: {fileID: 3487642138359600975}
   - component: {fileID: 3759584252234515716}
+  - component: {fileID: 145277966502217270}
   m_Layer: 0
   m_Name: Madera_1 (1)
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &145277966502217270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8113259205328505956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.16439159, z: 0.9704962}
+  m_Center: {x: 2, y: 0.082195826, z: -0.5231155}

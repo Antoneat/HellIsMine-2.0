@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 377706131340013902}
   - component: {fileID: 3644039013075861227}
   - component: {fileID: 1546649355725687329}
+  - component: {fileID: 8597641435909705088}
   m_Layer: 0
   m_Name: PiladeHuesos
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8597641435909705088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042074330964585460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.671221, y: 3.6479883, z: 5.7084417}
+  m_Center: {x: -0.06737499, y: 1.7394809, z: -0.1380978}

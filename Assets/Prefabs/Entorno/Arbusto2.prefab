@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6031442923264803965}
   - component: {fileID: 4760795018862529436}
   - component: {fileID: 5175963566838472219}
+  - component: {fileID: 4431599274935621424}
   m_Layer: 0
   m_Name: Arbusto2
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8244295508175988384}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 9.486102, y: 8.97, z: 2.5785017}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.003724399, y: 0.0037244, z: 0.003724399}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4431599274935621424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8244295508175988384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 444.18307, y: 321.89523, z: 455.0749}
+  m_Center: {x: -0.000007629396, y: 165.13374, z: 0.000007629396}

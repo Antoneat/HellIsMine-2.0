@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9176065657274811805}
   - component: {fileID: 4139659084381321237}
   - component: {fileID: 6893731006172823446}
+  - component: {fileID: 8322318109100767546}
   m_Layer: 0
   m_Name: Columna_Abajo
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4916128232313944274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.655, y: 0.0000019073486, z: 34.138}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8322318109100767546
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4916128232313944274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.734403, y: 0.442762, z: 0.7331445}
+  m_Center: {x: 0.000000044703484, y: 0.221381, z: -0.000000014901161}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6953714413012634843}
   - component: {fileID: 5351877989151684091}
   - component: {fileID: 2020153999634810642}
+  - component: {fileID: 2821968363190995624}
   m_Layer: 0
   m_Name: Piedra_Chica_2
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5022570775748949498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.273, y: -0.14, z: 87.45}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.24808069, y: 0.24808069, z: 0.24808069}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2821968363190995624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022570775748949498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.513489, y: 5.567386, z: 3.975101}
+  m_Center: {x: 0.21002817, y: 2.783693, z: -0.25651854}

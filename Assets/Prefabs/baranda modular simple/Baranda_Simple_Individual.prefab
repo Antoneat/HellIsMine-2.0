@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7484584182790686035}
   - component: {fileID: 3398417779024145163}
   - component: {fileID: 8537577866061449172}
+  - component: {fileID: 1763456732479379364}
   m_Layer: 0
   m_Name: Baranda_Simple_Individual
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1763456732479379364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557977803299683524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6746828, y: 1.4180115, z: 0.6746831}
+  m_Center: {x: 0.0000006109478, y: 0.7037516, z: -0.00000014901164}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4249818198377193440}
   - component: {fileID: 4003151087844250170}
   - component: {fileID: 299014171784822005}
+  - component: {fileID: 5580092357769571399}
   m_Layer: 0
   m_Name: P_Centro_Centro
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5580092357769571399
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433766109709781199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5085232, y: 0.12939413, z: 1.5244479}
+  m_Center: {x: -0.7462983, y: 0.06462131, z: -0.7451515}
