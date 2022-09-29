@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class DmgController : MonoBehaviour
 {
-    private PlayerDmg plyrDMG;
-    private PlayerDash plyrDash;
+    //private PlayerDmg plyrDMG;
 
     //private BombDmg bombdmg;
     public List<GameObject> Bombitas;
     public bool deadBomb;
 
     //private BuscadorController dogC;
-    //private BuscadorDmg dogdmg;
+   // private BuscadorDmg dogdmg;
     public bool deadBusc;
 
     public float dmgMultiplier;
 
     void Start()
     {
-        plyrDMG = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
-        plyrDash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDash>();
-
-
-        //dogC = GameObject.FindGameObjectWithTag("Buscador").GetComponent<BuscadorController>();
+        //plyrDMG = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
+    
+       // dogC = GameObject.FindGameObjectWithTag("Buscador").GetComponent<BuscadorController>();
 
         Bombitas = new List<GameObject>();
     }
@@ -31,13 +28,13 @@ public class DmgController : MonoBehaviour
 
     void Update()
     {
-        Bombitas.AddRange(GameObject.FindGameObjectsWithTag("Bombita"));
+       // Bombitas.AddRange(GameObject.FindGameObjectsWithTag("Bombita"));
      
-        BombDAÑO();
+        //BombDAÑO();
 
     }
 
-    public void BombDAÑO()
+   /* public void BombDAÑO()
     {
         foreach (GameObject Bombita in Bombitas)
         {
@@ -48,20 +45,5 @@ public class DmgController : MonoBehaviour
             }
         }
     }
-
-
-    public void BuscadorDAÑO()
-    {
-        //if (dogC.ataco == true)
-        //{
-
-        //    plyrDMG.actualvida -= 1.75f;
-
-        //}
-    }
-
-  
-
-  
-
+   */
 }
