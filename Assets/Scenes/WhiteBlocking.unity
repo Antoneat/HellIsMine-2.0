@@ -2615,6 +2615,7 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+<<<<<<< Updated upstream
 --- !u!43 &623400316
 Mesh:
   m_ObjectHideFlags: 0
@@ -2779,6 +2780,8 @@ Mesh:
     offset: 0
     size: 0
     path: 
+=======
+>>>>>>> Stashed changes
 --- !u!43 &685432727
 Mesh:
   m_ObjectHideFlags: 0
@@ -5889,6 +5892,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
+<<<<<<< Updated upstream
 --- !u!1 &1075781847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,6 +6237,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1104186447
 GameObject:
   m_ObjectHideFlags: 0
