@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6097061512542213359
+--- !u!114 &-2507845670648538582
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Metal
+  m_Name: Tela
   m_Shader: {fileID: 4800000, guid: 71d6765ad72e11541bc1448c891bbcf9, type: 3}
   m_ValidKeywords:
   - RECEIVE_SHADOWS_ON
@@ -68,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LightingRamp:
-        m_Texture: {fileID: 2800000, guid: 33d20ce7e83be2b41a02470ba9d611e3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0a7ebf1b416d4d045b028a804724ed56, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -131,7 +131,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _ID: 1
-    - _Metallic: 0.424
+    - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _PixelSize: 2
@@ -146,10 +146,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0.2, g: 0.2, b: 0.2, a: 0}
-    - _BaseColor: {r: 0.057137758, g: 0.09077961, b: 0.11320752, a: 1}
+    - _BaseColor: {r: 0.2924528, g: 0.18945101, b: 0.16415983, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeHighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.04031685, g: 0.044149067, b: 0.05660379, a: 1}
+    - _EdgeHighlightColor: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _PixelGridOrigin: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

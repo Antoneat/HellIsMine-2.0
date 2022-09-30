@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3644039013075861227}
   - component: {fileID: 1546649355725687329}
   - component: {fileID: 8597641435909705088}
+  - component: {fileID: -5448784236512658239}
   m_Layer: 0
   m_Name: PiladeHuesos
   m_TagString: Untagged
@@ -98,3 +99,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.671221, y: 3.6479883, z: 5.7084417}
   m_Center: {x: -0.06737499, y: 1.7394809, z: -0.1380978}
+--- !u!114 &-5448784236512658239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042074330964585460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
