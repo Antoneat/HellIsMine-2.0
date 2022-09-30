@@ -58,6 +58,6 @@ public class PlayerMovement : MonoBehaviour
             lastTransform = rgbd.velocity.normalized;
         }
 
-        playerTransform.rotation = Quaternion.LookRotation(lastTransform);
+        playerTransform.rotation = Quaternion.LookRotation(new Vector3 (lastTransform.x, 0, lastTransform.z));
     }
 }
