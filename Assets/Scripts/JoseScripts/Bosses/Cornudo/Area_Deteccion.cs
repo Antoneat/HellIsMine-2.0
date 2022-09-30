@@ -42,7 +42,7 @@ public class Area_Deteccion : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            verdugoScript.active = true;
+            //verdugoScript.active = true;
             
 
         }

@@ -5,22 +5,39 @@ using UnityEngine.AI;
 
 public class Verdugo_Controller : MonoBehaviour
 {
+    public int id;
     public NavMeshAgent agent;
+    public float enemySpeed;
     public Vector3 startPosition;
     GameObject player;
-    public bool active;
+    GameObject cabezaPlayer;
     public bool onChase;
     public bool basicAttack;
+    public bool lanzaAttack;
+    public bool teleportToPlayer;
+    
     int index;
     public GameObject[] spawnPointsSpheres;
+    public GameObject lanzaSpawn;
     public GameObject spheraQuemaduraPrefab;
-    public bool chargingEffect;
+    public GameObject lanzasPrefab;
+    public bool smokingVFX;
+    public bool chargingLanzasVFX;
     public GameObject verdugoMesh;
+    bool enemyActivated;
+
+    [Header("VFX GameObjects")]
+    public GameObject SmokeVfx;
+    public GameObject ChargingLanzasVfX;
     
 
     void Start()
     {
+        agent.speed = enemySpeed;
+        GameEvents.currentGEvent.combatTriggerExit += Activate;
+        smokingVFX = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        cabezaPlayer = GameObject.Find("mixamorig:Head");
         index = spawnPointsSpheres.Length;
         startPosition = this.gameObject.transform.position;
     }
@@ -28,12 +45,14 @@ public class Verdugo_Controller : MonoBehaviour
    
     void Update()
     {
-        //transform.LookAt(player.transform);
+        
         Chase();
-        if (active)
+        if (enemyActivated)
         {
-            StartCoroutine(TeleportToPlayer());
-            active = false;
+            Vector3 targetPosition = new Vector3(cabezaPlayer.transform.position.x, transform.position.y, cabezaPlayer.transform.position.z);
+            Quaternion rotTarget = Quaternion.LookRotation(targetPosition - this.transform.position);
+            this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotTarget, 100 * Time.deltaTime);
+            onChase = true;
         }
 
         if (basicAttack)
@@ -41,10 +60,27 @@ public class Verdugo_Controller : MonoBehaviour
             StartCoroutine(SpawnRafaga());
             basicAttack = false;
         }
-
+        if (lanzaAttack)
+        {
+            StartCoroutine(SpawnLanzas());
+            lanzaAttack = false;
+        }
+        if (teleportToPlayer)
+        {
+            smokingVFX = true;
+            StartCoroutine(TeleportToPlayer());
+            teleportToPlayer = false;
+        }
         
     }
-
+    void Activate(int id)
+    {
+        if (id == this.id)
+        {
+            enemyActivated = true;
+            
+        }
+    }
     void Chase()
     {
         if (onChase)
@@ -54,18 +90,20 @@ public class Verdugo_Controller : MonoBehaviour
 
       
     }
-
+    #region Courutines
     IEnumerator TeleportToPlayer()
     {
-        chargingEffect = true;
+        
+        //SmokeVfx.SetActive(true);
         verdugoMesh.SetActive(false);
         agent.speed = 15f;
         
         yield return new WaitForSeconds(3);
         agent.speed = 2.5f;
-
         verdugoMesh.SetActive(true);
-        chargingEffect = false;
+       // new WaitForSeconds(3f);
+        //SmokeVfx.SetActive(false);
+        smokingVFX = false;
     }
 
     IEnumerator SpawnRafaga()
@@ -73,7 +111,7 @@ public class Verdugo_Controller : MonoBehaviour
         
         agent.speed = 0;
         yield return new WaitForSeconds(1);
-        agent.speed = 2.5f;
+        agent.speed = enemySpeed;
         
         for (int i = 0; i <index; i++)
         {
@@ -84,4 +122,21 @@ public class Verdugo_Controller : MonoBehaviour
         }
   
     }
+
+    IEnumerator SpawnLanzas()
+    {
+        //chargingLanzasVFX = true;
+        ChargingLanzasVfX.SetActive(true);
+        agent.speed = 0;
+        yield return new WaitForSeconds(3f);
+        agent.speed = enemySpeed;
+        //chargingLanzasVFX = false;
+
+        GameObject lanzas = Instantiate(lanzasPrefab);
+        lanzas.transform.position = lanzaSpawn.transform.position;
+        lanzas.transform.localRotation = lanzaSpawn.gameObject.transform.rotation;
+        new WaitForSeconds(1f);
+        ChargingLanzasVfX.SetActive(false);
+    }
+    #endregion
 }
