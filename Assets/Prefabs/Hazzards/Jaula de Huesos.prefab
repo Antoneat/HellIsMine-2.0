@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1555361321054186300}
+  - component: {fileID: 1391445453}
   m_Layer: 0
   m_Name: Jaula de Huesos
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1391445453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2224233192697721222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
 --- !u!1 &4285074416557773235
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,8 +145,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.49608254, y: 0.4375894, z: 3.0134432}
-  m_Center: {x: -1.2610503, y: 0.16962945, z: 0}
+  m_Size: {x: 0.49608254, y: 2.4375896, z: 3.0134432}
+  m_Center: {x: -1.2610503, y: 1.1696296, z: -1.8548802e-15}
 --- !u!65 &9178192422943273713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -144,8 +158,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0181832, y: 0.44763756, z: 0.49134266}
-  m_Center: {x: 0, y: 0.17465353, z: -1.2610502}
+  m_Size: {x: 3.0181832, y: 2.4476376, z: 0.49134254}
+  m_Center: {x: 1.8548793e-15, y: 1.1746535, z: -1.2610502}
 --- !u!65 &7017968066889009688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -157,8 +171,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0181832, y: 0.44738376, z: 0.47112322}
-  m_Center: {x: 0, y: 0.17452675, z: 1.2711601}
+  m_Size: {x: 3.0181832, y: 2.4473839, z: 0.47112322}
+  m_Center: {x: -1.9267145e-15, y: 1.1745267, z: 1.2711601}
 --- !u!65 &8416804642112839366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -170,8 +184,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.54632366, y: 0.43758965, z: 3.0134432}
-  m_Center: {x: 1.2359297, y: 0.16962957, z: 0}
+  m_Size: {x: 0.5463238, y: 2.4375896, z: 3.0134432}
+  m_Center: {x: 1.2359297, y: 1.1696296, z: 1.6763875e-15}
 --- !u!1 &5638871809694558421
 GameObject:
   m_ObjectHideFlags: 0

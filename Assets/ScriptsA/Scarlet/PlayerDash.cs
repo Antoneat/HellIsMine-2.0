@@ -23,7 +23,7 @@ public class PlayerDash : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         anim = GetComponent<Animator>();
     }
-    
+
     private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
@@ -34,14 +34,14 @@ public class PlayerDash : MonoBehaviour
             anim.SetTrigger("Dash");
         }
     }
-    
+
     public void Dashing()
     {
         Debug.Log("Dashing");
         //playerMovement.maxSpeed = 10f;
-        
+
         Vector3 forceToApply = orientation * dashForce;
-        rgbd.AddForce(forceToApply, ForceMode.VelocityChange);
+        rgbd.AddForce(forceToApply, ForceMode.Impulse);
     }
 
     public void FinishDash()

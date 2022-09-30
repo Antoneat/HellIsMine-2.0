@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerHardAttack : MonoBehaviour
 {
+    [Header("Components")]
     public Animator anim;
     public BoxCollider armaCollider1;
     public BoxCollider armaCollider2;
+    public PlayerMovement playerMovement;
     public PlayerAttackCombo playerAttackCombo;
 
     public int hardCombo;
@@ -19,6 +21,7 @@ public class PlayerHardAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerAttackCombo = GetComponent<PlayerAttackCombo>();
+        playerMovement = GetComponent<PlayerMovement>();
         // audio = GetComponent<AudioSouce>();
     }
 
@@ -39,6 +42,11 @@ public class PlayerHardAttack : MonoBehaviour
         }
     }
 
+    public void StopMovement()
+    {
+        playerMovement.enabled = false;
+    }
+
     public void HardAttacking()
     {
         Debug.Log("AtacandoHARD");
@@ -48,12 +56,25 @@ public class PlayerHardAttack : MonoBehaviour
         if (hardCombo < 3) hardCombo++;
     }
 
+    public void ActivatingCollsHardAttack()
+    {
+        armaCollider1.enabled = true;
+        armaCollider2.enabled = true;
+    }
+
+    public void DeactivatingCollsHardAttack()
+    {
+        armaCollider1.enabled = false;
+        armaCollider2.enabled = false;
+    }
+
     public void AfterHardAttacking()
     {
         Debug.Log("Termino de atacarHARD");
         hardAttacking = false;
-        armaCollider1.enabled = true;
-        armaCollider2.enabled = true;
+        armaCollider1.enabled = false;
+        armaCollider2.enabled = false;
+        playerMovement.enabled = true;
         hardCombo = 0;
     }
 }

@@ -51,20 +51,17 @@ public class PlayerAttackCombo : MonoBehaviour
         Debug.Log("Atacando");
         attacking = false;
         armaColliderRight.enabled = true;
-        //armaColliderRight.enabled = false;
         if (combo < 3) combo++;
     }
 
     public void ActivatingCollsBasicAttack()
     {
-        armaColliderRight.enabled = false;
-        //armaColliderRight.enabled = false;
+        armaColliderRight.enabled = true;
     }
 
     public void DeactivatingCollsBasicAttack()
     {
         armaColliderRight.enabled = false;
-        //armaColliderRight.enabled = false;
     }
 
     public void AfterAttacking()
