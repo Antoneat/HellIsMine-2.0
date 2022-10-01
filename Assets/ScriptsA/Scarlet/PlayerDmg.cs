@@ -42,7 +42,7 @@ public class PlayerDmg : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-
+/*
         if (collider.gameObject.CompareTag("AtkBomb"))
         {
             actualvida -= 0.25f; //* mecanica tinoco: dmgC.dmgMultiplier; andre no jodas tkm
@@ -54,6 +54,6 @@ public class PlayerDmg : MonoBehaviour
         if (collider.gameObject.CompareTag("Lanza"))
         {
             actualvida -= 2.5f;
-        }
+        }*/
     }
 }
