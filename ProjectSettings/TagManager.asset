@@ -9,11 +9,12 @@ TagManager:
   - AtkBomb
   - AtaqueDuro
   - Guadana
+  - AtaqueNormal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
