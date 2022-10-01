@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDmg : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class PlayerDmg : MonoBehaviour
 
     void Start()
     {
-        actualvida = 10f;
-        dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
+        actualvida = 30f;
+        //dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
         //actualvida = maxVida;
     }
 
@@ -38,6 +39,7 @@ public class PlayerDmg : MonoBehaviour
     public void Dead()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("WhiteBlocking 1");
     }
 
     private void OnTriggerEnter(Collider collider)

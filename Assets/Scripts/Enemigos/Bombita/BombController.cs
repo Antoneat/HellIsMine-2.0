@@ -68,7 +68,7 @@ public class BombController : MonoBehaviour
 			StartCoroutine(AtaqueBasico());
 			agent.isStopped = false;
 		}
-		else if (playerDistance > atkRange)
+		else if (playerDistance > atkRange && playerDistance <= awareAI)
 		{
 			LookAtPlayer();
 			agent.isStopped = false;

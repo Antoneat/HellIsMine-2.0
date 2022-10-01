@@ -68,7 +68,7 @@ public class VerdugoController : MonoBehaviour
 		}
 
 
-		if (playerDistance <= atkRange && coPlay == false)
+		if (playerDistance <= atkRange && coPlay == false && playerDistance <= awareAI)
 		{
 			StartCoroutine(LanzaEspiritual());
 			//agent.isStopped = false;

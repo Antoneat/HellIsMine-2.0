@@ -63,10 +63,14 @@ public class BuscadorController : MonoBehaviour
 
 		if (playerDistance <= atkRange && coPlay == false)
 		{
-			StartCoroutine(Mordisco());
-			agent.isStopped = false;
+			if (playerDistance < awareAI)
+			{
+				Debug.Log("ayuda");
+				StartCoroutine(Mordisco());
+				agent.isStopped = false;
+			}
 		}
-		else if (playerDistance > atkRange)
+		else if (playerDistance > atkRange && playerDistance <= awareAI)
 		{
 			LookAtPlayer();
 			agent.isStopped = false;
