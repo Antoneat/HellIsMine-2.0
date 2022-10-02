@@ -12,11 +12,19 @@ public class PlayerMovementNavMesh : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        bool isDashing = Input.GetKeyUp(KeyCode.Space);
+
+        if (isDashing)
+        {
+            anim.SetTrigger("Roll");
+        }
+
         float speedPercent = agent.velocity.magnitude / agent.speed;
         anim.SetFloat("speed", speedPercent, smoothLikeButterTimeAnimation, Time.deltaTime);
     }
@@ -26,4 +34,6 @@ public class PlayerMovementNavMesh : MonoBehaviour
         agent.SetDestination(point);
 
     }
+
+
 }
