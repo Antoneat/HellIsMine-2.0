@@ -16,7 +16,15 @@ public class rioescena : MonoBehaviour
     {
         
     }
-    public void OnCollisionEnter(Collision collision)
+
+	public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene("WhiteBlocking 1");
+        }
+    }
+	public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
