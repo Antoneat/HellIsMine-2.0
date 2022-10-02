@@ -47,14 +47,18 @@ public class Verdugo_Controller : MonoBehaviour
     void Update()
     {
         
-        Chase();
+       
         if (enemyActivated)
         {
+            
             Vector3 targetPosition = new Vector3(cabezaPlayer.transform.position.x, transform.position.y, cabezaPlayer.transform.position.z);
             Quaternion rotTarget = Quaternion.LookRotation(targetPosition - this.transform.position);
             this.transform.rotation = Quaternion.RotateTowards(this.transform.rotation, rotTarget, 100 * Time.deltaTime);
             onChase = true;
         }
+        Chase();
+
+
 
         if (basicAttack)
         {

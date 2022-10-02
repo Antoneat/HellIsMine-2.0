@@ -11,14 +11,15 @@ public class ColliderTriggerEvent : MonoBehaviour
        
     }
 
+ 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.gameObject.CompareTag("Player"))
         {
             GameEvents.currentGEvent.StartCombatTriggerExit(id);
             Destroy(this.gameObject);
         }
+        
     }
 
 }
