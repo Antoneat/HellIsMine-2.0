@@ -29,7 +29,8 @@ public class Verdugo_Controller : MonoBehaviour
     [Header("VFX GameObjects")]
     public GameObject SmokeVfx;
     public GameObject ChargingLanzasVfX;
-    PlayerMovement _playerMovement;
+    //PlayerMovement _playerMovement;
+    NavMeshAgent playerNavMeshAgent;
 
     void Start()
     {
@@ -37,10 +38,11 @@ public class Verdugo_Controller : MonoBehaviour
         GameEvents.currentGEvent.combatTriggerExit += Activate;
         smokingVFX = false;
         player = GameObject.FindGameObjectWithTag("Player");
+        playerNavMeshAgent = player.GetComponent<NavMeshAgent>();
         cabezaPlayer = GameObject.Find("mixamorig:Head");
         index = spawnPointsSpheres.Length;
         startPosition = this.gameObject.transform.position;
-        _playerMovement = player.GetComponent<PlayerMovement>();
+        //_playerMovement = player.GetComponent<PlayerMovement>();
     }
 
    
@@ -145,9 +147,9 @@ public class Verdugo_Controller : MonoBehaviour
 
     IEnumerator StuntPlayer()
     {
-        _playerMovement.speed = 0;
+        playerNavMeshAgent.speed = 0.08f;
         yield return new WaitForSeconds(3);
-        _playerMovement.speed = 500;
+        playerNavMeshAgent.speed = 8.8f;
     }
     #endregion
 
@@ -155,6 +157,7 @@ public class Verdugo_Controller : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")&& smokingVFX == true)
         {
+            Debug.Log("Gaaaaaaaaaaaaa");
             StartCoroutine(StuntPlayer());
         }
     }

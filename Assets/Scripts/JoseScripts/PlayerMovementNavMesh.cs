@@ -27,10 +27,13 @@ public class PlayerMovementNavMesh : MonoBehaviour
 
         float speedPercent = agent.velocity.magnitude / agent.speed;
         anim.SetFloat("speed", speedPercent, smoothLikeButterTimeAnimation, Time.deltaTime);
+
+        
     }
 
     public void MoveToPoint(Vector3 point)
     {
+        agent.Move(transform.forward * Time.deltaTime);
         agent.SetDestination(point);
 
     }
