@@ -73,7 +73,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Arz2
+  m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 21689
+  controlID: 436
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 21386
+  controlID: 262
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 21441
+  controlID: 350
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 21454
+  controlID: 363
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -480,21 +480,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f0d7ffff08fbffff0efbffff207b0000
+      m_ExpandedIDs: 08fbffff74700000907b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: ajitanido
-        m_OriginalName: ajitanido
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 321404
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -748,7 +748,7 @@ MonoBehaviour:
       index: 10
       layout: 4
   m_WindowGUID: 105354c5174f762468931ce927d42a05
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -757,9 +757,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 66.3853, y: 19.360672, z: -10.936128}
+    m_Target: {x: 8.765638, y: 35.46833, z: -16.700668}
     speed: 2
-    m_Value: {x: 66.3853, y: 19.360672, z: -10.936128}
+    m_Value: {x: 8.765638, y: 35.46833, z: -16.700668}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -806,13 +806,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.315483, y: -0.015078248, z: 0.00503671, w: 0.9488254}
+    m_Target: {x: 0.30459553, y: -0.07285664, z: 0.025082586, w: 0.949642}
     speed: 2
-    m_Value: {x: 0.3154669, y: -0.016501041, z: 0.005509786, w: 0.9487771}
+    m_Value: {x: 0.30447605, y: -0.07426114, z: 0.025532616, w: 0.9492775}
   m_Size:
-    m_Target: 1.5563085
+    m_Target: 2.8665462
     speed: 2
-    m_Value: 1.5563085
+    m_Value: 2.8665462
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -954,22 +954,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/Enviroment
+    - Assets/Models/Nivel1/Nivel1-5to/Rueda
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Materials/Enviroment
+  - Assets/Models/Nivel1/Nivel1-5to/Rueda
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\TLS\6to Ciclo\Taller\Team\Git\HellIsMine-2.0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 46}
-    m_SelectedIDs: 2c8d0000
-    m_LastClickedID: 36140
-    m_ExpandedIDs: 00000000f28c0000f48c0000f68c0000f88c0000fa8c000000ca9a3b
+    scrollPos: {x: 0, y: 162}
+    m_SelectedIDs: de8f0000
+    m_LastClickedID: 36830
+    m_ExpandedIDs: 000000006a8d00006c8d00006e8d0000708d0000728d0000008e0000e08f0000e28f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -997,7 +997,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f28c0000f48c0000f68c0000f88c0000fa8c000000ca9a3b
+    m_ExpandedIDs: 000000006a8d00006c8d00006e8d0000708d0000728d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
