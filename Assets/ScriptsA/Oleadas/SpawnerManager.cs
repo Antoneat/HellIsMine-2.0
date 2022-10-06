@@ -38,9 +38,21 @@ public class SpawnerManager : MonoBehaviour
 
     public void Doors()
     {
-        if (doorActivator == true) puertas[indxPuertas - 1].SetActive(true);
+        if (doorActivator == true)
+        {
+            puertas[0].SetActive(true);
+            puertas[1].SetActive(true);
+            puertas[2].SetActive(true);
+            puertas[3].SetActive(true);
+        }
 
-        if (doorActivator == false) puertas[indxPuertas - 1].SetActive(false);
+        if (doorActivator == false)
+        {
+            puertas[0].SetActive(false);
+            puertas[1].SetActive(false);
+            puertas[2].SetActive(false);
+            puertas[3].SetActive(false);
+        }
     }
 
     public void Waves()
