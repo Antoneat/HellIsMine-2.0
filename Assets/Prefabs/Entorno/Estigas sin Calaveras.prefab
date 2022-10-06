@@ -92,8 +92,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 944039968695259086}
+  - component: {fileID: 1039238681439943402}
+  - component: {fileID: 9101619939864357463}
   m_Layer: 0
-  m_Name: Estigas sin Calaveras FBX
+  m_Name: Estigas sin Calaveras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,6 +119,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1039238681439943402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455488038016537972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.006402308, y: 0.0027790305, z: 0.016287118}
+  m_Center: {x: 0.0025232183, y: 0.019436235, z: -0.00008931875}
+--- !u!65 &9101619939864357463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455488038016537972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0006851911, y: 0.0008337735, z: 0.016287118}
+  m_Center: {x: -0.00971194, y: 0.020408854, z: -0.00008931875}
 --- !u!1 &1277919458922806204
 GameObject:
   m_ObjectHideFlags: 0

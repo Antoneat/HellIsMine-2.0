@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1789055868667534087}
   m_Layer: 0
-  m_Name: Arbol (4)
+  m_Name: Arbol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,8 +109,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7283936, y: 3.2315247, z: 1.4003615}
-  m_Center: {x: 0.045850486, y: 1.4417518, z: 0.032084525}
+  m_Size: {x: 0.7905477, y: 3.2315247, z: 0.68128943}
+  m_Center: {x: -0.05174941, y: 1.4417518, z: -0.03986244}
 --- !u!4 &3229725825988275091 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c65eeb330f1def64f8384de83dec3520, type: 3}

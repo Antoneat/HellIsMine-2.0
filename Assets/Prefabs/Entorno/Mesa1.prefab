@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6831938858253248660}
-  - component: {fileID: 1484703229667373973}
+  - component: {fileID: 5164454110655591723}
   m_Layer: 0
   m_Name: Mesa1
   m_TagString: Untagged
@@ -369,8 +369,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1484703229667373973
-BoxCollider:
+--- !u!136 &5164454110655591723
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -379,6 +379,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.9443703, y: 2.4463568, z: 3.608608}
-  m_Center: {x: 4.8297997, y: 1.2397344, z: 0.012913823}
+  m_Radius: 1.8375369
+  m_Height: 5.15465
+  m_Direction: 1
+  m_Center: {x: 4.781991, y: 0.9824388, z: 0}
