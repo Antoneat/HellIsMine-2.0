@@ -40,13 +40,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759739420973834284}
-  - component: {fileID: 237368579166273383}
   - component: {fileID: 1759739420973834273}
   - component: {fileID: 1759739420973834274}
   - component: {fileID: 6654190905018125405}
   - component: {fileID: 9004566205677489390}
   - component: {fileID: -8345479880792344386}
   - component: {fileID: -4042614353446850853}
+  - component: {fileID: 8122056530049547296}
   m_Layer: 6
   m_Name: Verdugo
   m_TagString: Verdugo
@@ -70,19 +70,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &237368579166273383
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759739420973834286}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1759739420973834273
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d3caddfd4947c47b8828662b77c0e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
 --- !u!23 &-8345479880792344386
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -213,6 +201,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759739420973834286}
   m_Mesh: {fileID: 4864056309639282896, guid: cad60d0d83577034791daa32b1a28202, type: 3}
+--- !u!65 &8122056530049547296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759739420973834286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0335026, y: 2.5845854, z: 1.0060887}
+  m_Center: {x: 0.104717076, y: 1.2866837, z: -0.010851979}
 --- !u!1 &2151589317320281310
 GameObject:
   m_ObjectHideFlags: 0

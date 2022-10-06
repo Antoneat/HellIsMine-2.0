@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4906008913135897408}
-  - component: {fileID: 6860444325691741195}
   - component: {fileID: 4906008913135897421}
   - component: {fileID: 4906008913135897422}
   - component: {fileID: 4906008913135897411}
   - component: {fileID: 244197605335388816}
   - component: {fileID: 6710773294821112150}
   - component: {fileID: 8453419954725380990}
+  - component: {fileID: 6908796182306050942}
   m_Layer: 6
   m_Name: Buscador
   m_TagString: Buscador
@@ -39,19 +39,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6860444325691741195
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4906008913135897410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4906008913135897421
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -178,6 +165,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6908796182306050942
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4906008913135897410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6940005, y: 1.7216752, z: 2.1781662}
+  m_Center: {x: 0, y: 0.85793424, z: 0.00000005960464}
 --- !u!1 &4906008914278288994
 GameObject:
   m_ObjectHideFlags: 0
