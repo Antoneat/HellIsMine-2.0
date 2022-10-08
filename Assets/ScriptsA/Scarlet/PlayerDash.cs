@@ -41,7 +41,7 @@ public class PlayerDash : MonoBehaviour
         //playerMovement.maxSpeed = 10f;
 
         Vector3 forceToApply = orientation * dashForce;
-        rgbd.AddForce(forceToApply, ForceMode.Impulse);
+        rgbd.AddForce(forceToApply, ForceMode.VelocityChange);
     }
 
     public void FinishDash()

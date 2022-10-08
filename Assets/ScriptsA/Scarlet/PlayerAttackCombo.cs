@@ -9,6 +9,7 @@ public class PlayerAttackCombo : MonoBehaviour
     public Collider armaColliderRight;
     public PlayerMovement playerMovement;
     public PlayerHardAttack playerHardAttack;
+    [SerializeField] private GameObject mousePos;
 
     public int combo;
     public bool attacking;
@@ -31,9 +32,11 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void Combo()
     {
-        if (Input.GetKeyDown(KeyCode.J) && !attacking && !playerHardAttack.hardAttacking)
+        if (Input.GetMouseButtonDown(0) && !attacking && !playerHardAttack.hardAttacking)
         {
             attacking = true;
+            playerMovement.playerTransform.LookAt(mousePos.transform.position);
+            playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
             playerHardAttack.hardCombo = 0;
             anim.SetTrigger("Ataque" + combo);
             // audio.clip = sonido[combo];
