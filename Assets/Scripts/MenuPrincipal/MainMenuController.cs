@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-    public GameObject panelBotonesPrincipal, panelOpciones;
+    public GameObject menuInicial, panelBotonesPrincipal, panelOpciones, panelTesoros;
 
     void Start()
     {
@@ -17,6 +17,14 @@ public class MainMenuController : MonoBehaviour
 
     }
 
+    public void CloseInitialMenu()
+    {
+        menuInicial.SetActive(false);
+        panelBotonesPrincipal.SetActive(true);
+    }
+
+
+    #region Opciones
     public void OpenPanelOpciones()
     {
         panelBotonesPrincipal.SetActive(false);
@@ -28,4 +36,21 @@ public class MainMenuController : MonoBehaviour
         panelBotonesPrincipal.SetActive(true);
         panelOpciones.SetActive(false);
     }
+
+    #endregion
+
+    #region Tesoros
+    public void OpenPanelTesoros()
+    {
+        panelBotonesPrincipal.SetActive(false);
+        panelTesoros.SetActive(true);
+    }
+
+    public void ClosePanelTesoros()
+    {
+        panelBotonesPrincipal.SetActive(true);
+        panelTesoros.SetActive(false);
+    }
+
+    #endregion
 }
