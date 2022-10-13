@@ -12,11 +12,6 @@ public class MainMenuController : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void Update()
-    {
-
-    }
-
     public void CloseInitialMenu()
     {
         menuInicial.SetActive(false);

@@ -6,6 +6,8 @@ public class TiendaInteracion : MonoBehaviour
 {
     public GameObject panelInicial, panelTiendaMejoras;
 
+
+
     void Start()
     {
         
@@ -16,6 +18,7 @@ public class TiendaInteracion : MonoBehaviour
         
     }
 
+    #region TiendaUI
     public void OpenTiendaUI()
     {
         panelInicial.SetActive(false);
@@ -26,4 +29,13 @@ public class TiendaInteracion : MonoBehaviour
         panelInicial.SetActive(true);
         panelTiendaMejoras.SetActive(false);
     }
+    #endregion
+
+    #region Cortes Agiles
+    public void CortesAgiles_1()
+    {
+
+    }
+
+    #endregion
 }
