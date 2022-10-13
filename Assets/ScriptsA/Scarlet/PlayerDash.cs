@@ -17,6 +17,8 @@ public class PlayerDash : MonoBehaviour
     [Header("ResetDash")]
     public bool killedEnemy;
 
+    public AudioSource dash;
+
     private void Start()
     {
         rgbd = GetComponent<Rigidbody>();
@@ -28,6 +30,7 @@ public class PlayerDash : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
         {
+            dash.Play();
             isDashing = true;
             orientation = playerMovement.lastTransform;
             playerMovement.enabled = false;
@@ -42,6 +45,7 @@ public class PlayerDash : MonoBehaviour
 
         Vector3 forceToApply = orientation * dashForce;
         rgbd.AddForce(forceToApply, ForceMode.VelocityChange);
+        
     }
 
     public void FinishDash()

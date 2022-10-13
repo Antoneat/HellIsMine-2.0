@@ -32,6 +32,10 @@ public class VerdugoController : MonoBehaviour
 	//public bool chargingEffect;
 	//public GameObject verdugoMesh;
 
+	public AudioSource lanzaEspiritualSFX;
+	public AudioSource rafagaDeAlmas;
+	
+
 	void Start()
 	{
 		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -71,6 +75,8 @@ public class VerdugoController : MonoBehaviour
 		if (playerDistance <= atkRange && coPlay == false && playerDistance <= awareAI)
 		{
 			StartCoroutine(LanzaEspiritual());
+			lanzaEspiritualSFX.Play();
+
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
@@ -127,6 +133,7 @@ public class VerdugoController : MonoBehaviour
 			spheraQuemadura.transform.position = spawnPoints[i].transform.position;
 			spheraQuemadura.transform.localRotation = spawnPoints[i].gameObject.transform.rotation;
 		}
+		rafagaDeAlmas.Play();
 
 	}
 

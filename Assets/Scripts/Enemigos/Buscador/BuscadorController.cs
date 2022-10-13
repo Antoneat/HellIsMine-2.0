@@ -24,6 +24,9 @@ public class BuscadorController : MonoBehaviour
 	[SerializeField] GameObject Dog;
 	Renderer dogRender;
 
+	public AudioSource pasosBuscador;
+	public AudioSource mordida;
+	
     void Start()
 	{
 		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -53,6 +56,7 @@ public class BuscadorController : MonoBehaviour
 			Debug.Log("Seen");
 			Chase();
 			agent.isStopped = false;
+			pasosBuscador.Play();
 		}
 		else if (playerDistance > awareAI)
 		{
@@ -68,6 +72,7 @@ public class BuscadorController : MonoBehaviour
 				Debug.Log("ayuda");
 				StartCoroutine(Mordisco());
 				agent.isStopped = false;
+				mordida.Play();
 			}
 		}
 		else if (playerDistance > atkRange && playerDistance <= awareAI)
@@ -119,6 +124,7 @@ public class BuscadorController : MonoBehaviour
 		ataco = false;
 		coPlay = false;
 		yield break;
+		
 	}
 
 	void ChangeColorPreAtk()

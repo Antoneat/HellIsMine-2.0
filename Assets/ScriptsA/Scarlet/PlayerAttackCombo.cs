@@ -14,8 +14,9 @@ public class PlayerAttackCombo : MonoBehaviour
     public int combo;
     public bool attacking;
 
-    // public AudioSource audioSourse;
-    // public AudioClip[] sonido;
+    public AudioSource ataqueUno;
+    //public AudioSource audioSourse;
+    //public AudioClip[] sonido;
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class PlayerAttackCombo : MonoBehaviour
     public void Attacking()
     {
         Debug.Log("Atacando");
+        ataqueUno.Play();
         attacking = false;
         armaColliderRight.enabled = true;
         if (combo < 3) combo++;

@@ -15,6 +15,8 @@ public class PlayerHardAttack : MonoBehaviour
     public int hardCombo;
     public bool hardAttacking;
 
+    public AudioSource ataqueDos;
+    public AudioSource ataqueTres;
     // public AudioSource audio;
     // public AudioClip[] sonido;
 
@@ -40,6 +42,7 @@ public class PlayerHardAttack : MonoBehaviour
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
             playerAttackCombo.combo = 0;
             anim.SetTrigger("AtaqueFuerte" + hardCombo);
+            ataqueDos.Play();
             // audio.clip = sonido[combo];
             // audio.Play();
         }
@@ -57,6 +60,8 @@ public class PlayerHardAttack : MonoBehaviour
         armaCollider1.enabled = true;
         armaCollider2.enabled = true;
         if (hardCombo < 3) hardCombo++;
+        ataqueTres.Play();
+        
     }
 
     public void ActivatingCollsHardAttack()

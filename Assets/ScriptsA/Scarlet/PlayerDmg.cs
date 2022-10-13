@@ -8,6 +8,9 @@ public class PlayerDmg : MonoBehaviour
     [Header("Vida")]
     public float actualvida;
     public float maxVida = 30f;
+    public AudioSource recibirDañoUno;
+    public AudioSource recibirDañoDos;
+    public AudioSource muerte;
 
     private DmgController dmgC;
 
@@ -23,6 +26,7 @@ public class PlayerDmg : MonoBehaviour
         if (actualvida <= 0)
         {
             Dead();
+            muerte.Play();
         }
 
         if (actualvida > maxVida)
@@ -47,14 +51,18 @@ public class PlayerDmg : MonoBehaviour
 
         if (collider.gameObject.CompareTag("AtkBomb"))
         {
+            recibirDañoDos.Play();
+            
             actualvida -= 0.25f; //* mecanica tinoco: dmgC.dmgMultiplier; andre no jodas tkm
         }
         if (collider.gameObject.CompareTag("MordiscoEnemy1"))
         {
+            recibirDañoUno.Play();
             actualvida -= 1.75f;
         }
         if (collider.gameObject.CompareTag("Lanza"))
         {
+            recibirDañoDos.Play();
             actualvida -= 2.5f;
         }
     }
