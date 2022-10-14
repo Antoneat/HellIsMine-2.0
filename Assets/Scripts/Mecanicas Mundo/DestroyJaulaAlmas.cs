@@ -24,7 +24,7 @@ public class DestroyJaulaAlmas : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Guadana"))
+        if (other.CompareTag("AtaqueDuro"))
         {
             Destroy(this.gameObject);
         }
