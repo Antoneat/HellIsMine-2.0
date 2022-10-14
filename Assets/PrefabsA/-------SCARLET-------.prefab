@@ -240,9 +240,8 @@ GameObject:
   - component: {fileID: 3667126378365676740}
   - component: {fileID: 4174554969401212729}
   - component: {fileID: 7995169936734570724}
+  - component: {fileID: 7220499287621930718}
   - component: {fileID: 5555373486834842605}
-  - component: {fileID: 1857815214}
-  - component: {fileID: 1857815215}
   m_Layer: 6
   m_Name: -------SCARLET-------
   m_TagString: Player
@@ -312,10 +311,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 500
   maxSpeed: 7.2
-  rgbd: {fileID: 5555373486834842609}
-  anim: {fileID: 5555373486834842605}
   lastTransform: {x: 0, y: 0, z: 0}
+  rgbd: {fileID: 5555373486834842609}
   playerTransform: {fileID: 2015512652424683927}
+  anim: {fileID: 5555373486834842605}
+  velocityOfMovement: 0
+  acceleration: 0
+  deceleration: 0
 --- !u!114 &7339353110002515530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,14 +330,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad51248328ea344bb0b7b389dcc32b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rgbd: {fileID: 5555373486834842609}
-  playerMovement: {fileID: 3296840433184143116}
-  anim: {fileID: 5555373486834842605}
-  orientation: {x: 0, y: 0, z: 0}
-  dashForce: 400
-  dashDuration: 0.25
+  dashNewSpeed: 0
+  canDash: 0
   isDashing: 0
+  orientation: {x: 0, y: 0, z: 0}
+  upgradeDash: 0
   killedEnemy: 0
+  anim: {fileID: 5555373486834842605}
 --- !u!114 &3667126378365676740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,12 +349,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c67ac0494ab74c41a9db201af7468fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  combo: 0
+  isAttacking: 0
   anim: {fileID: 5555373486834842605}
   armaColliderRight: {fileID: 5871250574382172294}
-  playerMovement: {fileID: 3296840433184143116}
-  playerHardAttack: {fileID: 4174554969401212729}
-  combo: 0
-  attacking: 0
+  mousePos: {fileID: 0}
 --- !u!114 &4174554969401212729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,13 +366,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1afd71ec78365b4a8d35336dc48b64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hardCombo: 0
+  isHardAttacking: 0
   anim: {fileID: 5555373486834842605}
   armaCollider1: {fileID: 9179305516821988041}
   armaCollider2: {fileID: 7629110083308310252}
-  playerMovement: {fileID: 0}
-  playerAttackCombo: {fileID: 3667126378365676740}
-  hardCombo: 0
-  hardAttacking: 0
+  mousePos: {fileID: 0}
 --- !u!114 &7995169936734570724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +385,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualvida: 30
+  maxVida: 30
+  "recibirDa\xF1oUno": {fileID: 0}
+  "recibirDa\xF1oDos": {fileID: 0}
+  muerte: {fileID: 0}
+--- !u!114 &7220499287621930718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203405274755660589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02aff6213e3aac46a72681e2dfca83b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  playerInitialPosition: {x: 0, y: 0, z: 0}
 --- !u!95 &5555373486834842605
 Animator:
   serializedVersion: 4
@@ -406,33 +423,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1857815214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203405274755660589}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d22d1a93f14c4b94693c1faaeefc1516, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1857815215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203405274755660589}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eea6fa034d1ec94b970e8edf8d56b73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &1305020869328858889
 GameObject:
   m_ObjectHideFlags: 0

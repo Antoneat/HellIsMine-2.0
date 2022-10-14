@@ -7,17 +7,25 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float maxSpeed;
 
-    public Rigidbody rgbd;
-    public Animator anim;
-
     public Vector3 lastTransform;
+
+    [Header("Componentes")]
+    public Rigidbody rgbd;
     public Transform playerTransform;
+    private PlayerDash playerDash;
+
+    [Header("Animator")]
+    public Animator anim;
+    public float velocityOfMovement;
+    public float acceleration;
+    public float deceleration;
 
     void Start()
     {
         rgbd = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         playerTransform = GetComponent<Transform>();
+        playerDash = GetComponent<PlayerDash>();
     }
 
     void FixedUpdate()
@@ -31,21 +39,28 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        rgbd.velocity = new Vector3(horizontal * speed * Time.fixedDeltaTime, rgbd.velocity.y, vertical * speed * Time.fixedDeltaTime);
+        rgbd.velocity = new Vector3(horizontal * speed * Time.fixedDeltaTime, 0, vertical * speed * Time.fixedDeltaTime);
 
         if (rgbd.velocity.magnitude > maxSpeed)
         {
             rgbd.velocity = Vector3.ClampMagnitude(rgbd.velocity, maxSpeed);
         }
 
-        if (rgbd.velocity.x != 0 || rgbd.velocity.z != 0)
+        if (rgbd.velocity.magnitude != 0 && velocityOfMovement < 1.0f && playerDash.isDashing == false)
         {
-            anim.SetBool("Run", true);
+            velocityOfMovement += Time.deltaTime * acceleration;
         }
-        else
+        else if (rgbd.velocity.magnitude == 0 && velocityOfMovement > 0.0f)
         {
-            anim.SetBool("Run", false);
+            velocityOfMovement -= Time.deltaTime * deceleration;
         }
+
+        if (velocityOfMovement < 0.0f)
+        {
+            velocityOfMovement = 0.0f;
+        }
+
+        anim.SetFloat("Run", velocityOfMovement);
 
         Debug.Log(rgbd.velocity.x);
         Debug.Log(rgbd.velocity.z);
@@ -60,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (rgbd.velocity != Vector3.zero)
         {
-            playerTransform.rotation = Quaternion.LookRotation(lastTransform);
+            playerTransform.rotation = Quaternion.LookRotation(new Vector3(rgbd.velocity.normalized.x, 0, rgbd.velocity.normalized.z));
         }
     }
 }

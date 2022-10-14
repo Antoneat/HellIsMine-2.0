@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class PlayerHardAttack : MonoBehaviour
 {
+    public int hardCombo;
+    public bool isHardAttacking;
+
     [Header("Components")]
     public Animator anim;
     public BoxCollider armaCollider1;
     public BoxCollider armaCollider2;
-    public PlayerMovement playerMovement;
-    public PlayerAttackCombo playerAttackCombo;
+    private PlayerMovement playerMovement;
+    private PlayerDash playerDash;
+    private PlayerAttackCombo playerAttackCombo;
     [SerializeField] private GameObject mousePos;
 
-    public int hardCombo;
-    public bool hardAttacking;
-
-    public AudioSource ataqueDos;
-    public AudioSource ataqueTres;
     // public AudioSource audio;
     // public AudioClip[] sonido;
 
     void Start()
     {
+        hardCombo = 0;
+        isHardAttacking = false;
+
         anim = GetComponent<Animator>();
+
         playerAttackCombo = GetComponent<PlayerAttackCombo>();
         playerMovement = GetComponent<PlayerMovement>();
+        playerDash = GetComponent<PlayerDash>();
+
         // audio = GetComponent<AudioSouce>();
     }
 
@@ -35,14 +40,18 @@ public class PlayerHardAttack : MonoBehaviour
 
     public void HardCombo()
     {
-        if (Input.GetMouseButtonDown(1) && !hardAttacking && !playerAttackCombo.attacking)
+        if (Input.GetMouseButtonDown(1) && isHardAttacking == false && playerAttackCombo.isAttacking == false && playerDash.isDashing == false)
         {
-            hardAttacking = true;
+            isHardAttacking = true;
+
             playerMovement.playerTransform.LookAt(mousePos.transform.position);
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
+
+            Vector3.MoveTowards(transform.position, mousePos.transform.position, 1f);
+
             playerAttackCombo.combo = 0;
-            anim.SetTrigger("AtaqueFuerte" + hardCombo);
-            ataqueDos.Play();
+
+            anim.Play("AtaqueFuerte" + hardCombo);
             // audio.clip = sonido[combo];
             // audio.Play();
         }
@@ -50,18 +59,16 @@ public class PlayerHardAttack : MonoBehaviour
 
     public void StopMovement()
     {
-        playerMovement.enabled = false;
+        playerMovement.maxSpeed = 0f;
     }
 
     public void HardAttacking()
     {
         Debug.Log("AtacandoHARD");
-        hardAttacking = false;
+        isHardAttacking = false;
         armaCollider1.enabled = true;
         armaCollider2.enabled = true;
         if (hardCombo < 3) hardCombo++;
-        ataqueTres.Play();
-        
     }
 
     public void ActivatingCollsHardAttack()
@@ -79,10 +86,13 @@ public class PlayerHardAttack : MonoBehaviour
     public void AfterHardAttacking()
     {
         Debug.Log("Termino de atacarHARD");
-        hardAttacking = false;
+        isHardAttacking = false;
         armaCollider1.enabled = false;
         armaCollider2.enabled = false;
+
+        playerMovement.maxSpeed = 7.2f;
         playerMovement.enabled = true;
+
         hardCombo = 0;
     }
 }

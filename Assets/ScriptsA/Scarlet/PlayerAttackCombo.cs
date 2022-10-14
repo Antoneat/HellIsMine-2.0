@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class PlayerAttackCombo : MonoBehaviour
 {
+    public int combo;
+    public bool isAttacking;
+
     [Header("Components")]
     public Animator anim;
     public Collider armaColliderRight;
-    public PlayerMovement playerMovement;
-    public PlayerHardAttack playerHardAttack;
+    private PlayerMovement playerMovement;
+    private PlayerDash playerDash;
+    private PlayerHardAttack playerHardAttack;
     [SerializeField] private GameObject mousePos;
 
-    public int combo;
-    public bool attacking;
-
-    public AudioSource ataqueUno;
-    //public AudioSource audioSourse;
-    //public AudioClip[] sonido;
+    // public AudioSource audioSourse;
+    // public AudioClip[] sonido;
 
     void Start()
     {
+        combo = 0;
+        isAttacking = false;
+
         anim = GetComponent<Animator>();
-        playerHardAttack = GetComponent<PlayerHardAttack>();
+
         playerMovement = GetComponent<PlayerMovement>();
+        playerHardAttack = GetComponent<PlayerHardAttack>();
+        playerDash = GetComponent<PlayerDash>();
+
         // audioSourse = GetComponent<AudioSouce>();
     }
 
@@ -33,13 +39,19 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void Combo()
     {
-        if (Input.GetMouseButtonDown(0) && !attacking && !playerHardAttack.hardAttacking)
+        if (Input.GetMouseButtonDown(0) && isAttacking == false && playerHardAttack.isHardAttacking == false && playerDash.isDashing == false)
         {
-            attacking = true;
+            isAttacking = true;
+
             playerMovement.playerTransform.LookAt(mousePos.transform.position);
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
+
+            Vector3.MoveTowards(transform.position, mousePos.transform.position, 1f);
+
             playerHardAttack.hardCombo = 0;
-            anim.SetTrigger("Ataque" + combo);
+
+            anim.Play("AtaqueBasico" + combo);
+
             // audio.clip = sonido[combo];
             // audio.Play();
         }
@@ -47,14 +59,13 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void StopMovement()
     {
-        playerMovement.enabled = false;
+        playerMovement.maxSpeed = 0f;
     }
 
     public void Attacking()
     {
         Debug.Log("Atacando");
-        ataqueUno.Play();
-        attacking = false;
+        isAttacking = false;
         armaColliderRight.enabled = true;
         if (combo < 3) combo++;
     }
@@ -72,8 +83,11 @@ public class PlayerAttackCombo : MonoBehaviour
     public void AfterAttacking()
     {
         Debug.Log("Termino de atacar");
-        attacking = false;
+        isAttacking = false;
+
+        playerMovement.maxSpeed = 7.2f;
         playerMovement.enabled = true;
+
         combo = 0;
     }
 }

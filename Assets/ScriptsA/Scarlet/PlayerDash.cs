@@ -3,57 +3,77 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
-    [Header("Componentes")]
-    [SerializeField] private Rigidbody rgbd;
-    [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private Animator anim;
+    [Header("Dashing")]
+    public float dashNewSpeed;
+    public bool canDash;
+    public bool isDashing;
     public Vector3 orientation;
 
-    [Header("Dashing")]
-    public float dashForce;
-    public float dashDuration; // reemplazado por la duracion de la anim (eliminar de la consola)
-    public bool isDashing;
+    public bool upgradeDash;
 
     [Header("ResetDash")]
     public bool killedEnemy;
 
-    public AudioSource dash;
+    [Header("Componentes")]
+    [SerializeField] private Animator anim;
+    private PlayerMovement playerMovement;
+    private PlayerAttackCombo playerAttackCombo;
+    private PlayerHardAttack playerHardAttack;
 
-    private void Start()
+    void Start()
     {
-        rgbd = GetComponent<Rigidbody>();
         playerMovement = GetComponent<PlayerMovement>();
         anim = GetComponent<Animator>();
+        playerAttackCombo = GetComponent<PlayerAttackCombo>();
+        playerHardAttack = GetComponent<PlayerHardAttack>();
+        canDash = true;
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
+        if (Input.GetKeyDown(KeyCode.Space) && isDashing == false && canDash == true)
         {
-            dash.Play();
+            canDash = false;
             isDashing = true;
-            orientation = playerMovement.lastTransform;
-            playerMovement.enabled = false;
-            anim.SetTrigger("Dash");
+            anim.Play("Dash");
+
+            playerAttackCombo.isAttacking = false;
+            playerAttackCombo.armaColliderRight.enabled = false;
+            playerAttackCombo.combo = 0;
+            playerHardAttack.isHardAttacking = false;
+            playerHardAttack.armaCollider1.enabled = false;
+            playerHardAttack.armaCollider2.enabled = false;
+            playerHardAttack.hardCombo = 0;
         }
     }
 
     public void Dashing()
     {
         Debug.Log("Dashing");
-        //playerMovement.maxSpeed = 10f;
+        playerMovement.maxSpeed = dashNewSpeed;
 
-        Vector3 forceToApply = orientation * dashForce;
-        rgbd.AddForce(forceToApply, ForceMode.VelocityChange);
-        
+        if (upgradeDash == true)
+        {
+            Physics.IgnoreLayerCollision(3, 8, true);
+        }
     }
 
     public void FinishDash()
     {
         Debug.Log("Termino el Dash");
+        Invoke(nameof(DelayToDash), 0.4f);
         isDashing = false;
+        playerMovement.maxSpeed = 7.2f;
+
         playerMovement.enabled = true;
-        //playerMovement.maxSpeed = 7.2f;
+
         killedEnemy = false;
+
+        Physics.IgnoreLayerCollision(3, 8, false);
+    }
+
+    public void DelayToDash()
+    {
+        canDash = true;
     }
 }
