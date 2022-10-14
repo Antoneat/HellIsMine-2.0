@@ -20,7 +20,7 @@ public class CrisalidaDeAlmas : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Guadana"))
+        if (other.CompareTag("Guadana") || other.CompareTag("AtaqueDuro"))
         {
             playerDmg.actualvida += 2.5f;
             Destroy(this.gameObject);
