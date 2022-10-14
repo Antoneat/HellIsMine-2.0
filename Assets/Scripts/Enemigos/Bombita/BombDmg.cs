@@ -6,15 +6,13 @@ public class BombDmg : MonoBehaviour
 {
     [Header("Vida")]
     public float vida;
-    public bool dead;
 
     void Start()
     {
-       // plyrDMG = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
-        vida = 1;
+        vida = 5;
     }
 
-    
+
     void Update()
     {
         MuerteBomba();
@@ -28,8 +26,9 @@ public class BombDmg : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
+
         if (collider.gameObject.CompareTag("Guadana")) vida -= 2; // Baja la vida del enemigo acorde con el valor que se puso en el ataque.
 
-        if (collider.gameObject.CompareTag("AtaqueDuro")) vida -= 4; // Lo de arriba x2.        
+        if (collider.gameObject.CompareTag("AtaqueDuro")) vida -= 4; // Lo de arriba x2.
     }
 }

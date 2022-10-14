@@ -13,14 +13,6 @@ public class VerdugoController : MonoBehaviour
 	public float awareAI;
 	public float atkRange;
 
-	[Header("Vida")]
-	public float vida;
-	public bool dead;
-
-	[Header("AtaqueBasico")]
-	public GameObject basicoGO;
-	//public GameObject atkBTxt;
-
 	public bool coPlay;
 	[Header("FeedbackVisual")]
 	[SerializeField] GameObject Verdugo;
@@ -29,21 +21,14 @@ public class VerdugoController : MonoBehaviour
 	int index;
 	public GameObject[] spawnPoints;
 	public GameObject lanzaPrefab;
-	//public bool chargingEffect;
-	//public GameObject verdugoMesh;
 
-	public AudioSource lanzaEspiritualSFX;
-	public AudioSource rafagaDeAlmas;
-	
 
 	void Start()
 	{
 		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		//agent.autoBraking = false;
 		goal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-		agent.SetDestination(goal.position);
 
-		dead = false;
 		//basicoGO.SetActive(false);
 
 		index = spawnPoints.Length;
@@ -62,21 +47,16 @@ public class VerdugoController : MonoBehaviour
 		{
 			LookAtPlayer();
 			Debug.Log("Seen");
-			//Chase();
-			//agent.isStopped = false;
 		}
 		else if (playerDistance > awareAI)
 		{
 			LookAtPlayer();
-			agent.isStopped = true;
 		}
 
 
-		if (playerDistance <= atkRange && coPlay == false && playerDistance <= awareAI)
+		if (playerDistance <= atkRange && coPlay == false)
 		{
 			StartCoroutine(LanzaEspiritual());
-			lanzaEspiritualSFX.Play();
-
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
@@ -91,28 +71,10 @@ public class VerdugoController : MonoBehaviour
 		transform.LookAt(goal);
 	}
 
-	public void Chase()
-	{
-		agent.stoppingDistance = 5;
-		agent.SetDestination(goal.position);
-
-		//transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-
-		if (agent.remainingDistance > agent.stoppingDistance)
-		{
-			agent.isStopped = false;
-
-		}
-		else if (agent.remainingDistance < agent.stoppingDistance)
-		{
-			agent.isStopped = true;
-		}
-	}
 
 	IEnumerator LanzaEspiritual()
 	{
 		coPlay = true;
-		agent.isStopped = true;
 		ChangeColorPreAtk();
 		yield return new WaitForSecondsRealtime(1f);
 		//agent.isStopped = false;
@@ -129,11 +91,10 @@ public class VerdugoController : MonoBehaviour
 	{
 		for (int i = 0; i < index; i++)
 		{
-			GameObject spheraQuemadura = Instantiate(lanzaPrefab);
-			spheraQuemadura.transform.position = spawnPoints[i].transform.position;
-			spheraQuemadura.transform.localRotation = spawnPoints[i].gameObject.transform.rotation;
+			GameObject LanzaEspiritual = Instantiate(lanzaPrefab);
+			LanzaEspiritual.transform.position = spawnPoints[i].transform.position;
+			LanzaEspiritual.transform.localRotation = spawnPoints[i].gameObject.transform.rotation;
 		}
-		rafagaDeAlmas.Play();
 
 	}
 

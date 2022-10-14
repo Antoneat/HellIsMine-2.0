@@ -124,11 +124,8 @@ MonoBehaviour:
   destPoint: 0
   goal: {fileID: 0}
   playerDistance: 0
-  awareAI: 10
-  atkRange: 5
-  vida: 0
-  dead: 0
-  basicoGO: {fileID: 0}
+  awareAI: 14
+  atkRange: 10
   coPlay: 0
   Verdugo: {fileID: 1759739420973834286}
   spawnPoints:

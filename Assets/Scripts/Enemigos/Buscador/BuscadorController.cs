@@ -15,38 +15,35 @@ public class BuscadorController : MonoBehaviour
 
 	[Header("AtaqueBasico")]
 	public GameObject basicoGO;
-	//public GameObject atkBTxt;
 
 	public bool coPlay;
 	public bool ataco;
+
+	PlayerDmg plyrDmg;
 
 	[Header("FeedbackVisual")]
 	[SerializeField] GameObject Dog;
 	Renderer dogRender;
 
-	public AudioSource pasosBuscador;
-	public AudioSource mordida;
-	
-    void Start()
+	void Start()
 	{
 		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
 		goal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+		plyrDmg = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
 		agent.SetDestination(goal.position);
-
-
 		basicoGO.SetActive(false);
-		//atkBTxt.SetActive(false);
 
 		coPlay = false;
 		ataco = false;
 
 		dogRender = Dog.GetComponent<Renderer>();
-
+		agent.isStopped = false;
 	}
 
 	void Update()
 	{
+
 
 		playerDistance = Vector3.Distance(transform.position, goal.position);
 
@@ -55,30 +52,24 @@ public class BuscadorController : MonoBehaviour
 			LookAtPlayer();
 			Debug.Log("Seen");
 			Chase();
-			agent.isStopped = false;
-			pasosBuscador.Play();
+			//agent.isStopped = false;
 		}
 		else if (playerDistance > awareAI)
 		{
 			LookAtPlayer();
-			agent.isStopped = true;
+			//agent.isStopped = true;
 		}
 
 
 		if (playerDistance <= atkRange && coPlay == false)
 		{
-			if (playerDistance < awareAI)
-			{
-				Debug.Log("ayuda");
-				StartCoroutine(Mordisco());
-				agent.isStopped = false;
-				mordida.Play();
-			}
+			StartCoroutine(Mordisco());
+			//agent.isStopped = false;
 		}
-		else if (playerDistance > atkRange && playerDistance <= awareAI)
+		else if (playerDistance > atkRange)
 		{
 			LookAtPlayer();
-			agent.isStopped = false;
+			//agent.isStopped = false;
 		}
 	}
 
@@ -89,48 +80,39 @@ public class BuscadorController : MonoBehaviour
 
 	public void Chase()
 	{
-		agent.stoppingDistance = 5;
 		agent.SetDestination(goal.position);
-
-		//transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-
-		if (agent.remainingDistance > agent.stoppingDistance)
-		{
-			agent.isStopped = false;
-
-		}
-		else if (agent.remainingDistance < agent.stoppingDistance)
-		{
-			agent.isStopped = true;
-		}
 	}
+
 
 	IEnumerator Mordisco()
 	{
 		coPlay = true;
 		agent.isStopped = true;
 		ChangeColorPreAtk();
-		yield return new WaitForSecondsRealtime(1.5f);
-		agent.isStopped = false;
+		yield return new WaitForSecondsRealtime(1.75f);
 		ChangeColorAtk();
 		basicoGO.SetActive(true);
-		if(playerDistance <= atkRange)
-        {
+		if (playerDistance <= atkRange)
+		{
 			ataco = true;
-        }
-		yield return new WaitForSecondsRealtime(2f);
+			if (ataco == true)
+			{
+				plyrDmg.actualvida -= 1.5f;
+			}
+		}
+		yield return new WaitForSecondsRealtime(1f);
+		agent.isStopped = false;
 		basicoGO.SetActive(false);
 		ChangeColorBack();
 		ataco = false;
 		coPlay = false;
 		yield break;
-		
 	}
 
 	void ChangeColorPreAtk()
-    {
+	{
 		dogRender.material.color = Color.yellow;
-    }
+	}
 
 	void ChangeColorAtk()
 	{

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BombController : MonoBehaviour
 {
-	
+
 	public UnityEngine.AI.NavMeshAgent agent;
 
 	public int destPoint = 0;
@@ -14,12 +14,11 @@ public class BombController : MonoBehaviour
 	public float awareAI;
 	public float atkRange;
 
-	
+
 	[Header("AtaqueBasico")]
 	public GameObject basicoGO;
-	//public GameObject atkBTxt;
 
-	private BombDmg bombDmg;
+
 	public bool coPlay;
 
 	[Header("FeedbackVisual")]
@@ -30,15 +29,10 @@ public class BombController : MonoBehaviour
 	{
 		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
-		//agent.autoBraking = false;
-
 		goal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
 		agent.SetDestination(goal.position);
-
 		basicoGO.SetActive(false);
 
-		//atkBTxt.SetActive(false);
 
 		coPlay = false;
 		bombitaRender = Bombita.GetComponent<Renderer>();
@@ -54,7 +48,7 @@ public class BombController : MonoBehaviour
 			LookAtPlayer();
 			Debug.Log("Seen");
 			Chase();
-			agent.isStopped = false;
+			//agent.isStopped = false;
 		}
 		else if (playerDistance > awareAI)
 		{
@@ -63,15 +57,15 @@ public class BombController : MonoBehaviour
 		}
 
 
-		if (playerDistance <= atkRange && coPlay==false)
+		if (playerDistance <= atkRange && coPlay == false)
 		{
 			StartCoroutine(AtaqueBasico());
-			agent.isStopped = false;
+			//agent.isStopped = false;
 		}
-		else if (playerDistance > atkRange && playerDistance <= awareAI)
+		else if (playerDistance > atkRange)
 		{
 			LookAtPlayer();
-			agent.isStopped = false;
+			//agent.isStopped = false;
 		}
 	}
 
@@ -82,20 +76,7 @@ public class BombController : MonoBehaviour
 
 	public void Chase()
 	{
-		agent.stoppingDistance = 5;
 		agent.SetDestination(goal.position);
-
-		//transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-
-		if (agent.remainingDistance > agent.stoppingDistance)
-		{
-			agent.isStopped = false;
-
-		}
-		else if (agent.remainingDistance < agent.stoppingDistance)
-		{
-			agent.isStopped = true;
-		}
 	}
 
 
@@ -104,16 +85,11 @@ public class BombController : MonoBehaviour
 		coPlay = true;
 		agent.isStopped = true;
 		ChangeColorPreAtk();
-		yield return new WaitForSecondsRealtime(0.75f);
-		agent.isStopped = false;
+		yield return new WaitForSecondsRealtime(1.75f);
+		agent.isStopped = true;
+		//ChangeColorAtk();
 		basicoGO.SetActive(true);
-		ChangeColorAtk();
-		//atkBTxt.SetActive(true);
-		yield return new WaitForSecondsRealtime(1.5f);
-		ChangeColorBack();
-		basicoGO.SetActive(false);
-		Destroy(gameObject);
-		//atkBTxt.SetActive(false);
+		Destroy(gameObject, 1);
 		coPlay = false;
 		yield break;
 	}
@@ -123,23 +99,13 @@ public class BombController : MonoBehaviour
 		bombitaRender.material.color = Color.yellow;
 	}
 
-	void ChangeColorAtk()
-	{
-		bombitaRender.material.color = Color.red;
-	}
-
-	void ChangeColorBack()
-	{
-		bombitaRender.material.color = Color.white;
-	}
-
 	private void OnTriggerEnter(Collider collider)
 	{
 
 		//if (collider.gameObject.CompareTag("AtkBomb"))
 		//{
 		//	StartCoroutine(AtaqueBasico());
-	//	}
+		//	}
 	}
 }
 
