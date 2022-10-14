@@ -26,7 +26,7 @@ public class PlayerDmg : MonoBehaviour
         if (actualvida <= 0)
         {
             Dead();
-            muerte.Play();
+            
         }
 
         if (actualvida > maxVida)
@@ -44,6 +44,7 @@ public class PlayerDmg : MonoBehaviour
     {
         Destroy(gameObject);
         SceneManager.LoadScene("WhiteBlocking 1");
+        muerte.Play();
     }
 
     private void OnTriggerEnter(Collider collider)

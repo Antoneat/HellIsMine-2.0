@@ -61,6 +61,7 @@ public class ArenaAlmas : MonoBehaviour
         {
             pisandoArena = false;
             playerMovement.maxSpeed = 7.2f;
+            pasosArena.Stop();
         }
     }
 

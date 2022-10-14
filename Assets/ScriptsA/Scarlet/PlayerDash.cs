@@ -20,6 +20,7 @@ public class PlayerDash : MonoBehaviour
     private PlayerAttackCombo playerAttackCombo;
     private PlayerHardAttack playerHardAttack;
 
+    public AudioSource dashScarlet;
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -44,6 +45,7 @@ public class PlayerDash : MonoBehaviour
             playerHardAttack.armaCollider1.enabled = false;
             playerHardAttack.armaCollider2.enabled = false;
             playerHardAttack.hardCombo = 0;
+            dashScarlet.Play();
         }
     }
 

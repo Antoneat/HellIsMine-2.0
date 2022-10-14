@@ -19,6 +19,12 @@ public class BuscadorController : MonoBehaviour
 	public bool coPlay;
 	public bool ataco;
 
+	[Header("Sonidos")]
+	public AudioSource grunido;
+	public AudioSource mordisco;
+	public AudioSource caminar;
+	
+
 	PlayerDmg plyrDmg;
 
 	[Header("FeedbackVisual")]
@@ -43,8 +49,6 @@ public class BuscadorController : MonoBehaviour
 
 	void Update()
 	{
-
-
 		playerDistance = Vector3.Distance(transform.position, goal.position);
 
 		if (playerDistance <= awareAI)
@@ -52,6 +56,7 @@ public class BuscadorController : MonoBehaviour
 			LookAtPlayer();
 			Debug.Log("Seen");
 			Chase();
+			
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > awareAI)
@@ -64,11 +69,12 @@ public class BuscadorController : MonoBehaviour
 		if (playerDistance <= atkRange && coPlay == false)
 		{
 			StartCoroutine(Mordisco());
+			mordisco.Play();
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
 		{
-			LookAtPlayer();
+			LookAtPlayer();	
 			//agent.isStopped = false;
 		}
 	}
@@ -76,11 +82,13 @@ public class BuscadorController : MonoBehaviour
 	void LookAtPlayer()
 	{
 		transform.LookAt(goal);
+		grunido.Play();
 	}
 
 	public void Chase()
 	{
 		agent.SetDestination(goal.position);
+		caminar.Play();
 	}
 
 
@@ -106,7 +114,7 @@ public class BuscadorController : MonoBehaviour
 		ChangeColorBack();
 		ataco = false;
 		coPlay = false;
-		yield break;
+		yield break;	
 	}
 
 	void ChangeColorPreAtk()

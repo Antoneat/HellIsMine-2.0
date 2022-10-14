@@ -16,6 +16,8 @@ public class PlayerHardAttack : MonoBehaviour
     private PlayerAttackCombo playerAttackCombo;
     [SerializeField] private GameObject mousePos;
 
+    public AudioSource ataqueDos;
+    public AudioSource ataqueTres;
     // public AudioSource audio;
     // public AudioClip[] sonido;
 
@@ -95,4 +97,23 @@ public class PlayerHardAttack : MonoBehaviour
 
         hardCombo = 0;
     }
+
+    public void AtaqueDosInit() 
+    {
+        ataqueDos.Play();
+    }
+    public void AtaqueDosExit() 
+    {
+        ataqueDos.Stop();
+    }
+
+    public void AtaqueTresInit()
+    {
+        ataqueTres.Play();
+    }
+    public void AtaqueTresExit()
+    {
+        ataqueTres.Stop();
+    }
+
 }

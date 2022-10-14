@@ -15,6 +15,8 @@ public class PlayerAttackCombo : MonoBehaviour
     private PlayerHardAttack playerHardAttack;
     [SerializeField] private GameObject mousePos;
 
+    public AudioSource ataqueUno;
+    
     // public AudioSource audioSourse;
     // public AudioClip[] sonido;
 
@@ -68,6 +70,7 @@ public class PlayerAttackCombo : MonoBehaviour
         isAttacking = false;
         armaColliderRight.enabled = true;
         if (combo < 3) combo++;
+        ataqueUno.Play();
     }
 
     public void ActivatingCollsBasicAttack()
@@ -89,5 +92,7 @@ public class PlayerAttackCombo : MonoBehaviour
         playerMovement.enabled = true;
 
         combo = 0;
+        ataqueUno.Stop();
+
     }
 }
