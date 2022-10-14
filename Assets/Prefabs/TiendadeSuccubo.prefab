@@ -601,6 +601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7637750208049844591}
   - component: {fileID: 8830727769684758553}
+  - component: {fileID: 847332424}
   m_Layer: 0
   m_Name: TiendadeSuccubo
   m_TagString: Untagged
@@ -643,6 +644,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.835718, y: 5.5395603, z: 8.837178}
   m_Center: {x: 0.04934287, y: 2.7632132, z: 1.8461804}
+--- !u!114 &847332424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112712088141319125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0427a5f71a1e3e9488f0c017b90d87a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  img_Tienda: {fileID: 0}
 --- !u!1 &7172091175456361576
 GameObject:
   m_ObjectHideFlags: 0

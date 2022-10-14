@@ -22,11 +22,13 @@ public class TiendaManager : MonoBehaviour
         if(collision.collider.CompareTag("Player"))
         {
             img_Tienda.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
     public void CerrarTienda()
     {
         img_Tienda.SetActive(false);
+        Time.timeScale = 1;
     }
 }
