@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 6710773294821112150}
   - component: {fileID: 8453419954725380990}
   - component: {fileID: 6908796182306050942}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Buscador
   m_TagString: Buscador
   m_Icon: {fileID: 0}
@@ -354,17 +354,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 4906008913135897422}
   destPoint: 0
-  goal: {fileID: 0}
+  goal: {fileID: 1501028498825772951}
   playerDistance: 0
-  awareAI: 12
-  atkRange: 8
-  basicoGO: {fileID: 0}
+  awareAI: 15
+  atkRange: 5
+  basicoGO: {fileID: 1487029653686905971}
   coPlay: 0
   ataco: 0
+  Dog: {fileID: 4906008913135897410}
   grunido: {fileID: 6781248353021044618}
   mordisco: {fileID: 8146465202755698434}
   caminar: {fileID: 5655756989864772262}
-  Dog: {fileID: 4906008913135897410}
 --- !u!114 &244197605335388816
 MonoBehaviour:
   m_ObjectHideFlags: 0

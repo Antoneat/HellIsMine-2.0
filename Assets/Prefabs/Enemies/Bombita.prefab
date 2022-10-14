@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2653957783918534561}
   - component: {fileID: 7588889786042308275}
   - component: {fileID: 2328621593620069388}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Bombita
   m_TagString: Bombita
   m_Icon: {fileID: 0}
@@ -71,9 +71,9 @@ MonoBehaviour:
   destPoint: 0
   goal: {fileID: 0}
   playerDistance: 0
-  awareAI: 12
-  atkRange: 7
-  basicoGO: {fileID: 0}
+  awareAI: 15
+  atkRange: 4
+  basicoGO: {fileID: 4987143686339540356}
   coPlay: 0
   Bombita: {fileID: 2119726176885463028}
 --- !u!114 &2119726176885463036
@@ -172,8 +172,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5034758, y: 3.6279514, z: 0.8689737}
-  m_Center: {x: 0, y: 0.72969025, z: 0.0064144535}
+  m_Size: {x: 0.8393769, y: 3.6279514, z: 0.8689737}
+  m_Center: {x: -0.0024944744, y: 0.72969025, z: 0.0064144535}
 --- !u!1001 &6612351811614436335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239,6 +239,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 61fdb71a188bb1e4f99f13fa00eff8c0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 717e6a338a5d2954882385a003f9a598, type: 3}
+--- !u!1 &4987143686339540356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2231021458248293995, guid: 717e6a338a5d2954882385a003f9a598, type: 3}
+  m_PrefabInstance: {fileID: 6612351811614436335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4987143686339540362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2231021458248293989, guid: 717e6a338a5d2954882385a003f9a598, type: 3}

@@ -7,6 +7,8 @@ public class BombController : MonoBehaviour
 
 	public UnityEngine.AI.NavMeshAgent agent;
 
+	//public Transform transformRangoExplosion;
+
 	public int destPoint = 0;
 	public Transform goal;
 
@@ -33,14 +35,13 @@ public class BombController : MonoBehaviour
 		agent.SetDestination(goal.position);
 		basicoGO.SetActive(false);
 
-
+		agent.isStopped = false;
 		coPlay = false;
 		bombitaRender = Bombita.GetComponent<Renderer>();
 	}
 
 	void Update()
 	{
-
 		playerDistance = Vector3.Distance(transform.position, goal.position);
 
 		if (playerDistance <= awareAI)
@@ -53,7 +54,7 @@ public class BombController : MonoBehaviour
 		else if (playerDistance > awareAI)
 		{
 			LookAtPlayer();
-			agent.isStopped = true;
+			//agent.isStopped = true;
 		}
 
 
