@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7928581185679443648}
   - component: {fileID: 5324114428719018506}
   - component: {fileID: 3107693045078538281}
+  - component: {fileID: 7120624511044286876}
   m_Layer: 0
-  m_Name: Ajitanido
+  m_Name: ajitanido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.515679, y: 2.7411485, z: 3.362069}
   m_Center: {x: 0.024720311, y: 0.63007563, z: -0.7475091}
+--- !u!114 &7120624511044286876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5972883257866032095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c475647a65710e64cb199290552d5a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  dead: 0
+  enemy: {fileID: 2119726176885463028, guid: 81ad12a0bc2f1bd40b84a5717e34ea48, type: 3}
+  ajitaNido: {fileID: 0}
