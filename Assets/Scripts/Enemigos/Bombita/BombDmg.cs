@@ -6,10 +6,12 @@ public class BombDmg : MonoBehaviour
 {
     [Header("Vida")]
     public float vida;
+    public float maxVida;
 
     void Start()
     {
         vida = 5;
+        maxVida = 5;
     }
 
 

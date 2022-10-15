@@ -7,9 +7,12 @@ public class VerdugoDmg : MonoBehaviour
     [Header("Vida")]
     public float vida;
 
+    public float maxVida;
+
     void Start()
     {
         vida = 15;
+        maxVida = 15;
     }
 
     void Update()

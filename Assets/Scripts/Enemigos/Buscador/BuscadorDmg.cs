@@ -6,6 +6,7 @@ public class BuscadorDmg : MonoBehaviour
 {
     [Header("Vida")]
     public float vida;
+    public float maxVida;
 
     public AudioSource muerte;
     public AudioSource recibirDañoPerro;
@@ -13,6 +14,7 @@ public class BuscadorDmg : MonoBehaviour
     void Start()
     {
         vida = 10;
+        maxVida = 10;
     }
 
 
