@@ -14,7 +14,7 @@ public class ArenaAlmas : MonoBehaviour
 
     private float timerMain = 1;
 
-    public AudioSource pasosArena;
+    //public AudioSource pasosArena;
 
 
     void Start()
@@ -49,7 +49,7 @@ public class ArenaAlmas : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            pasosArena.Play();
+            //pasosArena.Play();
             pisandoArena = true;
             playerMovement.maxSpeed = playerMovement.maxSpeed - 35 * playerMovement.maxSpeed / 100;
         }
@@ -61,7 +61,7 @@ public class ArenaAlmas : MonoBehaviour
         {
             pisandoArena = false;
             playerMovement.maxSpeed = 7.2f;
-            pasosArena.Stop();
+            //pasosArena.Stop();
         }
     }
 
