@@ -53,10 +53,11 @@ public class PlayerDash : MonoBehaviour
     {
         Debug.Log("Dashing");
         playerMovement.maxSpeed = dashNewSpeed;
+        Physics.IgnoreLayerCollision(6, 9, true);
 
         if (upgradeDash == true)
         {
-            Physics.IgnoreLayerCollision(3, 8, true);
+
         }
     }
 
@@ -71,7 +72,7 @@ public class PlayerDash : MonoBehaviour
 
         killedEnemy = false;
 
-        Physics.IgnoreLayerCollision(3, 8, false);
+        Physics.IgnoreLayerCollision(6, 9, false);
     }
 
     public void DelayToDash()

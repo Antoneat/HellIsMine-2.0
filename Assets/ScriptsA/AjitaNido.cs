@@ -8,10 +8,46 @@ public class AjitaNido : MonoBehaviour
     public bool dead;
     public GameObject enemy;
     public GameObject ajitaNido;
+    public List<GameObject> maxChildren;
+    public int maxNumber = 5;
+    public bool isPlayerInUwU;
+
+    private void Start()
+    {
+        maxChildren = new List<GameObject>();
+	}
     void Update()
     {
-        InvokeBomb();
+        if (isPlayerInUwU)
+        {
+            InvokeBomb();
+        }
         Muerte();
+
+        if (maxChildren[0] == null)
+        {
+            maxChildren.RemoveAt(0);
+        }
+        if (maxChildren[1] == null)
+        {
+            maxChildren.RemoveAt(1);
+        }
+        if (maxChildren[2] == null)
+        {
+            maxChildren.RemoveAt(2);
+        }
+        if (maxChildren[3] == null)
+        {
+            maxChildren.RemoveAt(3);
+        }
+        if (maxChildren[4] == null)
+        {
+            maxChildren.RemoveAt(4);
+        }
+        if (maxChildren[5] == null)
+        {
+            maxChildren.RemoveAt(5);
+        }
     }
 
     private void Muerte()
@@ -25,16 +61,16 @@ public class AjitaNido : MonoBehaviour
 
     void SummonBomb()
     {
-        if (!dead)
+        if (!dead && maxChildren.Count < maxNumber)
         {
-            Instantiate(enemy, ajitaNido.transform.position, Quaternion.identity);
-
+            GameObject obj = Instantiate(enemy, ajitaNido.transform.position, Quaternion.identity);
+            maxChildren.Add(obj);
         }
     }
 
     void InvokeBomb()
     {
-        Invoke("SummonBomb", 0.75f);
+        Invoke("SummonBomb", 5f);
     }
     private void OnTriggerEnter(Collider collider)
     {
@@ -42,5 +78,6 @@ public class AjitaNido : MonoBehaviour
 
         if (collider.gameObject.CompareTag("AtaqueDuro")) vida--;
     }
+
 }
 
