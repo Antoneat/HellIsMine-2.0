@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5224643360431342355}
   m_Layer: 0
-  m_Name: LAPIDA2
+  m_Name: Lapida2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5086335075717963786, guid: 954a12a386c25f94884297d9d0a9853f, type: 3}
+  - {fileID: 2100000, guid: cf7b329213267494683d03bb2bade0c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
