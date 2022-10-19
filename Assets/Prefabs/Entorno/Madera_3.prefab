@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6217680917788830012}
   - component: {fileID: 6297876309028570763}
   - component: {fileID: 1017638138458384322}
+  - component: {fileID: 687939776}
   m_Layer: 0
   m_Name: Madera_3
   m_TagString: Untagged
@@ -26,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138491968249026488}
-  m_LocalRotation: {x: -0, y: -0.93967295, z: -0, w: 0.3420743}
+  m_LocalRotation: {x: 0, y: -0.9396717, z: 0, w: 0.34207764}
   m_LocalPosition: {x: -8.504381, y: 0.039885, z: 30.138817}
-  m_LocalScale: {x: 0.65529, y: 0.65529, z: 0.65529}
+  m_LocalScale: {x: 0.006552897, y: 0.0065528923, z: 0.006552901}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.0633326, y: 0.18076801, z: 0.9621328}
   m_Center: {x: 2.0316663, y: 0.09038404, z: -0.51893383}
+--- !u!54 &687939776
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138491968249026488}
+  serializedVersion: 2
+  m_Mass: 0.2
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
