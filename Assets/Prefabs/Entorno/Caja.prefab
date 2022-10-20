@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 370587898263374135}
   - component: {fileID: 2504107989747432957}
   - component: {fileID: 7080757544408156328}
-  - component: {fileID: 9215591054355155962}
   - component: {fileID: 3234372946326575460}
   m_Layer: 0
   m_Name: Caja
@@ -64,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c18ce21ee8f025849a371ec416828e8f, type: 2}
+  - {fileID: 2100000, guid: d6a7da26621769a4eaa6a6947bfd957a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,19 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0714227, y: 1.0714265, z: 1.0715106}
   m_Center: {x: 0.00000029802322, y: 0.5508768, z: 0}
---- !u!114 &9215591054355155962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4161498143196929064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 1
 --- !u!54 &3234372946326575460
 Rigidbody:
   m_ObjectHideFlags: 0
