@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class BarraVidaBuscador : MonoBehaviour
 {
-    public BuscadorDmg buscadorDmg;
+    public EnemyLife enemyLife;
 
     public Image barraDeVida;
 
     void Update()
     {
-        barraDeVida.fillAmount = buscadorDmg.vida / buscadorDmg.maxVida;
+        barraDeVida.fillAmount = enemyLife.life / enemyLife.maxLife;
     }
 }

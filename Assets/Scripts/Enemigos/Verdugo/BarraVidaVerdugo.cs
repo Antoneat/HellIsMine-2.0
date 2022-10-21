@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class BarraVidaVerdugo : MonoBehaviour
 {
-    public VerdugoDmg verdugoDmg;
+    public EnemyLife enemyLife;
 
     public Image barraDeVida;
 
     void Update()
     {
-        barraDeVida.fillAmount = verdugoDmg.vida / verdugoDmg.maxVida;
+        barraDeVida.fillAmount = enemyLife.life / enemyLife.maxLife;
     }
 }

@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class BarraVidaBombita : MonoBehaviour
 {
-    public BombDmg bombDmg;
+    public EnemyLife enemyLife;
 
     public Image barraDeVida;
 
     void Update()
     {
-        barraDeVida.fillAmount = bombDmg.vida / bombDmg.maxVida;
+        barraDeVida.fillAmount = enemyLife.life / enemyLife.maxLife;
     }
 }
