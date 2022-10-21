@@ -277,9 +277,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ea06f00b28f88f34195ecbb748d8cf1f, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.407
+  m_audioClip: {fileID: 8300000, guid: 070fedaa3429ffa4b935d542d2924eb6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -287,13 +287,13 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.4556732
-  MaxDistance: 500
+  MinDistance: 1.8176537
+  MaxDistance: 4.0332794
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
-  BypassListenerEffects: 1
-  BypassReverbZones: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -323,7 +323,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -353,7 +353,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.977
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -370,7 +370,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8253271201981293182}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!169 &3959194364980280193
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ AudioLowPassFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8253271201981293182}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_LowpassResonanceQ: 1
   lowpassLevelCustomCurve:
