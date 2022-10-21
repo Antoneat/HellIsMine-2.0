@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDmg : MonoBehaviour
 {
     [Header("Vida")]
     public float actualvida;
     public float maxVida = 30f;
-    //private DmgController dmgC;
-   // public ConsolaComandosManager consolaComandos;
+    //public ConsolaComandosManager consolaComandos;
 
     public int actualSouls;
 
@@ -27,10 +27,11 @@ public class PlayerDmg : MonoBehaviour
 
     void Update()
     {
-      //  consolaComandos = FindObjectOfType<ConsolaComandosManager>();
+        //consolaComandos = FindObjectOfType<ConsolaComandosManager>();
 
         if (actualvida <= 0)
         {
+            playerMovement.enabled = false;
             playerMovement.maxSpeed = 0;
             anim.Play("Morir");
             Invoke(nameof(Dead), 3.20f);
@@ -52,6 +53,7 @@ public class PlayerDmg : MonoBehaviour
 
     public void Dead()
     {
-      //  consolaComandos.panelReinicio.SetActive(true);
+        SceneManager.LoadScene(1);
+        //consolaComandos.panelReinicio.SetActive(true);
     }
 }

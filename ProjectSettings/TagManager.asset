@@ -19,6 +19,8 @@ TagManager:
   - cam_Inicial
   - cam_BotonesPrincipal
   - cam_Opciones
+  - MousePos
+  - PlayerPivot
   layers:
   - Default
   - TransparentFX
