@@ -8,24 +8,34 @@ public class PlayerDmg : MonoBehaviour
     [Header("Vida")]
     public float actualvida;
     public float maxVida = 30f;
-    public AudioSource recibirDañoUno;
-    public AudioSource recibirDañoDos;
-    public AudioSource muerte;
+    //public ConsolaComandosManager consolaComandos;
 
-    private DmgController dmgC;
+    public int actualSouls;
+
+    public PlayerMovement playerMovement;
+
+    [Header("Animator")]
+    [SerializeField] private Animator anim;
 
     void Start()
     {
-        actualvida = 30f;
         //dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
-        //actualvida = maxVida;
+        actualvida = maxVida;
+        anim = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     void Update()
     {
+        //consolaComandos = FindObjectOfType<ConsolaComandosManager>();
+
         if (actualvida <= 0)
         {
-            Dead();
+            playerMovement.enabled = false;
+            playerMovement.maxSpeed = 0;
+            anim.Play("Morir");
+            Invoke(nameof(Dead), 3.20f);
+            //Destroy(gameObject, 3.20f);
             
         }
 
@@ -33,38 +43,17 @@ public class PlayerDmg : MonoBehaviour
         {
             actualvida = maxVida;
         }
-
     }
 
     public void GainLife(float life) => actualvida += life;
+
+    public void GainSoul(int soul) => actualSouls += soul;
 
     public void LoseLife(float dmg) => actualvida -= dmg;
 
     public void Dead()
     {
-        Destroy(gameObject);
-        SceneManager.LoadScene("WhiteBlocking 1");
-        muerte.Play();
-    }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-
-        if (collider.gameObject.CompareTag("AtkBomb"))
-        {
-            recibirDañoDos.Play();
-            
-            actualvida -= 0.25f; //* mecanica tinoco: dmgC.dmgMultiplier; andre no jodas tkm
-        }
-        if (collider.gameObject.CompareTag("MordiscoEnemy1"))
-        {
-            recibirDañoUno.Play();
-            actualvida -= 1.75f;
-        }
-        if (collider.gameObject.CompareTag("Lanza"))
-        {
-            recibirDañoDos.Play();
-            actualvida -= 2.5f;
-        }
+        SceneManager.LoadScene(1);
+        //consolaComandos.panelReinicio.SetActive(true);
     }
 }

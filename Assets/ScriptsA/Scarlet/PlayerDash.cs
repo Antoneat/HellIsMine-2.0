@@ -7,20 +7,15 @@ public class PlayerDash : MonoBehaviour
     public float dashNewSpeed;
     public bool canDash;
     public bool isDashing;
-    public Vector3 orientation;
-
-    public bool upgradeDash;
-
-    [Header("ResetDash")]
-    public bool killedEnemy;
+    public float cooldown;
 
     [Header("Componentes")]
     [SerializeField] private Animator anim;
     private PlayerMovement playerMovement;
     private PlayerAttackCombo playerAttackCombo;
     private PlayerHardAttack playerHardAttack;
-
     public AudioSource dashScarlet;
+
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -37,15 +32,7 @@ public class PlayerDash : MonoBehaviour
             canDash = false;
             isDashing = true;
             anim.Play("Dash");
-
-            playerAttackCombo.isAttacking = false;
-            playerAttackCombo.armaColliderRight.enabled = false;
-            playerAttackCombo.combo = 0;
-            playerHardAttack.isHardAttacking = false;
-            playerHardAttack.armaCollider1.enabled = false;
-            playerHardAttack.armaCollider2.enabled = false;
-            playerHardAttack.hardCombo = 0;
-            dashScarlet.Play();
+            ResetAttacks();
         }
     }
 
@@ -54,23 +41,16 @@ public class PlayerDash : MonoBehaviour
         Debug.Log("Dashing");
         playerMovement.maxSpeed = dashNewSpeed;
         Physics.IgnoreLayerCollision(6, 9, true);
-
-        if (upgradeDash == true)
-        {
-
-        }
     }
 
     public void FinishDash()
     {
         Debug.Log("Termino el Dash");
-        Invoke(nameof(DelayToDash), 0.4f);
+        Invoke(nameof(DelayToDash), cooldown);
         isDashing = false;
         playerMovement.maxSpeed = 7.2f;
 
         playerMovement.enabled = true;
-
-        killedEnemy = false;
 
         Physics.IgnoreLayerCollision(6, 9, false);
     }
@@ -79,4 +59,18 @@ public class PlayerDash : MonoBehaviour
     {
         canDash = true;
     }
+
+    #region No ver :D
+    public void ResetAttacks()
+    {
+        playerAttackCombo.isAttacking = false;
+        playerAttackCombo.continueAttack = false;
+        playerAttackCombo.nextAttack = false;
+        playerAttackCombo.ataqueBasico1Collider.SetActive(false);
+        playerAttackCombo.ataqueBasico2Collider.SetActive(false);
+        playerAttackCombo.ataqueBasico3Collider.SetActive(false);
+        playerHardAttack.isHardAttacking = false;
+        //playerHardAttack.ataqueHardCollider.enabled = false;
+    }
+    #endregion
 }

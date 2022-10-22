@@ -7,12 +7,7 @@ public class Lanza : MonoBehaviour
     [SerializeField] float speed;
     //public float damage;
     [SerializeField] float timeToDestroyObject;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (speed != 0)

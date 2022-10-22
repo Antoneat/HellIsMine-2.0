@@ -19,6 +19,9 @@ TagManager:
   - cam_Inicial
   - cam_BotonesPrincipal
   - cam_Opciones
+  - MousePos
+  - PlayerPivot
+  - Bombita2
   layers:
   - Default
   - TransparentFX

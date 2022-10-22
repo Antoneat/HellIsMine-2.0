@@ -6,6 +6,8 @@ public class VerdugoController : MonoBehaviour
 {
 	public UnityEngine.AI.NavMeshAgent agent;
 
+	//public VariableManagerVerdugo managerVerdugo;
+
 	public int destPoint = 0;
 	public Transform goal;
 
@@ -40,6 +42,8 @@ public class VerdugoController : MonoBehaviour
 
 	void Update()
 	{
+		//awareAI = managerVerdugo.awareAI_SO;
+		//atkRange = managerVerdugo.atkRange_SO;
 
 		playerDistance = Vector3.Distance(transform.position, goal.position);
 
@@ -95,7 +99,6 @@ public class VerdugoController : MonoBehaviour
 			LanzaEspiritual.transform.position = spawnPoints[i].transform.position;
 			LanzaEspiritual.transform.localRotation = spawnPoints[i].gameObject.transform.rotation;
 		}
-
 	}
 
 	void ChangeColorPreAtk()
@@ -111,5 +114,12 @@ public class VerdugoController : MonoBehaviour
 	void ChangeColorBack()
 	{
 		verdugoRender.material.color = Color.white;
+	}
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(transform.position, awareAI);
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(transform.position, atkRange);
 	}
 }
