@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6654190905018125405}
   - component: {fileID: 4939645386638611557}
   - component: {fileID: 7182538184246902578}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Verdugo
   m_TagString: Verdugo
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 5
   maxLife: 0
-  healAmount: 2
+  healAmount: 4
   isBomb: 0
   soulAmount: 1
 --- !u!65 &7182538184246902578
