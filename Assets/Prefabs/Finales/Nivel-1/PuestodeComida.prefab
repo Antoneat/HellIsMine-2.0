@@ -6689,6 +6689,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6581815094928354880}
+  - component: {fileID: 8707727652226951286}
+  - component: {fileID: 3768872372625061034}
+  - component: {fileID: 1781212717770031210}
+  - component: {fileID: 4209527379146066461}
   m_Layer: 0
   m_Name: PuestodeComida
   m_TagString: Untagged
@@ -6721,6 +6725,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8707727652226951286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772661825480062202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.818509, y: 2.330746, z: 2.154049}
+  m_Center: {x: -0.4720502, y: 0.66537297, z: 4.318462}
+--- !u!65 &3768872372625061034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772661825480062202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1532369, y: 2.330746, z: 5.8814487}
+  m_Center: {x: -3.3046863, y: 0.66537297, z: 0.74432373}
+--- !u!65 &1781212717770031210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772661825480062202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4196005, y: 2.1539013, z: 3.2704678}
+  m_Center: {x: 2.482637, y: 0.5769509, z: 1.3448362}
+--- !u!65 &4209527379146066461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5772661825480062202}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.40556526, y: 3.6643746, z: 0.26570034}
+  m_Center: {x: 3.3393211, y: 1.3321873, z: -2.0805192}
 --- !u!1 &5800103245893751132
 GameObject:
   m_ObjectHideFlags: 0

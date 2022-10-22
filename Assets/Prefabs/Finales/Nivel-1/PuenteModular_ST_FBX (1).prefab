@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4617140025975880498}
   - component: {fileID: 8627977631247676567}
   - component: {fileID: 5789461677273006173}
+  - component: {fileID: 9092215533713049418}
   m_Layer: 0
   m_Name: PuenteModular_ST_FBX (1)
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9092215533713049418
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429283726187553160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 304.78775, z: 802.49994}
+  m_Center: {x: 400, y: -152.33606, z: 1.2499809}

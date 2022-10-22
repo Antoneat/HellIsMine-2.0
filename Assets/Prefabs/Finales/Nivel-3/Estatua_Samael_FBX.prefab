@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2259305520042554794}
   - component: {fileID: 2951390420228651535}
   - component: {fileID: 1085797122305478341}
+  - component: {fileID: 9200062133782186141}
   m_Layer: 0
   m_Name: Estatua_Samael_FBX
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9200062133782186141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446071967316143888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 316.75623, y: 520.2876, z: 171.06133}
+  m_Center: {x: 0, y: 262.52484, z: 3.3477783}

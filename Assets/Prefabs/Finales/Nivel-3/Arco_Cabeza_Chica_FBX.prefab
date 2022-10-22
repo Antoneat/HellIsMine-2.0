@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6995792111935013538}
   - component: {fileID: 6249254970111216903}
   - component: {fileID: 8168728183936530893}
+  - component: {fileID: 6443669773952209746}
+  - component: {fileID: 4998691860743565005}
   m_Layer: 0
   m_Name: Arco_Cabeza_Chica_FBX
   m_TagString: Untagged
@@ -85,3 +87,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6443669773952209746
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664523418442504216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 65.10472, y: 195.68718, z: 79.6207}
+  m_Center: {x: -532.1275, y: 96.939674, z: -60.51662}
+--- !u!65 &4998691860743565005
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664523418442504216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 75.07248, y: 200.76234, z: 82.15837}
+  m_Center: {x: 533.3916, y: 99.4773, z: -59.24778}

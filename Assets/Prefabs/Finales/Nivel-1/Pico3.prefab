@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8374256836749997168}
   - component: {fileID: 2193142249102714775}
   - component: {fileID: 3883000377381482429}
+  - component: {fileID: 685387126833952038}
   m_Layer: 0
   m_Name: Pico3
   m_TagString: Untagged
@@ -85,3 +86,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &685387126833952038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2273677741101495813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2361531, y: 0.58151543, z: 4.6661196}
+  m_Center: {x: 0, y: 0, z: 0}

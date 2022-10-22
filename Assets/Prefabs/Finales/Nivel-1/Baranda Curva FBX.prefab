@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9203748083464111516}
   - component: {fileID: 5194219970636057145}
   - component: {fileID: 8066339195759656691}
+  - component: {fileID: 1104837277795432480}
+  - component: {fileID: 3464527739618045359}
   m_Layer: 0
   m_Name: Baranda Curva FBX
   m_TagString: Untagged
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1104837277795432480
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426684271678185254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 243.69684, y: 141.80115, z: 69.07592}
+  m_Center: {x: -88.42576, y: 70.90057, z: -207.41174}
+--- !u!65 &3464527739618045359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8426684271678185254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 67.03351, y: 141.80115, z: 241.9498}
+  m_Center: {x: -0.094115734, y: 70.90057, z: -120.9749}

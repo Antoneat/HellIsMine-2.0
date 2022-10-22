@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5278396673669561092}
   - component: {fileID: 9146663902621365409}
   - component: {fileID: 6416377203938984043}
+  - component: {fileID: 1434319083337967439}
   m_Layer: 0
   m_Name: Lapida_2_FBX
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1434319083337967439
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4759022098697757118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 89.28302, y: 135.9208, z: 28.04065}
+  m_Center: {x: -0.000030517578, y: 67.9604, z: 0}

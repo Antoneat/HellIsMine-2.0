@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1757675723702423562}
   - component: {fileID: 3443951168723836847}
   - component: {fileID: 589874926123723621}
+  - component: {fileID: 2055561077426592525}
   m_Layer: 0
   m_Name: Pared_Rota_FBX
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2055561077426592525
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382416444451195568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 784.5382, y: 321.85565, z: 115.40568}
+  m_Center: {x: -0.000071525574, y: 159.87825, z: 4.5372844}

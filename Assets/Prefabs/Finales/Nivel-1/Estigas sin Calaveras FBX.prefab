@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4961364418148503198}
   - component: {fileID: 8949430213290161943}
   - component: {fileID: 663025367988257711}
+  - component: {fileID: 7037326631934403459}
   m_Layer: 0
   m_Name: Lanza_con_Calavera_2
   m_TagString: Untagged
@@ -83,6 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7037326631934403459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7297730427297219216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0011009985, y: 0.0021136082, z: 0.015452455}
+  m_Center: {x: -0.00028233722, y: -0.0008737306, z: 0.0077041714}
 --- !u!1 &8016274924625582067
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +108,7 @@ GameObject:
   - component: {fileID: 1845853141580349375}
   - component: {fileID: 1896362665409711152}
   - component: {fileID: 8984730296903216217}
+  - component: {fileID: 7276480793972820587}
   m_Layer: 0
   m_Name: Lanza_con_Calavera_1
   m_TagString: Untagged
@@ -166,6 +181,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7276480793972820587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016274924625582067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0011009959, y: 0.0005911266, z: 0.015530583}
+  m_Center: {x: -0.00028233716, y: 0.000007221037, z: 0.007765291}
 --- !u!1 &8098497079419963702
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +205,7 @@ GameObject:
   - component: {fileID: 2383135328422446498}
   - component: {fileID: 1615799652212784530}
   - component: {fileID: 2513200750542392711}
+  - component: {fileID: 2214932569583673048}
   m_Layer: 0
   m_Name: Lanza_con_Calavera_3
   m_TagString: Untagged
@@ -249,6 +278,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2214932569583673048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8098497079419963702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0011009986, y: 0.0031787995, z: 0.015288603}
+  m_Center: {x: -0.00028233824, y: 0.001408271, z: 0.0076098116}
 --- !u!1 &8262025210418506840
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +300,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8782947859174618850}
+  - component: {fileID: 2081000343869350958}
+  - component: {fileID: 2710127407502959419}
   m_Layer: 0
   m_Name: Estigas sin Calaveras FBX
   m_TagString: Untagged
@@ -283,3 +327,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2081000343869350958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262025210418506840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2710127407502959419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262025210418506840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

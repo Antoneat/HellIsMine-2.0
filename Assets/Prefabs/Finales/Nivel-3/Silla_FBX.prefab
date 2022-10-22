@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8324995144822367895}
   - component: {fileID: 4911045018807052594}
   - component: {fileID: 7188728129066819064}
+  - component: {fileID: 544176192287830607}
+  - component: {fileID: 7775212630954611452}
   m_Layer: 0
   m_Name: Silla_FBX
   m_TagString: Untagged
@@ -84,3 +86,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &544176192287830607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701942208226229293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 77.96057, y: 71.5065, z: 92.66589}
+  m_Center: {x: -0.000059604645, y: 34.85406, z: 0}
+--- !u!65 &7775212630954611452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701942208226229293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 77.96057, y: 173.10326, z: 17.068459}
+  m_Center: {x: -0.000059604645, y: 85.65239, z: -37.79868}

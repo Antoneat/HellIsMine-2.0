@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 685765181754182647}
+  - component: {fileID: 2707351884840344835}
   m_Layer: 0
   m_Name: Calavera FBX
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2707351884840344835
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202524957458714957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 34.13978
+  m_Height: 81.20551
+  m_Direction: 1
+  m_Center: {x: 0.2640009, y: 79.0488, z: 14.179254}
 --- !u!1 &4102394854931554746
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4669027452575680266}
   - component: {fileID: 8603120134138955951}
   - component: {fileID: 5800807189577596005}
+  - component: {fileID: 6053972281647848625}
+  - component: {fileID: 2129000898415420485}
   m_Layer: 0
   m_Name: Rueda
   m_TagString: Untagged
@@ -92,3 +94,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6053972281647848625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5440461701027880368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0143328, y: 3.0926752, z: 4.0055475}
+  m_Center: {x: 0.025752544, y: -0.05973482, z: 0}
+--- !u!65 &2129000898415420485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5440461701027880368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.0055475, y: 3.0926752, z: 0.716588}
+  m_Center: {x: 0, y: -0.05973482, z: -0.035909176}

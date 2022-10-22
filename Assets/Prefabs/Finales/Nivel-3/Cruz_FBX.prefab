@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2174213443426758484}
   - component: {fileID: 2991375376185008369}
   - component: {fileID: 1037929389537055803}
+  - component: {fileID: 7473614815446428329}
+  - component: {fileID: 1253093514925898702}
   m_Layer: 0
   m_Name: Cruz_FBX
   m_TagString: Untagged
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7473614815446428329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542354469560579566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0989418, y: 1.575157, z: 41.20984}
+  m_Center: {x: 0.12974739, y: 0.0000038184226, z: -20.388721}
+--- !u!65 &1253093514925898702
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542354469560579566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.22293, y: 1.575157, z: 2.3054242}
+  m_Center: {x: 0.000014901161, y: 0.0000038184226, z: -27.735132}

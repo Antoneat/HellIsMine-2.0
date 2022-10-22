@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5578523442897822958}
   - component: {fileID: 8846545309918178123}
   - component: {fileID: 6710866331580948353}
+  - component: {fileID: 1303833768798103011}
   m_Layer: 0
   m_Name: Estatua_Yaldabaoth_FBX
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &1303833768798103011
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053378734001585748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 103.02747
+  m_Height: 408.47964
+  m_Direction: 1
+  m_Center: {x: 0.000011920929, y: 156.6643, z: -0.000011920929}

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2899785756382012346}
+  - component: {fileID: 4401809009259188221}
   m_Layer: 0
   m_Name: Estalagmitas
   m_TagString: Untagged
@@ -33,6 +34,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4401809009259188221
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555171996230187264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.2319052
+  m_Height: 7.1221166
+  m_Direction: 1
+  m_Center: {x: 0.36636543, y: 2.550368, z: -0.5217922}
 --- !u!1 &3455808799434140712
 GameObject:
   m_ObjectHideFlags: 0

@@ -1008,6 +1008,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8953418689689921421}
+  - component: {fileID: 8903890399871013268}
+  - component: {fileID: 3360589106674852810}
   m_Layer: 0
   m_Name: Desague
   m_TagString: Untagged
@@ -1034,6 +1036,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8903890399871013268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578018570158472503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.4943438, y: 1, z: 1.7918868}
+  m_Center: {x: -0.0017876625, y: 0, z: 0.3959434}
+--- !u!65 &3360589106674852810
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578018570158472503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.298816, y: 1, z: 0.74142456}
+  m_Center: {x: 0.00000023841858, y: 0, z: -0.7757263}
 --- !u!1 &8901904423714805096
 GameObject:
   m_ObjectHideFlags: 0

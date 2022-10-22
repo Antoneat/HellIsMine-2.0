@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5412708598318195195}
   - component: {fileID: 8985268806477311582}
   - component: {fileID: 6581695392057563796}
+  - component: {fileID: 7732840955651953621}
   m_Layer: 0
   m_Name: TroncoLargo FBX
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7732840955651953621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4635925191451818817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 199.38478, y: 36.742054, z: 71.992325}
+  m_Center: {x: 0.20491791, y: 19.337114, z: 0}

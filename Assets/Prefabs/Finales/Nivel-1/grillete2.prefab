@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 995952421374215782}
   - component: {fileID: 2925271173365938616}
   - component: {fileID: 3984568583530707194}
+  - component: {fileID: 1459804648514639914}
+  - component: {fileID: 2121559448204918893}
   m_Layer: 0
   m_Name: grillete2
   m_TagString: Untagged
@@ -83,3 +85,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1459804648514639914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795644808509239345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6942623, y: 0.65926874, z: 3.8832798}
+  m_Center: {x: 0.48549014, y: -0.18716195, z: 0.009174546}
+--- !u!65 &2121559448204918893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795644808509239345}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0844758, y: 0.45223925, z: 0.40653926}
+  m_Center: {x: -0.2711909, y: -0.2906767, z: 1.5111778}

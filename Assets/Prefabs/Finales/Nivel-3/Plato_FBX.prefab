@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8500574062710236270}
   - component: {fileID: 4780501216414215115}
   - component: {fileID: 7328262380299869953}
+  - component: {fileID: 7436855845451218502}
   m_Layer: 0
   m_Name: Plato_FBX
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7436855845451218502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9129864890407616212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 25.617584, y: 1.3486862, z: 26.012756}
+  m_Center: {x: -0.39826965, y: -1.0012474, z: -0.000015258789}

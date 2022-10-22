@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4434680279831427606}
   - component: {fileID: 730987914817123763}
   - component: {fileID: 3296646933276770681}
+  - component: {fileID: 768055723442334193}
   m_Layer: 0
   m_Name: Piedra_Chica_2_FBX
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &768055723442334193
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3945424420926415020}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 225.67444
+  m_Height: 556.73865
+  m_Direction: 1
+  m_Center: {x: 21.002815, y: 278.36932, z: -25.651794}

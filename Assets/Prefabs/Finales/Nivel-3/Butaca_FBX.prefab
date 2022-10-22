@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4460924089077819029}
   - component: {fileID: 740764381364119856}
   - component: {fileID: 3288557976547794426}
+  - component: {fileID: 2873125550710842471}
+  - component: {fileID: 6365666414124655177}
   m_Layer: 0
   m_Name: Butaca_FBX
   m_TagString: Untagged
@@ -84,3 +86,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2873125550710842471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937186755262233647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 403.9833, y: 71.977196, z: 95.85412}
+  m_Center: {x: 0.000023841858, y: 35.20135, z: 0.000059604645}
+--- !u!65 &6365666414124655177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937186755262233647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 403.9833, y: 190.5993, z: 13.871956}
+  m_Center: {x: 0.000023841858, y: 94.512436, z: -40.990974}

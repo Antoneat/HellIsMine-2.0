@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5881723854183404705}
   - component: {fileID: 7354324571069356804}
   - component: {fileID: 4749952296141778894}
+  - component: {fileID: 6729553696961175172}
   m_Layer: 0
   m_Name: BancoIndividual
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &6729553696961175172
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6551545597306555931}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0337396
+  m_Height: 2.6860847
+  m_Direction: 1
+  m_Center: {x: -0.00000023841858, y: -0.3093028, z: 0}

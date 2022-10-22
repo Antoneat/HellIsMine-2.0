@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1728653233945254221}
   - component: {fileID: 803224427217996441}
   - component: {fileID: 2267769995038832408}
+  - component: {fileID: 8499517111990274585}
   m_Layer: 0
   m_Name: rocas2
   m_TagString: Untagged
@@ -85,3 +86,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8499517111990274585
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477270974615703737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 6.5657797
+  m_Height: 4.2444572
+  m_Direction: 1
+  m_Center: {x: 0.26789212, y: 0, z: -0.3271482}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6163784888439482258}
   - component: {fileID: 6764369774334411178}
   - component: {fileID: 8995079010820112140}
+  - component: {fileID: 1846361597802191731}
   m_Layer: 0
   m_Name: Pared_3_Rota
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1846361597802191731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280410804363176384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8314514, y: 2.4183292, z: 0.67914736}
+  m_Center: {x: -0.8867285, y: 1.2068133, z: 0.085210726}

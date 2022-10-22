@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4932324681561492556}
   - component: {fileID: 1539577815865564357}
   - component: {fileID: 1119742414967151962}
+  - component: {fileID: 300659652801860777}
   m_Layer: 0
   m_Name: Piedra4
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &300659652801860777
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69954869624224951}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38750947
+  m_Height: 1.1913178
+  m_Direction: 1
+  m_Center: {x: -0.0012811124, y: 0.5956589, z: 0.00035233796}

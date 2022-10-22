@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1443371033361678805}
   - component: {fileID: 2569367204413017712}
   - component: {fileID: 309849601219984058}
+  - component: {fileID: 2254952482321106125}
+  - component: {fileID: 1223089551207663132}
+  - component: {fileID: 8574621908197444581}
   m_Layer: 0
   m_Name: PuenteModular_Pieza_2_FBX (1)
   m_TagString: Untagged
@@ -83,3 +86,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2254952482321106125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255233460189584239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 304.78775, z: 802.49994}
+  m_Center: {x: 400, y: -152.33606, z: 1.2499809}
+--- !u!65 &1223089551207663132
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255233460189584239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 409.07587, z: 38.22279}
+  m_Center: {x: 400, y: -100.19205, z: 382.1383}
+--- !u!65 &8574621908197444581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2255233460189584239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 409.07587, z: 25.105381}
+  m_Center: {x: 400, y: -100.19205, z: -388.6969}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 840586999418254914}
   - component: {fileID: 4325011422660393447}
   - component: {fileID: 2009011912519257389}
+  - component: {fileID: 2851637915799731317}
   m_Layer: 0
   m_Name: Baranda Doble FBX
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2851637915799731317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63487727774117112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 67.46829, y: 141.80115, z: 400}
+  m_Center: {x: 0.000015258789, y: 70.37515, z: -200}

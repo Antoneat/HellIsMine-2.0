@@ -416,6 +416,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4820022358635586186}
+  - component: {fileID: 8498186463022074993}
   m_Layer: 0
   m_Name: TiendadeSuccubo
   m_TagString: Untagged
@@ -444,6 +445,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8498186463022074993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309735579936258096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.8549, y: 3.048481, z: 5.783492}
+  m_Center: {x: 0.18871117, y: 1.0242405, z: 0.103988886}
 --- !u!1 &5527231959183040562
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2093052865426211235}
   - component: {fileID: 3072545560970448390}
   - component: {fileID: 956778119803976396}
+  - component: {fileID: 2140297152245945445}
   m_Layer: 0
   m_Name: Arbusto_3_FBX
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &2140297152245945445
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605485787391433497}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 141.32382
+  m_Height: 157.16786
+  m_Direction: 1
+  m_Center: {x: -0.000022888184, y: 76.37806, z: -0.0000076293945}

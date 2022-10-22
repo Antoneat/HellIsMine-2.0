@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5533769887960485401}
   - component: {fileID: 8891299672294703548}
   - component: {fileID: 6665550342089651574}
+  - component: {fileID: 5634924784322244380}
   m_Layer: 0
   m_Name: arbol_FBX
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &5634924784322244380
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152178207441753251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.8433897
+  m_Height: 5.6867795
+  m_Direction: 1
+  m_Center: {x: -0.22198367, y: 1.5259416, z: 0.097032785}

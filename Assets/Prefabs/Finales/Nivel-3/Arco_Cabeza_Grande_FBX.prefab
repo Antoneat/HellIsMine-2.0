@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5065540785030956105}
   - component: {fileID: 8206597646145096684}
   - component: {fileID: 6199000780617940774}
+  - component: {fileID: 1937875352656833493}
+  - component: {fileID: 4115803362824187108}
   m_Layer: 0
   m_Name: Arco_Cabeza_Grande_FBX
   m_TagString: Untagged
@@ -85,3 +87,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1937875352656833493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550609772316090099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 110.45799, y: 255.79686, z: 55.24683}
+  m_Center: {x: 536.0239, y: 122.10837, z: -23.276138}
+--- !u!65 &4115803362824187108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550609772316090099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 80.65739, y: 276.16287, z: 58.329346}
+  m_Center: {x: -550.92365, y: 132.29149, z: -24.299263}

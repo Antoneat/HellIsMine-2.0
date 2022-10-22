@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7115804573604759941}
   - component: {fileID: 6156333948294186528}
   - component: {fileID: 8253768061443650282}
+  - component: {fileID: 4272005454932068876}
   m_Layer: 0
   m_Name: Mesa_Chica_FBX
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4272005454932068876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7605377052656505663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 194.86475, y: 95.163, z: 194.54596}
+  m_Center: {x: -0.000015258789, y: 49.189793, z: -0.000015258789}

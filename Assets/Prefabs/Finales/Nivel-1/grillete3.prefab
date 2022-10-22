@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 116663100790427397}
   - component: {fileID: 6934781733700849600}
   - component: {fileID: 6536058981260306743}
+  - component: {fileID: 8536195730451032868}
+  - component: {fileID: 2100743082555306768}
+  - component: {fileID: 5734597588503049165}
   m_Layer: 0
   m_Name: grillete3
   m_TagString: Untagged
@@ -83,3 +86,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8536195730451032868
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282169319698599567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4255394, y: 0.66742337, z: 2.1801357}
+  m_Center: {x: 0.4781149, y: -0.70864666, z: 0.65115356}
+--- !u!135 &2100743082555306768
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282169319698599567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.991035
+  m_Center: {x: 0.6251844, y: 0.095408365, z: -1.9619541}
+--- !u!65 &5734597588503049165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282169319698599567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2214556, y: 1.0067266, z: 1.1247417}
+  m_Center: {x: -0.78612757, y: -0.53899527, z: 2.2707465}

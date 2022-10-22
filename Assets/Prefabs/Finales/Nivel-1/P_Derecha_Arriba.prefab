@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4096348720372995510}
   - component: {fileID: 5200801640595932983}
   - component: {fileID: 1147895714604222908}
+  - component: {fileID: 8660352980259169811}
   m_Layer: 0
   m_Name: P_Derecha_Arriba
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8660352980259169811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8669497483375699175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5000001, y: 0.1503047, z: 1.5}
+  m_Center: {x: -0.74999994, y: 0.07515234, z: -0.75}

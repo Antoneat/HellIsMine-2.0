@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8310008569252387104}
   - component: {fileID: 4971076060015924869}
   - component: {fileID: 7140518916578763343}
+  - component: {fileID: 9189127491143379139}
+  - component: {fileID: 4647884342009917520}
   m_Layer: 0
   m_Name: Mesa_Metal_FBX
   m_TagString: Untagged
@@ -84,3 +86,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9189127491143379139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653882666758554522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 107.46462, y: 25.863052, z: 192.51189}
+  m_Center: {x: 2.9115796, y: 84.98032, z: 0}
+--- !u!65 &4647884342009917520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653882666758554522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 113.28769, y: 99.59418, z: 106.95739}
+  m_Center: {x: 0.000047683716, y: 48.11496, z: 8.286738}

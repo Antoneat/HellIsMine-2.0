@@ -11,6 +11,11 @@ GameObject:
   - component: {fileID: 3397566077041023115}
   - component: {fileID: 1768032074179909422}
   - component: {fileID: 4570512074981860324}
+  - component: {fileID: 6571233320790023116}
+  - component: {fileID: 3440893066190820562}
+  - component: {fileID: 2355502887308093926}
+  - component: {fileID: 6379473330685709460}
+  - component: {fileID: 3453872615365456779}
   m_Layer: 0
   m_Name: PuenteModular_Esquina_FBX (1)
   m_TagString: Untagged
@@ -83,3 +88,68 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6571233320790023116
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624829972728169009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1600.1598, y: 304.78775, z: 1587.6179}
+  m_Center: {x: -403.69263, y: -152.33606, z: -391.30945}
+--- !u!65 &3440893066190820562
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624829972728169009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1619.9999, y: 411.89493, z: 21.932983}
+  m_Center: {x: -389.99997, y: -98.78249, z: 391.533}
+--- !u!65 &2355502887308093926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624829972728169009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.410698, y: 411.89493, z: 1602.5}
+  m_Center: {x: 406.29416, y: -98.78249, z: -398.75003}
+--- !u!65 &6379473330685709460
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624829972728169009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 827.8927, y: 411.89493, z: 30.446434}
+  m_Center: {x: -786.0525, y: -98.78249, z: -387.92468}
+--- !u!65 &3453872615365456779
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624829972728169009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.682716, y: 411.89493, z: 820.32404}
+  m_Center: {x: -398.80115, y: -98.78249, z: -789.83795}

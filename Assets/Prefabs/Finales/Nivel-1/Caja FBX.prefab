@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2324378584741616887}
   - component: {fileID: 1724317445667394386}
   - component: {fileID: 3461850694096742296}
+  - component: {fileID: 240570745832574112}
   m_Layer: 0
   m_Name: Caja FBX
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &240570745832574112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101303033183389261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 85.16754, y: 85.16785, z: 85.17454}
+  m_Center: {x: 0.000030517578, y: 43.789276, z: 0}

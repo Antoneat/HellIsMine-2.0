@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3097360838258798945}
   - component: {fileID: 2113264444712697540}
   - component: {fileID: 4230891714895727118}
+  - component: {fileID: 4131403327582625891}
   m_Layer: 0
   m_Name: Mineral_FBX
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4131403327582625891
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429650118793718747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 59.674973
+  m_Height: 104.55703
+  m_Direction: 1
+  m_Center: {x: 0.000032424927, y: 50.363293, z: 0}

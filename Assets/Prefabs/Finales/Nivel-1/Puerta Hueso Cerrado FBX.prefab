@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1943664441267067605}
   - component: {fileID: 3266960309621298544}
   - component: {fileID: 770788842270089658}
+  - component: {fileID: 2980586786180432186}
   m_Layer: 0
   m_Name: Puerta Hueso Cerrado FBX
   m_TagString: Untagged
@@ -84,3 +85,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2980586786180432186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275248969764061295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 287.9502, y: 300.11493, z: 40.77744}
+  m_Center: {x: -0.5607724, y: 150.05746, z: 0.022336096}
