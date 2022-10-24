@@ -23,6 +23,10 @@ public class BuscadorController : MonoBehaviour
 	public bool coPlay;
 	public bool ataco;
 
+	public Animator ataqueBuscador;
+	public Animator runBuscador;
+
+
 	PlayerDmg plyrDmg;
 
 	[Header("FeedbackVisual")]
@@ -69,6 +73,7 @@ public class BuscadorController : MonoBehaviour
 		if (playerDistance <= atkRange && coPlay == false)
 		{
 			StartCoroutine(Mordisco());
+			ataqueBuscador.SetBool("AtaqueFull", true);
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
@@ -86,6 +91,8 @@ public class BuscadorController : MonoBehaviour
 	public void Chase()
 	{
 		agent.SetDestination(goal.position);
+		runBuscador.SetBool("Run", true);
+
 	}
 
 

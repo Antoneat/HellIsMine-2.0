@@ -12,7 +12,7 @@ public class EnemyLife : MonoBehaviour
 
     public int soulAmount;
 
-    public Animator muerteVerdugo;  
+    
 
 
 
@@ -36,7 +36,7 @@ public class EnemyLife : MonoBehaviour
             }
             
             Destroy(gameObject);
-            muerteVerdugo.SetBool("Muerte", true);
+            
         }
     }
 }
