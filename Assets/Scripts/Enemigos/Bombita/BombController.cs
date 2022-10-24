@@ -17,8 +17,11 @@ public class BombController : MonoBehaviour
 	public float playerDistance;
 	public float awareAI;
 	public float atkRange;
-
 	
+	//public Animator moverseAgitador;
+	public Animator ataqueAgitador;
+	
+
 	[Header("AtaqueBasico")]
 	public GameObject basicoGO;
 
@@ -68,6 +71,8 @@ public class BombController : MonoBehaviour
 		if (playerDistance <= atkRange && coPlay==false)
 		{
 			StartCoroutine(AtaqueBasico());
+			ataqueAgitador.SetBool("Attack", true);
+
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
@@ -79,6 +84,7 @@ public class BombController : MonoBehaviour
 
 	void LookAtPlayer()
 	{
+		
 		transform.LookAt(goal);
 	}
 
@@ -90,6 +96,7 @@ public class BombController : MonoBehaviour
 
 	public IEnumerator AtaqueBasico()
 	{
+		
 		coPlay = true;
 		agent.isStopped = true;
 		ChangeColorPreAtk();

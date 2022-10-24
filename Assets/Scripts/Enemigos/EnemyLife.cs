@@ -12,6 +12,9 @@ public class EnemyLife : MonoBehaviour
 
     public int soulAmount;
 
+    
+
+
 
     private void Start()
     {
@@ -31,7 +34,7 @@ public class EnemyLife : MonoBehaviour
             {
                 player.GetComponent<PlayerDmg>().GainSoul(soulAmount);
             }
-
+            
             Destroy(gameObject);
         }
     }
