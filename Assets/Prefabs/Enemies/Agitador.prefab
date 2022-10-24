@@ -565,7 +565,6 @@ MonoBehaviour:
   playerDistance: 0
   awareAI: 25
   atkRange: 5
-  moverseAgitador: {fileID: 0}
   ataqueAgitador: {fileID: 9025773258636632773}
   basicoGO: {fileID: 2119726176608211605}
   coPlay: 0
@@ -584,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   maxLife: 0
-  healAmount: 1
+  healAmount: 2
   isBomb: 1
   soulAmount: 0
 --- !u!195 &2119726176885463035
