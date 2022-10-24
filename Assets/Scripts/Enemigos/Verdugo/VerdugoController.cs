@@ -15,6 +15,7 @@ public class VerdugoController : MonoBehaviour
 	public float awareAI;
 	public float atkRange;
 
+	public Animator ataqueVerdugo;
 	public bool coPlay;
 	[Header("FeedbackVisual")]
 	[SerializeField] GameObject Verdugo;
@@ -61,6 +62,7 @@ public class VerdugoController : MonoBehaviour
 		if (playerDistance <= atkRange && coPlay == false)
 		{
 			StartCoroutine(LanzaEspiritual());
+			ataqueVerdugo.SetBool("Attack", true);
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
