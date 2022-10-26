@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class TiendaManager : MonoBehaviour
 {
-    public GameObject img_Tienda;
+    public GameObject img_Tienda, dialogo;
 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -22,9 +21,15 @@ public class TiendaManager : MonoBehaviour
         if(collision.collider.CompareTag("Player"))
         {
             img_Tienda.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = 1;
         }
     }
+
+    public void Hablar()
+    {
+        dialogo.SetActive(true);
+    }
+
 
     public void CerrarTienda()
     {
