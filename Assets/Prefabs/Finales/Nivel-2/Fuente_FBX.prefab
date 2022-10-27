@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2516712139214106026}
   - component: {fileID: 363066516231805280}
   - component: {fileID: 1220442424861823062}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fuente_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7403572549928109028, guid: 82025f792ba154840b8e72f95f8a7fe8, type: 3}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

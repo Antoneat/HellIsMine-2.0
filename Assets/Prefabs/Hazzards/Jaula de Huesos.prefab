@@ -92,7 +92,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4285074416557773235}
   m_LocalRotation: {x: -0, y: 0.7071067, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.003257752, y: -3.78, z: -0.00009727455}
+  m_LocalPosition: {x: 0.003257752, y: -3.567, z: -0.00009727455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -160,8 +160,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.018184, y: 2.458456, z: 0.5436249}
-  m_Center: {x: 0.000015406, y: 1.1800628, z: 1.234925}
+  m_Size: {x: 3.018184, y: 2.3799298, z: 0.5436249}
+  m_Center: {x: 0.000015406004, y: 1.1407996, z: 1.234925}
 --- !u!65 &3357518760154253352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -173,8 +173,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.54837036, y: 2.458456, z: 3.013444}
-  m_Center: {x: -1.2348919, y: 1.1800628, z: 0.000015405996}
+  m_Size: {x: 0.54837036, y: 2.37993, z: 3.013444}
+  m_Center: {x: -1.2348919, y: 1.1408, z: 0.000015405996}
 --- !u!65 &1462061480486313064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -186,8 +186,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.018184, y: 2.4629264, z: 0.543627}
-  m_Center: {x: 0.000015111575, y: 1.182298, z: -1.2348934}
+  m_Size: {x: 3.018184, y: 2.37993, z: 0.543627}
+  m_Center: {x: 0.000015111575, y: 1.1408, z: -1.2348934}
 --- !u!65 &4293297899813623339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -199,8 +199,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5781254, y: 2.4528105, z: 3.013444}
-  m_Center: {x: 1.2200446, y: 1.17724, z: 0.000015113344}
+  m_Size: {x: 0.5781254, y: 2.37993, z: 3.013444}
+  m_Center: {x: 1.2200446, y: 1.1408, z: 0.000015113344}
 --- !u!1 &5638871809694558421
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,4 +345,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jaulaMasterTransform: {fileID: 4172751798940599239}
   colliderTriggerParedes: {fileID: 4849808333250458919}
+  distance: 2.35
   jaulaIsActive: 0
