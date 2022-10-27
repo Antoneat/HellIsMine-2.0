@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -73,7 +73,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Arz2
+  m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 73372
+  controlID: 988
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 73272
+  controlID: 793
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 73349
+  controlID: 861
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 73350
+  controlID: 839
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -478,24 +478,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 404}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 628df2ff6217f4ff7c42fdffe07effff00f9ffff0efbffff26c2000072cc000090d20000fe6902008a6f0200a871020000720200d4720200
+      m_ExpandedIDs: 00fbffffa07600000e770000f28e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: PlayerVirtualCam
-        m_OriginalName: PlayerVirtualCam
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 158780
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -780,9 +780,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 55.834778, y: 14.35248, z: -35.37062}
+    m_Target: {x: 32.006786, y: 10.530775, z: 69.78993}
     speed: 2
-    m_Value: {x: 55.834778, y: 14.35248, z: -35.37062}
+    m_Value: {x: 32.006786, y: 10.530775, z: 69.78993}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -829,13 +829,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.45822608, y: -0.07470133, z: 0.040101282, w: 0.8849461}
+    m_Target: {x: 0.3629575, y: -0.0003706457, z: -0.000084865605, w: 0.93192863}
     speed: 2
-    m_Value: {x: 0.45677167, y: -0.07607881, z: 0.040668547, w: 0.88539135}
+    m_Value: {x: -0.36295748, y: 0.00037064566, z: 0.0000848656, w: -0.9319286}
   m_Size:
-    m_Target: 7.2414646
+    m_Target: 0.60251904
     speed: 2
-    m_Value: 7.2414646
+    m_Value: 0.60251904
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -890,7 +890,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -183338
+  m_LastSelectedObjectID: -3866
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -920,11 +920,30 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_ViewTransforms:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
+    m_KeySerializationHelper:
+    - {fileID: 354858618354840293, guid: 81d69de5dcc652a44a7138897abeee07, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 0}
-  m_BreadCrumbs: []
+  m_AnimatorController: {fileID: 9100000, guid: 81d69de5dcc652a44a7138897abeee07, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 354858618354840293, guid: 81d69de5dcc652a44a7138897abeee07, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -977,22 +996,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Imagenes
+    - Assets/Sonidos
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Imagenes
+  - Assets/Sonidos
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\TLS\6to Ciclo\Taller\Team\Git\HellIsMine-2.0
+  m_LastProjectPath: G:\ProyectoTLS\HellIsMine-2.0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 164}
-    m_SelectedIDs: 9ab90000
-    m_LastClickedID: 47514
-    m_ExpandedIDs: 0000000020b9000022b9000024b9000094b90000cab900001445020000ca9a3b
+    scrollPos: {x: 0, y: 54}
+    m_SelectedIDs: 20b50000
+    m_LastClickedID: 46368
+    m_ExpandedIDs: 00000000b6b40000b8b40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1020,7 +1039,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000020b9000022b9000024b9000094b90000b6b90000cab900001445020000ca9a3b
+    m_ExpandedIDs: 00000000b6b40000b8b40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1111,7 +1130,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 517
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
