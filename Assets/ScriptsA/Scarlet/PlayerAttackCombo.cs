@@ -82,6 +82,7 @@ public class PlayerAttackCombo : MonoBehaviour
         if (isAttacking)
         {
             //PARTICLES
+            if(guadanaParticles)
             guadanaParticles.SetActive(true);
 
             //ROTATION
@@ -91,6 +92,7 @@ public class PlayerAttackCombo : MonoBehaviour
         else
         {
             //PARTICLES
+            if(guadanaParticles)
             guadanaParticles.SetActive(false);
         }
     }
