@@ -55,7 +55,7 @@ public class AjitaNido : MonoBehaviour
         if (vida <= 0)
         {
             dead = true;
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 

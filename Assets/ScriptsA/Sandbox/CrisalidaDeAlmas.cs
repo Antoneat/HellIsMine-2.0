@@ -23,7 +23,7 @@ public class CrisalidaDeAlmas : MonoBehaviour
         if (other.CompareTag("Guadana") || other.CompareTag("AtaqueDuro"))
         {
             playerDmg.actualvida += 2.5f;
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
             //spawCrisalida.crisalidaIsActive = false;
         }
     }

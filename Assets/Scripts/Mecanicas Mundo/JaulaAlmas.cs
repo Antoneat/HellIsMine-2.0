@@ -7,6 +7,7 @@ public class JaulaAlmas : MonoBehaviour
     public Transform jaulaMasterTransform;
 
     public BoxCollider colliderTriggerParedes;
+    public float distance;
 
     public bool jaulaIsActive = false;
 
@@ -25,7 +26,7 @@ public class JaulaAlmas : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            jaulaMasterTransform.position = new Vector3(jaulaMasterTransform.position.x, jaulaMasterTransform.position.y + 2.8f, jaulaMasterTransform.position.z);
+            jaulaMasterTransform.position = new Vector3(jaulaMasterTransform.position.x, jaulaMasterTransform.position.y + distance, jaulaMasterTransform.position.z);
             colliderTriggerParedes.enabled = false;
             jaulaIsActive = true;
         }

@@ -1,0 +1,33 @@
+﻿title: Opciones
+tags:
+---
+Sucubo: Ey, ¿Que quieres saber?
+-> Lugar
+    <<jump Lugar>>
+-> Yaldabaoth
+    <<jump Yaldabaoth>>
+-> Samael
+    <<jump Samael>>
+===
+//
+title: Lugar
+---
+Sucubo: Estas en el infierno.
+Scarlet: Interesante.
+<<jump Opciones>>
+===
+title: Yaldabaoth
+---
+Sucubo: Yaldabaoth, más conocida como la segunda mano del rey
+Sucubo: Si te encuentras con ella, preferirás no haber existido.
+Scarlet: Lo tendré en cuenta.
+<<jump Opciones>>
+===
+title: Samael
+---
+Sucubo: Samael es el tipo que manda aquí.
+Sucubo: ...
+Sucubo: Solo... nunca te enfrentes a él, vale?
+Scarlet: Okey?
+<<jump Opciones>>
+===

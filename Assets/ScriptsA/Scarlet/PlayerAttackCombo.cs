@@ -15,6 +15,8 @@ public class PlayerAttackCombo : MonoBehaviour
 
     [Header("Components")]
     public Animator anim;
+        
+    public GameObject guadanaParticles;
     public GameObject ataqueBasico1Collider;
     public GameObject ataqueBasico2Collider;
     public GameObject ataqueBasico3Collider;
@@ -74,18 +76,22 @@ public class PlayerAttackCombo : MonoBehaviour
 
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
 
-            Vector3.MoveTowards(transform.position, mousePos.transform.position, 1f);
-
             anim.SetTrigger("StartCombo");
         }
-        //MOVE
-        Vector3.MoveTowards(transform.position, mousePos.transform.position, 2f * Time.deltaTime);
 
         if (isAttacking)
         {
+            //PARTICLES
+            guadanaParticles.SetActive(true);
+
             //ROTATION
             rotateTo = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotateTo, rotationSpeed * Time.deltaTime);
+        }
+        else
+        {
+            //PARTICLES
+            guadanaParticles.SetActive(false);
         }
     }
 
