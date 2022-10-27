@@ -8,13 +8,14 @@ public class ObjetosRompibles : MonoBehaviour
     public int vida = 1;
     [SerializeField] private float time;
     [SerializeField] private UnityEvent OnDestroy;
-    private MeshRenderer mesh;
-    private Collider collider;
+    private MeshRenderer[] mesh ;
+    private Collider[] collider;
 
     private void Awake()
     {
-        mesh = GetComponent<MeshRenderer>();
-        collider = GetComponent<Collider>();
+        mesh = GetComponentsInChildren<MeshRenderer>();
+        collider = GetComponentsInChildren<Collider>();
+
     }
 
 
@@ -22,8 +23,12 @@ public class ObjetosRompibles : MonoBehaviour
     {
         if (vida > 0) yield break;
         OnDestroy.Invoke();
-        if (mesh) mesh.enabled = false;
-        if (collider) collider.enabled = false;
+
+        foreach (var item in mesh) item.enabled = false;
+
+        foreach (var item in collider) item.enabled = false;
+        
+        
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
     }
