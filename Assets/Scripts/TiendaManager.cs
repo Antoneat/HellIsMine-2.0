@@ -27,7 +27,7 @@ public class TiendaManager : MonoBehaviour
 
     public void Hablar()
     {
-        dialogo.SetActive(true);
+        //dialogo.SetActive(true);
     }
 
 
