@@ -13,6 +13,6 @@ public class SoulsText : MonoBehaviour
     {
         playerDmg = FindObjectOfType<PlayerDmg>();
 
-        soulsText.text = "Almas: " + playerDmg.actualSouls.ToString();
+        soulsText.text = ": " + playerDmg.actualSouls.ToString();
     }
 }
