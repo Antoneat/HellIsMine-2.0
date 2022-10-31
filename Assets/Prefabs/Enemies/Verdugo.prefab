@@ -202,10 +202,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 5
   maxLife: 0
-  healAmount: 4
+  healAmount: 2.5
   isBomb: 0
   soulAmount: 1
-  muerteVerdugo: {fileID: 7901663712272452239}
 --- !u!65 &7182538184246902578
 BoxCollider:
   m_ObjectHideFlags: 0

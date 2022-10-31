@@ -583,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 1
   maxLife: 0
-  healAmount: 2
+  healAmount: 1.5
   isBomb: 1
   soulAmount: 0
 --- !u!195 &2119726176885463035
