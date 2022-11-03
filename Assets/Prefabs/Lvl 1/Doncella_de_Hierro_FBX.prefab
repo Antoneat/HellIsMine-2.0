@@ -1,5 +1,121 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &925737739534166267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6211362222158912320}
+  - component: {fileID: 7786620792326345616}
+  - component: {fileID: 8378637784749531362}
+  m_Layer: 0
+  m_Name: DanoDer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6211362222158912320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925737739534166267}
+  m_LocalRotation: {x: -0.012242048, y: -0.25479212, z: 0.09331995, w: 0.96240455}
+  m_LocalPosition: {x: 1.45, y: 0.26080415, z: 0.44}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5490253312852328518}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 1.375, y: -29.528, z: 10.714}
+--- !u!65 &7786620792326345616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925737739534166267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7365288, y: 1.875632, z: 0.24666916}
+  m_Center: {x: -0.13173524, y: 0.8810774, z: 0.40495813}
+--- !u!114 &8378637784749531362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925737739534166267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d34eeb26c4604a98ced233a85e4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1597056841816901462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7452774462367041015}
+  - component: {fileID: 4644104608374455195}
+  - component: {fileID: 2953039398815690596}
+  m_Layer: 0
+  m_Name: DanoCentro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7452774462367041015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597056841816901462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5490253312852328518}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4644104608374455195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597056841816901462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.994867, z: 0.24666919}
+  m_Center: {x: 0.00000076144937, y: 0.9406951, z: 0.40495828}
+--- !u!114 &2953039398815690596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597056841816901462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d34eeb26c4604a98ced233a85e4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5150601610774829820
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +148,10 @@ Transform:
   m_LocalPosition: {x: -14.547, y: -0.1, z: 34.031}
   m_LocalScale: {x: 1.4062597, y: 1.4062597, z: 1.4062597}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7452774462367041015}
+  - {fileID: 6211362222158912320}
+  - {fileID: 4617972817505764402}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 148.084, z: 0}
@@ -126,3 +245,61 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.94467354, y: 2.9889102, z: 0.55068433}
   m_Center: {x: 1.1281667, y: 1.4944551, z: 0.6356556}
+--- !u!1 &5332889947845591397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4617972817505764402}
+  - component: {fileID: 2474608339622405034}
+  - component: {fileID: 3444630074853674271}
+  m_Layer: 0
+  m_Name: DanoIzq
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4617972817505764402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332889947845591397}
+  m_LocalRotation: {x: -0.009100976, y: 0.2160911, z: -0.06381598, w: 0.974243}
+  m_LocalPosition: {x: -1.584, y: 0.311, z: 0.417}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5490253312852328518}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0.564, y: 24.976, z: -7.37}
+--- !u!65 &2474608339622405034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332889947845591397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50789666, y: 1.875632, z: 0.2466692}
+  m_Center: {x: 0.24605267, y: 0.88107747, z: 0.4049587}
+--- !u!114 &3444630074853674271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332889947845591397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853d34eeb26c4604a98ced233a85e4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
