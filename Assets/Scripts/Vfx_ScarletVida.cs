@@ -17,18 +17,11 @@ public class Vfx_ScarletVida : MonoBehaviour
     void Update()
     {
         ActivarOrbe();
-        SeguirScarlet();
     }
 
     public void ActivarOrbe()
     {
         almasScarlet.Play();
         contenedorDeParticleAlmas.SetActive(true);
-    }
-    
-
-    public void SeguirScarlet()
-    {
-        Debug.Log("Ola");
     }
 }

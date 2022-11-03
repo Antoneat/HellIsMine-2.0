@@ -9,6 +9,7 @@ public class PlayerDmg : MonoBehaviour
     [Header("Vida")]
     public float actualvida;
     public float maxVida = 30f;
+    //public bool takingDmg;
     //public ConsolaComandosManager consolaComandos;
 
     public int actualSouls;
@@ -19,8 +20,9 @@ public class PlayerDmg : MonoBehaviour
     public float fadeSpeed;
     private float durationTimer;
 
-    [Header("Almitas_VFX")]
+    [Header("VFX")]
     public ParticleSystem almas;
+    public ParticleSystem recibiendoDmg;
 
 
     public PlayerMovement playerMovement;
@@ -78,9 +80,13 @@ public class PlayerDmg : MonoBehaviour
 
     public void LoseLife(float dmg)
     {
+        //takingDmg = true;
         actualvida -= dmg;
         durationTimer = 0f;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
+        recibiendoDmg.Play();
+        Debug.Log("Daño Scarlet");
+        
     }
 
     public void Alma_Vfx()
