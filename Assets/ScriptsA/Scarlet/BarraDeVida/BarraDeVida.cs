@@ -9,8 +9,11 @@ public class BarraDeVida : MonoBehaviour
 
     public Image barraDeVida;
 
+    public float durationTimer;
+
     void Update()
     {
         barraDeVida.fillAmount = playerDmg.actualvida / playerDmg.maxVida;
+
     }
 }

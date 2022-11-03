@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -76,6 +77,14 @@ public class PlayerMovement : MonoBehaviour
         if (rgbd.velocity != Vector3.zero)
         {
             playerTransform.rotation = Quaternion.LookRotation(new Vector3(rgbd.velocity.normalized.x, 0, rgbd.velocity.normalized.z));
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Nivel 1"))
+        {
+            SceneManager.LoadScene("WhiteBlocking 2");
         }
     }
 }

@@ -73,7 +73,7 @@ public class BuscadorController : MonoBehaviour
 		if (playerDistance <= atkRange && coPlay == false)
 		{
 			StartCoroutine(Mordisco());
-			ataqueBuscador.SetBool("AtaqueFull", true);
+			//ataqueBuscador.SetBool("AtaqueFull", true);
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
@@ -112,6 +112,7 @@ public class BuscadorController : MonoBehaviour
 				//plyrDmg.actualvida -= 1.5f;
 				GameObject obj = Instantiate(hitboxPrefab);
 				obj.transform.position = mordida.transform.position;
+				ataqueBuscador.SetBool("AtaqueFull", true);
 			}
 		}
 		yield return new WaitForSeconds(1f);
@@ -121,6 +122,8 @@ public class BuscadorController : MonoBehaviour
 		ataco = false;
 		coPlay = false;
 		yield break;
+
+		
 	}
 
 	void ChangeColorPreAtk()

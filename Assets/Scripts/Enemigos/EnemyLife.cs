@@ -12,12 +12,12 @@ public class EnemyLife : MonoBehaviour
 
     public int soulAmount;
 
+    //public ParticleSystem almas;
     
-
-
 
     private void Start()
     {
+        
         maxLife = life;
     }
 
@@ -33,6 +33,7 @@ public class EnemyLife : MonoBehaviour
             if (!isBomb)
             {
                 player.GetComponent<PlayerDmg>().GainSoul(soulAmount);
+                player.GetComponent<PlayerDmg>().Alma_Vfx();
             }
             
             Destroy(gameObject);

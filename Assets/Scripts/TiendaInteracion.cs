@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TiendaInteracion : MonoBehaviour
 {
-    public GameObject panelInicial, panelTiendaMejoras;
+    public GameObject panelInicial, panelTiendaMejoras,panelMaster;
 
 
 
@@ -38,4 +38,10 @@ public class TiendaInteracion : MonoBehaviour
     }
 
     #endregion
+
+    public void ExitTienda()
+    {
+        panelMaster.SetActive(false);
+
+    }
 }
