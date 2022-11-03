@@ -10,6 +10,8 @@ public class ObjetosRompibles : MonoBehaviour
     [SerializeField] private UnityEvent OnDestroy;
     private MeshRenderer[] mesh ;
     private Collider[] collider;
+    [SerializeField] private List<GameObject> vfx = new List<GameObject>();
+    [SerializeField] private GameObject spawnPointVfx;
 
     private void Awake()
     {
@@ -39,4 +41,13 @@ public class ObjetosRompibles : MonoBehaviour
         if (collider.gameObject.CompareTag("AtaqueDuro")) vida--;
         StartCoroutine(Muerte());
     }
+
+    public void SpawnVFX()
+	{
+        foreach(GameObject i in vfx)
+		{
+            GameObject obj = Instantiate(i);
+            obj.transform.position = spawnPointVfx.transform.position;
+		}
+	}
 }

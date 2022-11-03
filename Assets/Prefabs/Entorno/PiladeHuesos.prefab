@@ -130,6 +130,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -5448784236512658239}
+        m_TargetAssemblyTypeName: ObjetosRompibles, Assembly-CSharp
+        m_MethodName: SpawnVFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  vfx:
+  - {fileID: 5165994415647142424, guid: 87bbb1e92c0f2c04c87e0c32a0ebdc20, type: 3}
+  spawnPointVfx: {fileID: 1870016238120147608}
 --- !u!82 &8222818285593155909
 AudioSource:
   m_ObjectHideFlags: 0
@@ -306,5 +321,10 @@ PrefabInstance:
 --- !u!4 &1348952817601953826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cee5826de150acb45868d5536cbe21e3, type: 3}
+  m_PrefabInstance: {fileID: 1527503184901187529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1870016238120147608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cee5826de150acb45868d5536cbe21e3, type: 3}
   m_PrefabInstance: {fileID: 1527503184901187529}
   m_PrefabAsset: {fileID: 0}

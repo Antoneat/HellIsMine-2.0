@@ -190,6 +190,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2331149947183843180}
     m_Modifications:
+    - target: {fileID: 3249399871038790982, guid: e75ffb34a0271a240b2a9f11f084c340, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 16b0cd46594d171409dcbe5f165c06a5, type: 2}
     - target: {fileID: 3898098055351123091, guid: e75ffb34a0271a240b2a9f11f084c340, type: 3}
       propertyPath: m_Name
       value: Fetos Clavados FBX

@@ -1347,6 +1347,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1560389160246932859}
+        m_TargetAssemblyTypeName: ObjetosRompibles, Assembly-CSharp
+        m_MethodName: SpawnVFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  vfx:
+  - {fileID: 5165994415647142424, guid: 87bbb1e92c0f2c04c87e0c32a0ebdc20, type: 3}
+  - {fileID: 7390848407435261878, guid: 7f3634c3185ee284d8a998fc6447085c, type: 3}
 --- !u!82 &9081986247642976560
 AudioSource:
   m_ObjectHideFlags: 0
