@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826d6d874fc9d444f84f67a2f2309e18, type: 3}
+  m_Name: ManagerBombitaSO
+  m_EditorClassIdentifier: 
+  bombController: {fileID: 2119726176885463039, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
+  enemyLife: {fileID: -550314445654320122, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
+  awareAI_SO: 25
+  atkRange_SO: 5
+  life_SO: 1
+  healAmount_SO: 1.5
+  soulAmount_SO: 0
+  dmg_SO: 0
