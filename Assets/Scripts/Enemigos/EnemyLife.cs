@@ -17,7 +17,6 @@ public class EnemyLife : MonoBehaviour
 
     private void Start()
     {
-        
         maxLife = life;
     }
 
@@ -29,15 +28,21 @@ public class EnemyLife : MonoBehaviour
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<PlayerDmg>().GainLife(healAmount);
+            
+            MuertePerro();
+            Debug.Log("deberia morir el perro");
 
             if (!isBomb)
             {
                 player.GetComponent<PlayerDmg>().GainSoul(soulAmount);
                 player.GetComponent<PlayerDmg>().Alma_Vfx();
             }
-            
-            Destroy(gameObject);
-            
+
         }
+    }
+
+    public void MuertePerro()
+    {
+        Destroy(gameObject);
     }
 }

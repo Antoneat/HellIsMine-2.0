@@ -331,7 +331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4906008913135897422}
-  destPoint: 0
   goal: {fileID: 0}
   playerDistance: 0
   awareAI: 13
@@ -342,7 +341,7 @@ MonoBehaviour:
   coPlay: 0
   ataco: 0
   ataqueBuscador: {fileID: 7062100617167059940}
-  runBuscador: {fileID: 5082431404881250861}
+  runBuscador: {fileID: 0}
   Dog: {fileID: 0}
 --- !u!114 &3942415598742704220
 MonoBehaviour:
@@ -2415,6 +2414,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 35.849045
       objectReference: {fileID: 0}
+    - target: {fileID: 8219537785638110142, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: dde097d6c72840e46a7f6ae19b29e58a, type: 2}
+    - target: {fileID: 8219537785638110142, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 476a21249c318304abe438a496a6dbd9, type: 2}
+    - target: {fileID: 8219537785638110142, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 476a21249c318304abe438a496a6dbd9, type: 2}
+    - target: {fileID: 8219537785638110142, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 476a21249c318304abe438a496a6dbd9, type: 2}
+    - target: {fileID: 8219537785638110142, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 476a21249c318304abe438a496a6dbd9, type: 2}
     - target: {fileID: 8442456107727016533, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 33.17833
@@ -2513,31 +2532,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
---- !u!1 &1002556026435740771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4718996338242575850, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}
-  m_PrefabInstance: {fileID: 3705066877082371701}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &5082431404881250861
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002556026435740771}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6944c15c0cbcdea4080713e190d8d5d7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &3810524451627524510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}

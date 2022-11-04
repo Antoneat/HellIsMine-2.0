@@ -8,7 +8,6 @@ public class BuscadorController : MonoBehaviour
 
 	//public VariableManagerBuscador managerBuscador;
 
-	public int destPoint = 0;
 	public Transform goal;
 
 	public float playerDistance;
@@ -29,9 +28,9 @@ public class BuscadorController : MonoBehaviour
 
 	PlayerDmg plyrDmg;
 
-	[Header("FeedbackVisual")]
-	[SerializeField] GameObject Dog;
-	Renderer dogRender;
+	//[Header("FeedbackVisual")]
+	//[SerializeField] GameObject Dog;
+	//Renderer dogRender;
 
     void Start()
 	{
@@ -45,7 +44,7 @@ public class BuscadorController : MonoBehaviour
 		coPlay = false;
 		ataco = false;
 
-		dogRender = Dog.GetComponent<Renderer>();
+		//dogRender = Dog.GetComponent<Renderer>();
 		agent.isStopped = false;
 	}
 
@@ -92,7 +91,6 @@ public class BuscadorController : MonoBehaviour
 	{
 		agent.SetDestination(goal.position);
 		runBuscador.SetBool("Run", true);
-
 	}
 
 
@@ -128,17 +126,17 @@ public class BuscadorController : MonoBehaviour
 
 	void ChangeColorPreAtk()
     {
-		dogRender.material.color = Color.yellow;
+		//dogRender.material.color = Color.yellow;
     }
 
 	void ChangeColorAtk()
 	{
-		dogRender.material.color = Color.red;
+		//dogRender.material.color = Color.red;
 	}
 
 	void ChangeColorBack()
 	{
-		dogRender.material.color = Color.white;
+		//dogRender.material.color = Color.white;
 	}
 
     private void OnDrawGizmos()

@@ -50,8 +50,6 @@ public class PlayerDmg : MonoBehaviour
             playerMovement.maxSpeed = 0;
             anim.Play("Morir");
             Invoke(nameof(Dead), 3.20f);
-            //Destroy(gameObject, 3.20f);
-            
         }
 
         if (actualvida > maxVida)
@@ -70,7 +68,6 @@ public class PlayerDmg : MonoBehaviour
                 tempAlpha -= Time.deltaTime * fadeSpeed;
                 overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, tempAlpha);
             }
-
         }
     }
 
@@ -85,7 +82,7 @@ public class PlayerDmg : MonoBehaviour
         durationTimer = 0f;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
         recibiendoDmg.Play();
-        Debug.Log("Daño Scarlet");
+        Debug.Log("Daï¿½o Scarlet");
         
     }
 
