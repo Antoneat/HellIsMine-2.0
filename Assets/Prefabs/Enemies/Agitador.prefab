@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e5481f182da3e4b8c87d200e544f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLife: {fileID: -550314445654320122}
+  enemyLife: {fileID: 2501400972220356369}
   barraDeVida: {fileID: 737872565}
 --- !u!1 &2075047167
 GameObject:
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1888268820277055678}
   - component: {fileID: 2119726176885463032}
   - component: {fileID: 2119726176885463039}
-  - component: {fileID: -550314445654320122}
+  - component: {fileID: 2501400972220356369}
   - component: {fileID: 2119726176885463035}
   - component: {fileID: 2653957783918534561}
   - component: {fileID: 7588889786042308275}
@@ -571,7 +571,7 @@ MonoBehaviour:
   basicoGO: {fileID: 2119726176608211605}
   coPlay: 0
   Bombita: {fileID: 2119726176885463028}
---- !u!114 &-550314445654320122
+--- !u!114 &2501400972220356369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -580,14 +580,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2119726176885463028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d37b0918fca124f9219e78f17be355, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f8e6f48bba556045b0df85dd87fdec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
   maxLife: 0
   healAmount: 1.5
-  isBomb: 1
-  soulAmount: 0
 --- !u!195 &2119726176885463035
 NavMeshAgent:
   m_ObjectHideFlags: 0

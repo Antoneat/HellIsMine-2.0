@@ -9,18 +9,26 @@ public class HitboxDmg : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<EnemyLife>() && (other.gameObject.CompareTag("Bombita2") || other.gameObject.CompareTag("Buscador") || other.gameObject.CompareTag("Verdugo")))
+        if (other.gameObject.CompareTag("Bombita2"))
         {
-            other.gameObject.GetComponent<EnemyLife>().TakeDmg(dmg * modifier);
+            other.gameObject.GetComponent<AgitadorLife>().TakeDmg(dmg * modifier);
         }
-        
+        if (other.gameObject.CompareTag("Buscador"))
+        {
+            other.gameObject.GetComponent<BuscadorLife>().TakeDmg(dmg * modifier);
+        }
+        if (other.gameObject.CompareTag("Verdugo"))
+        {
+            other.gameObject.GetComponent<VerdugoLife>().TakeDmg(dmg * modifier);
+        }
+        if (other.gameObject.CompareTag("Yalda"))
+        {
+            other.gameObject.GetComponent<YaldaVida>().TakeDmg(dmg * modifier);
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<EnemyLife>() && (collision.gameObject.CompareTag("Bombita2") || collision.gameObject.CompareTag("Buscador") || collision.gameObject.CompareTag("Verdugo")))
-        {
 
-            collision.gameObject.GetComponent<EnemyLife>().TakeDmg(dmg * modifier);
-        }
     }
 }

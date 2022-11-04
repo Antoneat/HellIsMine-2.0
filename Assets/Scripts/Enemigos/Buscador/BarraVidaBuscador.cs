@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BarraVidaBuscador : MonoBehaviour
 {
-    public EnemyLife enemyLife;
+    public BuscadorLife enemyLife;
 
     public Image barraDeVida;
 

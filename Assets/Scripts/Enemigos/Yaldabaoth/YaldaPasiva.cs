@@ -22,7 +22,7 @@ public class YaldaPasiva : MonoBehaviour
 
     void Update()
     {
-        if(yaldaVida.actualVida <= 40) //Si tiene menos de 40 de vida...
+        if(yaldaVida.life <= 40) //Si tiene menos de 40 de vida...
         {
             InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
         }

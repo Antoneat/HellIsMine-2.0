@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BarraVidaBombita : MonoBehaviour
 {
-    public EnemyLife enemyLife;
+    public AgitadorLife enemyLife;
 
     public Image barraDeVida;
 

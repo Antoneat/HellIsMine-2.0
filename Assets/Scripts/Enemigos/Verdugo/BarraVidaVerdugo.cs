@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BarraVidaVerdugo : MonoBehaviour
 {
-    public EnemyLife enemyLife;
+    public VerdugoLife enemyLife;
 
     public Image barraDeVida;
 

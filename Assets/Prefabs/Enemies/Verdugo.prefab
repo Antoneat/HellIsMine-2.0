@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7078177613886337073}
   - component: {fileID: 8560342617030477268}
   - component: {fileID: 6654190905018125405}
-  - component: {fileID: 4939645386638611557}
+  - component: {fileID: 6158479446149784213}
   - component: {fileID: 7182538184246902578}
   m_Layer: 9
   m_Name: Verdugo
@@ -188,7 +188,7 @@ MonoBehaviour:
   - {fileID: 940892972880549042}
   - {fileID: 2151589317320281310}
   lanzaPrefab: {fileID: 3719504153533178831, guid: 12916444c2907d345a7899d1b81b85fb, type: 3}
---- !u!114 &4939645386638611557
+--- !u!114 &6158479446149784213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,13 +197,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1759739420973834286}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d37b0918fca124f9219e78f17be355, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a633fffd1fe8741bc29f07ff4fbae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   life: 5
   maxLife: 0
   healAmount: 2.5
-  isBomb: 0
   soulAmount: 1
 --- !u!65 &7182538184246902578
 BoxCollider:
@@ -656,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a23db86c1eba146a43f155b5910ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLife: {fileID: 4939645386638611557}
+  enemyLife: {fileID: 6158479446149784213}
   barraDeVida: {fileID: 4631199340793560635}
 --- !u!1 &8279829379292316367
 GameObject:
