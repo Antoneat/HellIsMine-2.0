@@ -11,15 +11,15 @@ public class HitboxDmg : MonoBehaviour
     {
         if (other.gameObject.GetComponent<EnemyLife>() && (other.gameObject.CompareTag("Bombita2") || other.gameObject.CompareTag("Buscador") || other.gameObject.CompareTag("Verdugo")))
         {
-            Debug.Log("FUNCIONAAAAAAAAAAAA");
             other.gameObject.GetComponent<EnemyLife>().TakeDmg(dmg * modifier);
         }
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<EnemyLife>() && (collision.gameObject.CompareTag("Bombita2") || collision.gameObject.CompareTag("Buscador") || collision.gameObject.CompareTag("Verdugo")))
         {
-            Debug.Log("FUNCIONAAAAAAAAAAAA");
+
             collision.gameObject.GetComponent<EnemyLife>().TakeDmg(dmg * modifier);
         }
     }
