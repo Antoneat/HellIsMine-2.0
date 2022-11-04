@@ -1,0 +1,74 @@
+﻿title: Sucubo
+---
+Súcubo: ¿Qué quieres saber cariño?
+
+-> ¿Quién es Samael?
+    <<jump Samael>>
+-> Háblame de Yaldabaoth
+    <<jump Yaldabaoth>>
+-> Sobre el arma
+    <<jump Arma>>
+-> Adiós
+    <<stop>>
+===
+
+title: Samael
+---
+Scarlet: Háblame más de ese tal... Samael.
+Súcubo: Rey del infierno, gobernador de la profundidades, blabla... un arrogante que tiene todo el reino bajo sus pies.
+Scarlet: Para ser parte de su reino, no parece que te agrade.
+Súcubo: No lo hace, linda. No me agrada en lo absoluto.
+Scarlet: ¿Y por qué no hacer algo al respecto?
+Súcubo: ¡Soy una Súcubo, dulzura! Soy consciente de que por mi misma, no soy nada contra él... pero tal vez tú sí.
+<<jump Sucubo>>
+===
+
+title: Yaldabaoth
+---
+Scarlet: ¿Así que el rey tiene una sirviente?
+Súcubo: Yaldabaoth, la mano derecha de Samael. Se encarga de cuidar que ningún alma escape del Infierno, además de ser la jefa de los Buscadores.
+Scarlet: ¿Buscadores?
+Súcubo: Las bestias que mataste en la prisión, dulzura. Hay más como esas ahi fuera y todas, Yaldabaoth las lidera.
+Scarlet: Ovejas siguiendo a su ama. Tan solo son eso.
+Súcubo: Mi consejo es que no subestimes a Yalda, linda. Puedes ser buena luchando, pero en este mundo te enfrentas a cosas que no has visto antes.
+<<jump Sucubo>>
+===
+
+title: Arma
+---
+Scarlet: ¿Qué sabes acerca de esta guadaña? La encontré en la prisión cuando caí.
+Súcubo: Su nombre es Sufrimiento, es la guadaña capaz de dar el poder de La Muerte a quien la aporte. Parece que tuviste mucha surte, dulzura.
+Scarlet: ¿Qué hacia algo tan poderoso en una prisión?
+Súcubo: Parece que fue tu día de suerte.
+<<jump Sucubo>>
+===
+
+
+
+
+
+title: BD1
+---
+Scarlet: ¿Ahora en que lugar me he metido? Lo único que recuerdo es que unos hombres me acorralaron y todo se tornó negro.
+<<wait 1.25>>
+<<StopTheDialogue>>
+===
+title: BD2
+---
+Scarlet: Siento como si la guadaña absorbiese las almas y me diese su vida. Es asombroso.
+<<wait 1.25>>
+<<StopTheDialogue>>
+===
+title: BD4
+---
+Súcubo: Si quieres más mejoras o quieres saber más acerca del infierno ¡Aquí me tienes, cariño!
+<<wait 1.25>>
+<<StopTheDialogue>>
+
+===
+title: BD5
+---
+Scarlet: ¿¡Qué es esto!?
+<<wait 1.25>>
+<<StopTheDialogue>>
+===
