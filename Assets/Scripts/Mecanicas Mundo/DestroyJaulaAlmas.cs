@@ -26,7 +26,7 @@ public class DestroyJaulaAlmas : MonoBehaviour
     {
         if (other.CompareTag("Guadana"))
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }

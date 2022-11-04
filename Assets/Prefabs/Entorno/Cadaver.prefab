@@ -1362,6 +1362,7 @@ MonoBehaviour:
   vfx:
   - {fileID: 5165994415647142424, guid: 87bbb1e92c0f2c04c87e0c32a0ebdc20, type: 3}
   - {fileID: 7390848407435261878, guid: 7f3634c3185ee284d8a998fc6447085c, type: 3}
+  spawnPointVfx: {fileID: 2470651448733952807}
 --- !u!82 &9081986247642976560
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1373,7 +1374,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
@@ -1388,7 +1389,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
