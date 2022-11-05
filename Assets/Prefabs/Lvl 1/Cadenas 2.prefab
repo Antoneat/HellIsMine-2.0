@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8138897961636025690}
   - component: {fileID: 5348575865033222326}
   - component: {fileID: 2339130313845448305}
+  - component: {fileID: 4885230341027633445}
+  - component: {fileID: 4390142487662560206}
   m_Layer: 0
   m_Name: Cadenas 2
   m_TagString: Untagged
@@ -83,3 +85,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4885230341027633445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751367779075479230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}
+--- !u!65 &4390142487662560206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4751367779075479230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 114.62659, y: 90.331985, z: 19.021011}
+  m_Center: {x: -0.0000076293945, y: -0.0000038146973, z: -0.17648363}

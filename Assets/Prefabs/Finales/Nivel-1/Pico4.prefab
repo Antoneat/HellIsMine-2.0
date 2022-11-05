@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2195558650184685099}
   - component: {fileID: 7571970224568007077}
   - component: {fileID: 3294783423836119507}
+  - component: {fileID: 5490605749869672767}
   m_Layer: 0
   m_Name: Pico4
   m_TagString: Untagged
@@ -99,3 +100,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0136392, y: 0.5696988, z: 4.67046}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5490605749869672767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156503283444825082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

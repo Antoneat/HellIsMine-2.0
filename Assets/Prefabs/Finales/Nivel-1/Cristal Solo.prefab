@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8775780207447821405}
   - component: {fileID: 7140413846582790590}
+  - component: {fileID: 7956492806674595159}
   m_Layer: 0
   m_Name: Cristal Solo
   m_TagString: Untagged
@@ -127,5 +128,24 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.49216986, y: 0.21721223, z: 0.46161175}
+  m_Center: {x: -0.0011107922, y: -0.0017710179, z: -0.010626078}
+--- !u!114 &7956492806674595159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8251163200429790951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

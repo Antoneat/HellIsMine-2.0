@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5453019301244061111}
   - component: {fileID: 1971655447823197664}
   - component: {fileID: 4980659383336326336}
+  - component: {fileID: 2717790325198032335}
   m_Layer: 0
   m_Name: grillete1
   m_TagString: Untagged
@@ -125,3 +126,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.60559595, y: 0.59108955, z: 1.0634669}
   m_Center: {x: -1.7135112, y: -0.9132759, z: -0.60174745}
+--- !u!114 &2717790325198032335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339193101999714857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

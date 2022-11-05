@@ -361,6 +361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7537740376464085213}
+  - component: {fileID: 948172527647016110}
   m_Layer: 0
   m_Name: Antorcha con Calavera FBX
   m_TagString: Untagged
@@ -389,6 +390,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -146.694, z: 0}
+--- !u!65 &948172527647016110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192457800267762279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3609.0027, y: 11266.715, z: 4813.15}
+  m_Center: {x: 63.580338, y: -58.87422, z: -78.57923}
 --- !u!1 &8003415037028986099
 GameObject:
   m_ObjectHideFlags: 0

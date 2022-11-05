@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7390080262231228937}
   - component: {fileID: 2148159866265119534}
   - component: {fileID: 6485051660373426002}
+  - component: {fileID: -5329911425527289049}
   m_Layer: 0
   m_Name: Reja_2_Rota
   m_TagString: Untagged
@@ -98,3 +99,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0179412, y: 2.5292616, z: 0.13465942}
   m_Center: {x: -1.0089706, y: 1.2401261, z: 0}
+--- !u!114 &-5329911425527289049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6103381577559625808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

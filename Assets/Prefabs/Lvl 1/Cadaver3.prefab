@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4649317613716062494}
   - component: {fileID: 8586792367276445371}
   - component: {fileID: 5822764404442970737}
+  - component: {fileID: 2566611636179144867}
+  - component: {fileID: 108565860719786913}
   m_Layer: 0
   m_Name: Cadaver3
   m_TagString: Untagged
@@ -85,3 +87,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2566611636179144867
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462410119783586724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8654125, y: 1.0515887, z: 0.37350038}
+  m_Center: {x: 0.008768888, y: 0.5617597, z: 0.19485193}
+--- !u!114 &108565860719786913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462410119783586724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

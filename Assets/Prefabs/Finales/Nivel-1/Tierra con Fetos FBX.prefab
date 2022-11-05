@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 126583414858404957}
   - component: {fileID: 2748675406629937303}
   - component: {fileID: 1086876273948561041}
+  - component: {fileID: 150044459600471608}
   m_Layer: 0
   m_Name: Tierra con Fetos FBX
   m_TagString: Untagged
@@ -99,3 +100,22 @@ CapsuleCollider:
   m_Height: 3.3301432
   m_Direction: 1
   m_Center: {x: 0, y: -0.9379424, z: 0}
+--- !u!114 &150044459600471608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406136477841883458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

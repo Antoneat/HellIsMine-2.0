@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8467249696656502808}
   - component: {fileID: 7007413652565555212}
   - component: {fileID: 7757477342481107863}
+  - component: {fileID: 988640686055051129}
+  - component: {fileID: 6933462955902396136}
   m_Layer: 0
   m_Name: Cadenas 3
   m_TagString: Untagged
@@ -83,3 +85,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &988640686055051129
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956663075877468196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 125.54338, y: 143.61087, z: 20.564222}
+  m_Center: {x: -0.000005722046, y: 0, z: 2.6020852e-18}
+--- !u!114 &6933462955902396136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956663075877468196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

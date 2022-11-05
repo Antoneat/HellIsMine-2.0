@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6081481735571486467}
   - component: {fileID: 8322990912205702089}
   - component: {fileID: 6073714979608927261}
+  - component: {fileID: 7702172209896836052}
   m_Layer: 0
   m_Name: BancodeTroncoLargo
   m_TagString: Untagged
@@ -97,3 +98,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.10774, y: 1.3204614, z: 2.500723}
   m_Center: {x: 0, y: 0, z: -0.00000047683716}
+--- !u!114 &7702172209896836052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7530520310756205084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2811392557885000843}
   - component: {fileID: 1201274966216442670}
   - component: {fileID: 3985472908229507044}
+  - component: {fileID: 4752085512566140439}
+  - component: {fileID: 1328525236555829729}
   m_Layer: 0
   m_Name: Cadaver2
   m_TagString: Untagged
@@ -85,3 +87,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4752085512566140439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192984027461703217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}
+--- !u!65 &1328525236555829729
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192984027461703217}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.76258534, y: 1.1914117, z: 0.44422472}
+  m_Center: {x: 0.040985312, y: 0.5617596, z: -0.10119675}

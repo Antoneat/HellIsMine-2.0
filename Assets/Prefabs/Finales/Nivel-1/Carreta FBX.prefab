@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3681708405615553906}
   - component: {fileID: 1512357354247035320}
   - component: {fileID: 4519970941691464983}
+  - component: {fileID: 504066449497559477}
   m_Layer: 0
   m_Name: Carreta FBX
   m_TagString: Untagged
@@ -97,3 +98,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.2794256, y: 3.2856908, z: 6.1594696}
   m_Center: {x: 0.00000011920929, y: 0, z: 0.00000035762787}
+--- !u!114 &504066449497559477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151801583562373229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

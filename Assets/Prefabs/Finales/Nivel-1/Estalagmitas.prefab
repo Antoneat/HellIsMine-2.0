@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2899785756382012346}
   - component: {fileID: 4401809009259188221}
+  - component: {fileID: 6515147564660027009}
   m_Layer: 0
   m_Name: Estalagmitas
   m_TagString: Untagged
@@ -48,6 +49,25 @@ CapsuleCollider:
   m_Height: 7.1221166
   m_Direction: 1
   m_Center: {x: 0.36636543, y: 2.550368, z: -0.5217922}
+--- !u!114 &6515147564660027009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2555171996230187264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}
 --- !u!1 &3455808799434140712
 GameObject:
   m_ObjectHideFlags: 0

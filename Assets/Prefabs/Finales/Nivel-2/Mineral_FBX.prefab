@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2113264444712697540}
   - component: {fileID: 4230891714895727118}
   - component: {fileID: 4131403327582625891}
+  - component: {fileID: 7731517166167561235}
   m_Layer: 0
   m_Name: Mineral_FBX
   m_TagString: Untagged
@@ -98,3 +99,22 @@ CapsuleCollider:
   m_Height: 104.55703
   m_Direction: 1
   m_Center: {x: 0.000032424927, y: 50.363293, z: 0}
+--- !u!114 &7731517166167561235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429650118793718747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7188728129066819064}
   - component: {fileID: 544176192287830607}
   - component: {fileID: 7775212630954611452}
+  - component: {fileID: -7729289252546588800}
   m_Layer: 0
   m_Name: Silla_FBX
   m_TagString: Untagged
@@ -112,3 +113,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 77.96057, y: 173.10326, z: 17.068459}
   m_Center: {x: -0.000059604645, y: 85.65239, z: -37.79868}
+--- !u!114 &-7729289252546588800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701942208226229293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}

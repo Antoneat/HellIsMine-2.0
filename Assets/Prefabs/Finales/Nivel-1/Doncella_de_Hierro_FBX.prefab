@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5530118605690035152}
   - component: {fileID: 3149473408883664187}
   - component: {fileID: 4008820464107384045}
+  - component: {fileID: 2834321852533949502}
   m_Layer: 0
   m_Name: Doncella_de_Hierro_FBX
   m_TagString: Untagged
@@ -126,3 +127,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.94467354, y: 2.9889102, z: 0.55068433}
   m_Center: {x: 1.1281667, y: 1.4944551, z: 0.6356556}
+--- !u!114 &2834321852533949502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554481887429114260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792470b52e09e447828557b6c378acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 1
+  time: 0
+  OnDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+  vfx: []
+  spawnPointVfx: {fileID: 0}
