@@ -11,12 +11,20 @@ public class YaldaVida : MonoBehaviour
 
     public int soulAmount;
 
+    public Animator anim;
+
+    public GameObject barraDeVidaYalda;
+
     //public ParticleSystem almas;
 
+    void OnEnable()
+    {
+        barraDeVidaYalda.SetActive(true);
+    }
 
     private void Start()
     {
-        maxLife = life;
+        life = maxLife;
     }
 
     public void TakeDmg(float dmg)
@@ -25,7 +33,8 @@ public class YaldaVida : MonoBehaviour
 
         if (life <= 0)
         {
-            Muerte();
+            barraDeVidaYalda.SetActive(false);
+            anim.SetTrigger("Muerte");
         }
     }
 

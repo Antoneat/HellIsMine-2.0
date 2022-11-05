@@ -62,9 +62,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetFloat("Run", velocityOfMovement);
-
-        Debug.Log(rgbd.velocity.x);
-        Debug.Log(rgbd.velocity.z);
     }
 
     public void PlayerRotation()

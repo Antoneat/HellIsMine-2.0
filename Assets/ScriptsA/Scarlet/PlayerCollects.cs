@@ -15,7 +15,6 @@ public class PlayerCollects : MonoBehaviour
         //collecTextGo.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         counterNum += Time.deltaTime;

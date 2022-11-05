@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TiendaManager : MonoBehaviour
 {
-    public GameObject img_Tienda, dialogo;
+    public GameObject img_Tienda;
 
     void Start()
     {
@@ -24,12 +24,6 @@ public class TiendaManager : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-
-    public void Hablar()
-    {
-        //dialogo.SetActive(true);
-    }
-
 
     public void CerrarTienda()
     {

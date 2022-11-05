@@ -56,7 +56,6 @@ public class PlayerHardAttack : MonoBehaviour
 
     public void HardAttacking()
     {
-        Debug.Log("AtacandoHARD");
         isHardAttacking = false;
     }
 
@@ -72,7 +71,6 @@ public class PlayerHardAttack : MonoBehaviour
 
     public void AfterHardAttacking()
     {
-        Debug.Log("Termino de atacarHARD");
         isHardAttacking = false;
         ataqueHardCollider.enabled = false;
 

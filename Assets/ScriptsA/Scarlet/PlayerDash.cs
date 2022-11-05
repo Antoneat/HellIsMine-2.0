@@ -38,14 +38,12 @@ public class PlayerDash : MonoBehaviour
 
     public void Dashing()
     {
-        Debug.Log("Dashing");
         playerMovement.maxSpeed = dashNewSpeed;
         Physics.IgnoreLayerCollision(6, 9, true);
     }
 
     public void FinishDash()
     {
-        Debug.Log("Termino el Dash");
         Invoke(nameof(DelayToDash), cooldown);
         isDashing = false;
         playerMovement.maxSpeed = 7.2f;

@@ -5,6 +5,11 @@ using System;
 
 public class YaldaPasiva : MonoBehaviour
 {
+
+
+    // CAMBIAR LOGICA POR LA DE CHUTO
+    
+    
     private YaldaVida yaldaVida; // Script de la vida de Yalda
 
     public float cooldownGeneral; // max cooldown el cual se spawnea cada enemigo

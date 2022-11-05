@@ -105,7 +105,6 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void Attacking()
     {
-        Debug.Log("Atacando");
         isAttacking = true;
         continueAttack = false;
         ataqueUno.Play();
@@ -113,8 +112,6 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void AfterAttacking()
     {
-        Debug.Log("Termino de atacar");
-
         nextAttack = false;
 
         anim.ResetTrigger("StartCombo");

@@ -18,7 +18,6 @@ public class YaldaAtkEspecial : MonoBehaviour
     [Header("Componentes")]
     [SerializeField] YaldaMov yaldaMov;
     [SerializeField] Animator anim;
-    [SerializeField] ImpactForSpecial impactForSpecialIzq, impactForSpecialDer;
     void Start()
     {
         cooldown = Random.Range(5,9);

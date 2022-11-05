@@ -98,5 +98,4 @@ public class StadosController : MonoBehaviour
         pDmg.actualvida -= 0.5f;
         yield break;
     }
-
 }
