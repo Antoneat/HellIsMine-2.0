@@ -11,6 +11,9 @@ public class BuscadorLife : MonoBehaviour
 
     public int soulAmount;
 
+    public Animator animator;
+    public GameObject mainBuscador;
+
     //public ParticleSystem almas;
 
 
@@ -32,12 +35,12 @@ public class BuscadorLife : MonoBehaviour
             //FALTAN LAS ALMAS
             //player.GetComponent<PlayerDmg>().Alma_Vfx();
 
-            MuertePerro();
+            animator.SetTrigger("Death");
         }
     }
 
     public void MuertePerro()
     {
-        Destroy(gameObject);
+        Destroy(mainBuscador);
     }
 }

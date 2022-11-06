@@ -10,53 +10,66 @@ public class AjitaNido : MonoBehaviour
     public GameObject ajitaNido;
     public List<GameObject> maxChildren;
     public int maxNumber = 5;
+    public float cooldownSpawn;
     public bool isPlayerInUwU;
+    public bool hasBeenCharged;
 
     private void Start()
     {
         maxChildren = new List<GameObject>();
+        hasBeenCharged = true;
 	}
     void Update()
     {
-        if (isPlayerInUwU)
+        if (isPlayerInUwU && hasBeenCharged)
         {
             InvokeBomb();
         }
-        Muerte();
+        if(maxChildren.Count >= maxNumber)
+		{
+            hasBeenCharged = false;
+		}
+        if (vida <= 0)
+        {
+            Muerte();
+        }
 
         if (maxChildren[0] == null)
         {
             maxChildren.RemoveAt(0);
+            StartCoroutine(startSummoning());
         }
         if (maxChildren[1] == null)
         {
             maxChildren.RemoveAt(1);
+            StartCoroutine(startSummoning());
         }
         if (maxChildren[2] == null)
         {
             maxChildren.RemoveAt(2);
+            StartCoroutine(startSummoning());
         }
         if (maxChildren[3] == null)
         {
             maxChildren.RemoveAt(3);
+            StartCoroutine(startSummoning());
         }
         if (maxChildren[4] == null)
         {
             maxChildren.RemoveAt(4);
+            StartCoroutine(startSummoning());
         }
         if (maxChildren[5] == null)
         {
             maxChildren.RemoveAt(5);
+            StartCoroutine(startSummoning());
         }
     }
 
     private void Muerte()
     {
-        if (vida <= 0)
-        {
-            dead = true;
-            //Destroy(gameObject);
-        }
+        dead = true;
+        //Destroy(gameObject);
     }
 
     void SummonBomb()
@@ -68,9 +81,15 @@ public class AjitaNido : MonoBehaviour
         }
     }
 
+    public IEnumerator startSummoning()
+	{
+        yield return new WaitForSeconds(cooldownSpawn);
+        hasBeenCharged = true;
+	}
+
     void InvokeBomb()
     {
-        Invoke("SummonBomb", 5f);
+        Invoke("SummonBomb", 3f);
     }
     private void OnTriggerEnter(Collider collider)
     {

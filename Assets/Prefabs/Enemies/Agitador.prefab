@@ -1055,8 +1055,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 9
-      minScalar: 6
+      scalar: 42.8
+      minScalar: 27.17
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1435,7 +1435,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.53
+    radiusThickness: 0.06
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -1518,7 +1518,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.8
+      value: 4.4
       mode: 0
       spread: 0
       speed:
@@ -10468,7 +10468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2231021458248293995, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8923011643089971797, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: m_Enabled

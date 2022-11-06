@@ -13,6 +13,7 @@ public class BuscadorController : MonoBehaviour
 	public float playerDistance;
 	public float awareAI;
 	public float atkRange;
+	public float atkActivator;
 
 	[Header("AtaqueBasico")]
 	public GameObject basicoGO;
@@ -20,7 +21,7 @@ public class BuscadorController : MonoBehaviour
 	public GameObject mordida;
 
 	public bool coPlay;
-	public bool ataco;
+	public bool isDead;
 
 	public Animator ataqueBuscador;
 	public Animator runBuscador;
@@ -42,7 +43,6 @@ public class BuscadorController : MonoBehaviour
 		basicoGO.SetActive(false);
 
 		coPlay = false;
-		ataco = false;
 
 		//dogRender = Dog.GetComponent<Renderer>();
 		agent.isStopped = false;
@@ -57,27 +57,36 @@ public class BuscadorController : MonoBehaviour
 
 		if (playerDistance <= awareAI)
 		{
-			LookAtPlayer();
+			if (!isDead)
+			{
+				LookAtPlayer();
+			}
 			Debug.Log("Seen");
 			Chase();
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > awareAI)
 		{
-			LookAtPlayer();
+			if (!isDead)
+			{
+				LookAtPlayer();
+			}
 			//agent.isStopped = true;
 		}
 
 
-		if (playerDistance <= atkRange && coPlay == false)
+		if (playerDistance <= atkActivator && coPlay == false)
 		{
-			StartCoroutine(Mordisco());
+			ataqueBuscador.SetBool("AtaqueFull", true);
 			//ataqueBuscador.SetBool("AtaqueFull", true);
 			//agent.isStopped = false;
 		}
 		else if (playerDistance > atkRange)
 		{
-			LookAtPlayer();
+			if (!isDead)
+			{
+				LookAtPlayer();
+			}
 			//agent.isStopped = false;
 		}
 	}
@@ -90,53 +99,29 @@ public class BuscadorController : MonoBehaviour
 	public void Chase()
 	{
 		agent.SetDestination(goal.position);
-		runBuscador.SetBool("Run", true);
+		runBuscador.SetTrigger("Run");
 	}
 
-
-	IEnumerator Mordisco()
+	public void StartAttack()
 	{
 		coPlay = true;
 		agent.isStopped = true;
-		ChangeColorPreAtk();
-		yield return new WaitForSeconds(1.25f); // cambiar por anim.
-		ChangeColorAtk();
-		basicoGO.SetActive(true);
-		if(playerDistance <= atkRange)
-        {
-			ataco = true;
-			if (ataco == true)
-			{
-				//plyrDmg.actualvida -= 1.5f;
-				GameObject obj = Instantiate(hitboxPrefab);
-				obj.transform.position = mordida.transform.position;
-				ataqueBuscador.SetBool("AtaqueFull", true);
-			}
+	}
+
+	public void CreateHitBox()
+	{
+		if (playerDistance <= atkRange)
+		{
+			GameObject obj = Instantiate(hitboxPrefab);
+			obj.transform.position = mordida.transform.position;
 		}
-		yield return new WaitForSeconds(1f);
+	}
+
+	public void EndAttack()
+	{
 		agent.isStopped = false;
-		basicoGO.SetActive(false);
-		ChangeColorBack();
-		ataco = false;
 		coPlay = false;
-		yield break;
-
-		
-	}
-
-	void ChangeColorPreAtk()
-    {
-		//dogRender.material.color = Color.yellow;
-    }
-
-	void ChangeColorAtk()
-	{
-		//dogRender.material.color = Color.red;
-	}
-
-	void ChangeColorBack()
-	{
-		//dogRender.material.color = Color.white;
+		ataqueBuscador.SetBool("AtaqueFull", false);
 	}
 
     private void OnDrawGizmos()
@@ -145,6 +130,8 @@ public class BuscadorController : MonoBehaviour
 		Gizmos.DrawWireSphere(transform.position,awareAI);
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, atkRange);
+		Gizmos.color = Color.white;
+		Gizmos.DrawWireSphere(transform.position, atkActivator);
 	}
 }
 
