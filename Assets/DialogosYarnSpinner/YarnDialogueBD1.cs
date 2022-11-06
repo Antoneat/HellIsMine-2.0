@@ -18,7 +18,6 @@ public class YarnDialogueBD1 : MonoBehaviour
         {
             dialogueRunner.StartDialogue("BD1");
             gameObject.SetActive(false);
-            //Destroy(gameObject);
         }
     }
 }

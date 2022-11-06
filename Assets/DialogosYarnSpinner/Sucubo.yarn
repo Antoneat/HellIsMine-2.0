@@ -1,47 +1,180 @@
 ﻿title: Sucubo
 ---
-Súcubo: ¿Qué quieres saber cariño?
-
--> ¿Quién es Samael?
-    <<jump Samael>>
--> Háblame de Yaldabaoth
-    <<jump Yaldabaoth>>
--> Sobre el arma
-    <<jump Arma>>
--> Adiós
-    <<stop>>
+<<declare $scarletPoints to 0>>
+Súcubo: Vaya... han pasado milenios desde la última vez que vi a una hermosa humana salir de la prisión, y tú saliste en una sola pieza. ¿Qué te trae por aquí?
+Scarlet: Eso me pregunto yo. ¿Sabes donde estoy? Y... ¿Qué se supone que eres?
+Súcubo: Soy una Súcubo, linda, y estás en el Infierno. Tu vida en la Tierra acabo y ahora te toca pagar por los pecados que cometiste.
+Scarlet: ¿Estoy muerta? Claro... ahora lo recuerdo, esos hombres, los asesinos de mi padre sobrevivieron y terminaron asesinandome... Fracasé.
+Scarlet: No pienso aceptarlo, ¿Cómo salgo de aquí?
+Súcubo: No se puede dulzura, una vez que un alma pecadora de la Tierra cae en el Infierno, está destinada a permanecer aquí por siempre; además, el único capaz de entrar y salir cuanto le plazca es el Rey del Infierno, Samael.
+Scarlet: Oye debo salir de aquí sin importar la forma, ¿Hay alguna otra cosa que pueda hacer?
+Súcubo: Ya te dije, el único ser que puede salir de aquí es Samael por ser el Rey del Infierno, así que si quisieras salir tendrías que derrocarlo, acabar con el y con su mano derecha, Yaldabaoth.
+Scarlet: Esa es una buena opción, dos muertes más a mi espalda no son nada a este punto...
+Súcubo: ¡Sabia que no eras una humana aburrida! Me gusta tu actitud, pero te hará falta algo más que solo ganas. Samael siempre está en el Castillo del Diablo, rara vez quita su trasero del trono y Yaldabaoth siempre vigila toda el Reino.
+Scarlet: No sé como lo haré aún pero acabaré con esos dos y saldré de este lugar.
+Súcubo: ¡Espera, linda! Si vas a celebrar una fiesta en el reino. No quiero quedarme fuera. Quiero participar. Te puedo ofrecer mejoras para ti y tu preciosa guadaña, qué parece que la vas a necesitar.
+Scarlet: ¿Y qué quieres a cambio de ayudarme?
+Súcubo: Mmm... tal vez algunas almas que contengas en esta guadaña... pero por ahora lo único que te pido, es que me digas tu nombre.
+Scarlet: Scarlet Crimson.
+Súcubo: ¡Me gusta! Bueno Scarlet Crimson, todo un placer poder divertirme contigo.
+Scarlet: Gracias supongo...
+-> Preguntar por la antigua arma de Scarlet
+    <<jump ArmaScarlet>>
+-> Preguntar por la Guadaña
+    <<jump Guadana>>
 ===
 
-title: Samael
+
+
+title: ArmaScarlet
 ---
-Scarlet: Háblame más de ese tal... Samael.
-Súcubo: Rey del infierno, gobernador de la profundidades, blabla... un arrogante que tiene todo el reino bajo sus pies.
-Scarlet: Para ser parte de su reino, no parece que te agrade.
-Súcubo: No lo hace, linda. No me agrada en lo absoluto.
-Scarlet: ¿Y por qué no hacer algo al respecto?
-Súcubo: ¡Soy una Súcubo, dulzura! Soy consciente de que por mi misma, no soy nada contra él... pero tal vez tú sí.
-<<jump Sucubo>>
+<<set $scarletPoints += 1>>
+Scarlet: ¿Sabes si pierdo mis pertenencias al entrar aquí?
+Súcubo: Las almas que caen al infierno mantienen los objetos que tuvieron durante su muerte, si no fuera así habrías llegado desnuda, aunque no me quejaría si ese fuera el caso~
+Scarlet: ¿Pero si ese es el caso por qué no tengo mi daga? Se supone que morí usandola.
+Súcubo: Puede que si lo soltaste haya sido traído aquí pero no en la misma ubicación que tú, así como cualquier otra cosa que hayas traído encima.
+Scarlet: Comprendo.
+-> Preguntar sobre el pasado de Scarlet
+    <<jump PasadoScarlet>>
+-> Preguntar por el antiguo dueño de la Guadaña
+    <<jump AntiguoPortador>>
 ===
+
+title: Guadana
+---
+<<set $scarletPoints -= 1>>
+Scarlet: ¿Qué sabes acerca de esta Guadaña? La encontré en la prisión cuando caí.
+Súcubo: Su nombre es Sufrimiento, es una guadaña capaz de dar el poder de La Muerte a quien la porte. Tuviste mucha suerte, dulzura.
+Scarlet: ¿Qué hacia algo tan poderoso en una prisión?
+Súcubo: Parece que fue tu día de suerte.
+-> Preguntar sobre el pasado de Scarlet
+    <<jump PasadoScarlet>>
+-> Preguntar por el antiguo dueño de la Guadaña
+    <<jump AntiguoPortador>>
+===
+
+
+
+title: PasadoScarlet
+---
+<<set $scarletPoints += 1>>
+Scarlet: ¿Qué tanto sabes acerca de mí y mis pecados?
+Súcubo: Solo los Buscadores, Yaldabaoth y Samael conocen los pecados y la vida de quienes entran para poder condenarlos, lo único que sé es tu nombre y lo apetecible que luces~
+Scarlet: ¿Buscadores?
+Súcubo: Las bestias que mataste en la prisión, hermosa. Bestias a cuatro patas que están encargadas de condenar correctamente a las víctimas que caen a la Prisión Infernal.
+Scarlet: Entiendo.
+-> Preguntar por los Ataques con la Guadaña
+    <<jump AtaqueGuadana>>
+-> Preguntar por los Desplazamientos Espectrales
+    <<jump DesplazamientoEspectral>>
+===
+
+title: AntiguoPortador
+---
+<<set $scarletPoints -= 1>>
+Scarlet: ¿Qué sabes del antiguo portador de la Guadaña?
+Súcubo: Lo que puedo decirte por ahora es que así como tú, fue otorgado de los poderes de la Parca, pero ahora se encuentra cumpliendo una condena.
+Scarlet: La historia será distinta ahora Sufrimiento...
+-> Preguntar por los Ataques con la Guadaña
+    <<jump AtaqueGuadana>>
+-> Preguntar por los Desplazamientos Espectrales
+    <<jump DesplazamientoEspectral>>
+===
+
+
+
+title: AtaqueGuadana
+---
+<<set $scarletPoints += 1>>
+Scarlet: ¿Los golpes que hago son potenciados por el mismo Sufrimiento?
+Súcubo: Hasta donde sé hace que tus cortes sean más fuertes contra entes demoníacos, lo que lo hace perfecto para luchar aquí, preciosa.
+Scarlet: Tal vez haber perdido mi daga no sea tan malo con Sufrimiento.
+-> Tienda
+    <<jump Tienda>>
+-> Hablar
+    <<jump Hablar>>
+===
+
+title: DesplazamientoEspectral
+---
+<<set $scarletPoints -= 1>>
+Scarlet: Entonces ¿Las almas podemos atravesar algunos objetos?
+Súcubo: No, esa habilidad la tienes gracias a Sufrimiento, puedes entrar en una forma espectral brevemente, te será muy util para esquivar y poder moverte mejor, linda.
+Scarlet: Tendré eso en cuenta.
+-> Tienda
+    <<jump Tienda>>
+-> Hablar
+    <<jump Hablar>>
+===
+
+
+
+title: Tienda
+---
+Scarlet: Y, ¿Qué clase de mejoras puedes darme?
+Súcubo: Puedo mejorar tanto tus habilidades físicas como tus habilidades espectrales, bombón.
+<<if $scarletPoints > 0>>
+    Scarlet: Te recomiendo mejorar tus habilidades físicas primero.
+<<else>>
+    Scarlet: Te recomiendo mejorar tus habilidades espectrales primero.
+<<endif>>
+-> Hablar
+    <<jump Hablar>>
+-> Salir
+    <<jump Salir>>
+===
+
+title: Hablar
+---
+Súcubo: ¿Tienes alguna otra pregunta, corazón?
+-> Preguntar por Yaldabaoth
+    <<jump Yaldabaoth>>
+-> Preguntar por Samael
+    <<jump Samael>>
+===
+
+
 
 title: Yaldabaoth
 ---
 Scarlet: ¿Así que el rey tiene una sirviente?
-Súcubo: Yaldabaoth, la mano derecha de Samael. Se encarga de cuidar que ningún alma escape del Infierno, además de ser la jefa de los Buscadores.
-Scarlet: ¿Buscadores?
-Súcubo: Las bestias que mataste en la prisión, dulzura. Hay más como esas ahi fuera y todas, Yaldabaoth las lidera.
+Súcubo: Yaldabaoth, la mano derecha de Samael. Se encarga de cuidar que ningún alma escape del Infierno, además de ser la jefa de los Buscadores, hay más como esas ahi fuera y todas, Yaldabaoth las lidera.
 Scarlet: Ovejas siguiendo a su ama. Tan solo son eso.
 Súcubo: Mi consejo es que no subestimes a Yalda, linda. Puedes ser buena luchando, pero en este mundo te enfrentas a cosas que no has visto antes.
-<<jump Sucubo>>
+-> Tienda
+    <<jump Tienda>>
+-> Hablar
+    <<jump Hablar>>
+-> Salir
+    <<jump Salir>>
+===
+title: Samael
+---
+Scarlet: Háblame más de ese tal... Samael.
+Súcubo: Rey del infierno, gobernador de las profundidades, blabla... un arrogante que tiene todo el reino bajo sus pies.
+Scarlet: Para ser parte de su reino, no parece que te agrade.
+Súcubo: No lo hace, linda. No me agrada en lo absoluto.
+Scarlet: ¿Y por qué no haces algo al respecto?
+Súcubo:¡Soy una Súcubo, lindura! Soy consciente de que por mi misma, no soy nada contra él... pero tal vez tú si.
+-> Tienda
+    <<jump Tienda>>
+-> Hablar
+    <<jump Hablar>>
+-> Salir
+    <<jump Salir>>
 ===
 
-title: Arma
+
+
+title: Salir
 ---
-Scarlet: ¿Qué sabes acerca de esta guadaña? La encontré en la prisión cuando caí.
-Súcubo: Su nombre es Sufrimiento, es la guadaña capaz de dar el poder de La Muerte a quien la aporte. Parece que tuviste mucha surte, dulzura.
-Scarlet: ¿Qué hacia algo tan poderoso en una prisión?
-Súcubo: Parece que fue tu día de suerte.
-<<jump Sucubo>>
+Scarlet: Bueno, Creo que eso sería todo por ahora.
+Súcubo: ¡Mucha suerte! Si quieres más mejoras o quieres saber más acerca del infierno ¡Aquí me tienes, cariño!
+<<stop>>
 ===
+
+
+
 
 
 
@@ -49,26 +182,33 @@ Súcubo: Parece que fue tu día de suerte.
 
 title: BD1
 ---
-Scarlet: ¿Ahora en que lugar me he metido? Lo único que recuerdo es que unos hombres me acorralaron y todo se tornó negro.
-<<wait 1.25>>
-<<StopTheDialogue>>
+Scarlet: Hugh... Jamás me había dolido tanto la cabeza... ¿Dónde estoy? Este lugar huele a azufre y sangre...
+???: ¡Basta de quejas humana! Enfocate en intentar salir de aquí primero.
+Scarlet: ¡¿Quién me habla?! ¡Dime quien eres!
+Sufrimiento: Te recomiendo hacer caso a lo que te digo si no quieres quedarte atrapada aquí. Por lo pronto llamame Sufrimiento.
+Scarlet: Debo de seguir inconsciente, soñando o algo parecido...
+Sufrimiento: Te sugiero dejarte de estupideces y salir de aquí cuanto antes, las bestias que aquí habitan son hostiles.
+Scarlet: No sé por qué tengo la sensación de que tienes razón, sea lo que seas, debo salir de aquí...
+<<stop>>
+//<<wait 1.25>>
 ===
 title: BD2
 ---
-Scarlet: Siento como si la guadaña absorbiese las almas y me diese su vida. Es asombroso.
-<<wait 1.25>>
-<<StopTheDialogue>>
+Sufrimiento: ¡Agitadores! Destruye su nido humana, esas escorias son inservibles para nosotros.
+<<stop>>
+//<<wait 1.25>>
 ===
-title: BD4
+title: BD3
 ---
-Súcubo: Si quieres más mejoras o quieres saber más acerca del infierno ¡Aquí me tienes, cariño!
-<<wait 1.25>>
-<<StopTheDialogue>>
+Scarlet: Siento como si la Guadaña absorbiese las almas y me diese su vida. Es asombroso.
+Sufrimiento: Si murieras no tendría quién me sirva de más almas así que sí, me interesa mantenerte viva...
+<<stop>>
+//<<wait 1.25>>
 
 ===
-title: BD5
+title: BD6
 ---
 Scarlet: ¿¡Qué es esto!?
-<<wait 1.25>>
-<<StopTheDialogue>>
+<<stop>>
+//<<wait 1.25>>
 ===
