@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AgitadorLife : MonoBehaviour
 {
+    public VariableManagerBombita managerBombita;
+
     public float life;
     public float maxLife;
 
@@ -16,6 +18,19 @@ public class AgitadorLife : MonoBehaviour
     {
         maxLife = life;
     }
+
+    #region Agitador
+    void ChangeLifeAgitador()
+    {
+        life = managerBombita.life_SO;
+    }
+
+    void ChangeHealtAmountAgitador()
+    {
+        healAmount = managerBombita.healAmount_SO;
+    }
+
+    #endregion
 
     public void TakeDmg(float dmg)
     {
