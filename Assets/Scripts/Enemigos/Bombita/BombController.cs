@@ -30,7 +30,8 @@ public class BombController : MonoBehaviour
 
 	[Header("FeedbackVisual")]
 	[SerializeField] GameObject Bombita;
-	Renderer bombitaRender;
+
+
 
 	void Start()
 	{
@@ -42,7 +43,7 @@ public class BombController : MonoBehaviour
 
 
 		coPlay = false;
-		bombitaRender = Bombita.GetComponent<Renderer>();
+		
 	}
 
 	void Update()
@@ -70,6 +71,7 @@ public class BombController : MonoBehaviour
 
 		if (playerDistance <= atkRange && coPlay==false)
 		{
+			
 			StartCoroutine(AtaqueBasico());
 			ataqueAgitador.SetBool("Attack", true);
 
@@ -99,41 +101,29 @@ public class BombController : MonoBehaviour
 		
 		coPlay = true;
 		agent.isStopped = true;
-		ChangeColorPreAtk();
+		
 		yield return new WaitForSeconds(1f);
 		if (playerDistance < atkRange)
 		{
+
 			basicoGO.SetActive(true);
 			Destroy(gameObject, 1);
+			
+
 		}
 		else if (playerDistance >= atkRange)
 		{
 			basicoGO.SetActive(false);
 			agent.isStopped = false;
-			ChangeColorPostAtk();
+
 		}
 		agent.isStopped = false;
 		coPlay = false;
 		yield break;
 	}
 
-	void ChangeColorPreAtk()
-	{
-		bombitaRender.material.color = Color.yellow;
-	}
-	void ChangeColorPostAtk()
-	{
-		bombitaRender.material.color = Color.white;
-	}
 
-	private void OnTriggerEnter(Collider collider)
-	{
 
-		//if (collider.gameObject.CompareTag("AtkBomb"))
-		//{
-		//	StartCoroutine(AtaqueBasico());
-	//	}
-	}
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.blue;
