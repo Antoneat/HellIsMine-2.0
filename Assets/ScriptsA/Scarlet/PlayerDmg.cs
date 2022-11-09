@@ -59,7 +59,7 @@ public class PlayerDmg : MonoBehaviour
  
         if (overlay.color.a > 0)
         {
-            if (actualvida < 25)
+            if (actualvida < 20)
                 return;            
             durationTimer += Time.deltaTime;
             if (durationTimer > duration)

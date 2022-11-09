@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArenaAlmas : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class ArenaAlmas : MonoBehaviour
 
     public float timerMain = 1;
 
+    [Header("DmgHUD")]
+    public Image overlay;
+    public float duration;
+    public float fadeSpeed;
+    private float durationTimer;
     //public AudioSource pasosArena;
 
 
