@@ -16,6 +16,7 @@ public class YaldaMov : MonoBehaviour
 	[Header("Componentes")]
 	public NavMeshAgent agent;
 	public Transform goal; //Pivot Transform de Scarlet
+	private YaldaPasiva yaldaPasiva;
 	private YaldaAtkBasic yaldaAtkBasic;
 	private YaldaAtkEspecial yaldaAtkEspecial;
 	private YaldaDesplazamiento yaldaDesplazamiento;
@@ -26,6 +27,7 @@ public class YaldaMov : MonoBehaviour
 	{
 		agent = GetComponent<NavMeshAgent>();
 		anim = GetComponent<Animator>();
+		yaldaPasiva = GetComponent<YaldaPasiva>();
 		yaldaAtkBasic = GetComponent<YaldaAtkBasic>();
 		yaldaAtkEspecial = GetComponent<YaldaAtkEspecial>();
 		yaldaDesplazamiento = GetComponent<YaldaDesplazamiento>();
@@ -39,18 +41,18 @@ public class YaldaMov : MonoBehaviour
 
 	void Update()
 	{
-		playerDistance = Vector3.Distance(transform.position, goal.position);
+		playerDistance = Vector3.Distance(transform.position, goal.position); // DISTANCIA entre Yalda y Scarlet
 
-		if(stare == true)
+		if(stare == true) // Mira a Scarlet
 		{
 			LookAtPlayer();
 		}
-		else if (stare == false)
+		else if (stare == false) // Deja de mirar a Scarlet
 		{
 			transform.LookAt(null);
 		}
 
-		if (playerDistance <= awareAI && attacking == false)
+		if (playerDistance <= awareAI && attacking == false && yaldaPasiva.curandose == false) // Si la DISTANCIA es menor o igual al rango de deteccion y si no esta atacando y si no se esta curando entonces...
 		{
 			Chase();
 			stare = true;
@@ -62,41 +64,43 @@ public class YaldaMov : MonoBehaviour
 			stare = false;
 		}
 
-		if(yaldaDesplazamiento.cooldownToTP <= 0)
+		if(yaldaDesplazamiento.cooldownToTP <= 0 && yaldaPasiva.curandose == false) // Si el cooldown para tepearse hasta Scarlet es menor a 0 entonces...
 		{
 			anim.SetTrigger("Teleport");
 		}
 
-		if (playerDistance <= atkRange && attacking == false)
+		if (playerDistance <= atkRange && attacking == false && yaldaPasiva.curandose == false) // Si la DISTANCIA es menor o igual al rango de ataque y si no esta atacando entonces...
 		{	
 			StopChase();
 
-			if(yaldaAtkEspecial.canAtkEspecial == true)
+			if(yaldaAtkEspecial.canAtkEspecial == true) // Si puede hacer el ataque especial entonces...
 			{
 				anim.SetTrigger("SpecialAttack");
 			}
-			else if (yaldaAtkEspecial.canAtkEspecial == false)
+			else if (yaldaAtkEspecial.canAtkEspecial == false) // Si no puede hacer el ataque especial entonces...
 			{
 				anim.SetTrigger("BasicAttack");
 			}
 		}
 	}
 	
-	public void Chase()
+	public void Chase() // Metodo para seguir a Scarlet. 
 	{
 		agent.SetDestination(goal.position);
 		agent.isStopped = false;
 	}
-	public void StopChase()
+
+	public void StopChase() // Metodo para dejar de seguir a Scarlet.
 	{
 		agent.isStopped = true;
 	}
 
-	public void LookAtPlayer()
+	public void LookAtPlayer() // Metodo para mirar a Scarlet
 	{
 		transform.LookAt(goal);
 	}
-	public void NotStareAtPlayer()
+
+	public void NotStareAtPlayer() // Metodo para dejar de mirar a Scarlet
     {
         stare = false;
     }
