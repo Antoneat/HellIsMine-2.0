@@ -7,6 +7,7 @@ using System;
 public class BuscadorConfig : MonoBehaviour
 {
     public VariableManagerBuscador managerBuscador;
+    public ValoresBuscador valoresBuscador;
 
     [Header("variables")]
     public float awareAI_Conf;
@@ -42,18 +43,22 @@ public class BuscadorConfig : MonoBehaviour
 
     public void Start()
     {
-        text_AwareAi.text = "AwareAI:" + awareAI_Conf;
-        text_AtqRange.text = "AtqRange:" + atkRange_Conf;
+        valoresBuscador = GameObject.FindGameObjectWithTag("Buscador").GetComponent<ValoresBuscador>();
 
-        text_Life.text = "Vida:" + life_Config;
-        text_HealtAmount.text = "Cura:" + healAmount_Config;
-        text_SoulAmount.text = "Almas:" + soulAmount_Config;
+        text_AwareAi.text = "AwareAI:" + valoresBuscador.awareAI_Val;
+        text_AtqRange.text = "AtqRange:" + valoresBuscador.atkRange_Val;
+
+        text_Life.text = "Vida:" + valoresBuscador.life_Val;
+        text_HealtAmount.text = "Cura:" + valoresBuscador.healAmount_Val;
+        text_SoulAmount.text = "Almas:" + valoresBuscador.soulAmount_Val;
 
         text_Dmg.text = "Daño:" + dmg_Config;
     }
 
     public void Update()
     {
+        valoresBuscador = GameObject.FindGameObjectWithTag("Buscador").GetComponent<ValoresBuscador>();
+
         managerBuscador.awareAI_SO = awareAI_Conf;
         managerBuscador.atkRange_SO = atkRange_Conf;
 

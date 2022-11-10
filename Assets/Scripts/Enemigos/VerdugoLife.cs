@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VerdugoLife : MonoBehaviour
 {
+    public VariableManagerVerdugo managerVerdugo;
+
     public float life;
     public float maxLife;
 
@@ -17,6 +19,14 @@ public class VerdugoLife : MonoBehaviour
     private void Start()
     {
         maxLife = life;
+
+        ChangeLifeVerdugo();
+        ChangeHealtAmountVerdugo();
+        ChangeSoulAmountVerdugo();
+
+        managerVerdugo.OnValueChange += ChangeLifeVerdugo;
+        managerVerdugo.OnValueChange += ChangeHealtAmountVerdugo;
+        managerVerdugo.OnValueChange += ChangeSoulAmountVerdugo;
     }
 
     public void TakeDmg(float dmg)
@@ -36,8 +46,31 @@ public class VerdugoLife : MonoBehaviour
         }
     }
 
+    void ChangeLifeVerdugo()
+    {
+        life = managerVerdugo.life_SO;
+    }
+
+    void ChangeHealtAmountVerdugo()
+    {
+        healAmount = managerVerdugo.healAmount_SO;
+    }
+
+    void ChangeSoulAmountVerdugo()
+    {
+        soulAmount = managerVerdugo.soulAmount_SO;
+    }
+
+
     public void MuertePerro()
     {
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        managerVerdugo.OnValueChange -= ChangeLifeVerdugo;
+        managerVerdugo.OnValueChange -= ChangeHealtAmountVerdugo;
+        managerVerdugo.OnValueChange -= ChangeSoulAmountVerdugo;
     }
 }

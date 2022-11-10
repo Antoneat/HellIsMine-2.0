@@ -6,9 +6,7 @@ using System;
 [CreateAssetMenu(fileName = "ManagerBuscadorSO", menuName = "Data/VariablesBuscador", order = 1)]
 public class VariableManagerBuscador : ScriptableObject
 {
-    public BuscadorController buscadorController;
-    public EnemyLife enemyLife;
-    public EnemyHitbox enemyHitbox;
+    public ValoresBuscador valoresBuscador;
 
     public float awareAI_SO;
     public float atkRange_SO;
@@ -23,25 +21,21 @@ public class VariableManagerBuscador : ScriptableObject
 
     public void Awake()
     {
-        awareAI_SO = buscadorController.awareAI;
-        atkRange_SO = buscadorController.atkRange;
+        awareAI_SO = valoresBuscador.awareAI_Val;
+        atkRange_SO = valoresBuscador.atkRange_Val;
 
-        life_SO = enemyLife.life;
-        healAmount_SO = enemyLife.healAmount;
-        soulAmount_SO = enemyLife.soulAmount;
-
-        dmg_SO = enemyHitbox.dmg;
+        life_SO = valoresBuscador.life_Val;
+        healAmount_SO = valoresBuscador.healAmount_Val;
+        soulAmount_SO = valoresBuscador.soulAmount_Val;
     }
 
     public void OnValidate()
     {
-        awareAI_SO = buscadorController.awareAI;
-        atkRange_SO = buscadorController.atkRange;
+        awareAI_SO = valoresBuscador.awareAI_Val;
+        atkRange_SO = valoresBuscador.atkRange_Val;
 
-        life_SO = enemyLife.life;
-        healAmount_SO = enemyLife.healAmount;
-        soulAmount_SO = enemyLife.soulAmount;
-
-        dmg_SO = enemyHitbox.dmg;
+        life_SO = valoresBuscador.life_Val;
+        healAmount_SO = valoresBuscador.healAmount_Val;
+        soulAmount_SO = valoresBuscador.soulAmount_Val;
     }
 }

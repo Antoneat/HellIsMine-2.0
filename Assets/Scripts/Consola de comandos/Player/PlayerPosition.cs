@@ -31,7 +31,7 @@ public class PlayerPosition : MonoBehaviour
 
     private void Update()
     {
-        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         scarletTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

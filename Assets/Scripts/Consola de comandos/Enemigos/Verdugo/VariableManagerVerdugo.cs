@@ -8,7 +8,7 @@ using System;
 public class VariableManagerVerdugo : ScriptableObject
 {
     public VerdugoController verdugoController;
-    public EnemyLife enemyLife;
+    public VerdugoLife verdugoLife;
     //public EnemyHitbox enemyHitbox;
 
     public float awareAI_SO;
@@ -27,9 +27,9 @@ public class VariableManagerVerdugo : ScriptableObject
         awareAI_SO = verdugoController.awareAI;
         atkRange_SO = verdugoController.atkRange;
 
-        life_SO = enemyLife.life;
-        healAmount_SO = enemyLife.healAmount;
-        soulAmount_SO = enemyLife.soulAmount;
+        life_SO = verdugoLife.life;
+        healAmount_SO = verdugoLife.healAmount;
+        soulAmount_SO = verdugoLife.soulAmount;
 
         //dmg_SO = enemyHitbox.dmg;
 
@@ -40,9 +40,9 @@ public class VariableManagerVerdugo : ScriptableObject
         awareAI_SO = verdugoController.awareAI;
         atkRange_SO = verdugoController.atkRange;
 
-        life_SO = enemyLife.life;
-        healAmount_SO = enemyLife.healAmount;
-        soulAmount_SO = enemyLife.soulAmount;
+        life_SO = verdugoLife.life;
+        healAmount_SO = verdugoLife.healAmount;
+        soulAmount_SO = verdugoLife.soulAmount;
 
         //dmg_SO = enemyHitbox.dmg;
     }

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ManagerVerdugoSO
   m_EditorClassIdentifier: 
   verdugoController: {fileID: 6654190905018125405, guid: 3b6b9b93218e8d44990cdc508effe7d5, type: 3}
-  enemyLife: {fileID: 4939645386638611557, guid: 3b6b9b93218e8d44990cdc508effe7d5, type: 3}
+  verdugoLife: {fileID: 6158479446149784213, guid: 3b6b9b93218e8d44990cdc508effe7d5, type: 3}
   awareAI_SO: 20
   atkRange_SO: 17
   life_SO: 5
-  healAmount_SO: 2
+  healAmount_SO: 2.5
   soulAmount_SO: 1
   dmg_SO: 0

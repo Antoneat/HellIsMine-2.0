@@ -14,10 +14,8 @@ public class BombitaConfig : MonoBehaviour
 
     public float life_Config;
     public float healAmount_Config;
-    public int soulAmount_Config;
 
     public float dmg_Config;
-    //public float rangoExplosion_Conf;
 
     [Header("Textos")]
     public TMP_Text text_AwareAi;
@@ -25,10 +23,8 @@ public class BombitaConfig : MonoBehaviour
 
     public TMP_Text text_Life;
     public TMP_Text text_HealtAmount;
-    public TMP_Text text_SoulAmount;
 
     public TMP_Text text_Dmg;
-    //public TMP_Text text_RangoExplosion;
 
     private void Awake()
     {
@@ -37,10 +33,8 @@ public class BombitaConfig : MonoBehaviour
 
         life_Config = managerBombita.life_SO;
         healAmount_Config = managerBombita.healAmount_SO;
-        soulAmount_Config = managerBombita.soulAmount_SO;
 
         dmg_Config = managerBombita.dmg_SO;
-        //rangoExplosion_Conf = managerBombita.rangoExplosion_SO;
     }
 
     public void Start()
@@ -50,10 +44,8 @@ public class BombitaConfig : MonoBehaviour
 
         text_Life.text = "Vida:" + life_Config;
         text_HealtAmount.text = "Cura:" + healAmount_Config;
-        text_SoulAmount.text = "Almas:" + soulAmount_Config;
 
         text_Dmg.text = "Daño:" + dmg_Config;
-        //text_RangoExplosion.text = "RngExplosion:" + rangoExplosion_Conf;
     }
 
     public void Update()
@@ -63,10 +55,8 @@ public class BombitaConfig : MonoBehaviour
 
         managerBombita.life_SO = life_Config;
         managerBombita.healAmount_SO = healAmount_Config;
-        managerBombita.soulAmount_SO = soulAmount_Config;
 
         managerBombita.dmg_SO = dmg_Config;
-        //managerBombita.rangoExplosion_SO = rangoExplosion_Conf;
     }
 
 
@@ -190,39 +180,6 @@ public class BombitaConfig : MonoBehaviour
     }
     #endregion
 
-    #region SoulAmount
-    public void MenosUnoSoulAmount()
-    {
-        soulAmount_Config--;
-
-        text_SoulAmount.text = "Almas:" + soulAmount_Config;
-        managerBombita.soulAmount_SO = soulAmount_Config;
-
-        managerBombita.OnValueChange.Invoke();
-    }
-    public void ChangeSoulAmount(string soulAmount)
-    {
-        int soulAmountNew = Int32.Parse(soulAmount);
-        healAmount_Config = soulAmountNew;
-
-        text_SoulAmount.text = "Almas:" + soulAmount;
-
-        managerBombita.soulAmount_SO = soulAmount_Config = soulAmountNew;
-
-        managerBombita.OnValueChange?.Invoke();
-    }
-
-    public void MasUnoSoulAmount()
-    {
-        soulAmount_Config++;
-
-        text_SoulAmount.text = "Almas:" + soulAmount_Config;
-        managerBombita.soulAmount_SO = soulAmount_Config;
-
-        managerBombita.OnValueChange.Invoke();
-    }
-    #endregion
-
     #region DMG
     public void MenosUnoDmg()
     {
@@ -255,31 +212,4 @@ public class BombitaConfig : MonoBehaviour
         managerBombita.OnValueChange.Invoke();
     }
     #endregion
-
-    /*#region Rango Explosion
-    public void MenosUnoRangoExplosion()
-    {
-        rangoExplosion_Conf--;
-
-        text_RangoExplosion.text = "RngExplosion:" + rangoExplosion_Conf;
-        managerBombita.rangoExplosion_SO = rangoExplosion_Conf;
-    }
-    public void ChangeRangoExplosion(string rngExplosion)
-    {
-        int rngExplosionNew = Int32.Parse(rngExplosion);
-        rangoExplosion_Conf = rngExplosionNew;
-
-        text_RangoExplosion.text = "RngExplosion:" + rngExplosion;
-
-        managerBombita.rangoExplosion_SO = rngExplosionNew;
-    }
-
-    public void MasUnoRangoExplosion()
-    {
-        rangoExplosion_Conf++;
-
-        text_RangoExplosion.text = "RngExplosion:" + rangoExplosion_Conf;
-        managerBombita.rangoExplosion_SO = rangoExplosion_Conf;
-    }
-    #endregion*/
 }

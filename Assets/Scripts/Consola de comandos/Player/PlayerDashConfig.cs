@@ -15,6 +15,8 @@ public class PlayerDashConfig : MonoBehaviour
 
     void Start()
     {
+        playerDash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDash>();
+
         text_dash.text = "Dash:" + playerDash.dashNewSpeed;
         text_cdDash.text = "CD_Dash:" + playerDash.cooldown;
     }
@@ -22,7 +24,7 @@ public class PlayerDashConfig : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerDash = FindObjectOfType<PlayerDash>();
+        playerDash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDash>();
     }
 
     #region Dash

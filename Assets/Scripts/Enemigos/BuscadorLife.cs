@@ -19,7 +19,7 @@ public class BuscadorLife : MonoBehaviour
 
     private void Start()
     {
-        maxLife = life;
+        life = maxLife;
     }
 
     public void TakeDmg(float dmg)

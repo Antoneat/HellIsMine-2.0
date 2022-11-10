@@ -7,7 +7,7 @@ using System;
 public class VariableManagerBombita : ScriptableObject
 {
     public BombController bombController;
-    public EnemyLife enemyLife;
+    public AgitadorLife agitadorLife;
     //public EnemyHitbox enemyHitbox;
 
     //public GameObject prefabBombita;
@@ -19,7 +19,6 @@ public class VariableManagerBombita : ScriptableObject
 
     public float life_SO;
     public float healAmount_SO;
-    public int soulAmount_SO;
 
     public float dmg_SO;
 
@@ -35,9 +34,8 @@ public class VariableManagerBombita : ScriptableObject
         awareAI_SO = bombController.awareAI;
         atkRange_SO = bombController.atkRange;
 
-        life_SO = enemyLife.life;
-        healAmount_SO = enemyLife.healAmount;
-        soulAmount_SO = enemyLife.soulAmount;
+        life_SO = agitadorLife.life;
+        healAmount_SO = agitadorLife.healAmount;
 
         //dmg_SO = enemyHitbox.dmg;
     }
@@ -49,9 +47,8 @@ public class VariableManagerBombita : ScriptableObject
         awareAI_SO = bombController.awareAI;
         atkRange_SO = bombController.atkRange;
 
-        life_SO = enemyLife.life;
-        healAmount_SO = enemyLife.healAmount;
-        soulAmount_SO = enemyLife.soulAmount;
+        life_SO = agitadorLife.life;
+        healAmount_SO = agitadorLife.healAmount;
 
         //dmg_SO = enemyHitbox.dmg;
     }

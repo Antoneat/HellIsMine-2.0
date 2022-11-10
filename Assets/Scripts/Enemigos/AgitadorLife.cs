@@ -17,6 +17,12 @@ public class AgitadorLife : MonoBehaviour
     private void Start()
     {
         maxLife = life;
+
+        ChangeLifeAgitador();
+        ChangeHealtAmountAgitador();
+
+        managerBombita.OnValueChange += ChangeLifeAgitador;
+        managerBombita.OnValueChange += ChangeHealtAmountAgitador;
     }
 
     #region Agitador
@@ -49,5 +55,11 @@ public class AgitadorLife : MonoBehaviour
     public void Muerte()
     {
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        managerBombita.OnValueChange -= ChangeLifeAgitador;
+        managerBombita.OnValueChange -= ChangeHealtAmountAgitador;
     }
 }

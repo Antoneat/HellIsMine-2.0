@@ -17,6 +17,8 @@ public class PlayerVidaConfig : MonoBehaviour
 
     void Start()
     {
+        playerDmg = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
+
         text_vida.text = "Vida:" + playerDmg.actualvida;
         text_maxVida.text = "MaxVida:" + playerDmg.maxVida;
         text_souls.text = "Souls:" + playerDmg.actualSouls;
@@ -25,6 +27,8 @@ public class PlayerVidaConfig : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        playerDmg = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
         playerDmg = FindObjectOfType<PlayerDmg>();
     }
 
