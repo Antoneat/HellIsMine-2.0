@@ -24,12 +24,13 @@ public class PlayerDmg : MonoBehaviour
     public ParticleSystem almas;
     public ParticleSystem recibiendoDmg;
 
-
+    
+        
     public PlayerMovement playerMovement;
 
     [Header("Animator")]
     [SerializeField] private Animator anim;
-    
+
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class PlayerDmg : MonoBehaviour
         actualvida = maxVida;
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+        
     }
 
     void Update()
@@ -56,11 +58,11 @@ public class PlayerDmg : MonoBehaviour
         {
             actualvida = maxVida;
         }
- 
+
         if (overlay.color.a > 0)
         {
-            if (actualvida < 20)
-                return;            
+            if (actualvida < 1)
+                return;
             durationTimer += Time.deltaTime;
             if (durationTimer > duration)
             {
@@ -70,10 +72,13 @@ public class PlayerDmg : MonoBehaviour
             }
         }
     }
-
     public void GainLife(float life) => actualvida += life;
 
-    public void GainSoul(int soul) => actualSouls += soul;
+    public void GainSoul(int soul)
+    {
+        actualSouls += soul;
+        almas.Play();
+    }
 
     public void LoseLife(float dmg)
     {
@@ -81,9 +86,7 @@ public class PlayerDmg : MonoBehaviour
         actualvida -= dmg;
         durationTimer = 0f;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
-        recibiendoDmg.Play();
-        Debug.Log("Da�o Scarlet");
-        
+        recibiendoDmg.Play();    
     }
 
     public void Alma_Vfx()

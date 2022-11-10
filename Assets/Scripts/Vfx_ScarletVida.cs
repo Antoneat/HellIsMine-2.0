@@ -21,7 +21,7 @@ public class Vfx_ScarletVida : MonoBehaviour
 
     public void ActivarOrbe()
     {
-        almasScarlet.Play();
-        contenedorDeParticleAlmas.SetActive(true);
+            almasScarlet.Play();
+            contenedorDeParticleAlmas.SetActive(true);
     }
 }
