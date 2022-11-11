@@ -26,6 +26,8 @@ public class BuscadorController : MonoBehaviour
 	public Animator ataqueBuscador;
 	public Animator runBuscador;
 
+	public AudioSource MordSource;
+	public AudioClip MordClip;
 
 	PlayerDmg plyrDmg;
 
@@ -112,6 +114,7 @@ public class BuscadorController : MonoBehaviour
 	{
 		if (playerDistance <= atkRange)
 		{
+			MordSource.PlayOneShot(MordClip);
 			GameObject obj = Instantiate(hitboxPrefab);
 			obj.transform.position = mordida.transform.position;
 		}

@@ -17,6 +17,8 @@ public class BombController : MonoBehaviour
 	public float playerDistance;
 	public float awareAI;
 	public float atkRange;
+	public AudioSource ExplSource;
+	public AudioClip ExplClip;
 	
 	//public Animator moverseAgitador;
 	public Animator ataqueAgitador;
@@ -105,7 +107,7 @@ public class BombController : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		if (playerDistance < atkRange)
 		{
-
+			ExplSource.PlayOneShot(ExplClip); //ACA EXPLOTA
 			basicoGO.SetActive(true);
 			Destroy(gameObject, 1);
 			

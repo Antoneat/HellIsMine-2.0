@@ -14,6 +14,9 @@ public class BuscadorLife : MonoBehaviour
     public Animator animator;
     public GameObject mainBuscador;
 
+    public AudioSource Source;
+    public AudioClip MuertePista;
+
     //public ParticleSystem almas;
 
 
@@ -34,7 +37,7 @@ public class BuscadorLife : MonoBehaviour
             player.GetComponent<PlayerDmg>().GainSoul(soulAmount);
             //FALTAN LAS ALMAS
             //player.GetComponent<PlayerDmg>().Alma_Vfx();
-
+            Source.PlayOneShot(MuertePista);
             animator.SetTrigger("Death");
         }
     }

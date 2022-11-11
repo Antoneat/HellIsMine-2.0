@@ -13,6 +13,9 @@ public class VerdugoLife : MonoBehaviour
 
     public int soulAmount;
 
+    public AudioSource DeadSource;
+    public AudioClip DeadPista;
+
     //public ParticleSystem almas;
 
 
@@ -40,8 +43,8 @@ public class VerdugoLife : MonoBehaviour
 
             player.GetComponent<PlayerDmg>().GainSoul(soulAmount);
             //FALTAN LAS ALMAS
-            //player.GetComponent<PlayerDmg>().Alma_Vfx();
-
+            //player.GetComponent<PlayerDmg>().Alma_Vfx
+            DeadSource.PlayOneShot(DeadPista);
             MuertePerro();
         }
     }
