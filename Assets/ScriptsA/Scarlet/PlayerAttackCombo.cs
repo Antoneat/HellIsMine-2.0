@@ -25,7 +25,8 @@ public class PlayerAttackCombo : MonoBehaviour
     private PlayerHardAttack playerHardAttack;
     [SerializeField] private GameObject mousePos;
 
-    public AudioSource ataqueUno,ataqueDos,AtaqueTres;
+    public AudioSource ataqueUno,ataqueDos,ataqueTres;
+    public AudioClip clip1, clip2, clip3;
 
     void Start()
     {
@@ -107,16 +108,15 @@ public class PlayerAttackCombo : MonoBehaviour
     {
         isAttacking = true;
         continueAttack = false;
-        ataqueUno.Play();
     }
 
     public void AfterAttacking()
     {
+
         nextAttack = false;
 
         anim.ResetTrigger("StartCombo");
 
-        ataqueUno.Stop();
     }
     public void FinalBasicAttack()
     {
@@ -129,18 +129,22 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void BasicAttack1Active()
     {
+        ataqueUno.PlayOneShot(clip1);
         ataqueBasico1Collider.SetActive(true);
         ataqueBasico2Collider.SetActive(false);
         ataqueBasico3Collider.SetActive(false);
     }
     public void BasicAttack2Active()
     {
+        ataqueDos.PlayOneShot(clip2);
         ataqueBasico1Collider.SetActive(false);
         ataqueBasico2Collider.SetActive(true);
         ataqueBasico3Collider.SetActive(false);
     }
     public void BasicAttack3Active()
     {
+
+        ataqueTres.PlayOneShot(clip3);
         ataqueBasico1Collider.SetActive(false);
         ataqueBasico2Collider.SetActive(false);
         ataqueBasico3Collider.SetActive(true);

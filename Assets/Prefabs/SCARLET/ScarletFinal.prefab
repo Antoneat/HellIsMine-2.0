@@ -1095,8 +1095,8 @@ MonoBehaviour:
   isDashing: 0
   cooldown: 0.5
   anim: {fileID: 4811876041847452568}
-  dashScarlet: {fileID: 0}
-  PistaDash: {fileID: 0}
+  dashScarlet: {fileID: 8032104237117341035}
+  PistaDash: {fileID: 8300000, guid: acd0b8151be074f42ac82e77ff68bca4, type: 3}
 --- !u!114 &2264408721482986322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,9 +1119,12 @@ MonoBehaviour:
   ataqueBasico2Collider: {fileID: 4920231919865549410}
   ataqueBasico3Collider: {fileID: 4920231919919464840}
   mousePos: {fileID: 0}
-  ataqueUno: {fileID: 0}
-  ataqueDos: {fileID: 0}
-  AtaqueTres: {fileID: 0}
+  ataqueUno: {fileID: 8032104237117341035}
+  ataqueDos: {fileID: 8032104237117341035}
+  ataqueTres: {fileID: 8032104237117341035}
+  clip1: {fileID: 8300000, guid: 56710e9a72c9061488905b1f78df9daf, type: 3}
+  clip2: {fileID: 8300000, guid: c631fca63e4364643bc0e0cba53685df, type: 3}
+  clip3: {fileID: 8300000, guid: 027ac46f28128314f92bfdb5d6db3e18, type: 3}
 --- !u!114 &2264408721482986333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,8 +1158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualvida: 30
   maxVida: 30
-  Muerte: {fileID: 0}
-  MuertePista: {fileID: 0}
+  Muerte: {fileID: 8032104237117341035}
+  MuertePista: {fileID: 8300000, guid: 8ac94a7395815024bb7c9ad4a0b126cf, type: 3}
   actualSouls: 0
   overlay: {fileID: 0}
   duration: 0.05
@@ -1193,14 +1196,14 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2264408721482986328}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.196
+  m_Volume: 0.1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1209,7 +1212,7 @@ AudioSource:
   MinDistance: 2
   MaxDistance: 3
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 1
@@ -1217,23 +1220,32 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.6666667
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -1.5005997
+      outSlope: -1.5005997
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7591424
+      value: 0.5329294
+      inSlope: -3.2637866
+      outSlope: -3.2637866
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.66398257
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.66693276
+      outSlope: -0.66693276
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4

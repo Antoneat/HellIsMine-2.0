@@ -33,6 +33,7 @@ public class PlayerDash : MonoBehaviour
         {
             canDash = false;
             isDashing = true;
+            dashScarlet.PlayOneShot(PistaDash);
             anim.Play("Dash");
             ResetAttacks();
         }

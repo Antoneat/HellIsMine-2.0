@@ -65,7 +65,21 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetFloat("Run", velocityOfMovement);
-        Pasos.PlayOneShot(Pista);
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            SFX();
+        }
+        else Pasos.Stop();
+    }
+
+    private void SFX()
+    {
+        if (Pasos.isPlaying == false)
+        {
+            Pasos.PlayOneShot(Pista);
+        }
+
     }
 
     public void PlayerRotation()

@@ -10,6 +10,8 @@ public class SpawnerManager : MonoBehaviour
     public int ordenOleada;
     public int childrens;
     public bool spawning;
+    public AudioSource OlSource;
+    public AudioClip OleadaPista;
     
     //childcount
 
@@ -26,7 +28,7 @@ public class SpawnerManager : MonoBehaviour
         ordenOleada = 0;
 
         // Puertas
-        doorActivator = false;
+        doorActivator = false;        
         indxPuertas = puertas.Length;
     }
 
@@ -40,10 +42,15 @@ public class SpawnerManager : MonoBehaviour
     {
         if (doorActivator == true)
         {
-            puertas[0].SetActive(true);
-            puertas[1].SetActive(true);
-            puertas[2].SetActive(true);
-            puertas[3].SetActive(true);
+            if (OlSource.isPlaying == false)
+            {
+                OlSource.PlayOneShot(OleadaPista);
+                puertas[0].SetActive(true);
+                puertas[1].SetActive(true);
+                puertas[2].SetActive(true);
+                puertas[3].SetActive(true);
+                OlSource.Stop();
+            }
         }
 
         if (doorActivator == false)
