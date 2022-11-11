@@ -25,7 +25,7 @@ public class PlayerAttackCombo : MonoBehaviour
     private PlayerHardAttack playerHardAttack;
     [SerializeField] private GameObject mousePos;
 
-    public AudioSource ataqueUno;
+    public AudioSource ataqueUno,ataqueDos,AtaqueTres;
 
     void Start()
     {

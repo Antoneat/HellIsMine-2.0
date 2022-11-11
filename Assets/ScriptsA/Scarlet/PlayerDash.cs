@@ -15,6 +15,8 @@ public class PlayerDash : MonoBehaviour
     private PlayerAttackCombo playerAttackCombo;
     private PlayerHardAttack playerHardAttack;
     public AudioSource dashScarlet;
+    public AudioClip PistaDash;
+
 
     void Start()
     {

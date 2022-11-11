@@ -11,6 +11,8 @@ public class PlayerDmg : MonoBehaviour
     public float maxVida = 30f;
     //public bool takingDmg;
     //public ConsolaComandosManager consolaComandos;
+    public AudioSource Muerte;
+    public AudioClip MuertePista;
 
     public int actualSouls;
 
@@ -48,6 +50,7 @@ public class PlayerDmg : MonoBehaviour
 
         if (actualvida <= 0)
         {
+            Muerte.PlayOneShot(MuertePista);
             playerMovement.enabled = false;
             playerMovement.maxSpeed = 0;
             anim.Play("Morir");

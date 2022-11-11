@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float velocityOfMovement;
     public float acceleration;
     public float deceleration;
+    public AudioSource Pasos;
+    public AudioClip Pista;
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         playerTransform = GetComponent<Transform>();
         playerDash = GetComponent<PlayerDash>();
+        
     }
 
     void FixedUpdate()
@@ -62,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         anim.SetFloat("Run", velocityOfMovement);
+        Pasos.PlayOneShot(Pista);
     }
 
     public void PlayerRotation()
