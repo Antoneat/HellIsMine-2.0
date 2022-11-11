@@ -15,7 +15,7 @@ public class PlayerDmg : MonoBehaviour
     public AudioClip MuertePista;
 
     public int actualSouls;
-
+    public ParticleSystem curacion;
     [Header("DmgHUD")]
     public Image overlay;
     public float duration;
@@ -60,6 +60,7 @@ public class PlayerDmg : MonoBehaviour
         if (actualvida > maxVida)
         {
             actualvida = maxVida;
+            //curacion.Stop();
         }
 
         if (overlay.color.a > 0)
@@ -75,7 +76,17 @@ public class PlayerDmg : MonoBehaviour
             }
         }
     }
-    public void GainLife(float life) => actualvida += life;
+    public void GainLife(float life)
+    {
+        actualvida += life;
+        curacion.Play();
+
+        if (maxVida == actualvida)
+            curacion.Stop();
+        
+        
+    }
+
 
     public void GainSoul(int soul)
     {
