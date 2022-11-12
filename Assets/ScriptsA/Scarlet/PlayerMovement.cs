@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float velocityOfMovement;
     public float acceleration;
     public float deceleration;
+
+    public float speedLimiter = 1;
     public AudioSource Pasos;
     public AudioClip Pista;
 
@@ -43,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        rgbd.velocity = new Vector3(horizontal * speed * Time.fixedDeltaTime, 0, vertical * speed * Time.fixedDeltaTime);
+        rgbd.velocity = new Vector3(horizontal * speed * Time.fixedDeltaTime * speedLimiter, 0, vertical * speed * Time.fixedDeltaTime * speedLimiter);
 
         if (rgbd.velocity.magnitude > maxSpeed)
         {

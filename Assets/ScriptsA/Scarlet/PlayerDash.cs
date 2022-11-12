@@ -41,6 +41,7 @@ public class PlayerDash : MonoBehaviour
 
     public void Dashing()
     {
+        playerMovement.speedLimiter = 1;
         playerMovement.maxSpeed = dashNewSpeed;
         Physics.IgnoreLayerCollision(6, 9, true);
     }
@@ -70,8 +71,9 @@ public class PlayerDash : MonoBehaviour
         playerAttackCombo.ataqueBasico1Collider.SetActive(false);
         playerAttackCombo.ataqueBasico2Collider.SetActive(false);
         playerAttackCombo.ataqueBasico3Collider.SetActive(false);
+        
         playerHardAttack.isHardAttacking = false;
-        //playerHardAttack.ataqueHardCollider.enabled = false;
+        playerHardAttack.ataqueHardCollider.SetActive(false);
     }
     #endregion
 }

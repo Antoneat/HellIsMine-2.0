@@ -16,6 +16,7 @@ public class PlayerDmg : MonoBehaviour
 
     public int actualSouls;
     public ParticleSystem curacion;
+
     [Header("DmgHUD")]
     public Image overlay;
     public float duration;
@@ -51,7 +52,7 @@ public class PlayerDmg : MonoBehaviour
         if (actualvida <= 0)
         {
             Muerte.PlayOneShot(MuertePista);
-            playerMovement.enabled = false;
+            //playerMovement.enabled = false;
             playerMovement.maxSpeed = 0;
             anim.Play("Morir");
             Invoke(nameof(Dead), 3.20f);
@@ -83,8 +84,6 @@ public class PlayerDmg : MonoBehaviour
 
         if (maxVida == actualvida)
             curacion.Stop();
-        
-        
     }
 
 

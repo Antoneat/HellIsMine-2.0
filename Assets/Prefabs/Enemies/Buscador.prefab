@@ -2668,7 +2668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 6
-  maxLife: 0
+  maxLife: 6
   healAmount: 4
   soulAmount: 1
   animator: {fileID: 7062100617167059940}

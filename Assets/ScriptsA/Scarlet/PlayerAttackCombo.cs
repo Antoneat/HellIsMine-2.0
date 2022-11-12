@@ -6,6 +6,7 @@ public class PlayerAttackCombo : MonoBehaviour
 {
     public bool isAttacking;
 
+    public bool canImpulse;
     public bool continueAttack;
     public bool nextAttack; // pase a la sgte anim
 
@@ -15,7 +16,6 @@ public class PlayerAttackCombo : MonoBehaviour
 
     [Header("Components")]
     public Animator anim;
-        
     public GameObject guadanaParticles;
     public GameObject ataqueBasico1Collider;
     public GameObject ataqueBasico2Collider;
@@ -31,14 +31,14 @@ public class PlayerAttackCombo : MonoBehaviour
     void Start()
     {
         isAttacking = false;
-        nextAttack = false;
         continueAttack = false;
+        nextAttack = false;
 
         anim = GetComponent<Animator>();
 
         playerMovement = GetComponent<PlayerMovement>();
-        playerHardAttack = GetComponent<PlayerHardAttack>();
         playerDash = GetComponent<PlayerDash>();
+        playerHardAttack = GetComponent<PlayerHardAttack>();
     }
 
     void Update()
@@ -63,10 +63,16 @@ public class PlayerAttackCombo : MonoBehaviour
             continueAttack = false;
         }
 
-        if (nextAttack == false && playerDash.isDashing == false && isAttacking == false)
+        if (nextAttack == false && playerDash.isDashing == false && isAttacking == false && playerHardAttack.isHardAttacking == false)
         {
+            Debug.Log("LOQUESEA");
+            playerMovement.speedLimiter = 1;
             playerMovement.maxSpeed = 7.2f;
         }
+        if(canImpulse)
+		{
+            ForceMovement();
+		}
     }
 
     public void Combo()
@@ -100,7 +106,7 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void StopMovement()
     {
-        playerMovement.maxSpeed = 0f;
+        playerMovement.speedLimiter = 0f;
         isAttacking = true;
     }
 
@@ -108,15 +114,29 @@ public class PlayerAttackCombo : MonoBehaviour
     {
         isAttacking = true;
         continueAttack = false;
+
+        StartCoroutine(UseForce(0.15f));
     }
+
+    public IEnumerator UseForce(float time)
+	{
+        canImpulse = true;
+        yield return new WaitForSeconds(time);
+        canImpulse = false;
+        yield return null;
+	}
+
+    public void ForceMovement()
+	{
+        //impulso para las anims
+        playerMovement.rgbd.AddForce(transform.forward * 1.2f, ForceMode.Impulse);
+	}
 
     public void AfterAttacking()
     {
-
         nextAttack = false;
 
         anim.ResetTrigger("StartCombo");
-
     }
     public void FinalBasicAttack()
     {

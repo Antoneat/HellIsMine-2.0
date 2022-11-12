@@ -12,7 +12,8 @@ public class PlayerHardAttack : MonoBehaviour
 
     [Header("Components")]
     public Animator anim;
-    public Collider ataqueHardCollider;
+    public GameObject guadanaParticles;
+    public GameObject ataqueHardCollider;
     private PlayerMovement playerMovement;
     private PlayerDash playerDash;
     private PlayerAttackCombo playerAttackCombo;
@@ -27,56 +28,78 @@ public class PlayerHardAttack : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
-        playerAttackCombo = GetComponent<PlayerAttackCombo>();
         playerMovement = GetComponent<PlayerMovement>();
         playerDash = GetComponent<PlayerDash>();
+        playerAttackCombo = GetComponent<PlayerAttackCombo>();
     }
 
     void Update()
     {
-        //HardCombo();
+        HardCombo();
         mousePos = GameObject.FindGameObjectWithTag("MousePos");
+
+        if(isHardAttacking == true && Input.GetMouseButtonDown(1))
+        {
+            direction = (mousePos.transform.position - transform.position).normalized;
+        }
     }
 
     public void HardCombo()
     {
         if (Input.GetMouseButtonDown(1) && isHardAttacking == false && playerAttackCombo.isAttacking == false && playerDash.isDashing == false)
         {
-            isHardAttacking = true;
-
             direction = (mousePos.transform.position - transform.position).normalized;
 
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
 
-            Vector3.MoveTowards(transform.position, mousePos.transform.position, 1f);
-
-            anim.Play("AtaqueFuerte");
+            anim.SetTrigger("AtaqueFuerte");
         }
+
+        if (isHardAttacking)
+        {
+            //PARTICLES
+            guadanaParticles.SetActive(true);
+            
+            //ROTATION
+            rotateTo = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotateTo, rotationSpeed * Time.deltaTime);
+        }
+    }
+
+    public void StopMovementHard()
+    {
+        playerMovement.maxSpeed = 3f;
+        isHardAttacking = true;
     }
 
     public void HardAttacking()
     {
-        isHardAttacking = false;
-    }
-
-    public void ActivatingCollHardAttack()
-    {
-        ataqueHardCollider.enabled = true;
-    }
-
-    public void DeactivatingCollHardAttack()
-    {
-        ataqueHardCollider.enabled = false;
+        isHardAttacking = true;
     }
 
     public void AfterHardAttacking()
     {
-        isHardAttacking = false;
-        ataqueHardCollider.enabled = false;
-
-        playerMovement.maxSpeed = 7.2f;
-        playerMovement.enabled = true;
+        anim.ResetTrigger("AtaqueFuerte");
     }
+
+    public void FinalHardAttack()
+    {
+        //nextHardAttack = false;
+        playerMovement.maxSpeed = 7.2f;
+        isHardAttacking = false;
+        //continueHardAttack = false;
+    }
+
+    public void HardAttack1Active()
+    {
+        ataqueHardCollider.SetActive(true);
+    }
+
+    public void DeactivatingCollsHardAttack()
+    {
+        ataqueHardCollider.SetActive(false);
+    }
+
 
     public void AtaqueDosInit() 
     {
