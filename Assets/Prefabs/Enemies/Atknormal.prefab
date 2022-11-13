@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 8923011643089971797}
   - component: {fileID: 935299448065547628}
   - component: {fileID: 1682210399809320325}
+  - component: {fileID: 4639747095157879849}
   m_Layer: 0
   m_Name: Atknormal
   m_TagString: AtkBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2231021458248293989
 Transform:
   m_ObjectHideFlags: 0
@@ -54,7 +55,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b7012158d11a1742bdea4d873b39b6e, type: 2}
+  - {fileID: 2100000, guid: 61fdb71a188bb1e4f99f13fa00eff8c0, type: 2}
+  - {fileID: 2100000, guid: e9e857d7c0db68846b5ccb6eb02c7a45, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,3 +100,17 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4639747095157879849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231021458248293995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd97cd7e047db44cb9b36aa593a3a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 0
+  modifier: 1

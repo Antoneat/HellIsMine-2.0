@@ -109,9 +109,8 @@ public class BombController : MonoBehaviour
 		{
 			ExplSource.PlayOneShot(ExplClip); //ACA EXPLOTA
 			basicoGO.SetActive(true);
+			this.GetComponent<BoxCollider>().enabled = false;
 			Destroy(gameObject, 1);
-			
-
 		}
 		else if (playerDistance >= atkRange)
 		{

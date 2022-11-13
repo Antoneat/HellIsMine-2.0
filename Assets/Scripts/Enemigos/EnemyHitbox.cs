@@ -30,7 +30,7 @@ public class EnemyHitbox : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerDmg>() && other.gameObject.CompareTag("Player"))
         {
-            if(modifier != 0)
+            if(modifier != 1)
             {
                 other.gameObject.GetComponent<PlayerDmg>().LoseLife(dmg * modifier);
             }

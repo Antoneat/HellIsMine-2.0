@@ -10570,6 +10570,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4639747095157879849, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
+      propertyPath: dmg
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8923011643089971797, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -10585,21 +10589,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2231021458248293995, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
   m_PrefabInstance: {fileID: 260339649627393278}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3349402890763583613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119726176608211605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 919e5f8998771f742b990db7717b3a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dmg: 0.25
-  modifier: 1
-  enemyType: 0
 --- !u!4 &2119726176608211611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2231021458248293989, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
