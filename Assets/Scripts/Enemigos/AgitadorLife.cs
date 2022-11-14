@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AgitadorLife : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class AgitadorLife : MonoBehaviour
 
     public float healAmount;
 
+    [SerializeField] UnityEvent DmgSound;
     //public ParticleSystem almas;
 
 
@@ -41,7 +43,7 @@ public class AgitadorLife : MonoBehaviour
     public void TakeDmg(float dmg)
     {
         life -= dmg;
-
+        DmgSound.Invoke();
         if (life <= 0)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");

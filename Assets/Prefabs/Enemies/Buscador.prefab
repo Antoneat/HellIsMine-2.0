@@ -12316,7 +12316,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -12346,7 +12346,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -12406,6 +12406,21 @@ MonoBehaviour:
   mainBuscador: {fileID: 4906008913135897410}
   Source: {fileID: 7945515138169089208}
   MuertePista: {fileID: 8300000, guid: 6235a5e30726f954785b6cd1ce764a34, type: 3}
+  DmgSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7945515138169089208}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 7e56f67c16f1f1547a1c726be1cf40f7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75909598626321609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12433,6 +12448,33 @@ MonoBehaviour:
   runBuscador: {fileID: 7062100617167059940}
   MordSource: {fileID: 7945515138169089208}
   MordClip: {fileID: 8300000, guid: 426ae5d28d7cf1b4ea237fd8491194ac, type: 3}
+--- !u!114 &6381630882297673603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587588434960497444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5558ae99d24ab47bc95b7c5141a34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Efectos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7945515138169089208}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: dec922ee92cb94243b1352b5df0d2061, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &6354290651575051244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1493520384329718375, guid: 1251d728aa1807647a4e0d4c98e38e5c, type: 3}

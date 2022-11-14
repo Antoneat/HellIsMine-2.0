@@ -21,6 +21,8 @@ public class PlayerHardAttack : MonoBehaviour
 
     public AudioSource ataqueDos;
     public AudioSource ataqueTres;
+    public AudioSource ataqueFuerte;
+    public AudioClip AtkHClip;
 
     void Start()
     {
@@ -51,7 +53,7 @@ public class PlayerHardAttack : MonoBehaviour
             direction = (mousePos.transform.position - transform.position).normalized;
 
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
-
+            ataqueFuerte.PlayOneShot(AtkHClip);
             anim.SetTrigger("AtaqueFuerte");
         }
 

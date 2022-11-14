@@ -25,6 +25,9 @@ public class VerdugoController : MonoBehaviour
 	public GameObject[] spawnPoints;
 	public GameObject lanzaPrefab;
 
+	public AudioSource LanzaSource;
+	public AudioClip LanzaClip;
+
 
 	void Start()
 	{
@@ -60,7 +63,8 @@ public class VerdugoController : MonoBehaviour
 
 
 		if (playerDistance <= atkRange && coPlay == false)
-		{
+		{ 
+
 			StartCoroutine(LanzaEspiritual());
 			ataqueVerdugo.SetBool("Attack", true);
 			//agent.isStopped = false;
@@ -85,6 +89,7 @@ public class VerdugoController : MonoBehaviour
 		yield return new WaitForSecondsRealtime(1f);
 		//agent.isStopped = false;
 		SpawnRafaga();
+		LanzaSource.PlayOneShot(LanzaClip);
 		ChangeColorAtk();
 		yield return new WaitForSecondsRealtime(2f);
 		//basicoGO.SetActive(false);

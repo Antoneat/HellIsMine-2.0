@@ -51,6 +51,7 @@ public class PlayerDmg : MonoBehaviour
 
         if (actualvida <= 0)
         {
+            if(!Muerte.isPlaying)
             Muerte.PlayOneShot(MuertePista);
             //playerMovement.enabled = false;
             playerMovement.maxSpeed = 0;

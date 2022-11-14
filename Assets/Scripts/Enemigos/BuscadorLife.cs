@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BuscadorLife : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class BuscadorLife : MonoBehaviour
     public AudioSource Source;
     public AudioClip MuertePista;
 
+    [SerializeField] UnityEvent DmgSound;
+    
+
     //public ParticleSystem almas;
 
 
@@ -28,7 +32,7 @@ public class BuscadorLife : MonoBehaviour
     public void TakeDmg(float dmg)
     {
         life -= dmg;
-
+        DmgSound.Invoke();
         if (life <= 0)
         {
             GameObject player = GameObject.Find("ScarletFinal");

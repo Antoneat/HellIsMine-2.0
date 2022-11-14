@@ -12,7 +12,8 @@ public class SpawnerManager : MonoBehaviour
     public bool spawning;
     public AudioSource OlSource;
     public AudioClip OleadaPista;
-    
+    private bool Audio;
+
     //childcount
 
     [Header("Puertas")]
@@ -42,14 +43,14 @@ public class SpawnerManager : MonoBehaviour
     {
         if (doorActivator == true)
         {
-            if (OlSource.isPlaying == false)
+            if (!Audio)
             {
+                Audio = true;
                 OlSource.PlayOneShot(OleadaPista);
                 puertas[0].SetActive(true);
                 puertas[1].SetActive(true);
                 puertas[2].SetActive(true);
                 puertas[3].SetActive(true);
-                OlSource.Stop();
             }
         }
 

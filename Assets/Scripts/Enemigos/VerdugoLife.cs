@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VerdugoLife : MonoBehaviour
 {
@@ -13,8 +14,10 @@ public class VerdugoLife : MonoBehaviour
 
     public int soulAmount;
 
-    public AudioSource DeadSource;
+    public AudioSource DeadSource,LifeSource;
     public AudioClip DeadPista;
+
+    [SerializeField] UnityEvent DmgSound;
 
     //public ParticleSystem almas;
 
@@ -22,7 +25,7 @@ public class VerdugoLife : MonoBehaviour
     private void Start()
     {
         maxLife = life;
-
+        
         ChangeLifeVerdugo();
         ChangeHealtAmountVerdugo();
         ChangeSoulAmountVerdugo();
@@ -35,7 +38,7 @@ public class VerdugoLife : MonoBehaviour
     public void TakeDmg(float dmg)
     {
         life -= dmg;
-
+        DmgSound.Invoke();
         if (life <= 0)
         {
             GameObject player = GameObject.Find("ScarletFinal");
@@ -45,6 +48,7 @@ public class VerdugoLife : MonoBehaviour
             //FALTAN LAS ALMAS
             //player.GetComponent<PlayerDmg>().Alma_Vfx
             DeadSource.PlayOneShot(DeadPista);
+            LifeSource.Stop();
             MuertePerro();
         }
     }

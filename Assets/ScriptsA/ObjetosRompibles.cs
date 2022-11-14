@@ -10,6 +10,7 @@ public class ObjetosRompibles : MonoBehaviour
     [SerializeField] private UnityEvent OnDestroy;
     private MeshRenderer[] mesh ;
     private Collider[] collider;
+    private bool enable=true;
     [SerializeField] private List<GameObject> vfx = new List<GameObject>();
     [SerializeField] private GameObject spawnPointVfx;
 
@@ -22,7 +23,8 @@ public class ObjetosRompibles : MonoBehaviour
 
     private IEnumerator Muerte()
     {
-        if (vida > 0) yield break;
+        if (vida > 0 || !enable) yield break;
+        enable = false;
         OnDestroy.Invoke();
 
         foreach (var item in mesh) item.enabled = false;
