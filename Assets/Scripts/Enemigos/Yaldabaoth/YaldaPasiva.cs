@@ -1,109 +1,78 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class YaldaPasiva : MonoBehaviour
 {
 
     private YaldaVida yaldaVida; // Script de la vida de Yalda
+    private YaldaMov yaldaMov; // Script de el movimiento de Yalda
     private Animator anim;
 
-    // public float cooldownGeneral; // Max cooldown el cual se spawnea cada enemigo
-    // private float cooldownToSpawnA, cooldownToSpawnB, cooldownToSpawnV; // cooldown para cada enemigo a spawnear
-
-    public int curitas;
+    public int curitas; //Cantidad de veces que se curó.
 
     public bool curandose; // Comprobante si esta curandose.
 
     [Header("Enemigos")]
-    public GameObject oleada1, oleada2;
-    // public List<GameObject> agitador, buscador, verdugo; //Lista de los enemigos a spawnear
-    // public GameObject agitadorPrefab, buscadorPrefab, verdugoPrefab; // Prefabs de enemigos
+    public GameObject oleada1, oleada2; // Oleadas a activar cuando esté por 50 o 20 de vida.
+    public int childrens1, childrens2; // Agarra la cantidad de hijos que tienen las oleadas.
 
     void Start()
     {
         yaldaVida = GetComponent<YaldaVida>();
+        yaldaMov = GetComponent<YaldaMov>();
         anim = GetComponent<Animator>();
         curandose = false;
         curitas = 0;
-        //cooldownToSpawnA = cooldownToSpawnB = cooldownToSpawnV = cooldownGeneral; // los cooldowns de todos los enemigos son igualados al general al principio de la pasiva.
     }
 
     void Update()
     {
-        if(yaldaVida.life <= 50 && curitas == 0 || yaldaVida.life <= 20 && curitas == 1) //Si tiene menos de 50 de vida y no se ha curado entonces...
+        if(yaldaVida.life <= 50 && curitas == 0 || yaldaVida.life <= 20 && curitas == 1) //Si tiene menos de 50 de vida y no se ha curado entonces... Si tiene menos de 20 de vida y se curó antes entonces...
         {
-            curitas++;
-            curandose = true;
+            curitas++; // Aumenta en 1 las veces que se curó.
+            curandose = true; // Se pone en el estado de curandose.
 			anim.Play("Curandose");
 
-            if(curitas == 0)
+            if(curitas == 1) // Activa la 1ra oleada cuando esté curandose por 1ra vez. 
             {
                 oleada1.SetActive(true);
             }
-            else if( curitas == 1)
+            else if(curitas == 2) // Activa la 2da oleada cuando esté curandose por 2da vez.
             {
                 oleada2.SetActive(true);
             }
-
-            // InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f); //Invoca los enemigos en una posicion distinta.
         }
-        // Baja el contador para spawnear
-        // if(cooldownToSpawnA >= 0)
-        // {
-        //     cooldownToSpawnA -= Time.deltaTime;
-        // }
-        // if(cooldownToSpawnB >= 0)
-        // {
-        //     cooldownToSpawnB -= Time.deltaTime;
-        // }
-        // if(cooldownToSpawnV >= 0)
-        // {
-        //     cooldownToSpawnV -= Time.deltaTime;
-        // }
+
+        childrens1 = oleada1.transform.childCount;
+        childrens2 = oleada2.transform.childCount;
+        // Comprobante de si Scarlet mató toda la oleada antes de que Yalda se cure por completo, que pare la curación.
+        if(childrens1 == 0 && curitas == 1 && curandose == true)
+        {
+            curandose = false;
+            anim.Play("Idle");
+        }
+
+        if(childrens2 == 0 && curitas == 2 && curandose == true)
+        {
+            curandose = false;
+            anim.Play("Idle");
+        }
     }
 
-    // public void SpawnerAleatorio()
-    // {   
-    //     // Posiciones aleatorias para cada enemigo (si no spawnean en el mismo sitio)
-    //     Vector3 randomSpawnPositionA = new Vector3(UnityEngine.Random.Range(151, 170), 0, UnityEngine.Random.Range(-29, -12)); //CAMBIAR EN CASO DE AGRANDAR SALA
-    //     Vector3 randomSpawnPositionB = new Vector3(UnityEngine.Random.Range(151, 170), 0, UnityEngine.Random.Range(-29, -12)); //CAMBIAR EN CASO DE AGRANDAR SALA
-    //     Vector3 randomSpawnPositionV = new Vector3(UnityEngine.Random.Range(151, 170), 0, UnityEngine.Random.Range(-29, -12)); //CAMBIAR EN CASO DE AGRANDAR SALA
-
-    //     // Max cantidad de agitadores spawneados = 9
-    //     if(agitador.Count <= 8 && cooldownToSpawnA <= 0)
-    //     {
-    //         cooldownToSpawnA = cooldownGeneral;
-    //         Instantiate(agitadorPrefab, randomSpawnPositionA, Quaternion.identity);
-    //         agitador.Add(agitadorPrefab);
-    //     }
-
-    //     // Max cantidad de buscadores spawneados = 3
-    //     if(buscador.Count <= 2 && cooldownToSpawnB <= 0)
-    //     {
-    //         cooldownToSpawnB = cooldownGeneral;
-    //         Instantiate(buscadorPrefab, randomSpawnPositionB, Quaternion.identity);
-    //         buscador.Add(buscadorPrefab);
-    //     }
-
-    //     // Max cantidad de verdugos spawneados = 2
-    //     if(verdugo.Count <= 1 && cooldownToSpawnV <= 0)
-    //     {
-    //         cooldownToSpawnV = cooldownGeneral;
-    //         Instantiate(verdugoPrefab, randomSpawnPositionV, Quaternion.identity);
-    //         verdugo.Add(verdugoPrefab);
-    //     }
-    // }
-
-    public void Cura()
+    public void InicioDeCura() // Metodo puesto para animacion.
     {
-        // comprobante de si mato a todos antes de curarse, que pare
-        yaldaVida.life++;
+        yaldaMov.attacking = false;
+        yaldaMov.ResetOfTriggersAnim();
     }
 
-    public void FinDeCura()
+    public void Cura() // Metodo puesto para animacion.
     {
-        curandose = false;
+        yaldaVida.life++; //Aumenta su vida en 1.
     }
+
+    public void FinDeCura() // Metodo puesto para animacion.
+    {
+        curandose = false; // Termina su estado de curación.
+    }    
 }

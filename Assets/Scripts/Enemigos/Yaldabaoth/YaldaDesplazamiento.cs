@@ -17,6 +17,7 @@ public class YaldaDesplazamiento : MonoBehaviour
 
     [Header("Componentes")]
     [SerializeField] YaldaMov yaldaMov;
+    [SerializeField] YaldaPasiva yaldaPasiva;
     [SerializeField] Animator anim;
     public CapsuleCollider ondaEx;
 
@@ -56,9 +57,8 @@ public class YaldaDesplazamiento : MonoBehaviour
     public void StartOfTpYalda()
     {
         yaldaMov.attacking = true;
-        anim.ResetTrigger("BasicAttack");
-		anim.ResetTrigger("SpecialAttack");
-        anim.ResetTrigger("Teleport");
+        
+        yaldaMov.ResetOfTriggersAnim();
     }
 
     public void GoingToTeleport()

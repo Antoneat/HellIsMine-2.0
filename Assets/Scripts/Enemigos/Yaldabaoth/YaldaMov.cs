@@ -77,7 +77,7 @@ public class YaldaMov : MonoBehaviour
 			{
 				anim.SetTrigger("SpecialAttack");
 			}
-			else if (yaldaAtkEspecial.canAtkEspecial == false) // Si no puede hacer el ataque especial entonces...
+			else if (yaldaAtkEspecial.canAtkEspecial == false) 
 			{
 				anim.SetTrigger("BasicAttack");
 			}
@@ -103,6 +103,18 @@ public class YaldaMov : MonoBehaviour
 	public void NotStareAtPlayer() // Metodo para dejar de mirar a Scarlet
     {
         stare = false;
+    }
+
+	public void StartOfIdle()
+	{
+		attacking = false;
+	}
+
+	public void ResetOfTriggersAnim()
+    {
+        anim.ResetTrigger("BasicAttack");
+		anim.ResetTrigger("SpecialAttack");
+		anim.ResetTrigger("Teleport");
     }
 
 	private void OnDrawGizmos()

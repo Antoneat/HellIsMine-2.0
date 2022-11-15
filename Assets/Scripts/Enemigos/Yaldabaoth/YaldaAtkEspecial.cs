@@ -17,6 +17,7 @@ public class YaldaAtkEspecial : MonoBehaviour
 
     [Header("Componentes")]
     [SerializeField] YaldaMov yaldaMov;
+    [SerializeField] YaldaPasiva yaldaPasiva;
     [SerializeField] Animator anim;
     void Start()
     {
@@ -45,12 +46,10 @@ public class YaldaAtkEspecial : MonoBehaviour
 
     public void StartOfSpecialAttack() //Evento cuando empieza la anim de specialAttack
 	{
+		Debug.Log("AtaqueEspecialYalda");
 		yaldaMov.StopChase();
         yaldaMov.attacking = true;
         yaldaMov.stare = false;
-        anim.ResetTrigger("BasicAttack");
-		anim.ResetTrigger("SpecialAttack");
-        anim.ResetTrigger("Teleport");
 	}
 
 	public void EndOfSpecialAttack() //Evento cuando termina la anim de specialAttack Y la onda expansiva 
@@ -61,6 +60,8 @@ public class YaldaAtkEspecial : MonoBehaviour
         cooldown = Random.Range(5,9);
         ResetOndaEx();
         canAtkEspecial = false;
+        
+        yaldaMov.ResetOfTriggersAnim();
 	}
 
 	public void SpecialAttackColliderON() //Evento que activa los colliders de las manos y onda expansiva

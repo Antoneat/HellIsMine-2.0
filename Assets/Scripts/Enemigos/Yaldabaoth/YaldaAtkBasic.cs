@@ -9,6 +9,8 @@ public class YaldaAtkBasic : MonoBehaviour
 
 	[Header("Ataque Basico")]
 	[SerializeField] YaldaMov yaldaMov;
+
+	[SerializeField] YaldaPasiva yaldaPasiva;
 	[SerializeField] YaldaAtkEspecial yaldaAtkEspecial;
 	[SerializeField] Animator anim;
 	public Collider manoCollider;
@@ -20,12 +22,12 @@ public class YaldaAtkBasic : MonoBehaviour
 
 	public void StartOfBasicAttack() //Evento cuando empieza la anim de basicAttack
 	{
+		Debug.Log("AtaqueBasicoYalda");
 		yaldaMov.StopChase();
 		yaldaMov.attacking = true;
 		yaldaMov.stare = false;
-		anim.ResetTrigger("BasicAttack");
-		anim.ResetTrigger("SpecialAttack");
-		anim.ResetTrigger("Teleport");
+		
+		yaldaMov.ResetOfTriggersAnim();
 	}
 
 	public void EndOfBasicAttack() //Evento cuando termina la anim de basicAttack

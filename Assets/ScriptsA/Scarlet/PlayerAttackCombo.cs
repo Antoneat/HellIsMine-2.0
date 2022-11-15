@@ -65,7 +65,6 @@ public class PlayerAttackCombo : MonoBehaviour
 
         if (nextAttack == false && playerDash.isDashing == false && isAttacking == false && playerHardAttack.isHardAttacking == false)
         {
-            Debug.Log("LOQUESEA");
             playerMovement.speedLimiter = 1;
             playerMovement.maxSpeed = 7.2f;
         }

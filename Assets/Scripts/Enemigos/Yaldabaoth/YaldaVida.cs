@@ -14,6 +14,7 @@ public class YaldaVida : MonoBehaviour
     public Animator anim;
 
     public YaldaPasiva yaldaPasiva;
+    [SerializeField] private YaldaMov yaldaMov;
     public GameObject barraDeVidaYalda; // Barra de vida de Yalda
 
     //public ParticleSystem almas;
@@ -25,6 +26,7 @@ public class YaldaVida : MonoBehaviour
 
     private void Start()
     {
+        yaldaMov = GetComponent<YaldaMov>();
         yaldaPasiva = GetComponent<YaldaPasiva>();
         life = maxLife;
     }
@@ -39,12 +41,13 @@ public class YaldaVida : MonoBehaviour
         if (life <= 0)
         {
             barraDeVidaYalda.SetActive(false);
+            yaldaMov.enabled = false;
             anim.SetTrigger("Muerte");
         }
     }
 
     public void Muerte()
-    {
+    {   
         Destroy(gameObject);
     }
 }
