@@ -114,6 +114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 3
   modifier: 1
+  tiendaInteracion: {fileID: 0}
+  playerAttackCombo: {fileID: 2264408721482986322}
+  playerDash: {fileID: 2264408721482986323}
 --- !u!1 &2057707099
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,7 +6060,15 @@ MonoBehaviour:
   canDash: 1
   isDashing: 0
   cooldown: 0.5
+  DashOfensivo: 0
+  DashAfilado1: 0
+  DashAfilado2: 0
+  DashPotente1: 0
+  DashPotente2: 0
+  MaestroDelMovimieto: 0
   anim: {fileID: 4811876041847452568}
+  sphereCollider: {fileID: 4920231918471804782}
+  hitboxDmgDash: {fileID: 4920231918471804781}
   dashScarlet: {fileID: 2495295175029682864}
   PistaDash: {fileID: 8300000, guid: acd0b8151be074f42ac82e77ff68bca4, type: 3}
 --- !u!114 &2264408721482986322
@@ -6077,7 +6088,16 @@ MonoBehaviour:
   continueAttack: 0
   nextAttack: 0
   rotationSpeed: 16
+  CortesAgiles1: 0
+  CortesAgiles2: 0
+  CortesTenaces1: 0
+  CortesTenaces2: 0
+  CortesPerfectos: 0
   anim: {fileID: 4811876041847452568}
+  hitboxDmg1: {fileID: 4920231918718356356}
+  hitboxDmg2: {fileID: 4920231919865549415}
+  hitboxDmg3: {fileID: 4920231919919464845}
+  hitboxDmg4: {fileID: 1448135082}
   guadanaParticles: {fileID: 4920231918478294032}
   ataqueBasico1Collider: {fileID: 4920231918718356355}
   ataqueBasico2Collider: {fileID: 4920231919865549410}
@@ -6123,6 +6143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b7b04188d6253419da0270be0095aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escenaActual: 1
   actualvida: 30
   maxVida: 30
   Muerte: {fileID: 2495295175029682864}
@@ -12880,6 +12901,8 @@ GameObject:
   - component: {fileID: 4920231918504957598}
   - component: {fileID: 4920231918504957593}
   - component: {fileID: 4920231918504957592}
+  - component: {fileID: 4920231918471804782}
+  - component: {fileID: 4920231918471804781}
   m_Layer: 6
   m_Name: Coso de dash
   m_TagString: Untagged
@@ -12918,7 +12941,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4920231918504957594}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13079,6 +13102,36 @@ TrailRenderer:
   m_MinVertexDistance: 0.21
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!135 &4920231918471804782
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920231918504957594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4920231918471804781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920231918504957594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ab115dde62f774db6b7ef16ca402ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 0
+  modifier: 1
+  tiendaInteracion: {fileID: 0}
+  playerAttackCombo: {fileID: 2264408721482986322}
+  playerDash: {fileID: 2264408721482986323}
 --- !u!1 &4920231918570458594
 GameObject:
   m_ObjectHideFlags: 0
@@ -13289,6 +13342,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1.5
   modifier: 1
+  tiendaInteracion: {fileID: 0}
+  playerAttackCombo: {fileID: 2264408721482986322}
+  playerDash: {fileID: 2264408721482986323}
 --- !u!1 &4920231918772160263
 GameObject:
   m_ObjectHideFlags: 0
@@ -23199,6 +23255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 1
   modifier: 1
+  tiendaInteracion: {fileID: 0}
+  playerAttackCombo: {fileID: 2264408721482986322}
+  playerDash: {fileID: 2264408721482986323}
 --- !u!1 &4920231919919464840
 GameObject:
   m_ObjectHideFlags: 0
@@ -23311,6 +23370,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmg: 2.5
   modifier: 1
+  tiendaInteracion: {fileID: 0}
+  playerAttackCombo: {fileID: 2264408721482986322}
+  playerDash: {fileID: 2264408721482986323}
 --- !u!1 &4923644394720329617
 GameObject:
   m_ObjectHideFlags: 0

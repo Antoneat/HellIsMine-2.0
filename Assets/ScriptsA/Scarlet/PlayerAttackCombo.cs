@@ -14,8 +14,19 @@ public class PlayerAttackCombo : MonoBehaviour
     private Quaternion rotateTo;
     private Vector3 direction;
 
+    [Header("Mejoras")]
+    public bool CortesAgiles1;
+    public bool CortesAgiles2;
+
+    public bool CortesTenaces1;
+    public bool CortesTenaces2;
+
+    public bool CortesPerfectos;
+
     [Header("Components")]
     public Animator anim;
+    private TiendaInteracion tiendaInteracion;
+    public HitboxDmg hitboxDmg1, hitboxDmg2, hitboxDmg3, hitboxDmg4;
     public GameObject guadanaParticles;
     public GameObject ataqueBasico1Collider;
     public GameObject ataqueBasico2Collider;
@@ -30,11 +41,13 @@ public class PlayerAttackCombo : MonoBehaviour
 
     void Start()
     {
+        LoadData();
         isAttacking = false;
         continueAttack = false;
         nextAttack = false;
 
         anim = GetComponent<Animator>();
+        tiendaInteracion = GameObject.FindGameObjectWithTag("CANVAS").GetComponent<TiendaInteracion>();
 
         playerMovement = GetComponent<PlayerMovement>();
         playerDash = GetComponent<PlayerDash>();
@@ -72,6 +85,90 @@ public class PlayerAttackCombo : MonoBehaviour
 		{
             ForceMovement();
 		}
+    
+        #region MejorasAtaques
+    
+        if(CortesAgiles1 == false && CortesTenaces1 == false && CortesPerfectos == false)
+        {
+            anim.SetFloat("VelocidadAnimacion", 1f);
+            hitboxDmg1.modifier = 1f;
+            hitboxDmg2.modifier = 1f;
+            hitboxDmg3.modifier = 1f;
+            hitboxDmg4.modifier = 1f;
+        }
+
+
+        if(CortesAgiles1 == true && CortesAgiles2 == false && CortesPerfectos == false)
+        {
+            hitboxDmg1.modifier = 0.85f;
+            hitboxDmg2.modifier = 0.85f;
+            hitboxDmg3.modifier = 0.85f;
+            hitboxDmg4.modifier = 0.85f;
+            anim.SetFloat("VelocidadAnimacion", 1.2f);
+        }
+        
+        if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false)
+        {
+            hitboxDmg1.modifier = 0.67f;
+            hitboxDmg2.modifier = 0.67f;
+            hitboxDmg3.modifier = 0.67f;
+            hitboxDmg4.modifier = 0.67f;
+            anim.SetFloat("VelocidadAnimacion", 1.4f);
+        }
+
+
+        if(CortesTenaces1 == true && CortesTenaces2 == false && CortesPerfectos == false)
+        {
+            hitboxDmg1.modifier = 1.15f;
+            hitboxDmg2.modifier = 1.15f;
+            hitboxDmg3.modifier = 1.15f;
+            hitboxDmg4.modifier = 1.15f;
+            anim.SetFloat("VelocidadAnimacion", 0.8f);
+        }
+        
+        if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false)
+        {
+            hitboxDmg1.modifier = 1.33f;
+            hitboxDmg2.modifier = 1.33f;
+            hitboxDmg3.modifier = 1.33f;
+            hitboxDmg4.modifier = 1.33f;
+            anim.SetFloat("VelocidadAnimacion", 0.6f);
+        }
+
+
+        if(CortesPerfectos== true)
+        {
+            hitboxDmg1.modifier += (hitboxDmg1.modifier * 0.33f);
+            hitboxDmg2.modifier += (hitboxDmg2.modifier * 0.33f);
+            hitboxDmg3.modifier += (hitboxDmg3.modifier * 0.33f);
+            hitboxDmg4.modifier += (hitboxDmg4.modifier * 0.33f);
+            anim.SetFloat("VelocidadAnimacion", 1.4f);
+        }
+
+        #endregion
+    }
+
+    private void OnDestroy()
+    {
+        SaveData();
+    }
+
+    private void SaveData()
+    {
+        ScarletData.instance.CortesAgiles1 = CortesAgiles1;
+        ScarletData.instance.CortesAgiles2 = CortesAgiles2;
+        ScarletData.instance.CortesTenaces1 = CortesTenaces1;
+        ScarletData.instance.CortesTenaces1 = CortesTenaces2;
+        ScarletData.instance.CortesPerfectos = CortesPerfectos;
+    }
+
+    private void LoadData()
+    {
+        CortesAgiles1 = ScarletData.instance.CortesAgiles1;
+        CortesAgiles2 = ScarletData.instance.CortesAgiles2;
+        CortesTenaces1 = ScarletData.instance.CortesTenaces1;
+        CortesTenaces2 = ScarletData.instance.CortesTenaces2;
+        CortesPerfectos = ScarletData.instance.CortesPerfectos;
     }
 
     public void Combo()
@@ -137,6 +234,7 @@ public class PlayerAttackCombo : MonoBehaviour
 
         anim.ResetTrigger("StartCombo");
     }
+    
     public void FinalBasicAttack()
     {
         nextAttack = false;

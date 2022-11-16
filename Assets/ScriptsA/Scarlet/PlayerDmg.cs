@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerDmg : MonoBehaviour
 {
+    public int escenaActual;
+
     [Header("Vida")]
     public float actualvida;
     public float maxVida = 30f;
@@ -26,9 +28,6 @@ public class PlayerDmg : MonoBehaviour
     [Header("VFX")]
     public ParticleSystem almas;
     public ParticleSystem recibiendoDmg;
-
-    
-        
     public PlayerMovement playerMovement;
 
     [Header("Animator")]
@@ -37,6 +36,8 @@ public class PlayerDmg : MonoBehaviour
 
     void Start()
     {
+        LoadData();
+        if(actualvida == 0) actualvida = maxVida;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
         //dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
         actualvida = maxVida;
@@ -78,6 +79,25 @@ public class PlayerDmg : MonoBehaviour
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        SaveData();
+    }
+
+    private void SaveData()
+    {
+        ScarletData.instance.actualvida = actualvida;
+        ScarletData.instance.actualSouls = actualSouls;
+    }
+
+    private void LoadData()
+    {
+        actualvida = ScarletData.instance.actualvida;
+        actualSouls = ScarletData.instance.actualSouls;
+    }
+
+
     public void GainLife(float life)
     {
         actualvida += life;
@@ -107,9 +127,10 @@ public class PlayerDmg : MonoBehaviour
     {
         almas.Play();
     }
+    
     public void Dead()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(escenaActual);
         //consolaComandos.panelReinicio.SetActive(true);
     }
 }
