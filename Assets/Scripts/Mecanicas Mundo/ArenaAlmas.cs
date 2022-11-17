@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ArenaAlmas : MonoBehaviour
 {
-    
 
+    public Animator anim;
     private PlayerDmg playerDmg;
 
     private PlayerMovement playerMovement;
@@ -17,7 +17,7 @@ public class ArenaAlmas : MonoBehaviour
 
     public float timerMain = 1;
 
-    public GameObject dmgArena;
+    
 
 
     //public AudioSource pasosArena;
@@ -28,7 +28,7 @@ public class ArenaAlmas : MonoBehaviour
         danoArena = 0.5f;
 
         pisandoArena = false;
-        dmgArena.SetActive(false);
+        
 
 
     }
@@ -60,7 +60,7 @@ public class ArenaAlmas : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            dmgArena.SetActive(true);
+            anim.SetBool("collisionArena", true);
             //pasosArena.Play();
             pisandoArena = true;
             //playerMovement.maxSpeed = playerMovement.maxSpeed - 35 * playerMovement.maxSpeed / 100;
@@ -72,7 +72,7 @@ public class ArenaAlmas : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            dmgArena.SetActive(false);
+            anim.SetBool("collisionArena", false);
             pisandoArena = false;
             //playerMovement.maxSpeed = 7.2f;
             //pasosArena.Stop();
