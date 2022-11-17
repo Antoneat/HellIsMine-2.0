@@ -26,7 +26,7 @@ public class BuscadorHitbox : MonoBehaviour
             {
                 other.gameObject.GetComponent<PlayerDmg>().LoseLife(dmg);
             }
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.25f);
         }
     }
 }
