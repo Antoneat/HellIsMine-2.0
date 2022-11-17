@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerDmg : MonoBehaviour
 {
+    
     public int escenaActual;
 
     [Header("Vida")]
@@ -43,7 +44,7 @@ public class PlayerDmg : MonoBehaviour
         actualvida = maxVida;
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
-        
+
     }
 
     void Update()
@@ -133,4 +134,6 @@ public class PlayerDmg : MonoBehaviour
         SceneManager.LoadScene(escenaActual);
         //consolaComandos.panelReinicio.SetActive(true);
     }
+
+
 }

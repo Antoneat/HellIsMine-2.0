@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ArenaAlmas : MonoBehaviour
 {
+    
+
     private PlayerDmg playerDmg;
 
     private PlayerMovement playerMovement;
@@ -27,6 +29,8 @@ public class ArenaAlmas : MonoBehaviour
 
         pisandoArena = false;
         dmgArena.SetActive(false);
+
+
     }
 
     
@@ -93,4 +97,6 @@ public class ArenaAlmas : MonoBehaviour
             danoArena = 0.5f;
         }
     }
+
+   
 }
