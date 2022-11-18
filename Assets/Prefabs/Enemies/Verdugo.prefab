@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a633fffd1fe8741bc29f07ff4fbae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  managerVerdugo: {fileID: 0}
+  managerVerdugo: {fileID: 11400000, guid: 38a022c56b4d47d4eb9a6c353c75b945, type: 2}
   life: 5
   maxLife: 0
   healAmount: 2.5
