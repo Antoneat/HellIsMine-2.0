@@ -5933,7 +5933,6 @@ GameObject:
   - component: {fileID: 2264408721482986333}
   - component: {fileID: 2264408721482986332}
   - component: {fileID: 2264408721482986320}
-  - component: {fileID: 7853816384049112266}
   - component: {fileID: 2264408721482986321}
   m_Layer: 6
   m_Name: ScarletFinal
@@ -6170,23 +6169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInitialPosition: {x: -11, y: 0, z: 10.75}
---- !u!114 &7853816384049112266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2264408721482986328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89c70a41fd35dbb439907231fe74c4f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nivel1: {fileID: 0}
-  nivel2: {fileID: 0}
-  nivel2Terreno: {fileID: 0}
-  pointTerreno2: {fileID: 0}
-  inicioNivel2: {fileID: 0}
 --- !u!81 &2264408721482986321
 AudioListener:
   m_ObjectHideFlags: 0

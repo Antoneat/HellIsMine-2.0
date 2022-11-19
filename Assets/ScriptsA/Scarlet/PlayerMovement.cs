@@ -97,5 +97,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Nivel 1"))
+        {
+            SceneManager.LoadScene("WhiteBlocking 2");
+        }
+    }
 }
