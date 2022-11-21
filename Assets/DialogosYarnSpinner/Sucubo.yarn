@@ -1,23 +1,21 @@
 ﻿title: Sucubo
 ---
 <<declare $scarletPoints to 0>>
-Súcubo: Vaya... han pasado milenios desde la última vez que vi a una hermosa humana salir de la prisión, y tú saliste en una sola pieza. ¿Qué te trae por aquí?
+Súcubo: Vaya... han pasado milenios desde la última vez que vi a una hermosa humana salir de la prisión, ¡Y tú sí lograste salir en una sola pieza! Bueno, ¿Qué te trae por aquí?
 Scarlet: Eso me pregunto yo. ¿Sabes donde estoy? Y... ¿Qué se supone que eres?
-Súcubo: Soy una Súcubo, linda, y estás en el Infierno. Tu vida en la Tierra acabo y ahora te toca pagar por los pecados que cometiste.
-Scarlet: ¿Estoy muerta? Claro... ahora lo recuerdo, esos hombres, los asesinos de mi padre sobrevivieron y terminaron asesinandome... Fracasé.
-Scarlet: No pienso aceptarlo, ¿Cómo salgo de aquí?
-Súcubo: No se puede dulzura, una vez que un alma pecadora de la Tierra cae en el Infierno, está destinada a permanecer aquí por siempre; además, el único capaz de entrar y salir cuanto le plazca es el Rey del Infierno, Samael.
-Scarlet: Oye debo salir de aquí sin importar la forma, ¿Hay alguna otra cosa que pueda hacer?
-Súcubo: Ya te dije, el único ser que puede salir de aquí es Samael por ser el Rey del Infierno, así que si quisieras salir tendrías que derrocarlo, acabar con el y con su mano derecha, Yaldabaoth.
-Scarlet: Esa es una buena opción, dos muertes más a mi espalda no son nada a este punto...
-Súcubo: ¡Sabia que no eras una humana aburrida! Me gusta tu actitud, pero te hará falta algo más que solo ganas. Samael siempre está en el Castillo del Diablo, rara vez quita su trasero del trono y Yaldabaoth siempre vigila toda el Reino.
-Scarlet: No sé como lo haré aún pero acabaré con esos dos y saldré de este lugar.
-Súcubo: ¡Espera, linda! Si vas a celebrar una fiesta en el reino. No quiero quedarme fuera. Quiero participar. Te puedo ofrecer mejoras para ti y tu preciosa guadaña, qué parece que la vas a necesitar.
-Scarlet: ¿Y qué quieres a cambio de ayudarme?
-Súcubo: Mmm... tal vez algunas almas que contengas en esta guadaña... pero por ahora lo único que te pido, es que me digas tu nombre.
+Súcubo: Soy una Súcubo, linda, y estás en el Infierno, eso significa que tu vida en la Tierra acabó y ahora te toca pagar por los pecados que cometiste.
+Scarlet: ¿Estoy muerta? Claro, ahora lo recuerdo... Esos hombres, los asesinos de mi padre, sobrevivieron… eso significa que fracasé...
+Scarlet: …
+Scarlet: Tengo algo pendiente ahí arriba. ¿Cómo salgo de aquí? 
+Súcubo: No se puede. Una vez que un alma pecadora de la Tierra cae en el Infierno, está destinada a permanecer aquí por siempre; además, el único capaz de entrar y salir es el Rey del Infierno, Samael.
+Súcubo: Bueno… hay una forma. Pero es arriesgada. Debes matar a Samael y a su mano derecha, Yaldabaoth.
+Scarlet: Si no hay otra opción…
+Súcubo: ¡Sabía que no eras una aburrida humana! Me gusta tu actitud, pero te hará falta algo más que solo ganas, bonita. Samael siempre está en el Castillo del Diablo, rara vez quita su trasero del trono y Yaldabaoth siempre vigila todo el reino. Ten cuidado ahí fuera.
+Súcubo: ¡Espera, corazón! Si vas a celebrar una fiesta en el reino. No quiero quedarme fuera. Quiero participar. Te puedo ofrecer mejoras para ti y tu preciosa guadaña, qué parece que la vas a necesitar. 
+Scarlet: ¿Tú? ¿Y qué quieres a cambio? 
+Súcubo: Detalles insignificantes, tal vez algunas deliciosas almas... pero por ahora lo único que te pido, es que me digas tu nombre. 
+Scarlet: ...
 Scarlet: Scarlet Crimson.
-Súcubo: ¡Me gusta! Bueno Scarlet Crimson, todo un placer poder divertirme contigo.
-Scarlet: Gracias supongo...
 -> Preguntar por la antigua arma de Scarlet
     <<jump ArmaScarlet>>
 -> Preguntar por la Guadaña
