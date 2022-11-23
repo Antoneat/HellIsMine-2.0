@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 129
+  controlID: 14400
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 130
+  controlID: 14401
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 131
+  controlID: 14393
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 112}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5228fdff3a4ffeff6c8dfeffcadafeffc8e4feff7af3ffff42ee000016ef00008ef00000e6f2000032f30000c6f40000eef40000faf60000
+      m_ExpandedIDs: 9ae2fcff5228fdff3a4ffeff6c8dfeffcadafeffc8e4feff7af3ffff16ef00008ef00000e6f2000032f30000c6f40000faf60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -523,9 +523,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.343349, y: 0.48830605, z: 3.7657013}
+    m_Target: {x: 0.9826072, y: 4.46692, z: 25.845879}
     speed: 2
-    m_Value: {x: 9.343349, y: 0.48830605, z: 3.7657013}
+    m_Value: {x: 0.9826072, y: 4.46692, z: 25.845879}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -572,13 +572,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.21298227, y: -0.4435303, z: 0.05956832, w: -0.8696067}
+    m_Target: {x: -0.09986991, y: 0.065169826, z: -0.051549528, w: -0.99246633}
     speed: 2
-    m_Value: {x: -0.21278611, y: -0.4431218, z: 0.059513457, w: -0.86880577}
+    m_Value: {x: -0.09977676, y: 0.065109044, z: -0.05150145, w: -0.9915407}
   m_Size:
-    m_Target: 23.605156
+    m_Target: 7.0646806
     speed: 2
-    m_Value: 23.605156
+    m_Value: 7.0646806
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -627,7 +627,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 14402
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -655,7 +655,7 @@ MonoBehaviour:
   - {fileID: 11}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -792,21 +792,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Cinematica/Props
+    - Assets/Cinematica
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Cinematica/Props
+  - Assets/Cinematica
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\jdgdx\OneDrive\Documentos\GitHub\HellIsMine-2.0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e090100
-    m_LastClickedID: 67966
+    m_SelectedIDs: 34ed0000
+    m_LastClickedID: 60724
     m_ExpandedIDs: 0000000004ed000006ed000008ed00000aed00000ced00000eed000010ed000012ed000016ed000018ed000034ed000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000004ed000006ed000008ed00000aed00000ced00000eed000010ed000012ed000014ed000016ed000018ed0000
+    m_ExpandedIDs: 0000000004ed000006ed000008ed00000aed00000ced00000eed000010ed000012ed000016ed000018ed000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -860,24 +860,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 8acefcff
+    m_LastClickedInstanceID: -209270
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: e4610200b2350100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Marmol Dorado
-      m_OriginalName: Marmol Dorado
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 63878
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
@@ -887,7 +887,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 53}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 139
@@ -979,7 +979,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: -209270
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
