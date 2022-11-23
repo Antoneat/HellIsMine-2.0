@@ -11,6 +11,9 @@ public class PlayerPasarNivel : MonoBehaviour
 
     [SerializeField] GameObject nivel2Terreno;
     [SerializeField] Transform pointTerreno2;
+    
+    
+    [SerializeField] GameObject panelLoadingScreen;
 
 
     [SerializeField] Transform inicioNivel2;
@@ -47,10 +50,15 @@ public class PlayerPasarNivel : MonoBehaviour
 
     IEnumerator Terreno2()
     {
+        panelLoadingScreen.SetActive(true);
+        LoadingScreenManager.instanciate.ReloadText();
         nivel2Terreno.transform.position = pointTerreno2.position;
         nivel2Terreno.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         nivel2Terreno.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        panelLoadingScreen.SetActive(false);
+        yield return new WaitForSeconds(0.3f);
         terrenoValor = 1;
     }
 }

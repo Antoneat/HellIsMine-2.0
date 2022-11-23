@@ -25,13 +25,21 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource Pasos;
     public AudioClip Pista;
 
+    public CapsuleCollider capsuleCollider;
+
+    public static PlayerMovement instanciate;
+
+    private void Awake()
+    {
+        instanciate = this;
+    }
     void Start()
     {
         rgbd = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         playerTransform = GetComponent<Transform>();
         playerDash = GetComponent<PlayerDash>();
-        
+        capsuleCollider = GetComponent<CapsuleCollider>();   
     }
 
     void FixedUpdate()
