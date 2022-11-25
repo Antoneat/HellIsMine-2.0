@@ -34,6 +34,15 @@ public class AjitaNido : MonoBehaviour
             Muerte();
         }
 
+        foreach(GameObject a in maxChildren)
+		{
+            if(a == null)
+            {
+                maxChildren.Remove(a);
+                StartCoroutine(startSummoning());
+            }
+		}
+        /*
         if (maxChildren[0] == null)
         {
             maxChildren.RemoveAt(0);
@@ -48,22 +57,7 @@ public class AjitaNido : MonoBehaviour
         {
             maxChildren.RemoveAt(2);
             StartCoroutine(startSummoning());
-        }
-        if (maxChildren[3] == null)
-        {
-            maxChildren.RemoveAt(3);
-            StartCoroutine(startSummoning());
-        }
-        if (maxChildren[4] == null)
-        {
-            maxChildren.RemoveAt(4);
-            StartCoroutine(startSummoning());
-        }
-        if (maxChildren[5] == null)
-        {
-            maxChildren.RemoveAt(5);
-            StartCoroutine(startSummoning());
-        }
+        }*/
     }
 
     private void Muerte()

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3680377534428958656}
   - component: {fileID: 2439016770243971855}
   - component: {fileID: 5986448588992814478}
-  - component: {fileID: 8476505205106181001}
+  - component: {fileID: 1434877226}
   m_Layer: 0
   m_Name: Madera_4
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9122358620029566747}
   m_LocalRotation: {x: 0, y: 0.41387507, z: 0, w: 0.9103337}
   m_LocalPosition: {x: -17.921482, y: 0.039885, z: 16.513897}
-  m_LocalScale: {x: 0.0065529007, y: 0.0065528974, z: 0.006552901}
+  m_LocalScale: {x: 0.006726546, y: 0.006726549, z: 0.006726549}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6a7da26621769a4eaa6a6947bfd957a, type: 2}
+  - {fileID: 2100000, guid: c18ce21ee8f025849a371ec416828e8f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.063331, y: 0.2314069, z: 0.98712534}
   m_Center: {x: 2.0316656, y: 0.11570348, z: -0.53143007}
---- !u!54 &8476505205106181001
+--- !u!54 &1434877226
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

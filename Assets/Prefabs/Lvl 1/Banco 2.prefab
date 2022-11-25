@@ -168,7 +168,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0afbfc5ff90c49d4fa56e6793fe53b16, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c18ce21ee8f025849a371ec416828e8f, type: 2}
+      objectReference: {fileID: 2100000, guid: d6a7da26621769a4eaa6a6947bfd957a, type: 2}
     - target: {fileID: 919132149155446097, guid: 0afbfc5ff90c49d4fa56e6793fe53b16, type: 3}
       propertyPath: m_Name
       value: BancoIndividual2

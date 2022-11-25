@@ -47,19 +47,19 @@ public class SpawnerManager : MonoBehaviour
             {
                 Audio = true;
                 OlSource.PlayOneShot(OleadaPista);
-                puertas[0].SetActive(true);
-                puertas[1].SetActive(true);
-                puertas[2].SetActive(true);
-                puertas[3].SetActive(true);
+                for(int i=0; i < puertas.Length; i++)
+				{
+                    puertas[i].SetActive(true);
+				}
             }
         }
 
         if (doorActivator == false)
         {
-            puertas[0].SetActive(false);
-            puertas[1].SetActive(false);
-            puertas[2].SetActive(false);
-            puertas[3].SetActive(false);
+            for (int i = 0; i < puertas.Length; i++)
+            {
+                puertas[i].SetActive(false);
+            }
         }
     }
 

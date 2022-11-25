@@ -10,7 +10,10 @@ public class Vfx_ScarletVida : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        contenedorDeParticleAlmas.SetActive(false);
+        if (contenedorDeParticleAlmas)
+        {
+            contenedorDeParticleAlmas.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -22,6 +25,9 @@ public class Vfx_ScarletVida : MonoBehaviour
     public void ActivarOrbe()
     {
             almasScarlet.Play();
+        if (contenedorDeParticleAlmas)
+        {
             contenedorDeParticleAlmas.SetActive(true);
+        }
     }
 }

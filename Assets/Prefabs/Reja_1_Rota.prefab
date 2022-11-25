@@ -143,7 +143,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   vfx:
-  - {fileID: 7390848407435261878, guid: 7f3634c3185ee284d8a998fc6447085c, type: 3}
+  - {fileID: 5165994415647142424, guid: 87bbb1e92c0f2c04c87e0c32a0ebdc20, type: 3}
   spawnPointVfx: {fileID: 8084131089123344341}
 --- !u!82 &5376304276609712463
 AudioSource:
@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 800aba0458f2c8342b6a778921895ff9, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: c679db2ceac50274796f6cf091806f93, type: 2}
+      objectReference: {fileID: 2100000, guid: c005d38b2359b1d42979afdea4ceddce, type: 2}
     - target: {fileID: 919132149155446097, guid: 800aba0458f2c8342b6a778921895ff9, type: 3}
       propertyPath: m_Name
       value: Huesos_S

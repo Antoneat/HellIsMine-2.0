@@ -37,7 +37,7 @@ public class BuscadorController : MonoBehaviour
 
     void Start()
 	{
-		UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+		//UnityEngine.AI.NavMeshAgent agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
 		goal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		plyrDmg = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
