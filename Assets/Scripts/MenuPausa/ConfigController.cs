@@ -6,6 +6,8 @@ using TMPro;
 
 public class ConfigController : MonoBehaviour
 {
+    //Full Screen
+    public Toggle fullScreenToggle;
 
 
     //Show FPS
@@ -17,10 +19,18 @@ public class ConfigController : MonoBehaviour
 
     void Start()
     {
+        if (Screen.fullScreen)
+            fullScreenToggle.isOn = true;
+        else
+            fullScreenToggle.isOn = false;
         
+        if (text_FPS == true)
+            toggleFPS.isOn = true;
+        else
+            toggleFPS.isOn = false;
     }
 
-    // Update is called once per frame
+    #region FPS
     void Update()
     {
         CalculateFPS();
@@ -29,10 +39,10 @@ public class ConfigController : MonoBehaviour
 
     void CalculateFPS()
     {
-        if (toggleFPS.isOn == true)
-            toggleFPS.enabled = true;
-        else
-            toggleFPS.enabled = false;
+        //if (toggleFPS.isOn == true)
+        //    toggleFPS.enabled = true;
+        //else
+        //    toggleFPS.enabled = false;
 
 
         time += Time.deltaTime;
@@ -57,5 +67,17 @@ public class ConfigController : MonoBehaviour
     public void OcultarFPS()
     {
         toggleFPS.isOn = false;
+    }
+
+    public void ActivateFPS(bool showFPS)
+    {
+        text_FPS.enabled = showFPS;
+    }
+
+    #endregion
+
+    public void ActivateFullScreen(bool fullScreen)
+    {
+        Screen.fullScreen = fullScreen;
     }
 }
