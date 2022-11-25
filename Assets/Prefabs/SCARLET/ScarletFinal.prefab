@@ -6044,6 +6044,7 @@ MonoBehaviour:
   speedLimiter: 1
   Pasos: {fileID: 3677226194822270233}
   Pista: {fileID: 8300000, guid: b3e6874728d4ae74caee1916475c781d, type: 3}
+  capsuleCollider: {fileID: 0}
 --- !u!114 &2264408721482986323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6184,9 +6185,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivel1: {fileID: 0}
   nivel2: {fileID: 0}
-  nivel2Terreno: {fileID: 0}
-  pointTerreno2: {fileID: 0}
+  nivel3: {fileID: 0}
+  panelLoadingScreen: {fileID: 0}
   inicioNivel2: {fileID: 0}
+  inicioNivel3: {fileID: 0}
 --- !u!81 &2264408721482986321
 AudioListener:
   m_ObjectHideFlags: 0
@@ -6773,7 +6775,7 @@ AudioSource:
   m_GameObject: {fileID: 3000283166860869677}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 811158372010997011, guid: 05a7042a5e8e1854eb40db06b659cffe, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -7364,7 +7366,7 @@ AudioSource:
   m_GameObject: {fileID: 3950205742107257579}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 811158372010997011, guid: 05a7042a5e8e1854eb40db06b659cffe, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.1

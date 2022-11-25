@@ -86,12 +86,12 @@ public class VerdugoController : MonoBehaviour
 	{
 		coPlay = true;
 		ChangeColorPreAtk();
-		yield return new WaitForSecondsRealtime(1f);
+		yield return new WaitForSeconds(1f);
 		//agent.isStopped = false;
 		SpawnRafaga();
 		LanzaSource.PlayOneShot(LanzaClip);
 		ChangeColorAtk();
-		yield return new WaitForSecondsRealtime(2f);
+		yield return new WaitForSeconds(2f);
 		//basicoGO.SetActive(false);
 		ChangeColorBack();
 		coPlay = false;
