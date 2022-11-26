@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: KoiTwo Studios
-  productName: Hell Is Mine 0.18
+  productName: Hell Is Mine 0.19
   defaultCursor: {fileID: 2800000, guid: 1d1729a4cd20f9047b1c0995b09753e6, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.18
+  bundleVersion: 0.19
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1ef0c98b484383647a564ecfa04a8514, type: 3}
+      m_Icon: {fileID: 2800000, guid: 21874e89ac288b941bc14ab6732ebc4d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
