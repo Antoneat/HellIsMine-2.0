@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerHardAttack : MonoBehaviour
 {
-    public bool isHardAttacking;
-
     public float rotationSpeed;
+
+    public bool canHardAttack;
+    public bool isHardAttacking;
+    public float cooldown;
+    public float maxCooldown;
+
     private Quaternion rotateTo;
     private Vector3 direction;
 
@@ -27,6 +31,8 @@ public class PlayerHardAttack : MonoBehaviour
     void Start()
     {
         isHardAttacking = false;
+        canHardAttack = true;
+        cooldown = 0f;
 
         anim = GetComponent<Animator>();
 
@@ -44,17 +50,29 @@ public class PlayerHardAttack : MonoBehaviour
         {
             direction = (mousePos.transform.position - transform.position).normalized;
         }
+
+        if(cooldown <= maxCooldown) cooldown -= Time.deltaTime;
+
+        if(cooldown < 0)
+        {
+            cooldown = 0;
+            Invoke(nameof(DelayToHardAttack), 0f); 
+        }
+        
+        if(isHardAttacking) canHardAttack = false;
     }
 
     public void HardCombo()
     {
-        if (Input.GetMouseButtonDown(1) && isHardAttacking == false && playerAttackCombo.isAttacking == false && playerDash.isDashing == false)
+        if (Input.GetMouseButtonDown(1) && isHardAttacking == false && playerDash.isDashing == false && canHardAttack == true)
         {
+            canHardAttack = false;
             direction = (mousePos.transform.position - transform.position).normalized;
 
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
             ataqueFuerte.PlayOneShot(AtkHClip);
-            anim.SetTrigger("AtaqueFuerte");
+            //anim.SetTrigger("AtaqueFuerte");
+            anim.Play("AtaqueHard1");
         }
 
         if (isHardAttacking)
@@ -72,6 +90,7 @@ public class PlayerHardAttack : MonoBehaviour
     {
         playerMovement.maxSpeed = 3f;
         isHardAttacking = true;
+        cooldown = maxCooldown;
     }
 
     public void HardAttacking()
@@ -81,10 +100,19 @@ public class PlayerHardAttack : MonoBehaviour
 
     public void AfterHardAttacking()
     {
-        anim.ResetTrigger("AtaqueFuerte");
+        //Invoke(nameof(DelayToHardAttack), cooldown);
+        //anim.ResetTrigger("AtaqueFuerte");
+        isHardAttacking = false;
     }
 
-    public void FinalHardAttack()
+    public void DelayToHardAttack()
+    {
+        canHardAttack = true;
+
+        // Agregarle aca algo de vfx o sfx que indique que ya se puede usar el ataque fuerte.
+    }
+
+    public void FinalHardAttack() // este metodos no esta siendo usado.
     {
         //nextHardAttack = false;
         playerMovement.maxSpeed = 7.2f;
@@ -121,4 +149,18 @@ public class PlayerHardAttack : MonoBehaviour
         ataqueTres.Stop();
     }
 
+    #region No ver :D
+    public void ResetBasicAttackAndDash()
+    {
+        playerAttackCombo.isAttacking = false;
+        playerAttackCombo.continueAttack = false;
+        playerAttackCombo.nextAttack = false;
+        playerAttackCombo.ataqueBasico1Collider.SetActive(false);
+        playerAttackCombo.ataqueBasico2Collider.SetActive(false);
+        playerAttackCombo.ataqueBasico3Collider.SetActive(false);
+
+        playerDash.canDash = true; //testear esta linea.
+        playerDash.isDashing = false;
+    }
+    #endregion
 }

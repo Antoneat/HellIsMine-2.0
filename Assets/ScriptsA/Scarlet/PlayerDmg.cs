@@ -134,6 +134,4 @@ public class PlayerDmg : MonoBehaviour
         SceneManager.LoadScene(escenaActual);
         //consolaComandos.panelReinicio.SetActive(true);
     }
-
-
 }

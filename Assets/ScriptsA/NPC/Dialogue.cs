@@ -17,12 +17,12 @@ public class Dialogue : MonoBehaviour
     public int lineIndex;   // Indice que se usara para comprobar 
 
     [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private PlayerOrientation playerOrientation; 
+    //[SerializeField] private PlayerOrientation playerOrientation; 
 
     void Start()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        playerOrientation = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerOrientation>();
+        //playerOrientation = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerOrientation>();
     }
 
     void Update()
@@ -53,7 +53,7 @@ public class Dialogue : MonoBehaviour
         //dialogueMark.SetActive(false);
         lineIndex = 0;
         playerMovement.enabled = false; // movimiento de jugador deshabilitado.
-        playerOrientation.enabled = false; // orientacion del jugados dehabilitado.
+        //playerOrientation.enabled = false; // orientacion del jugados dehabilitado.
         playerMovement.anim.SetBool("Run", false);
         playerMovement.rgbd.velocity = Vector3.zero;
         StartCoroutine(ShowLine());
@@ -73,7 +73,7 @@ public class Dialogue : MonoBehaviour
             dialogueGO.SetActive(false);
             //dialogueMark.SetActive(true);
             playerMovement.enabled = true; // movimiento de jugador habilitado.
-            playerOrientation.enabled = true; // orientacion del jugados habilitado.
+            //playerOrientation.enabled = true; // orientacion del jugados habilitado.
         }
     }
 

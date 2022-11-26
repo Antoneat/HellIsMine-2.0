@@ -8,6 +8,7 @@ public class PlayerDash : MonoBehaviour
     public bool canDash;
     public bool isDashing;
     public float cooldown;
+    public float maxCooldown;
 
     [Header("Mejoras")]
     public bool DashOfensivo;
@@ -36,6 +37,7 @@ public class PlayerDash : MonoBehaviour
         playerAttackCombo = GetComponent<PlayerAttackCombo>();
         playerHardAttack = GetComponent<PlayerHardAttack>();
         canDash = true;
+        cooldown = 0f;
     }
 
     void Update()
@@ -91,6 +93,16 @@ public class PlayerDash : MonoBehaviour
 
             ResetAttacks();
         }
+
+        if(cooldown <= maxCooldown) cooldown -= Time.deltaTime;
+
+        if(cooldown < 0)
+        {
+            cooldown = 0;
+            Invoke(nameof(DelayToDash), 0f); 
+        }
+
+        if(isDashing) canDash = false;
     }
 
     private void OnDestroy()
@@ -120,6 +132,7 @@ public class PlayerDash : MonoBehaviour
 
     public void Dashing()
     {
+        cooldown = maxCooldown;
         playerMovement.speedLimiter = 1;
         playerMovement.maxSpeed = dashNewSpeed;
         Physics.IgnoreLayerCollision(6, 9, true);
@@ -127,7 +140,6 @@ public class PlayerDash : MonoBehaviour
 
     public void FinishDash()
     {
-        Invoke(nameof(DelayToDash), cooldown);
         isDashing = false;
         playerMovement.maxSpeed = 7.2f;
 
@@ -151,6 +163,7 @@ public class PlayerDash : MonoBehaviour
         playerAttackCombo.ataqueBasico2Collider.SetActive(false);
         playerAttackCombo.ataqueBasico3Collider.SetActive(false);
         
+        //playerHardAttack.canHardAttack = true;
         playerHardAttack.isHardAttacking = false;
         playerHardAttack.ataqueHardCollider.SetActive(false);
     }
