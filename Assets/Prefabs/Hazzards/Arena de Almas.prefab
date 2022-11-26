@@ -358,7 +358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18b08351cd003d4ea76437869ead581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  danoArena: 0
+  anim: {fileID: 0}
+  danoArena: 0.25
+  timerMain: 1
 --- !u!82 &3156089496409814577
 AudioSource:
   m_ObjectHideFlags: 0

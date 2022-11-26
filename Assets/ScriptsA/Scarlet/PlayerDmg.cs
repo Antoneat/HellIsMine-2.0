@@ -40,8 +40,8 @@ public class PlayerDmg : MonoBehaviour
         LoadData();
         if(actualvida == 0) actualvida = maxVida;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
-        //dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
         actualvida = maxVida;
+        //dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
 

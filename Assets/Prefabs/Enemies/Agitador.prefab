@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e5481f182da3e4b8c87d200e544f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLife: {fileID: 2501400972220356369}
+  enemyLife: {fileID: 1167758246452215055}
   barraDeVida: {fileID: 737872565}
 --- !u!1 &2075047167
 GameObject:
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1888268820277055678}
   - component: {fileID: 2119726176885463032}
   - component: {fileID: 2119726176885463039}
-  - component: {fileID: 2501400972220356369}
+  - component: {fileID: 1167758246452215055}
   - component: {fileID: 8967127935953558602}
   - component: {fileID: 2119726176885463035}
   - component: {fileID: 2653957783918534561}
@@ -573,7 +573,7 @@ MonoBehaviour:
   basicoGO: {fileID: 2119726176608211605}
   coPlay: 0
   Bombita: {fileID: 2119726176885463028}
---- !u!114 &2501400972220356369
+--- !u!114 &1167758246452215055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -588,6 +588,7 @@ MonoBehaviour:
   managerBombita: {fileID: 11400000, guid: 497ee3f073bd1074791beea0e67175bd, type: 2}
   life: 1
   maxLife: 0
+  SoulVFX: {fileID: 6320560618561652290, guid: 4d8e81255b76e7943b65f5836da53d5e, type: 3}
   healAmount: 1.5
   DmgSound:
     m_PersistentCalls:
@@ -611,7 +612,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119726176885463028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17e1955e21d5a2c4bbc98396a2e3a652, type: 3}
   m_Name: 

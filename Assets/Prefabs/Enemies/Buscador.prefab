@@ -12427,6 +12427,7 @@ MonoBehaviour:
   maxLife: 6
   healAmount: 4
   soulAmount: 1
+  SoulVFX: {fileID: 6320560618561652290, guid: a290917067ef03d4aaebe4ba96ac7ad2, type: 3}
   animator: {fileID: 7062100617167059940}
   mainBuscador: {fileID: 4906008913135897410}
   Source: {fileID: 7945515138169089208}

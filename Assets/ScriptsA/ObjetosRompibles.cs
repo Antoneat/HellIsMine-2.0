@@ -10,6 +10,7 @@ public class ObjetosRompibles : MonoBehaviour
     [SerializeField] private UnityEvent OnDestroy;
     private MeshRenderer[] mesh ;
     private Collider[] collider;
+    public bool isJail;
     private bool enable=true;
     [SerializeField] private List<GameObject> vfx = new List<GameObject>();
     [SerializeField] private GameObject spawnPointVfx;
@@ -38,7 +39,7 @@ public class ObjetosRompibles : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Guadana")) vida--;
+        if (collider.gameObject.CompareTag("Guadana") && !isJail) vida--;
         if (collider.gameObject.CompareTag("AtaqueDuro")) vida--;
         StartCoroutine(Muerte());
     }

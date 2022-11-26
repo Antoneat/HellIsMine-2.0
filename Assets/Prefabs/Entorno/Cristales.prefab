@@ -114,6 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dbab86a9dc74f4699e55ea68709c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SoulVFX: {fileID: 6320560618561652290, guid: a290917067ef03d4aaebe4ba96ac7ad2, type: 3}
+  healAmount: 1.5
+  soulAmount: 1
+  randomSouls: 0
 --- !u!114 &4262584262485921872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +147,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isJail: 0
   vfx: []
   spawnPointVfx: {fileID: 0}
 --- !u!82 &2837494674810198112

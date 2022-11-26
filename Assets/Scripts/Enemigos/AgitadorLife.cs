@@ -9,6 +9,7 @@ public class AgitadorLife : MonoBehaviour
 
     public float life;
     public float maxLife;
+    [SerializeField] private GameObject SoulVFX;
 
     public float healAmount;
 
@@ -47,7 +48,9 @@ public class AgitadorLife : MonoBehaviour
         if (life <= 0)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<PlayerDmg>().GainLife(healAmount);
+            GameObject obj = Instantiate(SoulVFX);
+            obj.transform.position = transform.position;
+            obj.GetComponent<AlmasParent>().almaScript.curacion = healAmount;
 
             Muerte();
             Debug.Log("deberia morir la bomba");

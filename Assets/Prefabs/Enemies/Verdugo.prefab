@@ -534,6 +534,7 @@ MonoBehaviour:
   maxLife: 0
   healAmount: 2.5
   soulAmount: 1
+  SoulVFX: {fileID: 6320560618561652290, guid: a290917067ef03d4aaebe4ba96ac7ad2, type: 3}
   DeadSource: {fileID: 2900845523265648654}
   LifeSource: {fileID: 219928698111514345}
   DeadPista: {fileID: 8300000, guid: 1b2cb53b0928117439fb8d6fc90a0afa, type: 3}
