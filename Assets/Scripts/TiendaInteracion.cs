@@ -12,11 +12,17 @@ public class TiendaInteracion : MonoBehaviour
     public TMP_Text tmpTitulo;
     public TMP_Text tmpDescripcion;
 
+    public GameObject DialogoTienda;
+
+
     #region TiendaUI
     public void OpenTiendaUI()
     {
-        panelInicial.SetActive(false);
-        panelTiendaMejoras.SetActive(true);
+        if(DialogoTienda == null)
+        {
+            panelInicial.SetActive(false);
+            panelTiendaMejoras.SetActive(true);
+        }
     }
     public void CloseTiendaUI()
     {

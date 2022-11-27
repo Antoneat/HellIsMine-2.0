@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public Image actorImage;
-    public Text actorName;
-    public Text messageText;
+    public TMP_Text actorName;
+    public TMP_Text messageText;
     public RectTransform backgroundBox;
     private string sentence;
 
@@ -16,9 +17,10 @@ public class DialogueManager : MonoBehaviour
     public float textspeed;
     public KeyCode Tecla;
 
-    Message[] currentMessages;
-    Actor[] currentActors;
-    int activeMessage = 0;
+
+    public Message[] currentMessages;
+    public Actor[] currentActors;
+    public int activeMessage = 0;
 
     public static bool isActive = false;
 
@@ -123,6 +125,5 @@ public class DialogueManager : MonoBehaviour
         {
             timer = maxTime;
         }
-
     }
 }

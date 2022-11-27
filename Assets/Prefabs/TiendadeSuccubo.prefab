@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 7637750208049844591}
   - component: {fileID: 8830727769684758553}
   - component: {fileID: 847332424}
-  - component: {fileID: 8531173344153208218}
+  - component: {fileID: 7514648161334109403}
   m_Layer: 0
   m_Name: TiendadeSuccubo
   m_TagString: Untagged
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img_Tienda: {fileID: 0}
---- !u!114 &8531173344153208218
+--- !u!114 &7514648161334109403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,10 +752,79 @@ MonoBehaviour:
   m_GameObject: {fileID: 7112712088141319125}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c63314a3732cb7418f7f0660aa8c4e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0091bbbd08686794dac71ac2ac4d5e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueRunner: {fileID: 0}
+  messagesTIENDA:
+  - actorIdTIENDA: 1
+    messageTIENDA: "Vaya... han pasado milenios desde la \xFAltima vez que vi a una
+      hermosa humana salir de la prisi\xF3n, \xA1Y t\xFA s\xED lograste salir en
+      una sola pieza! Bueno, \xBFQu\xE9 te trae por aqu\xED?"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: "Eso me pregunto yo. \xBFSabes donde estoy? Y... \xBFQu\xE9 se
+      supone que eres?"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 1
+    messageTIENDA: "Soy una S\xFAcubo, linda, y est\xE1s en el Infierno, eso significa
+      que tu vida en la Tierra acab\xF3 y ahora te toca pagar por los pecados que
+      cometiste."
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: "\xBFEstoy muerta? Claro, ahora lo recuerdo... Esos hombres, los
+      asesinos de mi padre, sobrevivieron\u2026 eso significa que fracas\xE9..."
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: "\u2026"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: "Tengo algo pendiente ah\xED arriba. \xBFC\xF3mo salgo de aqu\xED?"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 1
+    messageTIENDA: "No se puede. Una vez que un alma pecadora de la Tierra cae en
+      el Infierno, est\xE1 destinada a permanecer aqu\xED por siempre; adem\xE1s,
+      el \xFAnico capaz de entrar y salir es el Rey del Infierno, Samael"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 1
+    messageTIENDA: "Bueno\u2026 hay una forma. Pero es arriesgada. Debes matar a
+      Samael y a su mano derecha, Yaldabaoth."
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: "Si no hay otra opci\xF3n\u2026"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 1
+    messageTIENDA: "\xA1Sab\xEDa que no eras una aburrida humana! Me gusta tu actitud,
+      pero te har\xE1 falta algo m\xE1s que solo ganas, bonita. Samael siempre est\xE1
+      en el Castillo del Diablo, rara vez quita su trasero del trono y Yaldabaoth
+      siempre vigila todo el reino. Ten cuidado ah\xED fuera."
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 1
+    messageTIENDA: "\xA1Espera, coraz\xF3n! Si vas a celebrar una fiesta en el reino.
+      No quiero quedarme fuera. Quiero participar. Te puedo ofrecer mejoras para
+      ti y tu preciosa guada\xF1a, qu\xE9 parece que la vas a necesitar."
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: "\xBFT\xFA? \xBFY qu\xE9 quieres a cambio?"
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 1
+    messageTIENDA: "Detalles insignificantes, tal vez algunas deliciosas almas...
+      pero por ahora lo \xFAnico que te pido, es que me digas tu nombre."
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: ...
+    audioClipTIENDA: {fileID: 0}
+  - actorIdTIENDA: 0
+    messageTIENDA: Scarlet Crimson.
+    audioClipTIENDA: {fileID: 0}
+  actorsTIENDA:
+  - nameTIENDA: Scarlet
+    spriteTIENDA: {fileID: 0}
+  - nameTIENDA: "S\xFAcubo"
+    spriteTIENDA: {fileID: 0}
+  opcionesTIENDA: []
+  opcionesBotonesAnteriores: []
+  dialogueManagerTIENDA: {fileID: 0}
+  oneTimeDialogue: 1
 --- !u!1 &7172091175456361576
 GameObject:
   m_ObjectHideFlags: 0

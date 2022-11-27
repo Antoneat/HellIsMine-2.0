@@ -2,36 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManagerTIENDA : MonoBehaviour
 {
     public Image actorImage;
-    public Text actorName;
-    public Text messageText;
+    public TMP_Text actorName;
+    public TMP_Text messageText;
     public RectTransform backgroundBox;
-    private string sentence;
+    public string sentence;
 
     public AudioSource audioSource;
+    
+    public GameObject BotonContinuar;
 
-    public float textspeed;
     public KeyCode Tecla;
+    public float textspeed;
 
-    public Message[] currentMessages;
-    Actor[] currentActors;
+
+    public MessageTIENDA[] currentMessagesTIENDA;
+    public ActorTIENDA[] currentActorsTIENDA;
+    public OpcionesTIENDA[] currentOpcionesTIENDA;
     public int activeMessage = 0;
 
     public static bool isActive = false;
 
+    public TiendaInteracion tiendaInteracion;
+    public GameObject[] mejoras;
+    public bool mejoraAtaqueBasico;
+    public bool mejoraDash;
     
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public void OpenDialogue(MessageTIENDA[] messagesTIENDA, ActorTIENDA[] actorsTIENDA, OpcionesTIENDA[] opcionesTIENDA)
     {
         backgroundBox.localScale = new Vector3(1, 1, 1);
-        currentMessages = messages;
-        currentActors = actors;
+        currentMessagesTIENDA = messagesTIENDA;
+        currentActorsTIENDA = actorsTIENDA;
+        currentOpcionesTIENDA = opcionesTIENDA;
         activeMessage = 0;
         isActive = true;
 
-        Debug.Log("ESTAS CONVERSANDO PRRO, HAS CARGADO: " + messages.Length);
+        Debug.Log("ESTAS CONVERSANDO PRRO, HAS CARGADO: " + messagesTIENDA.Length);
         DisplayMessage();
     }
 
@@ -47,19 +57,19 @@ public class DialogueManagerTIENDA : MonoBehaviour
 
     void DisplayMessage()
     {
-        Message messageToDisplay = currentMessages[activeMessage];
+        MessageTIENDA messageToDisplay = currentMessagesTIENDA[activeMessage];
         StopAllCoroutines();
 
-        sentence = messageToDisplay.message;
-        audioSource.clip = messageToDisplay.audioClip;
+        sentence = messageToDisplay.messageTIENDA;
+        audioSource.clip = messageToDisplay.audioClipTIENDA;
         audioSource.Play();
         StartCoroutine(TypeSentence(sentence));
 
 
-        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
+        ActorTIENDA actorToDisplay = currentActorsTIENDA[messageToDisplay.actorIdTIENDA];
 
-        actorName.text = actorToDisplay.name;
-        actorImage.sprite = actorToDisplay.sprite;
+        actorName.text = actorToDisplay.nameTIENDA;
+        actorImage.sprite = actorToDisplay.spriteTIENDA;
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -76,7 +86,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
     {
         activeMessage++;
 
-        if (activeMessage < currentMessages.Length)
+        if (activeMessage < currentMessagesTIENDA.Length)
         {
             DisplayMessage();
         }
@@ -85,13 +95,14 @@ public class DialogueManagerTIENDA : MonoBehaviour
             Debug.Log("ACABASTE DE HABLAR PRRO");
             isActive = false;
             backgroundBox.localScale = new Vector3(0, 0, 0);
+            sentence = "";
         }
     }
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(Tecla) && isActive == true)
+        if (Input.GetKeyDown(Tecla) && isActive)
         {
             if (messageText.text == sentence)
             {
@@ -104,21 +115,36 @@ public class DialogueManagerTIENDA : MonoBehaviour
                 messageText.text = sentence;
             }
         }
-
-    }
-
-    public void PasarDialogoTiendaBTN()
-    {
         
-        if (messageText.text == sentence)
+        if(sentence == "¿Así que por eso deseas salir de aquí? Me da igual siempre y cuando me alimentes ¡Jajaja!")
         {
-            audioSource.Stop();
-            NextMessage();
+            mejoraAtaqueBasico = true;
         }
-        else
+        if(sentence == "Volveré y los mataré yo misma.")
         {
-            StopAllCoroutines();
-            messageText.text = sentence;
+            mejoraDash = true;
         }
+
+        if(sentence == "Bueno, te recomiendo esto." && mejoraAtaqueBasico)
+        {
+            tiendaInteracion.OpenTiendaUI();
+            mejoras[0].SetActive(true); // Mejora de ataque basico.
+        }
+        else if(sentence == "Bueno, te recomiendo esto." && mejoraDash)
+        {
+            tiendaInteracion.OpenTiendaUI();
+            mejoras[1].SetActive(true); // Mejora de Dash
+        }
+
+        if(currentOpcionesTIENDA.Length != 0) // Si la conversacion no tiene opciones, no hace nada este if
+        {
+            if (currentMessagesTIENDA.Length == activeMessage + 1 ) // si tiene opciones, va a verificar si es el ultimo dialogo para mostrar las opciones
+            {
+                currentOpcionesTIENDA[0].opcion.SetActive(true);
+                currentOpcionesTIENDA[1].opcion.SetActive(true);
+                BotonContinuar.SetActive(false);
+            }
+        }
+        else return;
     }
 }

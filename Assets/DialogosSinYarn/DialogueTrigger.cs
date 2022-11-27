@@ -7,128 +7,43 @@ public class DialogueTrigger : MonoBehaviour
     public Message[] messages;
     public Actor[] actors;
 
-    public DialogueManagerTIENDA DialogueManagerTIENDA;
     public DialogueManager dialogueManager;
-    public GameObject[] opciones;
 
-    public bool dialogoParaTienda;
     public bool oneTimeDialogue; //Dialogo que solo se va a mostrar una vez en el juego. (Para la tienda)
 
-    public TiendaInteracion tiendaInteracion;
-    public bool dialogoDeTienda;
-    public bool tiendaMejorasA, tiendaMejorasB;
-
     public GameObject ContiniueBtn;
+
 
     private void OnTriggerEnter(Collider other) // PARA LOS DIALOGOS IN GAME
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(dialogoParaTienda == true)
-            {
-                DialogueManagerTIENDA.OpenDialogue(messages, actors);
-            }
-            else
-            {
-                dialogueManager.OpenDialogue(messages, actors);
-            }
-
-            if(oneTimeDialogue == true)
-            {
-                this.gameObject.SetActive(false);
-            }
+            dialogueManager.OpenDialogue(messages, actors);
+            DestroyDialogue();
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Player"))
         {
-            if(dialogoParaTienda == true)
-            {
-                DialogueManagerTIENDA.OpenDialogue(messages, actors);
-            }
-            else
-            {
-                dialogueManager.OpenDialogue(messages, actors);
-            }
-
-            if(oneTimeDialogue == true)
-            {   
-                this.enabled = false;
-            }
+            dialogueManager.OpenDialogue(messages, actors);
+            Destroy(this);
         }
     }
 
     public void EmpezarDialogo() // Metodo para usarlo con la tienda.
     {
-        if(dialogoParaTienda == true)
-        {
-            DialogueManagerTIENDA.OpenDialogue(messages, actors);
-        }
-        else
-        {
-            dialogueManager.OpenDialogue(messages, actors);
-        }
-
-        if(oneTimeDialogue == true)
-        {
-            this.gameObject.SetActive(false);
-        }
+        dialogueManager.OpenDialogue(messages, actors);
+        DestroyDialogue();
     }
-
-    void Update() // Opciones
+    
+    private void DestroyDialogue()
     {
-        if(opciones.Length == 0) // Si la conversacion no tiene opciones, no hace nada este update
+        if(oneTimeDialogue)
         {
-            return;
-        }
-        else
-        {
-            if(dialogoDeTienda == true)
-            {
-                if (DialogueManagerTIENDA.activeMessage == DialogueManagerTIENDA.currentMessages.Length-1) // si tiene opciones, va a verificar si es el ultimo dialogo para mostrar las opciones
-                {
-                    opciones[0].SetActive(true);
-                    opciones[1].SetActive(true);
-                    ContiniueBtn.SetActive(false);
-                }
-                else
-                {
-                    opciones[0].SetActive(false);
-                    opciones[1].SetActive(false);
-                    ContiniueBtn.SetActive(true);
-                }
-            }
-            else
-            {
-                if (messages.Length == DialogueManagerTIENDA.currentMessages.Length) // si tiene opciones, va a verificar si es el ultimo dialogo para mostrar las opciones
-                {
-                    opciones[0].SetActive(true);
-                    opciones[1].SetActive(true);
-                    ContiniueBtn.SetActive(false);
-                }
-                else 
-                {
-                    opciones[0].SetActive(false);
-                    opciones[1].SetActive(false);
-                    ContiniueBtn.SetActive(true);
-                }
-            }
-            
-        }
-
-        if(DialogueManagerTIENDA.activeMessage == DialogueManagerTIENDA.currentMessages.Length-1 && tiendaMejorasA == true && dialogoDeTienda == true)
-        {
-            tiendaInteracion.OpenTiendaUI();
-            tiendaInteracion.MejorasDeDashOFF();
-        }
-        else if(DialogueManagerTIENDA.activeMessage == DialogueManagerTIENDA.currentMessages.Length-1 && tiendaMejorasB == true && dialogoDeTienda == true)
-        {
-            tiendaInteracion.OpenTiendaUI();
-            tiendaInteracion.MejorasDeAtaqueBasicoOFF();
+            Destroy(gameObject);
         }
     }
-
 }
 
 [System.Serializable]
