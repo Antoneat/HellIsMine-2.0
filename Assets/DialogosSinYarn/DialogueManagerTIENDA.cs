@@ -29,9 +29,24 @@ public class DialogueManagerTIENDA : MonoBehaviour
 
     public TiendaInteracion tiendaInteracion;
     public GameObject[] mejoras;
-    public bool mejoraAtaqueBasico;
-    public bool mejoraDash;
+    public int mejoraMejoras;
     
+
+    [Header("Scarlet")]
+    public PlayerMovement playerMovement;
+    public PlayerDash playerDash;
+    public PlayerAttackCombo playerAttackCombo;
+    public PlayerHardAttack playerHardAttack;
+
+
+    private void Start()
+    {
+        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        playerDash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDash>();
+        playerAttackCombo = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttackCombo>();
+        playerHardAttack = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHardAttack>();    
+    }
+
     public void OpenDialogue(MessageTIENDA[] messagesTIENDA, ActorTIENDA[] actorsTIENDA, OpcionesTIENDA[] opcionesTIENDA)
     {
         backgroundBox.localScale = new Vector3(1, 1, 1);
@@ -118,22 +133,24 @@ public class DialogueManagerTIENDA : MonoBehaviour
         
         if(sentence == "¿Así que por eso deseas salir de aquí? Me da igual siempre y cuando me alimentes ¡Jajaja!")
         {
-            mejoraAtaqueBasico = true;
+            mejoraMejoras++;
         }
         if(sentence == "Volveré y los mataré yo misma.")
         {
-            mejoraDash = true;
+            mejoraMejoras--;
         }
 
-        if(sentence == "Bueno, te recomiendo esto." && mejoraAtaqueBasico)
+        if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras > 0) // Para las mejoras de el ataque basico
         {
             tiendaInteracion.OpenTiendaUI();
             mejoras[0].SetActive(true); // Mejora de ataque basico.
+            mejoras[1].SetActive(false);
         }
-        else if(sentence == "Bueno, te recomiendo esto." && mejoraDash)
+        else if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras < 0) // Para las mejoras de el dash
         {
             tiendaInteracion.OpenTiendaUI();
-            mejoras[1].SetActive(true); // Mejora de Dash
+            mejoras[0].SetActive(false); 
+            mejoras[1].SetActive(true); // Mejora de Dash.
         }
 
         if(currentOpcionesTIENDA.Length != 0) // Si la conversacion no tiene opciones, no hace nada este if
@@ -146,5 +163,13 @@ public class DialogueManagerTIENDA : MonoBehaviour
             }
         }
         else return;
+    }
+
+    public void ToggleMecanicasScarlet(bool toggle)
+    {
+        playerMovement.enabled = toggle;
+        playerDash.enabled = toggle;
+        playerAttackCombo.enabled = toggle;
+        playerHardAttack.enabled = toggle;
     }
 }

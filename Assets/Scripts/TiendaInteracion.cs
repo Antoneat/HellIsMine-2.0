@@ -14,6 +14,9 @@ public class TiendaInteracion : MonoBehaviour
 
     public GameObject DialogoTienda;
 
+    public DialogueManagerTIENDA dialogueManagerTIENDA;
+
+
 
     #region TiendaUI
     public void OpenTiendaUI()
@@ -240,5 +243,6 @@ public class TiendaInteracion : MonoBehaviour
     public void ExitTienda()
     {
         panelMaster.SetActive(false);
+        dialogueManagerTIENDA.ToggleMecanicasScarlet(true);
     }
 }

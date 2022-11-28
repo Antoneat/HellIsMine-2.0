@@ -31,6 +31,8 @@ public class DialogueTriggerTIENDA : MonoBehaviour
         if(collision.collider.CompareTag("Player"))
         {
             dialogueManagerTIENDA.OpenDialogue(messagesTIENDA, actorsTIENDA, opcionesTIENDA);
+            dialogueManagerTIENDA.ToggleMecanicasScarlet(false);
+
             Destroy(this);
         }
     }
