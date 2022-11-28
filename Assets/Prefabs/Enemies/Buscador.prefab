@@ -12338,7 +12338,7 @@ AudioSource:
   MinDistance: 10.871447
   MaxDistance: 30.206396
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 1
@@ -12346,23 +12346,32 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.35990545
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -2.7796144
+      outSlope: -2.7796144
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5968403
+      value: 0.36190796
+      inSlope: -1.9930236
+      outSlope: -1.9930236
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.30698672
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.36004856
+      outSlope: -0.36004856
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -12440,7 +12449,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 7e56f67c16f1f1547a1c726be1cf40f7, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 7da7321ded90b08458929f6abcd30346, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -12494,7 +12503,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: dec922ee92cb94243b1352b5df0d2061, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 3e5fb060676d6d54fa82ca1456dc642d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

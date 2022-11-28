@@ -6043,7 +6043,7 @@ MonoBehaviour:
   deceleration: 9
   speedLimiter: 1
   Pasos: {fileID: 3677226194822270233}
-  Pista: {fileID: 8300000, guid: b3e6874728d4ae74caee1916475c781d, type: 3}
+  Pista: {fileID: 8300000, guid: 935b9634adb565549ba9281ab528d0c1, type: 3}
   capsuleCollider: {fileID: 0}
 --- !u!114 &2264408721482986323
 MonoBehaviour:
@@ -6061,6 +6061,7 @@ MonoBehaviour:
   canDash: 1
   isDashing: 0
   cooldown: 0.5
+  maxCooldown: 0
   DashOfensivo: 0
   DashAfilado1: 0
   DashAfilado2: 0
@@ -6122,8 +6123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1afd71ec78365b4a8d35336dc48b64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHardAttacking: 0
   rotationSpeed: 16
+  canHardAttack: 0
+  isHardAttacking: 0
+  cooldown: 0
+  maxCooldown: 0
   anim: {fileID: 4811876041847452568}
   guadanaParticles: {fileID: 4920231918478294032}
   ataqueHardCollider: {fileID: 1448135080}
