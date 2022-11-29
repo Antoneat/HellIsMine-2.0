@@ -17020,6 +17020,7 @@ GameObject:
   - component: {fileID: 494841203806284019}
   - component: {fileID: 494841203806284016}
   - component: {fileID: 494841203806284017}
+  - component: {fileID: 433251513277145903}
   m_Layer: 0
   m_Name: YaldaFinal2
   m_TagString: Yalda
@@ -17114,8 +17115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafbcaea3b48c0f438275358aa713409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualVida: 0
-  maxVida: 80
+  life: 0
+  maxLife: 0
+  healAmount: 0
+  soulAmount: 0
+  anim: {fileID: 0}
+  yaldaPasiva: {fileID: 0}
+  yaldaMov: {fileID: 0}
+  barraDeVidaYalda: {fileID: 0}
 --- !u!114 &494841203806284012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17135,6 +17142,8 @@ MonoBehaviour:
   stare: 0
   agent: {fileID: 494841203806284014}
   goal: {fileID: 0}
+  YaldaSource: {fileID: 433251513277145903}
+  MovClip: {fileID: 8300000, guid: 999bee7245d713b4eb1f8c5f7133784e, type: 3}
 --- !u!114 &494841203806284013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17147,13 +17156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b0163be3bb5014faf2f7e0262d2bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownGeneral: 2
-  agitador: []
-  buscador: []
-  verdugo: []
-  agitadorPrefab: {fileID: 2119726176885463028, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
-  buscadorPrefab: {fileID: 4906008913135897410, guid: b14e2c8afb9b30d49901e18f487d836d, type: 3}
-  verdugoPrefab: {fileID: 1759739420973834286, guid: 3b6b9b93218e8d44990cdc508effe7d5, type: 3}
+  curitas: 0
+  curandose: 0
+  oleada1: {fileID: 0}
+  oleada2: {fileID: 0}
+  childrens1: 0
+  childrens2: 0
 --- !u!114 &494841203806284018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17167,9 +17175,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yaldaMov: {fileID: 494841203806284012}
+  yaldaPasiva: {fileID: 0}
   yaldaAtkEspecial: {fileID: 494841203806284019}
   anim: {fileID: 494841203806284017}
   manoCollider: {fileID: 495213553}
+  YaldaSource: {fileID: 433251513277145903}
+  BasClip: {fileID: 8300000, guid: 711e3269a256e4243a3418dbcabe054f, type: 3}
 --- !u!114 &494841203806284019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17188,9 +17199,10 @@ MonoBehaviour:
   manoCollider: {fileID: 640720188}
   ondaEx: {fileID: 6319837643293977795}
   yaldaMov: {fileID: 494841203806284012}
+  yaldaPasiva: {fileID: 0}
   anim: {fileID: 494841203806284017}
-  impactForSpecialIzq: {fileID: 0}
-  impactForSpecialDer: {fileID: 0}
+  YaldaSource: {fileID: 433251513277145903}
+  EspClip: {fileID: 8300000, guid: dd74fa3d2b5d01c409bcc5886f27f899, type: 3}
 --- !u!114 &494841203806284016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17211,8 +17223,11 @@ MonoBehaviour:
   percentageComplete: 0
   tping: 0
   yaldaMov: {fileID: 494841203806284012}
+  yaldaPasiva: {fileID: 0}
   anim: {fileID: 494841203806284017}
   ondaEx: {fileID: 1962318249}
+  YaldaSource: {fileID: 433251513277145903}
+  DesClip: {fileID: 8300000, guid: eefdb9c7ec6c2f74e8eba2f4084feca5, type: 3}
 --- !u!95 &494841203806284017
 Animator:
   serializedVersion: 4
@@ -17233,6 +17248,120 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &433251513277145903
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590449658195355697}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 811158372010997011, guid: 05a7042a5e8e1854eb40db06b659cffe, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 6.4767456
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.15439853
+      value: 1
+      inSlope: -6.4793353
+      outSlope: -6.4793353
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.30879706
+      value: 0.5
+      inSlope: -1.6198338
+      outSlope: -1.6198338
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.58432996
+      value: 0.19589233
+      inSlope: -0.95564485
+      outSlope: -0.95564485
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.27022123
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -0.15446022
+      outSlope: -0.15446022
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6605319749511928608
 GameObject:
   m_ObjectHideFlags: 0

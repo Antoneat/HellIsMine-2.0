@@ -20,7 +20,8 @@ public class YaldaDesplazamiento : MonoBehaviour
     [SerializeField] YaldaPasiva yaldaPasiva;
     [SerializeField] Animator anim;
     public CapsuleCollider ondaEx;
-
+    public AudioSource YaldaSource;
+    public AudioClip DesClip;
     void Start()
     {
         yaldaMov = GetComponent<YaldaMov>();
@@ -36,6 +37,7 @@ public class YaldaDesplazamiento : MonoBehaviour
         {
             if(cooldownToTP >= 0)
             {
+                YaldaSource.PlayOneShot(DesClip);
                 cooldownToTP -= Time.deltaTime;
             }
         }

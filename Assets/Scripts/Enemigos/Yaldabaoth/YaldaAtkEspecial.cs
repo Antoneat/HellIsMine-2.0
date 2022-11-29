@@ -19,6 +19,9 @@ public class YaldaAtkEspecial : MonoBehaviour
     [SerializeField] YaldaMov yaldaMov;
     [SerializeField] YaldaPasiva yaldaPasiva;
     [SerializeField] Animator anim;
+    public AudioSource YaldaSource;
+    public AudioClip EspClip;
+
     void Start()
     {
         cooldown = Random.Range(5,9);
@@ -46,7 +49,8 @@ public class YaldaAtkEspecial : MonoBehaviour
 
     public void StartOfSpecialAttack() //Evento cuando empieza la anim de specialAttack
 	{
-		Debug.Log("AtaqueEspecialYalda");
+        YaldaSource.PlayOneShot(EspClip);
+        Debug.Log("AtaqueEspecialYalda");
 		yaldaMov.StopChase();
         yaldaMov.attacking = true;
         yaldaMov.stare = false;

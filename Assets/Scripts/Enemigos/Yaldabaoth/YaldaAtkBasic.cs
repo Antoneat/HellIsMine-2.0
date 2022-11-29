@@ -14,6 +14,8 @@ public class YaldaAtkBasic : MonoBehaviour
 	[SerializeField] YaldaAtkEspecial yaldaAtkEspecial;
 	[SerializeField] Animator anim;
 	public Collider manoCollider;
+	public AudioSource YaldaSource;
+	public AudioClip BasClip;
 
 	void Start()
 	{
@@ -22,6 +24,7 @@ public class YaldaAtkBasic : MonoBehaviour
 
 	public void StartOfBasicAttack() //Evento cuando empieza la anim de basicAttack
 	{
+		YaldaSource.PlayOneShot(BasClip);
 		Debug.Log("AtaqueBasicoYalda");
 		yaldaMov.StopChase();
 		yaldaMov.attacking = true;
