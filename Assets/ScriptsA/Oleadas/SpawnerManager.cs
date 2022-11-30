@@ -11,7 +11,7 @@ public class SpawnerManager : MonoBehaviour
     public int childrens;
     public bool spawning;
     public AudioSource OlSource;
-    public AudioClip OleadaPista;
+    public AudioClip OleadaPista,CombatPista;
     private bool Audio;
 
     //childcount
@@ -47,7 +47,8 @@ public class SpawnerManager : MonoBehaviour
             {
                 Audio = true;
                 OlSource.PlayOneShot(OleadaPista);
-                for(int i=0; i < puertas.Length; i++)
+                OlSource.PlayOneShot(CombatPista);
+                for (int i=0; i < puertas.Length; i++)
 				{
                     puertas[i].SetActive(true);
 				}
@@ -58,6 +59,7 @@ public class SpawnerManager : MonoBehaviour
         {
             for (int i = 0; i < puertas.Length; i++)
             {
+                OlSource.Stop();
                 puertas[i].SetActive(false);
             }
         }

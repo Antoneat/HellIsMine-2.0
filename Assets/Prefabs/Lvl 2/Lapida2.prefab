@@ -112,10 +112,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 1
-  time: 0
+  time: 2
   OnDestroy:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4939800206862519542}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 7c583d29f7d2caf4288eef0353cd39f0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isJail: 0
   vfx: []
   spawnPointVfx: {fileID: 0}
@@ -128,8 +140,8 @@ AudioSource:
   m_GameObject: {fileID: 1655802387873263768}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7c583d29f7d2caf4288eef0353cd39f0, type: 3}
+  OutputAudioMixerGroup: {fileID: 811158372010997011, guid: 05a7042a5e8e1854eb40db06b659cffe, type: 2}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.231
   m_Pitch: 1

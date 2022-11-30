@@ -81,16 +81,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oleadas:
   - {fileID: 3558454040207846225}
-  - {fileID: 3558454040664523619}
-  - {fileID: 3558454041836796833}
-  - {fileID: 3558454041188485879}
-  indxOleadas: 0
+  indxOleadas: 1
   ordenOleada: 0
   childrens: 0
   spawning: 0
   OlSource: {fileID: 7398410056248356643}
   OleadaPista: {fileID: 8300000, guid: 336843f1c7a368442a915cddf4cc713c, type: 3}
-  puertas: []
+  CombatPista: {fileID: 8300000, guid: 43b37d720fdc0bc47956d1957835b197, type: 3}
+  puertas:
+  - {fileID: 0}
+  - {fileID: 0}
   indxPuertas: 0
   doorActivator: 0
 --- !u!82 &7398410056248356643
