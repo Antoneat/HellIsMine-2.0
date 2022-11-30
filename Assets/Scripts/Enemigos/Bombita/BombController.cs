@@ -57,12 +57,12 @@ public class BombController : MonoBehaviour
 
 		playerDistance = Vector3.Distance(transform.position, goal.position);
 
-		if (playerDistance <= awareAI)
+		if (playerDistance <= awareAI && playerDistance > atkRange) // corrección de testeo, si falla regresalo
 		{
 			LookAtPlayer();
 			Debug.Log("Seen");
 			Chase();
-			//agent.isStopped = false;
+			agent.isStopped = false;
 		}
 		else if (playerDistance > awareAI)
 		{

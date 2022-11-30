@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ManagerBombitaSO
   m_EditorClassIdentifier: 
   bombController: {fileID: 2119726176885463039, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
-  agitadorLife: {fileID: 2501400972220356369, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
+  agitadorLife: {fileID: 1167758246452215055, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
   awareAI_SO: 25
   atkRange_SO: 5
   life_SO: 1
-  healAmount_SO: 1.5
+  healAmount_SO: 2
   dmg_SO: 0

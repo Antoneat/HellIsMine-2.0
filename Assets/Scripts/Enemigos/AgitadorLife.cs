@@ -19,6 +19,7 @@ public class AgitadorLife : MonoBehaviour
 
     private void Start()
     {
+        life = 1;
         maxLife = life;
 
         ChangeLifeAgitador();
