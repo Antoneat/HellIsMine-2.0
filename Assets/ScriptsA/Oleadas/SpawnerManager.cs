@@ -10,7 +10,7 @@ public class SpawnerManager : MonoBehaviour
     public int ordenOleada;
     public int childrens;
     public bool spawning;
-    public AudioSource OlSource;
+    public AudioSource OlSource,PistSource;
     public AudioClip OleadaPista,CombatPista;
     private bool Audio;
 
@@ -47,7 +47,7 @@ public class SpawnerManager : MonoBehaviour
             {
                 Audio = true;
                 OlSource.PlayOneShot(OleadaPista);
-                OlSource.PlayOneShot(CombatPista);
+                PistSource.Play();
                 for (int i=0; i < puertas.Length; i++)
 				{
                     puertas[i].SetActive(true);
@@ -59,7 +59,7 @@ public class SpawnerManager : MonoBehaviour
         {
             for (int i = 0; i < puertas.Length; i++)
             {
-                OlSource.Stop();
+                PistSource.Stop();
                 puertas[i].SetActive(false);
             }
         }

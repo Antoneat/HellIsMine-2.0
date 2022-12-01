@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class YaldaVida : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class YaldaVida : MonoBehaviour
     public YaldaPasiva yaldaPasiva;
     [SerializeField] private YaldaMov yaldaMov;
     public GameObject barraDeVidaYalda; // Barra de vida de Yalda
+    [SerializeField] UnityEvent DmgSound;
+    public AudioSource DeadSource;
+    public AudioClip MuertePista;
 
     //public ParticleSystem almas;
 
@@ -35,11 +39,14 @@ public class YaldaVida : MonoBehaviour
     {
         if(yaldaPasiva.curandose == false)
         {
+            DmgSound.Invoke();
             life -= dmg;
         }
         
         if (life <= 0)
         {
+            if (!DeadSource.isPlaying)
+                DeadSource.PlayOneShot(MuertePista);
             barraDeVidaYalda.SetActive(false);
             yaldaMov.enabled = false;
             anim.SetTrigger("Muerte");

@@ -21,8 +21,8 @@ public class YaldaMov : MonoBehaviour
 	private YaldaAtkEspecial yaldaAtkEspecial;
 	private YaldaDesplazamiento yaldaDesplazamiento;
 	private Animator anim;
-	public AudioSource YaldaSource;
-	public AudioClip MovClip;
+	//public AudioSource YaldaSource;
+	//public AudioClip MovClip;
 
 
 	void Start()
@@ -88,7 +88,7 @@ public class YaldaMov : MonoBehaviour
 	
 	public void Chase() // Metodo para seguir a Scarlet. 
 	{
-		YaldaSource.PlayOneShot(MovClip);
+		//YaldaSource.PlayOneShot(MovClip);
 		agent.SetDestination(goal.position);
 		agent.isStopped = false;
 	}
