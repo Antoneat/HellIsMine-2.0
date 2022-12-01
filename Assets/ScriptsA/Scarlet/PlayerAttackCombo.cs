@@ -104,7 +104,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier = 0.85f;
             hitboxDmg3.modifier = 0.85f;
             hitboxDmg4.modifier = 0.85f;
-            anim.SetFloat("VelocidadAnimacion", 1.2f);
+            //anim.SetFloat("VelocidadAnimacion", 1.2f);
         }
         
         if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false)
@@ -113,7 +113,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier = 0.67f;
             hitboxDmg3.modifier = 0.67f;
             hitboxDmg4.modifier = 0.67f;
-            anim.SetFloat("VelocidadAnimacion", 1.4f);
+            //anim.SetFloat("VelocidadAnimacion", 1.4f);
         }
 
 
@@ -123,7 +123,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier = 1.15f;
             hitboxDmg3.modifier = 1.15f;
             hitboxDmg4.modifier = 1.15f;
-            anim.SetFloat("VelocidadAnimacion", 0.8f);
+            //anim.SetFloat("VelocidadAnimacion", 0.8f);
         }
         
         if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false)
@@ -132,7 +132,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier = 1.33f;
             hitboxDmg3.modifier = 1.33f;
             hitboxDmg4.modifier = 1.33f;
-            anim.SetFloat("VelocidadAnimacion", 0.6f);
+            //anim.SetFloat("VelocidadAnimacion", 0.6f);
         }
 
 
@@ -142,7 +142,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier += (hitboxDmg2.modifier * 0.33f);
             hitboxDmg3.modifier += (hitboxDmg3.modifier * 0.33f);
             hitboxDmg4.modifier += (hitboxDmg4.modifier * 0.33f);
-            anim.SetFloat("VelocidadAnimacion", 1.4f);
+            //anim.SetFloat("VelocidadAnimacion", 1.4f);
         }
 
         #endregion

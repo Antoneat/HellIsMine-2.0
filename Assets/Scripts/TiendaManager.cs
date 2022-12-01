@@ -5,6 +5,7 @@ using UnityEngine;
 public class TiendaManager : MonoBehaviour
 {
     public GameObject img_Tienda;
+    public DialogueManagerTIENDA dialogueManagerTIENDA;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class TiendaManager : MonoBehaviour
         if(collision.collider.CompareTag("Player"))
         {
             img_Tienda.SetActive(true);
+            dialogueManagerTIENDA.ToggleMecanicasScarlet(false);
             Time.timeScale = 1;
         }
     }
