@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32063291085918207}
-  m_LocalRotation: {x: -0, y: -0.1921292, z: -0, w: 0.98136973}
+  m_LocalRotation: {x: 0, y: -0.19212797, z: 0, w: 0.9813699}
   m_LocalPosition: {x: 9.03, y: 0.30061188, z: 25.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -108,7 +108,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5da8a4e79462e204d9da30b8c2e45b28, type: 2}
+  - {fileID: 2100000, guid: c679db2ceac50274796f6cf091806f93, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,6 +141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Velas_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4175886033535091531, guid: f1c1fc75bdac1584885ef8f28bd84cca, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c679db2ceac50274796f6cf091806f93, type: 2}
     - target: {fileID: 4611773606222351177, guid: f1c1fc75bdac1584885ef8f28bd84cca, type: 3}
       propertyPath: m_RootOrder
       value: 0
