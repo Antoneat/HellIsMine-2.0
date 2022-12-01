@@ -11,6 +11,7 @@ public class HitboxDmg : MonoBehaviour
     public PlayerAttackCombo playerAttackCombo;
 
     public PlayerDash playerDash;
+    public PlayerDmg playerDmg;
 
     private void Start()
     {
@@ -47,73 +48,73 @@ public class HitboxDmg : MonoBehaviour
 
     public void MejorasAtaques()
     {
-        if(tiendaInteracion.CA1 == true)
+        if(tiendaInteracion.CA1 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerAttackCombo.CortesAgiles1 = true;  
         }   
         
-        if(tiendaInteracion.CA2 == true && playerAttackCombo.CortesAgiles1 ==  true)
+        if(tiendaInteracion.CA2 == true && playerAttackCombo.CortesAgiles1 ==  true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerAttackCombo.CortesAgiles2 = true;
         } 
         
-        if(tiendaInteracion.CT1 == true)
+        if(tiendaInteracion.CT1 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerAttackCombo.CortesTenaces1 = true;
         } 
         
-        if(tiendaInteracion.CT2 == true && playerAttackCombo.CortesTenaces1 == true)
+        if(tiendaInteracion.CT2 == true && playerAttackCombo.CortesTenaces1 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerAttackCombo.CortesTenaces2 = true;
         } 
         
-        if(tiendaInteracion.CP == true && playerAttackCombo.CortesAgiles2 == true && playerAttackCombo.CortesTenaces2 == true)
+        if(tiendaInteracion.CP == true && playerAttackCombo.CortesAgiles2 == true && playerAttackCombo.CortesTenaces2 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerAttackCombo.CortesPerfectos = true;
         } 
 
 
 
 
-        if(tiendaInteracion.DO == true)
+        if(tiendaInteracion.DO == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerDash.DashOfensivo = true;
         }
 
 
-        if(tiendaInteracion.DA1 == true && playerDash.DashOfensivo == true)
+        if(tiendaInteracion.DA1 == true && playerDash.DashOfensivo == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerDash.DashAfilado1 = true;
         }
-        if(tiendaInteracion.DA2 == true && playerDash.DashAfilado1 == true)
+        if(tiendaInteracion.DA2 == true && playerDash.DashAfilado1 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerDash.DashAfilado2 = true;
         }
 
 
-        if(tiendaInteracion.DP1 == true && playerDash.DashOfensivo == true)
+        if(tiendaInteracion.DP1 == true && playerDash.DashOfensivo == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerDash.DashPotente1 = true;
         }
-        if(tiendaInteracion.DP2 == true && playerDash.DashPotente1 == true)
+        if(tiendaInteracion.DP2 == true && playerDash.DashPotente1 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerDash.DashPotente2 = true;
         }
 
 
-        if(tiendaInteracion.DMDM == true && playerDash.DashAfilado2 == true && playerDash.DashPotente2 == true)
+        if(tiendaInteracion.DMDM == true && playerDash.DashAfilado2 == true && playerDash.DashPotente2 == true && playerDmg.actualSouls > 30)
         {
-            // Quitarle cierta cantidad de almas.
+            playerDmg.actualSouls -= 30; //revisar precio
             playerDash.MaestroDelMovimieto = true;
         }
     }
