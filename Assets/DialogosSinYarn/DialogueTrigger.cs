@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class DialogueTrigger : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy() //porseca
+    {
+        Destroy(gameObject);
+    }
 }
 
 [System.Serializable]
@@ -52,6 +58,7 @@ public class Message
     public int actorId;
     public string message;
     public AudioClip audioClip;
+    public UnityEvent unityEvent;
 }
 
 [System.Serializable]

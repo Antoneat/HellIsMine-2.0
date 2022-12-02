@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
         sentence = messageToDisplay.message;
         audioSource.clip = messageToDisplay.audioClip;
         audioSource.Play();
+        messageToDisplay.unityEvent.Invoke();
         StartCoroutine(TypeSentence(sentence));
 
 
