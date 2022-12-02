@@ -11,8 +11,10 @@ public class SpawnerManager : MonoBehaviour
     public int childrens;
     public bool spawning;
     public AudioSource OlSource,PistSource;
+    public ThemeManager themeManager;
+    public bool themeChanged;
     public AudioClip OleadaPista,CombatPista;
-    private bool Audio;
+    public bool Audio;
 
     //childcount
 
@@ -27,6 +29,9 @@ public class SpawnerManager : MonoBehaviour
         spawning = false;
         indxOleadas = oleadas.Length;
         ordenOleada = 0;
+
+        //Cancion
+        themeManager = GameObject.FindGameObjectWithTag("ThemeManager").GetComponent<ThemeManager>();
 
         // Puertas
         doorActivator = false;        
@@ -47,7 +52,8 @@ public class SpawnerManager : MonoBehaviour
             {
                 Audio = true;
                 OlSource.PlayOneShot(OleadaPista);
-                PistSource.Play();
+                //PistSource.Play();
+                themeManager.ChangeTheme();
                 for (int i=0; i < puertas.Length; i++)
 				{
                     puertas[i].SetActive(true);
@@ -59,7 +65,7 @@ public class SpawnerManager : MonoBehaviour
         {
             for (int i = 0; i < puertas.Length; i++)
             {
-                PistSource.Stop();
+                //PistSource.Stop();
                 puertas[i].SetActive(false);
             }
         }
@@ -75,6 +81,7 @@ public class SpawnerManager : MonoBehaviour
         if (ordenOleada == indxOleadas)
         {
             doorActivator = false;
+            CheckChange();
             ordenOleada = 0;
         }
         else
@@ -88,6 +95,15 @@ public class SpawnerManager : MonoBehaviour
             ordenOleada++;
         }
     }
+
+    public void CheckChange()
+	{
+        if(!themeChanged)
+		{
+            themeManager.ChangeTheme();
+            themeChanged = true;
+		}
+	}
 
     IEnumerator WaveActivator()
     {

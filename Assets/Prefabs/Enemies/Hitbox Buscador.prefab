@@ -171,20 +171,20 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.8938142, b: 0, a: 1}
-      key1: {r: 0, g: 0.9150943, b: 0.5287212, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.9622642, g: 0.8826902, b: 0.21333215, a: 1}
+      key1: {r: 0.7673902, g: 0.8679245, b: 0.30704877, a: 1}
+      key2: {r: 0.3066038, g: 1, b: 0.5377358, a: 0}
+      key3: {r: 0, g: 0.9150943, b: 0.5287212, a: 0}
+      key4: {r: 0, g: 0.9150943, b: 0.5287212, a: 0}
+      key5: {r: 0, g: 0.9150943, b: 0.5287212, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
+      ctime1: 25250
+      ctime2: 45489
+      ctime3: 65535
+      ctime4: 65535
+      ctime5: 65535
       ctime6: 0
       ctime7: 0
       atime0: 0
@@ -196,7 +196,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 4
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
