@@ -41,6 +41,11 @@ public class HitboxDmg : MonoBehaviour
         {
             other.gameObject.GetComponent<YaldaVida>().TakeDmg(dmg * modifier);
         }
+
+        if (other.gameObject.CompareTag("Samael"))
+        {
+            other.gameObject.GetComponent<YaldaVida>().TakeDmg(dmg * modifier);
+        }
     }
  
  
