@@ -10,4 +10,19 @@ public class CambiarEscena : MonoBehaviour
         SceneManager.LoadScene(SceneNumber);
         Time.timeScale = 1;
     }
+
+    public void GoToLevel1()
+    {
+        PlayerPasarNivel.instance.ChargeLevel1();
+    }
+
+    public void GoToLevel2()
+    {
+        PlayerPasarNivel.instance.ChargeLevel2();
+    }
+    
+    public void GoToLevel3()
+    {
+        PlayerPasarNivel.instance.ChargeLevel3();
+    }
 }

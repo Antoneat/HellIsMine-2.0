@@ -16,11 +16,19 @@ public class PlayerPasarNivel : MonoBehaviour
     [SerializeField] GameObject panelLoadingScreen;
 
 
+    [SerializeField] Transform inicioNivel1;
     [SerializeField] Transform inicioNivel2;
     [SerializeField] Transform inicioNivel3;
 
 
     int terrenoValor;
+
+    public static PlayerPasarNivel instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -44,21 +52,13 @@ public class PlayerPasarNivel : MonoBehaviour
     {
         if (other.CompareTag("Nivel 1"))
         {
-            nivel1.SetActive(false);
-            nivel2.SetActive(true);
-
-            transform.position = inicioNivel2.position;
-
+            ChargeLevel2();
             StartCoroutine("Terreno2");
         }
         
         if (other.CompareTag("Nivel 2"))
         {
-            nivel2.SetActive(false);
-            nivel3.SetActive(true);
-
-            transform.position = inicioNivel3.position;
-
+            ChargeLevel3();
             StartCoroutine("Terreno3");
         }
     }
@@ -75,6 +75,16 @@ public class PlayerPasarNivel : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         terrenoValor = 1;
     }
+
+    public void ChargeLevel2()
+    {
+        nivel1.SetActive(false);
+        nivel2.SetActive(true);
+        nivel3.SetActive(false);
+
+        transform.position = inicioNivel2.position;       
+    }
+
     
     IEnumerator Terreno3()
     {
@@ -87,5 +97,23 @@ public class PlayerPasarNivel : MonoBehaviour
         panelLoadingScreen.SetActive(false);
         yield return new WaitForSeconds(0.3f);
         terrenoValor = 2;
+    }
+
+    public void ChargeLevel3()
+    {
+        nivel1.SetActive(false);
+        nivel2.SetActive(false);
+        nivel3.SetActive(true);
+
+        transform.position = inicioNivel3.position;      
+    }
+
+    public void ChargeLevel1()
+    {
+        nivel1.SetActive(true);
+        nivel2.SetActive(false);
+        nivel3.SetActive(false);
+
+        transform.position = inicioNivel1.position;
     }
 }
