@@ -17,6 +17,7 @@ public class SamaDesplazamiento : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         atacando = false;
+        SamaEmbestida.enabled = false;
     }
 
     void Update()
@@ -33,7 +34,7 @@ public class SamaDesplazamiento : MonoBehaviour
     {
         samaMov.StopChase();
         samaMov.attacking = samaMov.stare = SamaEmbestida.enabled = atacando = true;
-
+        SamaEmbestida.enabled = true;
         anim.ResetTrigger("Samael_Ataque_1");
         anim.ResetTrigger("Samael_Ataque_Especial");
         anim.ResetTrigger("Samael_Prepara_Embestida");

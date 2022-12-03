@@ -10,13 +10,13 @@ public class SamaAtkBasico : MonoBehaviour
 	[SerializeField] Animator anim;
 
 	[Header("Onda Expansiva")]
-	public GameObject ondaEx;
+	public CapsuleCollider ondaEx;
 	public bool activateOndaExpansiva;
 
 	void Start()
 	{
 		anim = GetComponent<Animator>();
-		ondaEx.SetActive(false);
+		ondaEx.enabled = false;
 	}
 
 	void Update()
@@ -24,8 +24,8 @@ public class SamaAtkBasico : MonoBehaviour
 
 		if ( activateOndaExpansiva == true)
 		{
-			ondaEx.SetActive(true);
-			//ondaEx.radius += Time.deltaTime * 4f;
+			ondaEx.enabled = true;
+			ondaEx.radius += Time.deltaTime * 4f;
 		}
 	}
 
@@ -52,8 +52,8 @@ public class SamaAtkBasico : MonoBehaviour
 
 	void ResetOndaEx()
 	{
-		ondaEx.SetActive(false);
-		//ondaEx.radius = 0;
+		ondaEx.enabled = false;
+		ondaEx.radius = 0;
 		activateOndaExpansiva = false;
 	}
 }
