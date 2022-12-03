@@ -36,6 +36,12 @@ public class ScarletData : MonoBehaviour
 
     #endregion
 
+    #region PlayerPasarNivel
+
+    public int terrenoValor;
+
+    #endregion
+
     private void Awake()
     {
         if(instance == null)

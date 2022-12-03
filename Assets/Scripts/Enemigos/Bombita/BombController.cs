@@ -43,6 +43,7 @@ public class BombController : MonoBehaviour
 		agent.SetDestination(goal.position);
 		basicoGO.SetActive(false);
 
+		Physics.IgnoreLayerCollision(9, 9, true);
 
 		coPlay = false;
 		
@@ -57,7 +58,7 @@ public class BombController : MonoBehaviour
 
 		playerDistance = Vector3.Distance(transform.position, goal.position);
 
-		if (playerDistance <= awareAI && playerDistance > atkRange) // corrección de testeo, si falla regresalo
+		if (playerDistance <= awareAI && playerDistance > atkRange) // correcciï¿½n de testeo, si falla regresalo
 		{
 			LookAtPlayer();
 			Debug.Log("Seen");

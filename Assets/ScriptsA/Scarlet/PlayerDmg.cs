@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerDmg : MonoBehaviour
 {
-    
-    public int escenaActual;
-
     [Header("Vida")]
     public float actualvida;
     public float maxVida = 30f;
@@ -58,7 +55,6 @@ public class PlayerDmg : MonoBehaviour
             //playerMovement.enabled = false;
             playerMovement.maxSpeed = 0;
             anim.Play("Morir");
-            Invoke(nameof(Dead), 3.20f);
         }
 
         if (actualvida > maxVida)
@@ -131,7 +127,6 @@ public class PlayerDmg : MonoBehaviour
     
     public void Dead()
     {
-        SceneManager.LoadScene(escenaActual);
-        //consolaComandos.panelReinicio.SetActive(true);
+        PlayerPasarNivel.instance.RestartLevel();
     }
 }
