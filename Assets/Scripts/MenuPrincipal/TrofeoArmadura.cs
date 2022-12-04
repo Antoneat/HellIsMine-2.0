@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class TrofeoArmadura : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    void Awake()
     {
-        if (other.CompareTag("Player"))
+        if(ManagerTrofeos.instance.armaduraComp == 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
             PlayerPrefs.SetInt(ManagerTrofeos.instance.armaduraPref, 1);
 

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class TrofeoColmillo : MonoBehaviour
 {
+    void Awake()
+    {
+        if (ManagerTrofeos.instance.colmilloComp == 1)
+        {
+            Destroy(gameObject);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

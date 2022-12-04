@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using GameJolt.API;
 public class ManagerTrofeos : MonoBehaviour
 {
     public int cuchilloComp;
@@ -30,7 +30,7 @@ public class ManagerTrofeos : MonoBehaviour
     void Awake()
     {
         instance = this;
-
+        PlayerPrefs.DeleteAll();
         LoadData();
         Comprobacion();
     }
@@ -40,6 +40,7 @@ public class ManagerTrofeos : MonoBehaviour
         if (cuchilloComp == 1)
         {
             cuchilloButton.SetActive(true);
+            Trophies.TryUnlock(179317);
         }
         else
         {

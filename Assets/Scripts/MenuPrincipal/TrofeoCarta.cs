@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class TrofeoCarta : MonoBehaviour
 {
+    void Awake()
+    {
+        if (ManagerTrofeos.instance.cartaComp == 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
