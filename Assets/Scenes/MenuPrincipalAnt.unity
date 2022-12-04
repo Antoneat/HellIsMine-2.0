@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1967,6 +1967,7 @@ GameObject:
   - component: {fileID: 132777820}
   - component: {fileID: 132777822}
   - component: {fileID: 132777818}
+  - component: {fileID: 132777824}
   - component: {fileID: 132777823}
   m_Layer: 5
   m_Name: Button_Jugar
@@ -2039,9 +2040,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 132777823}
-        m_TargetAssemblyTypeName: CambiarEscena, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 132777824}
+        m_TargetAssemblyTypeName: CambiarEsceneHUD, Assembly-CSharp
+        m_MethodName: CambiarEscena
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2170,6 +2171,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7927ad0b55806f24f91fdcd03d795ee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &132777824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132777816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a119830373498494881f40a634e123d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &133499888
