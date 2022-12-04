@@ -63,10 +63,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1294284738371021749, guid: 28108ded2f6c37745bacdfbda7cef80e, type: 3}
+  - {fileID: 2100000, guid: ad43c9aef0ba9b94f88737e5c53a88ea, type: 2}
   - {fileID: 5775865398287329665, guid: 28108ded2f6c37745bacdfbda7cef80e, type: 3}
-  - {fileID: 3311723187333043063, guid: 28108ded2f6c37745bacdfbda7cef80e, type: 3}
-  - {fileID: 150490249916377658, guid: 28108ded2f6c37745bacdfbda7cef80e, type: 3}
+  - {fileID: 2100000, guid: 1a064e8982e91424db4b43f342a3fac3, type: 2}
+  - {fileID: 2100000, guid: 1a064e8982e91424db4b43f342a3fac3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,5 +119,6 @@ MonoBehaviour:
   OnDestroy:
     m_PersistentCalls:
       m_Calls: []
+  isJail: 0
   vfx: []
   spawnPointVfx: {fileID: 0}
