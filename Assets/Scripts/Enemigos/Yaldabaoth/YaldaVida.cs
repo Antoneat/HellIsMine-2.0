@@ -55,6 +55,8 @@ public class YaldaVida : MonoBehaviour
 
     public void Muerte()
     {   
+        Destroy(yaldaPasiva.oleada1);
+        Destroy(yaldaPasiva.oleada2);
         Destroy(gameObject);
     }
 }

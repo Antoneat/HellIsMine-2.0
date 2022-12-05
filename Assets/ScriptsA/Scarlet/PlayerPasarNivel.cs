@@ -152,25 +152,31 @@ public class PlayerPasarNivel : MonoBehaviour
     // Metodos para la consola
     public void GoToLvl1()
     {
-        ChargeLevel1();
-        StartCoroutine("Terreno1");
+        //StartCoroutine("Terreno1");
+        //ChargeLevel1();
+        terrenoValor = 0;
+        RestartLevel();
     }
 
     public void GoToLvl2()
     {
-        ChargeLevel2();
-        StartCoroutine("Terreno2");
+        //StartCoroutine("Terreno2");
+        //ChargeLevel2();
+        terrenoValor = 1;
+        RestartLevel();
     }
 
     public void GoToLvl3()
     {
-        ChargeLevel3();
-        StartCoroutine("Terreno3");   
+        //StartCoroutine("Terreno3");   
+        //ChargeLevel3();
+        terrenoValor = 2;
+        RestartLevel();
     }
 
     // Metodo para el boton de "Reiniciar nivel"
     public void RestartLevel()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(1);
     }
 }
