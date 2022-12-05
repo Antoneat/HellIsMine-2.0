@@ -15,8 +15,7 @@ public class TiendaInteracion : MonoBehaviour
     public GameObject DialogoTienda;
 
     public DialogueManagerTIENDA dialogueManagerTIENDA;
-
-
+    
 
     #region TiendaUI
     public void OpenTiendaUI()
@@ -49,6 +48,7 @@ public class TiendaInteracion : MonoBehaviour
         CP = false;
         tmpTitulo.text = "Cortes Ágiles I";
         tmpDescripcion.text = "Daño: -  Duración: +";
+        Debug.Log("Boton seleccionado1");
     }
 
     public void BtnCA2()

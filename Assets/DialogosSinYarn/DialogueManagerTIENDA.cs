@@ -130,7 +130,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
                 messageText.text = sentence;
             }
         }
-        
+        //Dialogos Nivel1
         if(sentence == "¿Así que por eso deseas salir de aquí? Me da igual siempre y cuando me alimentes ¡Jajaja!")
         {
             mejoraMejoras++;
@@ -139,7 +139,19 @@ public class DialogueManagerTIENDA : MonoBehaviour
         {
             mejoraMejoras--;
         }
+        //Dialogos Nivel2
+        if(sentence == "Mis años como asesina harán su trabajo con ella.")
+        {
+            mejoraMejoras += 2;
+        }
+        if(sentence == "Esta guadaña asesinó a su padre, solo terminaré lo que se empezó.")
+        {
+            mejoraMejoras -= 2;
+        }
+        //Dialogos Nivel3
 
+
+        //Tienda Nivel1
         if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras > 0) // Para las mejoras de el ataque basico
         {
             tiendaInteracion.OpenTiendaUI();
@@ -147,6 +159,19 @@ public class DialogueManagerTIENDA : MonoBehaviour
             mejoras[1].SetActive(false);
         }
         else if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras < 0) // Para las mejoras de el dash
+        {
+            tiendaInteracion.OpenTiendaUI();
+            mejoras[0].SetActive(false); 
+            mejoras[1].SetActive(true); // Mejora de Dash.
+        }
+        //Tienda Nivel2
+        if(sentence == "¡Esto podría servirte!" && mejoraMejoras > 0)
+        {
+            tiendaInteracion.OpenTiendaUI();
+            mejoras[0].SetActive(true); // Mejora de ataque basico.
+            mejoras[1].SetActive(false);
+        }
+        else if(sentence == "¡Esto podría servirte!" && mejoraMejoras < 0)
         {
             tiendaInteracion.OpenTiendaUI();
             mejoras[0].SetActive(false); 
@@ -171,5 +196,6 @@ public class DialogueManagerTIENDA : MonoBehaviour
         playerDash.enabled = toggle;
         playerAttackCombo.enabled = toggle;
         playerHardAttack.enabled = toggle;
+        playerMovement.anim.SetFloat("Run", 0);
     }
 }

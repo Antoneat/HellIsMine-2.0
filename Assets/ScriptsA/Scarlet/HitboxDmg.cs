@@ -8,6 +8,8 @@ public class HitboxDmg : MonoBehaviour
     public float modifier; // Igualar a 1 cuando no tenga upgrades.
 
     public TiendaInteracion tiendaInteracion;
+    public CambioColorMejoraTienda cambioColorMejoraTienda;
+    public EstadoMejora[] estadoMejoras;
     public PlayerAttackCombo playerAttackCombo;
 
     public PlayerDash playerDash;
@@ -18,6 +20,7 @@ public class HitboxDmg : MonoBehaviour
         tiendaInteracion = GameObject.FindGameObjectWithTag("CANVAS").GetComponent<TiendaInteracion>();
         playerAttackCombo = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttackCombo>();
         playerDash = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDash>();
+        playerDmg = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,30 +59,41 @@ public class HitboxDmg : MonoBehaviour
         if(tiendaInteracion.CA1 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
-            playerAttackCombo.CortesAgiles1 = true;  
+            cambioColorMejoraTienda.CA1 = true;
+            estadoMejoras[0].bought = true;            
+            playerAttackCombo.CortesAgiles1 = true; 
+            Debug.Log("Mejora Aplicada"); 
         }   
         
         if(tiendaInteracion.CA2 == true && playerAttackCombo.CortesAgiles1 ==  true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.CA2 = true;
+            estadoMejoras[1].bought = true; 
             playerAttackCombo.CortesAgiles2 = true;
         } 
         
         if(tiendaInteracion.CT1 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.CT1 = true;
+            estadoMejoras[2].bought = true; 
             playerAttackCombo.CortesTenaces1 = true;
         } 
         
         if(tiendaInteracion.CT2 == true && playerAttackCombo.CortesTenaces1 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.CT2 = true;
+            estadoMejoras[3].bought = true; 
             playerAttackCombo.CortesTenaces2 = true;
         } 
         
         if(tiendaInteracion.CP == true && playerAttackCombo.CortesAgiles2 == true && playerAttackCombo.CortesTenaces2 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.CP = true;
+            estadoMejoras[4].bought = true; 
             playerAttackCombo.CortesPerfectos = true;
         } 
 
@@ -89,6 +103,8 @@ public class HitboxDmg : MonoBehaviour
         if(tiendaInteracion.DO == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.DO = true;
+            estadoMejoras[5].bought = true; 
             playerDash.DashOfensivo = true;
         }
 
@@ -96,11 +112,15 @@ public class HitboxDmg : MonoBehaviour
         if(tiendaInteracion.DA1 == true && playerDash.DashOfensivo == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.DA1 = true;
+            estadoMejoras[6].bought = true; 
             playerDash.DashAfilado1 = true;
         }
         if(tiendaInteracion.DA2 == true && playerDash.DashAfilado1 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.DA2 = true;
+            estadoMejoras[7].bought = true; 
             playerDash.DashAfilado2 = true;
         }
 
@@ -108,11 +128,15 @@ public class HitboxDmg : MonoBehaviour
         if(tiendaInteracion.DP1 == true && playerDash.DashOfensivo == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.DP1 = true;
+            estadoMejoras[8].bought = true; 
             playerDash.DashPotente1 = true;
         }
         if(tiendaInteracion.DP2 == true && playerDash.DashPotente1 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.DP2 = true;
+            estadoMejoras[9].bought = true; 
             playerDash.DashPotente2 = true;
         }
 
@@ -120,6 +144,8 @@ public class HitboxDmg : MonoBehaviour
         if(tiendaInteracion.DMDM == true && playerDash.DashAfilado2 == true && playerDash.DashPotente2 == true && playerDmg.actualSouls > 30)
         {
             playerDmg.actualSouls -= 30; //revisar precio
+            cambioColorMejoraTienda.DMDM = true;
+            estadoMejoras[10].bought = true; 
             playerDash.MaestroDelMovimieto = true;
         }
     }

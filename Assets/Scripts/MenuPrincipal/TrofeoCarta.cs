@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrofeoCarta : MonoBehaviour
 {
+    public DialogueTrigger dialogueTrigger;
+
     void Awake()
     {
         if (ManagerTrofeos.instance.cartaComp == 1)
@@ -17,6 +19,8 @@ public class TrofeoCarta : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PlayerPrefs.SetInt(ManagerTrofeos.instance.cartaPref, 1);
+
+            dialogueTrigger.EmpezarDialogo();
 
             Destroy(gameObject);
         }
