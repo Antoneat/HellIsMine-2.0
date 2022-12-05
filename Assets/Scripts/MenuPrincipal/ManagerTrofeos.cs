@@ -30,7 +30,7 @@ public class ManagerTrofeos : MonoBehaviour
     void Awake()
     {
         instance = this;
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         LoadData();
         Comprobacion();
     }
