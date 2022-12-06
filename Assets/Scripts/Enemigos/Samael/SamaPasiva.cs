@@ -17,7 +17,7 @@ public class SamaPasiva : MonoBehaviour
     public List<GameObject> agitador, buscador, verdugo; //Lista de los enemigos a spawnear
     public GameObject agitadorPrefab, buscadorPrefab, verdugoPrefab; // Prefabs de enemigos
 
-    private bool curandose;
+    public bool curandose;
     void Start()
     {
         ticks = 0;
@@ -28,39 +28,38 @@ public class SamaPasiva : MonoBehaviour
 
     void Update()
     {
-        if (samaVida.actualVida <= 75) //Si tiene menos de x de vida...
+        if (samaVida.vida <= 75) //Si tiene menos de x de vida...
         {
             InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
         }
 
-        if (samaVida.actualVida <= 50) //Si tiene menos de x de vida...
+        if (samaVida.vida <= 50) //Si tiene menos de x de vida...
         {
             InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
             //crea arena de almas
         }
 
-        if (samaVida.actualVida <= 25) //Si tiene menos de x de vida...
+        if (samaVida.vida <= 25) //Si tiene menos de x de vida...
         {
             InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
         }
 
         if (agitador.Count > 0 || buscador.Count > 0 || verdugo.Count > 0)
         {
-            samaelVida.enabled = false;
+        
             curandose = true;
 
             if (curandose)
             {
                 ticks += Time.deltaTime;
                 if (ticks < 15)
-                    samaVida.actualVida += 1; // vida +1 hasta 15 ticks 
+                    samaVida.vida += 1; // vida +1 hasta 15 ticks 
             }
         }
 
         if (agitador.Count < 1 || buscador.Count < 1 || verdugo.Count < 1)
         {
             curandose = false;
-            samaelVida.enabled = true;
             ticks = 0;
         }
 

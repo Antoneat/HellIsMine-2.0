@@ -18,4 +18,14 @@ public class CambiarEscena : MonoBehaviour
     {
         PlayerPasarNivel.instance.GoToLvl3();
     }
+
+    public void GotoLevelYalda()
+    {
+        PlayerPasarNivel.instance.GotoLevelYalda();
+    }
+
+    public void GotoLevelSamael()
+    {
+        PlayerPasarNivel.instance.GotoLevelSamael();
+    }
 }

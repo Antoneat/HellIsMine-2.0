@@ -9,13 +9,14 @@ public class PlayerPasarNivel : MonoBehaviour
     [SerializeField] GameObject nivel2;
     [SerializeField] GameObject nivel3;
 
-
     [SerializeField] GameObject panelLoadingScreen; // Pantalla de carga.
 
 
     [SerializeField] GameObject inicioNivel1;
     [SerializeField] GameObject inicioNivel2;
     [SerializeField] GameObject inicioNivel3;
+    [SerializeField] GameObject testYalda;
+    [SerializeField] GameObject testSamael;
 
     public int terrenoValor;
 
@@ -28,6 +29,9 @@ public class PlayerPasarNivel : MonoBehaviour
         inicioNivel1 = GameObject.Find("ScarletPointLevel1");
         inicioNivel2 = GameObject.Find("ScarletPointLevel2");
         inicioNivel3 = GameObject.Find("ScarletPointLevel3");
+        testYalda= GameObject.Find("ScarletPointYalda"); ;
+        testSamael = GameObject.Find("ScarletPointSamael"); 
+
         panelLoadingScreen = GameObject.Find("LoadingPanelCanva");
     }
 
@@ -47,6 +51,15 @@ public class PlayerPasarNivel : MonoBehaviour
         {
             ChargeLevel3();
         }
+        if (terrenoValor == 3)
+        {
+            ChargeLevelYalda();
+
+        }
+        if (terrenoValor == 4)
+        {
+            ChargeLevelSamael();
+        }
     }
 
     private void SaveData()
@@ -65,7 +78,7 @@ public class PlayerPasarNivel : MonoBehaviour
 
     void Update()
     {
-        if (terrenoValor == 1)
+        /*if (terrenoValor == 1)
         {
             StopCoroutine("Terreno2");
         }
@@ -73,7 +86,7 @@ public class PlayerPasarNivel : MonoBehaviour
         if(terrenoValor == 2)
         {
             StopCoroutine("Terreno3");
-        }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)
@@ -157,7 +170,16 @@ public class PlayerPasarNivel : MonoBehaviour
         transform.position = inicioNivel3.transform.position;
     }
 
+    public void ChargeLevelYalda()
+    {
+        transform.position = testYalda.transform.position;
+    }
 
+    public void ChargeLevelSamael()
+    {
+        transform.position = testSamael.transform.position;
+    }
+   
     // Metodos para la consola
     public void GoToLvl1()
     {
@@ -180,6 +202,18 @@ public class PlayerPasarNivel : MonoBehaviour
         //StartCoroutine("Terreno3");   
         //ChargeLevel3();
         terrenoValor = 2;
+        RestartLevel();
+    }
+
+    public void GotoLevelYalda()
+    {
+        terrenoValor = 3;
+        RestartLevel();
+    }
+
+    public void GotoLevelSamael()
+    {
+        terrenoValor = 4;
         RestartLevel();
     }
 
