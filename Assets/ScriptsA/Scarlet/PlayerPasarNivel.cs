@@ -28,10 +28,12 @@ public class PlayerPasarNivel : MonoBehaviour
         inicioNivel1 = GameObject.Find("ScarletPointLevel1");
         inicioNivel2 = GameObject.Find("ScarletPointLevel2");
         inicioNivel3 = GameObject.Find("ScarletPointLevel3");
+        panelLoadingScreen = GameObject.Find("LoadingPanelCanva");
     }
 
     void Start()
     {
+
         if(terrenoValor == 0)
         {
             ChargeLevel1();
@@ -39,6 +41,7 @@ public class PlayerPasarNivel : MonoBehaviour
         if(terrenoValor == 1)
         {
             ChargeLevel2();
+            StartCoroutine("Terreno2");
         }
         if(terrenoValor == 2)
         {
@@ -77,14 +80,18 @@ public class PlayerPasarNivel : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Nivel 1"))
         {
-            StartCoroutine("Terreno2");
-            ChargeLevel2();
+            // StartCoroutine("Terreno2");
+            // ChargeLevel2();
+
+            GoToLvl2();
         }
         
         if (other.gameObject.CompareTag("Nivel 2"))
         {
-            StartCoroutine("Terreno3");
-            ChargeLevel3();
+            // StartCoroutine("Terreno3");
+            // ChargeLevel3();
+
+            GoToLvl3();
         }
     }
 
@@ -116,7 +123,8 @@ public class PlayerPasarNivel : MonoBehaviour
         yield return new WaitForSeconds(3f);
         panelLoadingScreen.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        terrenoValor = 1;
+        yield break;
+        //terrenoValor = 1;
     }
 
     public void ChargeLevel2()
@@ -136,7 +144,8 @@ public class PlayerPasarNivel : MonoBehaviour
         yield return new WaitForSeconds(3f);
         panelLoadingScreen.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        terrenoValor = 2;
+        yield break;
+        //terrenoValor = 2;
     }
 
     public void ChargeLevel3()
