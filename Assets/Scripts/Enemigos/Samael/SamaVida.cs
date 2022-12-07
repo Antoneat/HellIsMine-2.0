@@ -30,7 +30,7 @@ public class SamaVida : MonoBehaviour
         vida = maxVida;
     }
 
-    public void TakeDmg(float dmg) //Metodo el cual recibe daño
+    public void TakeDmg(float dmg) //Metodo el cual recibe daï¿½o
     {
         if (Pasiva.curandose == false)
         {

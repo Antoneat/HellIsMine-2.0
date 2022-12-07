@@ -172,11 +172,19 @@ public class PlayerPasarNivel : MonoBehaviour
 
     public void ChargeLevelYalda()
     {
+        nivel1.SetActive(false);
+        nivel2.SetActive(true);
+        nivel3.SetActive(false);
+        
         transform.position = testYalda.transform.position;
     }
 
     public void ChargeLevelSamael()
     {
+        nivel1.SetActive(false);
+        nivel2.SetActive(false);
+        nivel3.SetActive(true);
+            
         transform.position = testSamael.transform.position;
     }
    
