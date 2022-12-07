@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00048828125, y: -0.0026855469}
+  m_AnchoredPosition: {x: -9.000121, y: -0.0026855469}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &234445692
@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00048828125, y: -0.0026855469}
+  m_AnchoredPosition: {x: -9.000121, y: -0.0026855469}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &597227409
@@ -187,7 +187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00048828125, y: -0.0026855469}
+  m_AnchoredPosition: {x: -9, y: -0.0026855469}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &737872566
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &757053006
@@ -434,7 +434,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.828247, y: -0.0026855469}
+  m_AnchoredPosition: {x: 121.19939, y: -0.0026855469}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2075047170
@@ -589,7 +589,7 @@ MonoBehaviour:
   life: 1
   maxLife: 1
   SoulVFX: {fileID: 6320560618561652290, guid: 4d8e81255b76e7943b65f5836da53d5e, type: 3}
-  healAmount: 2
+  healAmount: 1.5
   DmgSound:
     m_PersistentCalls:
       m_Calls:
@@ -10587,7 +10587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4639747095157879849, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: dmg
-      value: 0.25
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 8923011643089971797, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: m_Enabled

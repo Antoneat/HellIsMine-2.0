@@ -66,9 +66,9 @@ public class VerdugoController : MonoBehaviour
 
 
 		if (playerDistance <= atkRange && coPlay == false)
-		{ 
-
-			StartCoroutine(LanzaEspiritual());
+		{
+			coPlay = true;
+			//StartCoroutine(LanzaEspiritual());
 			ataqueVerdugo.SetBool("Attack", true);
 			//agent.isStopped = false;
 		}
@@ -84,6 +84,12 @@ public class VerdugoController : MonoBehaviour
 		transform.LookAt(goal);
 	}
 
+	public void Lanza()
+	{
+		SpawnRafaga();
+		LanzaSource.PlayOneShot(LanzaClip);
+		coPlay = false;
+	}
 
 	IEnumerator LanzaEspiritual()
 	{

@@ -44,10 +44,12 @@ public class YaldaAtkBasic : MonoBehaviour
 	public void BasicAttackColliderON() //Evento que activa los colliders
 	{
 		manoCollider.enabled = true;
+		manoCollider.gameObject.GetComponent<MeshRenderer>().enabled = true;
 	}
 
 	public void BasicAttackColliderOFF() //Evento que desactiva los colliders
 	{
 		manoCollider.enabled = false;
+		manoCollider.gameObject.GetComponent<MeshRenderer>().enabled = false;
 	}
 }

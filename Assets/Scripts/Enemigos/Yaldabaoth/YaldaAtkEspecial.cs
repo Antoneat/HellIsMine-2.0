@@ -71,12 +71,14 @@ public class YaldaAtkEspecial : MonoBehaviour
 	public void SpecialAttackColliderON() //Evento que activa los colliders de las manos y onda expansiva
 	{
 		manoCollider.enabled = true;
+        manoCollider.gameObject.GetComponent<MeshRenderer>().enabled = true;
         activateOndaExpansiva = true;
 	}
 
 	public void SpecialAttackColliderOFF() //Evento que desactiva los colliders de las manos
 	{
 		manoCollider.enabled = false;
+        manoCollider.gameObject.GetComponent<MeshRenderer>().enabled = false;
 	}
 
     void ResetOndaEx()

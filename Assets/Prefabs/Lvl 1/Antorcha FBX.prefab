@@ -343,7 +343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8253271201981293182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.944, y: -1.59, z: -3.485}
+  m_LocalPosition: {x: 1.239, y: -0.669, z: -1.495}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -492,15 +492,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.009
+      value: 1.251
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: -1.499
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -549,6 +549,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
       propertyPath: m_Name
       value: Antorcha FBX (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131280005378525677, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131280005378525677, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131280005378525677, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b11b02d32973946489727162a4f5ecc5, type: 3}
