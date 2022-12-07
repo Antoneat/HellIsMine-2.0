@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4018839620095135420}
   - component: {fileID: 29856972954550553}
   - component: {fileID: 2850468002843243987}
-  - component: {fileID: 5476940383666596221}
+  - component: {fileID: 2250305840774358468}
   m_Layer: 9
   m_Name: Tronco2
   m_TagString: Untagged
@@ -86,8 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5476940383666596221
-CapsuleCollider:
+--- !u!65 &2250305840774358468
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.3337495
-  m_Height: 1.3804946
-  m_Direction: 1
-  m_Center: {x: 0.612033, y: 0.6485268, z: -0.16131578}
+  serializedVersion: 2
+  m_Size: {x: 1.6996018, y: 1.380495, z: 1.6870425}
+  m_Center: {x: 0.1862353, y: 0.64852685, z: -0.074804544}

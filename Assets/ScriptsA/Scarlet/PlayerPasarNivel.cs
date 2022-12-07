@@ -37,7 +37,7 @@ public class PlayerPasarNivel : MonoBehaviour
 
     void Start()
     {
-
+        Time.timeScale = 1;
         if(terrenoValor == 0)
         {
             ChargeLevel1();
