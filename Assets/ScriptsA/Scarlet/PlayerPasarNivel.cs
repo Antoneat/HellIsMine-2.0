@@ -37,7 +37,7 @@ public class PlayerPasarNivel : MonoBehaviour
 
     void Start()
     {
-
+        Time.timeScale = 1;
         if(terrenoValor == 0)
         {
             ChargeLevel1();
@@ -172,11 +172,19 @@ public class PlayerPasarNivel : MonoBehaviour
 
     public void ChargeLevelYalda()
     {
+        nivel1.SetActive(false);
+        nivel2.SetActive(true);
+        nivel3.SetActive(false);
+        
         transform.position = testYalda.transform.position;
     }
 
     public void ChargeLevelSamael()
     {
+        nivel1.SetActive(false);
+        nivel2.SetActive(false);
+        nivel3.SetActive(true);
+            
         transform.position = testSamael.transform.position;
     }
    

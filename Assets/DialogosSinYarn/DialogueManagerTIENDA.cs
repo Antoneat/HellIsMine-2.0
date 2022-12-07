@@ -193,9 +193,14 @@ public class DialogueManagerTIENDA : MonoBehaviour
     public void ToggleMecanicasScarlet(bool toggle)
     {
         playerMovement.enabled = toggle;
-        playerDash.enabled = toggle;
+        //playerDash.enabled = toggle;
         playerAttackCombo.enabled = toggle;
         playerHardAttack.enabled = toggle;
         playerMovement.anim.SetFloat("Run", 0);
+        if(playerDash.isDashing == true)
+        {
+            playerDash.ResetAttacks();
+        }
+        playerDash.enabled = toggle;
     }
 }

@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5124930055880626491}
-  - component: {fileID: 3359493198543325508}
+  - component: {fileID: 6232449391583356512}
   m_Layer: 0
   m_Name: Tronco3
   m_TagString: Untagged
@@ -108,17 +108,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5500223454081485697}
-  m_LocalRotation: {x: -3.948397e-18, y: -0.7386125, z: 3.948397e-18, w: 0.67413026}
+  m_LocalRotation: {x: 0, y: -0.7386142, z: 0, w: 0.6741284}
   m_LocalPosition: {x: 4, y: 0, z: -2}
-  m_LocalScale: {x: 0.38224447, y: 0.38224447, z: 0.38224447}
+  m_LocalScale: {x: 0.6964494, y: 0.69644946, z: 0.6964495}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 911786183478844578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3359493198543325508
-CapsuleCollider:
+  m_LocalEulerAnglesHint: {x: 0, y: -95.227, z: 0}
+--- !u!65 &6232449391583356512
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,7 +127,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 2.7931554
-  m_Height: 5.586311
-  m_Direction: 1
-  m_Center: {x: -4.972891e-10, y: 1.3359858, z: -0.21514064}
+  serializedVersion: 2
+  m_Size: {x: 2.205372, y: 1, z: 2.0560355}
+  m_Center: {x: -0.08535552, y: 1.7500088, z: -0.15170144}
