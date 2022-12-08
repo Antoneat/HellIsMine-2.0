@@ -53,10 +53,10 @@ public class YaldaAtkEspecial : MonoBehaviour
 
     public void StartOfSpecialAttack() //Evento cuando empieza la anim de specialAttack
 	{
-        YaldaSource.PlayOneShot(EspClip);
         Debug.Log("AtaqueEspecialYalda");
 		yaldaMov.StopChase();
         yaldaMov.attacking = true;
+        YaldaSource.PlayOneShot(EspClip);
         yaldaMov.stare = false;
 	}
 

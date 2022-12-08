@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SamaVida : MonoBehaviour
 {
@@ -12,9 +13,9 @@ public class SamaVida : MonoBehaviour
     public SamaPasiva Pasiva;
     [SerializeField] private SamaMov Mov;
     public GameObject barraDeVida; // Barra de vida de
-    // [SerializeField] UnityEvent DmgSound;
-    //public AudioSource DeadSource;
-    //public AudioClip MuertePista;
+    [SerializeField] UnityEvent DmgSound;
+    public AudioSource Source;
+    public AudioClip MuertePista;
 
     //public ParticleSystem almas;
 
@@ -35,12 +36,15 @@ public class SamaVida : MonoBehaviour
         if (Pasiva.curandose == false)
         {
             vida -= dmg;
+            DmgSound.Invoke();
         }
 
         if (vida <= 0)
         {
-           // if (!DeadSource.isPlaying)
-             //   DeadSource.PlayOneShot(MuertePista);
+            if (!Source.isPlaying)
+            {
+                Source.PlayOneShot(MuertePista);
+            }
             barraDeVida.SetActive(false);
             Mov.enabled = false;
             anim.SetTrigger("Muerte");

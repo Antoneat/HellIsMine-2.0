@@ -24,10 +24,10 @@ public class YaldaAtkBasic : MonoBehaviour
 
 	public void StartOfBasicAttack() //Evento cuando empieza la anim de basicAttack
 	{
-		YaldaSource.PlayOneShot(BasClip);
 		Debug.Log("AtaqueBasicoYalda");
 		yaldaMov.StopChase();
 		yaldaMov.attacking = true;
+		YaldaSource.PlayOneShot(BasClip);
 		yaldaMov.stare = false;
 		
 		yaldaMov.ResetOfTriggersAnim();

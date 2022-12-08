@@ -14,6 +14,8 @@ public class HitboxDmg : MonoBehaviour
 
     public PlayerDash playerDash;
     public PlayerDmg playerDmg;
+    //public AudioSource Source;
+    //public AudioClip Comprado;
 
     private void Start()
     {
@@ -60,7 +62,8 @@ public class HitboxDmg : MonoBehaviour
         {
             playerDmg.actualSouls -= 30; //revisar precio
             cambioColorMejoraTienda.CA1 = true;
-            estadoMejoras[0].bought = true;            
+            estadoMejoras[0].bought = true;
+            //Source.PlayOneShot(Comprado);
             playerAttackCombo.CortesAgiles1 = true; 
             Debug.Log("Mejora Aplicada"); 
         }   
@@ -69,7 +72,8 @@ public class HitboxDmg : MonoBehaviour
         {
             playerDmg.actualSouls -= 30; //revisar precio
             cambioColorMejoraTienda.CA2 = true;
-            estadoMejoras[1].bought = true; 
+            estadoMejoras[1].bought = true;
+            //Source.PlayOneShot(Comprado);
             playerAttackCombo.CortesAgiles2 = true;
         } 
         
@@ -77,7 +81,8 @@ public class HitboxDmg : MonoBehaviour
         {
             playerDmg.actualSouls -= 30; //revisar precio
             cambioColorMejoraTienda.CT1 = true;
-            estadoMejoras[2].bought = true; 
+            estadoMejoras[2].bought = true;
+            //Source.PlayOneShot(Comprado);
             playerAttackCombo.CortesTenaces1 = true;
         } 
         
@@ -85,7 +90,8 @@ public class HitboxDmg : MonoBehaviour
         {
             playerDmg.actualSouls -= 30; //revisar precio
             cambioColorMejoraTienda.CT2 = true;
-            estadoMejoras[3].bought = true; 
+            estadoMejoras[3].bought = true;
+            //Source.PlayOneShot(Comprado);
             playerAttackCombo.CortesTenaces2 = true;
         } 
         
@@ -93,7 +99,8 @@ public class HitboxDmg : MonoBehaviour
         {
             playerDmg.actualSouls -= 30; //revisar precio
             cambioColorMejoraTienda.CP = true;
-            estadoMejoras[4].bought = true; 
+            estadoMejoras[4].bought = true;
+            //Source.PlayOneShot(Comprado);
             playerAttackCombo.CortesPerfectos = true;
         } 
 

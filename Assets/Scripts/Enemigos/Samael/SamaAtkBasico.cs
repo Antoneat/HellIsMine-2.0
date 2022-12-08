@@ -12,6 +12,9 @@ public class SamaAtkBasico : MonoBehaviour
 	[Header("Onda Expansiva")]
 	public CapsuleCollider ondaEx;
 	public bool activateOndaExpansiva;
+	public AudioSource Source;
+	public AudioClip GolpeBasico;
+		
 
 	void Start()
 	{
@@ -34,7 +37,8 @@ public class SamaAtkBasico : MonoBehaviour
 		samaMov.StopChase();
 		samaMov.attacking = true;
 		samaMov.stare = false;
-		
+		Source.PlayOneShot(GolpeBasico);
+
 		activateOndaExpansiva = true;
 
 		anim.ResetTrigger("Samael_Ataque_1");
@@ -48,6 +52,7 @@ public class SamaAtkBasico : MonoBehaviour
 		samaMov.attacking = false;
 		samaMov.stare = true;
 		ResetOndaEx();
+		
 	}
 
 	void ResetOndaEx()

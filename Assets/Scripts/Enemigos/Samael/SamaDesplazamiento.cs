@@ -10,7 +10,8 @@ public class SamaDesplazamiento : MonoBehaviour
     [SerializeField] Animator anim;
     public CapsuleCollider SamaEmbestida;
     [SerializeField] float speed;
-
+    public AudioSource Source;
+    public AudioClip Carga,Embestida;
     public bool atacando;
 
     void Start()
@@ -35,6 +36,7 @@ public class SamaDesplazamiento : MonoBehaviour
         samaMov.StopChase();
         samaMov.attacking = samaMov.stare = SamaEmbestida.enabled = atacando = true;
         SamaEmbestida.enabled = true;
+        Source.PlayOneShot(Carga);
         anim.ResetTrigger("Samael_Ataque_1");
         anim.ResetTrigger("Samael_Ataque_Especial");
         anim.ResetTrigger("Samael_Prepara_Embestida");
@@ -46,6 +48,7 @@ public class SamaDesplazamiento : MonoBehaviour
         samaMov.Chase();
         samaMov.attacking = false;
         SamaEmbestida.enabled = false;
+        Source.PlayOneShot(Embestida);
     }
 
 }
