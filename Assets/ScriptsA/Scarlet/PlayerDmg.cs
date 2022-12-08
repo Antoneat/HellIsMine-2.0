@@ -134,11 +134,11 @@ public class PlayerDmg : MonoBehaviour
 
     IEnumerator LifeLose()
 	{
-        DamageAnim.SetBool("Damage", true);
+        DamageAnim.SetTrigger("Damage");
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
 
-        DamageAnim.SetBool("Damage", false);
+        DamageAnim.ResetTrigger("Damage");
 	}
 
     public void Alma_Vfx()
