@@ -20,6 +20,10 @@ public class PlayerPasarNivel : MonoBehaviour
 
     public int terrenoValor;
 
+    public PlayerDmg playerDmg;
+    public int restaDeAlmas;
+
+
     public static PlayerPasarNivel instance;
 
     void Awake()
@@ -126,6 +130,7 @@ public class PlayerPasarNivel : MonoBehaviour
         nivel3.SetActive(false);
 
         transform.position = inicioNivel1.transform.position;
+        transform.rotation = inicioNivel1.transform.rotation;
     }
 
     // Corrutina y Metodo para ir al nivel 2
@@ -146,7 +151,8 @@ public class PlayerPasarNivel : MonoBehaviour
         nivel2.SetActive(true);
         nivel3.SetActive(false);
 
-        transform.position = inicioNivel2.transform.position;       
+        transform.position = inicioNivel2.transform.position;
+        transform.rotation = inicioNivel2.transform.rotation;
     }
 
     // Corrutina y Metodo para ir al nivel 3
@@ -168,6 +174,7 @@ public class PlayerPasarNivel : MonoBehaviour
         nivel3.SetActive(true);
 
         transform.position = inicioNivel3.transform.position;
+        transform.rotation = inicioNivel3.transform.rotation;
     }
 
     public void ChargeLevelYalda()
@@ -177,6 +184,7 @@ public class PlayerPasarNivel : MonoBehaviour
         nivel3.SetActive(false);
         
         transform.position = testYalda.transform.position;
+        transform.rotation = testYalda.transform.rotation;
     }
 
     public void ChargeLevelSamael()
@@ -186,6 +194,7 @@ public class PlayerPasarNivel : MonoBehaviour
         nivel3.SetActive(true);
             
         transform.position = testSamael.transform.position;
+        transform.rotation = testSamael.transform.rotation;
     }
    
     // Metodos para la consola
@@ -228,6 +237,7 @@ public class PlayerPasarNivel : MonoBehaviour
     // Metodo para el boton de "Reiniciar nivel"
     public void RestartLevel()
     {
+        playerDmg.actualSouls -= restaDeAlmas;
         SceneManager.LoadScene(1);
     }
 }

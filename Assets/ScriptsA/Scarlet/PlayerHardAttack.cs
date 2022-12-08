@@ -32,7 +32,7 @@ public class PlayerHardAttack : MonoBehaviour
     {
         isHardAttacking = false;
         canHardAttack = true;
-        cooldown = 0f;
+        cooldown = maxCooldown;
 
         anim = GetComponent<Animator>();
 
@@ -51,11 +51,11 @@ public class PlayerHardAttack : MonoBehaviour
             direction = (mousePos.transform.position - transform.position).normalized;
         }
 
-        if(cooldown <= maxCooldown) cooldown -= Time.deltaTime;
+        if(cooldown <= maxCooldown) cooldown += Time.deltaTime;
 
-        if(cooldown < 0)
+        if(cooldown > maxCooldown)
         {
-            cooldown = 0;
+            cooldown = maxCooldown;
             Invoke(nameof(DelayToHardAttack), 0f); 
         }
         
@@ -90,7 +90,7 @@ public class PlayerHardAttack : MonoBehaviour
     {
         playerMovement.maxSpeed = 3f;
         isHardAttacking = true;
-        cooldown = maxCooldown;
+        cooldown = 0;
     }
 
     public void HardAttacking()
@@ -109,7 +109,7 @@ public class PlayerHardAttack : MonoBehaviour
     {
         canHardAttack = true;
 
-        // Agregarle aca algo de vfx o sfx que indique que ya se puede usar el ataque fuerte.
+        // Agregarle aca algo de vfx o sfx que indique que ya se puede usar el ataque fuerte (xd).
     }
 
     public void FinalHardAttack() // este metodos no esta siendo usado.

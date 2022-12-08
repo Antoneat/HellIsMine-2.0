@@ -17,6 +17,8 @@ public class PlayerDmg : MonoBehaviour
     public int actualSouls;
     public ParticleSystem curacion;
 
+    public CapsuleCollider coll;
+
     [Header("DmgHUD")]
     public Image overlay;
     public float duration;
@@ -35,7 +37,11 @@ public class PlayerDmg : MonoBehaviour
     void Start()
     {
         LoadData();
-        if(actualvida == 0) actualvida = maxVida;
+        if(actualvida == 0)
+        {
+            coll.enabled = true;
+            actualvida = maxVida;
+        }
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
         actualvida = maxVida;
         //dmgC = GameObject.FindGameObjectWithTag("damageController").GetComponent<DmgController>();
@@ -47,6 +53,10 @@ public class PlayerDmg : MonoBehaviour
     void Update()
     {
         //consolaComandos = FindObjectOfType<ConsolaComandosManager>();
+        if(actualSouls < 0)
+        {
+            actualSouls = 0;
+        }
 
         if (actualvida <= 0)
         {

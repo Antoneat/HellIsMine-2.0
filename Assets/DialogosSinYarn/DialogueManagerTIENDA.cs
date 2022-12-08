@@ -196,11 +196,16 @@ public class DialogueManagerTIENDA : MonoBehaviour
         //playerDash.enabled = toggle;
         playerAttackCombo.enabled = toggle;
         playerHardAttack.enabled = toggle;
-        playerMovement.anim.SetFloat("Run", 0);
+        //playerMovement.anim.Play("Idle - Run");
         if(playerDash.isDashing == true)
         {
+            playerDash.canDash = toggle;
             playerDash.ResetAttacks();
         }
         playerDash.enabled = toggle;
+    }
+    public void WeirdRunAnimForDialogues()
+    {
+        playerMovement.anim.SetFloat("Run", 0);
     }
 }

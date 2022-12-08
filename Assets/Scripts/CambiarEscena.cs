@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CambiarEscena : MonoBehaviour
 {
+    
     public void GoToLevel1()
     {
         PlayerPasarNivel.instance.GoToLvl1();

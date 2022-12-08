@@ -37,10 +37,15 @@ public class BuscadorLife : MonoBehaviour
         if (life <= 0)
         {
             GameObject player = GameObject.Find("ScarletFinal");
-            GameObject obj = Instantiate(SoulVFX);
-            obj.transform.position = transform.position;
-            obj.GetComponent<AlmasParent>().almaScript.curacion = healAmount;
-            obj.GetComponent<AlmasParent>().almaScript.almas = soulAmount;
+            if(SoulVFX != null)
+            {
+                GameObject obj = Instantiate(SoulVFX);
+
+                obj.transform.position = transform.position;
+                obj.GetComponent<AlmasParent>().almaScript.curacion = healAmount;
+                obj.GetComponent<AlmasParent>().almaScript.almas = soulAmount;
+                SoulVFX = null;
+            }
 
             //FALTAN LAS ALMAS
             //player.GetComponent<PlayerDmg>().Alma_Vfx();

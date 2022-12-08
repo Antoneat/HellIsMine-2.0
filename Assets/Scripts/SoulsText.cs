@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SoulsText : MonoBehaviour
 {
-    public Text soulsText;
+    public TMP_Text soulsText;
 
     public PlayerDmg playerDmg;
 
@@ -13,6 +14,6 @@ public class SoulsText : MonoBehaviour
     {
         playerDmg = FindObjectOfType<PlayerDmg>();
 
-        soulsText.text = ": " + playerDmg.actualSouls.ToString();
+        soulsText.text = playerDmg.actualSouls.ToString();
     }
 }

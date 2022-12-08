@@ -13,7 +13,9 @@ public class YaldaAtkEspecial : MonoBehaviour
     
     [Header("Manos y OndaEx")]
     public Collider manoCollider;
-    public CapsuleCollider ondaEx;
+    public GameObject ondaEx;
+    public Transform spawnerOndaEx;
+    //public CapsuleCollider ondaEx;
 
     [Header("Componentes")]
     [SerializeField] YaldaMov yaldaMov;
@@ -40,11 +42,13 @@ public class YaldaAtkEspecial : MonoBehaviour
             canAtkEspecial = true;
         }
 
-        if (impactFirtsAttack == false && activateOndaExpansiva == true)
-        {
-		    ondaEx.enabled = true;
-            ondaEx.radius += Time.deltaTime * 4f;
-        }
+        // if (impactFirtsAttack == false && activateOndaExpansiva == true)
+        // {
+            
+		//     ondaEx.enabled = true;
+        //     ondaEx.radius += Time.deltaTime * 4f;
+        //     ondaEx.gameObject.transform.localScale = new Vector3(ondaEx.gameObject.transform.localScale.x + Time.deltaTime * 4f, ondaEx.gameObject.transform.localScale.y, ondaEx.gameObject.transform.localScale.z + Time.deltaTime * 4f);
+        // }
     }
 
     public void StartOfSpecialAttack() //Evento cuando empieza la anim de specialAttack
@@ -83,9 +87,18 @@ public class YaldaAtkEspecial : MonoBehaviour
 
     void ResetOndaEx()
     {
-        ondaEx.enabled = false;
+        //ondaEx.enabled = false;
         impactFirtsAttack = false;
-        ondaEx.radius = 0;
+        //ondaEx.radius = 0;
+        ondaEx.gameObject.transform.localScale = Vector3.one;
         activateOndaExpansiva = false;
+    }
+    
+    public void OndaEx()
+    {
+        if (impactFirtsAttack == false && activateOndaExpansiva == true)
+        {
+            Instantiate(ondaEx, spawnerOndaEx.position, Quaternion.identity);
+        }
     }
 }
