@@ -24,6 +24,7 @@ public class PlayerDmg : MonoBehaviour
     public float duration;
     public float fadeSpeed;
     private float durationTimer;
+    public Animator DamageAnim;
 
     [Header("VFX")]
     public ParticleSystem almas;
@@ -127,8 +128,18 @@ public class PlayerDmg : MonoBehaviour
         actualvida -= dmg;
         durationTimer = 0f;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 1);
-        recibiendoDmg.Play();    
+        recibiendoDmg.Play();
+        StartCoroutine(LifeLose());
     }
+
+    IEnumerator LifeLose()
+	{
+        DamageAnim.SetBool("Damage", true);
+
+        yield return new WaitForSeconds(0.1f);
+
+        DamageAnim.SetBool("Damage", false);
+	}
 
     public void Alma_Vfx()
     {
