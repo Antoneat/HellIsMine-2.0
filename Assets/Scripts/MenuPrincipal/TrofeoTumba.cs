@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameJolt.API;
 
 public class TrofeoTumba : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class TrofeoTumba : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Trophies.TryUnlock(179316);
             PlayerPrefs.SetInt(ManagerTrofeos.instance.tumbaPref, 1);
 
             dialogueTrigger.EmpezarDialogo();

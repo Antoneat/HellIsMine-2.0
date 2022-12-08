@@ -16,7 +16,7 @@ MonoBehaviour:
   privateKey: fb1d74758647d0dcaa76bb45cb9b0693
   timeout: 10
   autoPing: 1
-  autoSignInOutMessage: 0
+  autoSignInOutMessage: 1
   signInMessage: Bienvenido al infierno '{0}'
   signOutMessage: "Esto a\xFAn no acaba..."
   useCaching: 1

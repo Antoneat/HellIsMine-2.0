@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameJolt.API;
 
 public class TrofeoCarta : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class TrofeoCarta : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Trophies.TryUnlock(179315);
             PlayerPrefs.SetInt(ManagerTrofeos.instance.cartaPref, 1);
 
             dialogueTrigger.EmpezarDialogo();

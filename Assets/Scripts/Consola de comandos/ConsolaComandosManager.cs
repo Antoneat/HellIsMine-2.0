@@ -19,17 +19,27 @@ public class ConsolaComandosManager : MonoBehaviour
 
     private PlayerDmg playerDmg;
 
+    public static ConsolaComandosManager instance;
+
+    public bool comandosEnable;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         playerDmg = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDmg>();
+        comandosEnable = false;
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.F7) && PausaControler.instance.pauseEnable == false)
         {
             panelComandos.SetActive(true);
             Time.timeScale = 0;
+            comandosEnable = true;
         }
     }
 
@@ -37,6 +47,7 @@ public class ConsolaComandosManager : MonoBehaviour
     {
         panelComandos.SetActive(false);
         Time.timeScale = 1;
+        comandosEnable = false;
     }
 
     #region Player

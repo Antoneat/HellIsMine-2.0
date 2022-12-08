@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameJolt.API;
 
 public class TrofeoArmadura : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class TrofeoArmadura : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Trophies.TryUnlock(179312);
             PlayerPrefs.SetInt(ManagerTrofeos.instance.armaduraPref, 1);
 
             dialogueTrigger.EmpezarDialogo();
