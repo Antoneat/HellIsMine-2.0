@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7068333294004620733}
   - component: {fileID: 6176713531178172952}
   - component: {fileID: 8240724694494983890}
+  - component: {fileID: 7375814122599076145}
   m_Layer: 0
   m_Name: Medio
   m_TagString: Untagged
@@ -86,3 +87,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7375814122599076145
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591963975404099335}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62255865, y: 4.1095595, z: 0.66495115}
+  m_Center: {x: 0.04518947, y: 2.0547798, z: 0}
