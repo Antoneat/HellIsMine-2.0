@@ -37,23 +37,6 @@ public class CamMovimientoMenu : MonoBehaviour
                 HiMTitle.SetActive(false);
             }
         }
-
-        else if (currentView == viewsMp[3]) //sala de trofeos1.2
-        {
-                currentView = viewsMp[4];
-        }
-        else if (currentView == viewsMp[4]) //sala de trofeos 1.3
-        {
-                currentView = viewsMp[5];
-        }
-        else if (currentView == viewsMp[6]) //cerrar sala de trofeos 
-        {
-            currentView = viewsMp[7];
-        }
-        else if (currentView == viewsMp[7]) //cerrar sala de trofeos 1.3
-        {
-            currentView = viewsMp[1];
-        }
     }
 
     private void LateUpdate()
@@ -61,13 +44,13 @@ public class CamMovimientoMenu : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, currentView.position, Time.deltaTime * transitionSpeedMp);
 
         Vector3 currentAngle = new Vector3(
-            Mathf.Lerp(transform.rotation.eulerAngles.x, currentView.transform.rotation.eulerAngles.x,
+            Mathf.LerpAngle(transform.rotation.eulerAngles.x, currentView.transform.rotation.eulerAngles.x,
             Time.deltaTime * transitionSpeedMp),
 
-            Mathf.Lerp(transform.rotation.eulerAngles.y, currentView.transform.rotation.eulerAngles.y,
+            Mathf.LerpAngle(transform.rotation.eulerAngles.y, currentView.transform.rotation.eulerAngles.y,
             Time.deltaTime * transitionSpeedMp),
 
-            Mathf.Lerp(transform.rotation.eulerAngles.z, currentView.transform.rotation.eulerAngles.z,
+            Mathf.LerpAngle(transform.rotation.eulerAngles.z, currentView.transform.rotation.eulerAngles.z,
             Time.deltaTime * transitionSpeedMp)
 
             );
@@ -80,28 +63,16 @@ public class CamMovimientoMenu : MonoBehaviour
         if(other.gameObject.tag ==  "View1")
         {
             MenuPrincipal.SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.menuFirstButton);
         }
         else if (other.gameObject.tag == "View2")
         {
             mainMenuController.optionsMainMenu.SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.optionsFirstButtonMainMenu);
         }
 
         //SALA DE TROFEOS INTERFAZ
         else if (other.gameObject.tag == "View5")
         {
             mainMenuController.salaTrofeosInterfaz.SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.salaTrofeosFirstButton);
         }
 
         //Trofeos 8 - 12
@@ -109,46 +80,26 @@ public class CamMovimientoMenu : MonoBehaviour
         {
             mainMenuController.trofeosInfo[0].SetActive(true);
             mainMenuController.closeButtonInfo.SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.closeButtonInfo);
         }
         else if (other.gameObject.tag == "View9") //carta
         {
             mainMenuController.trofeosInfo[1].SetActive(true);
             mainMenuController.closeButtonInfo.SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.closeButtonInfo);
         }
         else if (other.gameObject.tag == "View10") //bolsaColmillos
         {
             mainMenuController.closeButtonInfo.SetActive(true);
             mainMenuController.trofeosInfo[2].SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.closeButtonInfo);
         }
         else if (other.gameObject.tag == "View11") //armadura
         {
             mainMenuController.closeButtonInfo.SetActive(true);
             mainMenuController.trofeosInfo[3].SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.closeButtonInfo);
         }
         else if (other.gameObject.tag == "View12") //Tumba
         {
             mainMenuController.closeButtonInfo.SetActive(true);
             mainMenuController.trofeosInfo[4].SetActive(true);
-            //clear selected object
-            //EventSystem.current.SetSelectedGameObject(null);
-            //Set a new selected object
-            //EventSystem.current.SetSelectedGameObject(mainMenuController.closeButtonInfo);
         }
 
     }

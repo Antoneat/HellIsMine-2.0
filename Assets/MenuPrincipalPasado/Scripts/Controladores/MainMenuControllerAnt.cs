@@ -57,7 +57,7 @@ public class MainMenuControllerAnt : MonoBehaviour
     public void CloseSalaTrofeos()
     {
         //optionsMainMenu.SetActive(false);
-        movimientoMenu.currentView = movimientoMenu.viewsMp[6];
+        movimientoMenu.currentView = movimientoMenu.viewsMp[1];
         //clear selected object
         //EventSystem.current.SetSelectedGameObject(null);
         //Set a new selected object
@@ -89,7 +89,7 @@ public class MainMenuControllerAnt : MonoBehaviour
     }
     public void CloseInfo()
     {
-        movimientoMenu.currentView = movimientoMenu.viewsMp[5];
+        movimientoMenu.currentView = movimientoMenu.viewsMp[3];
     }
 
 }
