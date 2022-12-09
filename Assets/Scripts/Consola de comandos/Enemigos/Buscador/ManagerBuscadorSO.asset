@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ManagerBuscadorSO
   m_EditorClassIdentifier: 
   valoresBuscador: {fileID: 304296152168810005, guid: b14e2c8afb9b30d49901e18f487d836d, type: 3}
-  awareAI_SO: 0
-  atkRange_SO: 0
-  life_SO: 0
-  healAmount_SO: 0
-  soulAmount_SO: 0
+  awareAI_SO: 13
+  atkRange_SO: 6
+  life_SO: 6
+  healAmount_SO: 2
+  soulAmount_SO: 1
   dmg_SO: 4.5

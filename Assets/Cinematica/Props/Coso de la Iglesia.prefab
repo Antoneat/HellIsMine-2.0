@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8684823799114924161}
   - component: {fileID: 8805460072805765995}
   - component: {fileID: 2754927911484713624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2044238071971056122}
   - component: {fileID: 4192434171819085964}
   - component: {fileID: 6626943869631464715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Izquierda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 662dbc09a26aa5e4fac7499fdd90600b, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 8920470698674968977}
   - component: {fileID: 44291902911045632}
   - component: {fileID: 7465268236180072795}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -267,8 +267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3777525772503343538}
-  - component: {fileID: 7927327677257049091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Coso de la Iglesia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +281,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3058318156659473599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.708627, y: -14.660681, z: 32.538773}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -300,19 +299,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7927327677257049091
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3058318156659473599}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3244240805220251405
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +310,7 @@ GameObject:
   - component: {fileID: 3687772334864160923}
   - component: {fileID: 7192182636033480171}
   - component: {fileID: 3727669548958225112}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +360,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -411,7 +397,7 @@ GameObject:
   - component: {fileID: 562671941388625690}
   - component: {fileID: 82064138875057889}
   - component: {fileID: 6261721586370207143}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +447,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -510,7 +496,7 @@ GameObject:
   - component: {fileID: 7455272927881517926}
   - component: {fileID: 5736606448438829107}
   - component: {fileID: 1392232717791326368}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +546,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -597,7 +583,7 @@ GameObject:
   - component: {fileID: 3523446942272111452}
   - component: {fileID: 7111502383093124774}
   - component: {fileID: 6758581087100284270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -696,7 +682,7 @@ GameObject:
   - component: {fileID: 7402224826337215427}
   - component: {fileID: 502209430004880669}
   - component: {fileID: 9167209508853074437}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +732,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -782,7 +768,7 @@ GameObject:
   - component: {fileID: 7613613201057789115}
   - component: {fileID: 3559411199209332511}
   - component: {fileID: 2633212151954343750}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Izquierda (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +818,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 662dbc09a26aa5e4fac7499fdd90600b, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
@@ -868,7 +854,7 @@ GameObject:
   - component: {fileID: 7025239684634857568}
   - component: {fileID: 7869976828133531874}
   - component: {fileID: 8920720240597183618}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Medio (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c6cd970c5b3f5c449777c5edf450594, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: -1580535799172915004, guid: 42a0e2e04f71153498f463e9a9d29ded, type: 3}
   - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}

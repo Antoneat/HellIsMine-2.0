@@ -2537,7 +2537,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: cdec8c1c4a7d78b4eba901b069280f6c, type: 3}
+  - {fileID: 2100000, guid: a1f7b4280bbbc1c44ad6f8015b9b1848, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4154,8 +4154,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac0b2c6222235549b77cdba823bd558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualVida: 0
+  vida: 0
   maxVida: 100
+  anim: {fileID: 0}
+  Pasiva: {fileID: 0}
+  Mov: {fileID: 0}
+  barraDeVida: {fileID: 0}
+  DmgSound:
+    m_PersistentCalls:
+      m_Calls: []
+  Source: {fileID: 0}
+  MuertePista: {fileID: 0}
 --- !u!114 &5669255165443721621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4196,6 +4205,7 @@ MonoBehaviour:
   agitadorPrefab: {fileID: 2119726176885463028, guid: 73e00b625039d3041a591aaa5721b904, type: 3}
   buscadorPrefab: {fileID: 4906008913135897410, guid: b14e2c8afb9b30d49901e18f487d836d, type: 3}
   verdugoPrefab: {fileID: 1759739420973834286, guid: 3b6b9b93218e8d44990cdc508effe7d5, type: 3}
+  curandose: 0
 --- !u!114 &5669255165443721619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4212,6 +4222,8 @@ MonoBehaviour:
   anim: {fileID: 1370996378127288656}
   ondaEx: {fileID: 7092415634163333543}
   activateOndaExpansiva: 0
+  Source: {fileID: 0}
+  GolpeBasico: {fileID: 0}
 --- !u!114 &5669255165443721618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4244,6 +4256,9 @@ MonoBehaviour:
   anim: {fileID: 1370996378127288656}
   SamaEmbestida: {fileID: 3596327292634905855}
   speed: 15
+  Source: {fileID: 0}
+  Carga: {fileID: 0}
+  Embestida: {fileID: 0}
   atacando: 0
 --- !u!95 &1370996378127288656
 Animator:

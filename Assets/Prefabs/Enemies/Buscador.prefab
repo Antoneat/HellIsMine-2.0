@@ -486,7 +486,7 @@ MonoBehaviour:
   awareAI_Val: 13
   atkRange_Val: 6
   life_Val: 6
-  healAmount_Val: 4
+  healAmount_Val: 1.5
   soulAmount_Val: 1
   dmg_SO: 0
 --- !u!95 &7479845880156685855
@@ -12460,7 +12460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 6
   maxLife: 6
-  healAmount: 4
+  healAmount: 2
   soulAmount: 1
   SoulVFX: {fileID: 6320560618561652290, guid: a290917067ef03d4aaebe4ba96ac7ad2, type: 3}
   animator: {fileID: 7062100617167059940}

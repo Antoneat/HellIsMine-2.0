@@ -66,6 +66,5 @@ public class Actor
 {
     public string name;
     public Sprite sprite;
-    public Vector3 position;
-    public float size;
+    public GameObject imageToDisplay;
 }

@@ -25,6 +25,7 @@ public class PlayerDmg : MonoBehaviour
     public float fadeSpeed;
     private float durationTimer;
     public Animator DamageAnim;
+    public Animator DamageAnimCam;
 
     [Header("VFX")]
     public ParticleSystem almas;
@@ -135,10 +136,12 @@ public class PlayerDmg : MonoBehaviour
     IEnumerator LifeLose()
 	{
         DamageAnim.SetTrigger("Damage");
+        DamageAnimCam.SetTrigger("Damage");
 
         yield return new WaitForSeconds(0.05f);
 
         DamageAnim.ResetTrigger("Damage");
+        DamageAnimCam.ResetTrigger("Damage");
 	}
 
     public void Alma_Vfx()

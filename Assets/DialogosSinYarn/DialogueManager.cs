@@ -6,7 +6,7 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Image actorImage;
+    public GameObject actorImage;
     public TMP_Text actorName;
     public TMP_Text messageText;
     public RectTransform backgroundBox;
@@ -70,7 +70,11 @@ public class DialogueManager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
 
         actorName.text = actorToDisplay.name;
-        actorImage.sprite = actorToDisplay.sprite;
+        if (actorToDisplay.imageToDisplay != null)
+        {
+            actorImage = actorToDisplay.imageToDisplay;
+            actorImage.SetActive(true);
+        }
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -89,6 +93,7 @@ public class DialogueManager : MonoBehaviour
         activeMessage++;
         timer = 0;
         messageDone = false;
+        actorImage.SetActive(false);
 
         if (activeMessage < currentMessages.Length)
         {
@@ -96,7 +101,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("ACABASTE DE HABLAR PRRO");
             isActive = false;
             messageDone = false;
             backgroundBox.localScale = new Vector3(0, 0, 0);
