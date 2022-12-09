@@ -8,6 +8,7 @@ public class YaldaPasiva : MonoBehaviour
     private YaldaVida yaldaVida; // Script de la vida de Yalda
     private YaldaMov yaldaMov; // Script de el movimiento de Yalda
     private Animator anim;
+    private Rigidbody rgbd;
 
     public int curitas; //Cantidad de veces que se curó.
 
@@ -22,6 +23,8 @@ public class YaldaPasiva : MonoBehaviour
         yaldaVida = GetComponent<YaldaVida>();
         yaldaMov = GetComponent<YaldaMov>();
         anim = GetComponent<Animator>();
+        rgbd = GetComponent<Rigidbody>();
+
         curandose = false;
         curitas = 0;
     }
@@ -51,12 +54,18 @@ public class YaldaPasiva : MonoBehaviour
         {
             curandose = false;
             anim.Play("Idle");
+            
+            rgbd.useGravity = true;
+            rgbd.isKinematic = false;
         }
 
         if(childrens2 == 0 && curitas == 2 && curandose == true)
         {
             curandose = false;
             anim.Play("Idle");
+            
+            rgbd.useGravity = true;
+            rgbd.isKinematic = false;
         }
     }
 
@@ -64,6 +73,8 @@ public class YaldaPasiva : MonoBehaviour
     {
         yaldaMov.attacking = false;
         yaldaMov.ResetOfTriggersAnim();
+        rgbd.useGravity = false;
+        rgbd.isKinematic = true;
     }
 
     public void Cura() // Metodo puesto para animacion.
@@ -74,5 +85,7 @@ public class YaldaPasiva : MonoBehaviour
     public void FinDeCura() // Metodo puesto para animacion.
     {
         curandose = false; // Termina su estado de curación.
+        rgbd.useGravity = true;
+        rgbd.isKinematic = false;
     }    
 }

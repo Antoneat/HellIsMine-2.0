@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     public Message[] currentMessages;
     public Actor[] currentActors;
+    public RectTransform rectTransformActor;
     public int activeMessage = 0;
 
     public static bool isActive = false;
@@ -37,6 +38,7 @@ public class DialogueManager : MonoBehaviour
         currentActors = actors;
         activeMessage = 0;
         isActive = true;
+        messageDone = false;
 
         Debug.Log("ESTAS CONVERSANDO PRRO, HAS CARGADO: " + messages.Length);
         DisplayMessage();
@@ -46,6 +48,7 @@ public class DialogueManager : MonoBehaviour
     {
         backgroundBox.localScale = new Vector3(1, 1, 1);
         isActive = false;
+        messageDone = false;
         backgroundBox.localScale = new Vector3(0, 0, 0);
 
         Debug.Log("Cerraste dialogo prro");
@@ -95,8 +98,8 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("ACABASTE DE HABLAR PRRO");
             isActive = false;
-            backgroundBox.localScale = new Vector3(0, 0, 0);
             messageDone = false;
+            backgroundBox.localScale = new Vector3(0, 0, 0);
         }
     }
     
@@ -114,10 +117,11 @@ public class DialogueManager : MonoBehaviour
             {
                 StopAllCoroutines();
                 messageText.text = sentence;
+                messageDone = false;
             }
         }
 
-        if(messageDone == true)
+        if(messageDone == true && isActive == true)
         {
             timer += Time.deltaTime;
         }
@@ -125,6 +129,11 @@ public class DialogueManager : MonoBehaviour
         if(timer > maxTime)
         {
             timer = maxTime;
+        }
+        if(isActive == false)
+        {
+            timer = 0f;
+            messageDone = false;
         }
     }
 }
