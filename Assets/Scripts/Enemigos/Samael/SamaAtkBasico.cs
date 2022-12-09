@@ -20,6 +20,7 @@ public class SamaAtkBasico : MonoBehaviour
 	{
 		anim = GetComponent<Animator>();
 		ondaEx.enabled = false;
+		activateOndaExpansiva = false;
 	}
 
 	void Update()
@@ -28,6 +29,7 @@ public class SamaAtkBasico : MonoBehaviour
 		if ( activateOndaExpansiva == true)
 		{
 			ondaEx.enabled = true;
+			Debug.Log("onda activada");
 			ondaEx.radius += Time.deltaTime * 4f;
 		}
 	}

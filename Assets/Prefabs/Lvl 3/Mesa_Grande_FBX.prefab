@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7703619310311566135}
   - component: {fileID: -2645513056332664562}
   - component: {fileID: 2011886311538518962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mesa_Grande_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7306010372916891744}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.503189, y: 0.009455428, z: -5.827238}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.01, y: 0.0067544, z: 0.0066148}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5da8a4e79462e204d9da30b8c2e45b28, type: 2}
+  - {fileID: 2100000, guid: 666659a16bb6d7747b435144ea9f40d6, type: 2}
   - {fileID: 2100000, guid: 80325caed1e3f89428bccf06e3e301f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

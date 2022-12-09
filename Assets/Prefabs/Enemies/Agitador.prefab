@@ -589,7 +589,7 @@ MonoBehaviour:
   life: 1
   maxLife: 1
   SoulVFX: {fileID: 6320560618561652290, guid: 4d8e81255b76e7943b65f5836da53d5e, type: 3}
-  healAmount: 1.5
+  healAmount: 2.5
   DmgSound:
     m_PersistentCalls:
       m_Calls:
@@ -10587,7 +10587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4639747095157879849, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: dmg
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8923011643089971797, guid: 0d6f2e8712e39aa4ba188cc5a7a6cc18, type: 3}
       propertyPath: m_Enabled

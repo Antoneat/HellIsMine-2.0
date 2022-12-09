@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2951390420228651535}
   - component: {fileID: 1085797122305478341}
   - component: {fileID: 9200062133782186141}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Estatua_Samael_FBX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446071967316143888}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.503189, y: -0.02381114, z: -5.827238}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0

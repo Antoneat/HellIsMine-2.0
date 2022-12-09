@@ -44,7 +44,7 @@ public class SamaAtkEspecial : MonoBehaviour
     //Esta habilidad se puede utilizar cada que hayan menos de 3 jaulas de almas en el nivel.
     void SpawnJaula()
     {
-        Vector3 randomSpawnPositionA = new Vector3(UnityEngine.Random.Range(-15, 15), 1, UnityEngine.Random.Range(-15, 15)); //CAMBIAR POR LAS DIMENSIONES DE LA SALA DE Samael
+        Vector3 randomSpawnPositionA = new Vector3(UnityEngine.Random.Range(295, 316), -1, UnityEngine.Random.Range(356, 378)); //CAMBIAR POR LAS DIMENSIONES DE LA SALA DE Samael
         if (jaulas.Count <= 3)
         {
             Instantiate(jaulaDeAlmas, randomSpawnPositionA, Quaternion.identity);
