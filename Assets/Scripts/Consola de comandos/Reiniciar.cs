@@ -8,8 +8,6 @@ public class Reiniciar : MonoBehaviour
 
     public GameObject scarletPrefab;
 
-    public Transform spawnScarlet;
-
     public ConsolaComandosManager consolaComandos;
 
     public int numDeEscena;
