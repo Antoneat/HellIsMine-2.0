@@ -89,7 +89,7 @@ public class MainMenuControllerAnt : MonoBehaviour
     }
     public void CloseInfo()
     {
-        movimientoMenu.currentView = movimientoMenu.viewsMp[3];
+        movimientoMenu.currentView = movimientoMenu.viewsMp[1];
     }
 
 }
