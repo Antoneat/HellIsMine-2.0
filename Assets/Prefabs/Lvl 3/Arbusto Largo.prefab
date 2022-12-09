@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 272732448813487467}
   - component: {fileID: 272732448813487466}
   - component: {fileID: 272732448813487465}
+  - component: {fileID: 5492081319663425427}
   m_Layer: 0
   m_Name: Arbusto Largo
   m_TagString: Untagged
@@ -84,6 +85,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5492081319663425427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272732448813487464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9198303, y: 1.6296641, z: 0.9356384}
+  m_Center: {x: 0.0026397705, y: 0.6411583, z: 0.010513306}
 --- !u!1 &272732449925207550
 GameObject:
   m_ObjectHideFlags: 0
