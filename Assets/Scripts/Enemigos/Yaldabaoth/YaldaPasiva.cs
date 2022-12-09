@@ -9,7 +9,6 @@ public class YaldaPasiva : MonoBehaviour
     private YaldaMov yaldaMov; // Script de el movimiento de Yalda
     private Animator anim;
     private Rigidbody rgbd;
-
     public int curitas; //Cantidad de veces que se curó.
 
     public bool curandose; // Comprobante si esta curandose.
@@ -87,5 +86,5 @@ public class YaldaPasiva : MonoBehaviour
         curandose = false; // Termina su estado de curación.
         rgbd.useGravity = true;
         rgbd.isKinematic = false;
-    }    
+    } 
 }

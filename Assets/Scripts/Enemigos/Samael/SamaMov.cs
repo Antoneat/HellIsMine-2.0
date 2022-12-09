@@ -104,6 +104,14 @@ public class SamaMov : MonoBehaviour
 		stare = false;
 	}
 
+	public void ResetOfTriggersAnim()
+    {
+        anim.ResetTrigger("Samael_Ataque_1");
+		anim.ResetTrigger("Samael_Ataque_Especial");
+		anim.ResetTrigger("Samael_Prepara_Embestida");
+		anim.ResetTrigger("Samael_Caminar");
+    }
+
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.blue;

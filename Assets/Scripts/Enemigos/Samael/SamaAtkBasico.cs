@@ -10,7 +10,8 @@ public class SamaAtkBasico : MonoBehaviour
 	[SerializeField] Animator anim;
 
 	[Header("Onda Expansiva")]
-	public CapsuleCollider ondaEx;
+	public GameObject ondaEx; //
+	public Transform spawnerOndaEx; //
 	public bool activateOndaExpansiva;
 	public AudioSource Source;
 	public AudioClip GolpeBasico;
@@ -19,19 +20,11 @@ public class SamaAtkBasico : MonoBehaviour
 	void Start()
 	{
 		anim = GetComponent<Animator>();
-		ondaEx.enabled = false;
 		activateOndaExpansiva = false;
 	}
 
 	void Update()
 	{
-
-		if ( activateOndaExpansiva == true)
-		{
-			ondaEx.enabled = true;
-			Debug.Log("onda activada");
-			ondaEx.radius += Time.deltaTime * 4f;
-		}
 	}
 
 	public void StartOfBasicAttack() //Evento cuando empieza la anim de basicAttack
@@ -59,8 +52,16 @@ public class SamaAtkBasico : MonoBehaviour
 
 	void ResetOndaEx()
 	{
-		ondaEx.enabled = false;
-		ondaEx.radius = 0;
+		ondaEx.gameObject.transform.localScale = Vector3.one;
 		activateOndaExpansiva = false;
+	}
+
+	public void OndaExSamael()
+	{
+		if (activateOndaExpansiva == true)
+		{
+			Debug.Log("onda activada");
+			Instantiate(ondaEx, spawnerOndaEx.position, Quaternion.identity);
+		}
 	}
 }

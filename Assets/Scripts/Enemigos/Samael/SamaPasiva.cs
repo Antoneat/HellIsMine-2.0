@@ -5,110 +5,107 @@ using UnityEngine;
 public class SamaPasiva : MonoBehaviour
 {
     private SamaVida samaVida; // Script de la vida de Samael
-    private float ticks;
+    private SamaMov samaMov;
+    private Animator anim;
+    private Rigidbody rgbd;
+    public int curitas;
 
-    public float cooldownGeneral; // max cooldown el cual se spawnea cada enemigo
-    private float cooldownToSpawnA, cooldownToSpawnB, cooldownToSpawnV; // cooldown para cada enemigo a spawnear
-
-    public CapsuleCollider samaelVida;
+    public bool curandose;
 
 
     [Header("Enemigos")]
-    public List<GameObject> agitador, buscador, verdugo; //Lista de los enemigos a spawnear
-    public GameObject agitadorPrefab, buscadorPrefab, verdugoPrefab; // Prefabs de enemigos
+    public GameObject oleada1, oleada2, oleada3; // Oleadas a activar cuando esté por 50 o 20 de vida.
+    public int childrens1, childrens2, childrens3; // Agarra la cantidad de hijos que tienen las oleadas.
 
-    public bool curandose;
+
     void Start()
     {
-        ticks = 0;
         samaVida = GetComponent<SamaVida>();
+        samaMov = GetComponent<SamaMov>();
+        anim = GetComponent<Animator>();
+        rgbd = GetComponent<Rigidbody>();
+
         curandose = false;
-        cooldownToSpawnA = cooldownToSpawnB = cooldownToSpawnV = cooldownGeneral; // los cooldowns de todos los enemigos son igualados al general al principio de la pasiva.
+        curitas = 0;
     }
 
     void Update()
     {
-        if (samaVida.vida <= 75) //Si tiene menos de x de vida...
+        if(samaVida.vida <= 75 && curitas == 0 || samaVida.vida <= 50 && curitas == 1 || samaVida.vida <= 25 && curitas == 2) //Si tiene menos de 50 de vida y no se ha curado entonces... Si tiene menos de 20 de vida y se curó antes entonces...
         {
-            InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
-        }
+            curitas++; // Aumenta en 1 las veces que se curó.
+            curandose = true; // Se pone en el estado de curandose.
+			anim.Play("Curandose");
 
-        if (samaVida.vida <= 50) //Si tiene menos de x de vida...
-        {
-            InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
-            //crea arena de almas
-        }
-
-        if (samaVida.vida <= 25) //Si tiene menos de x de vida...
-        {
-            InvokeRepeating(nameof(SpawnerAleatorio), 1f, 1f);
-        }
-
-        if (agitador.Count > 0 || buscador.Count > 0 || verdugo.Count > 0)
-        {
-        
-            curandose = true;
-
-            if (curandose)
+            if(curitas == 1) // Activa la 1ra oleada cuando esté curandose por 1ra vez. 
             {
-                ticks += Time.deltaTime;
-                if (ticks < 15)
-                    samaVida.vida += 1; // vida +1 hasta 15 ticks 
+                oleada1.SetActive(true);
+            }
+            if(curitas == 2) // Activa la 2da oleada cuando esté curandose por 2da vez.
+            {
+                oleada2.SetActive(true);
+            }
+            if(curitas == 3)
+            {
+                oleada2.SetActive(true);
             }
         }
 
-        if (agitador.Count < 1 || buscador.Count < 1 || verdugo.Count < 1)
+        childrens1 = oleada1.transform.childCount;
+        childrens2 = oleada2.transform.childCount;
+        childrens3 = oleada3.transform.childCount;
+
+        // Comprobante de si Scarlet mató toda la oleada antes de que Yalda se cure por completo, que pare la curación.
+        if(childrens1 == 0 && curitas == 1 && curandose == true)
         {
+            samaMov.attacking = false;
             curandose = false;
-            ticks = 0;
+            anim.Play("Movement");
+            
+            rgbd.useGravity = true;
+            rgbd.isKinematic = false;
         }
 
-        // Baja el contador para spawnear
-        if (cooldownToSpawnA >= 0)
+        if(childrens2 == 0 && curitas == 2 && curandose == true)
         {
-            cooldownToSpawnA -= Time.deltaTime;
-        }
-        if (cooldownToSpawnB >= 0)
-        {
-            cooldownToSpawnB -= Time.deltaTime;
-        }
-        if (cooldownToSpawnV >= 0)
-        {
-            cooldownToSpawnV -= Time.deltaTime;
+            samaMov.attacking = false;
+            curandose = false;
+            anim.Play("Movement");
+            
+            rgbd.useGravity = true;
+            rgbd.isKinematic = false;
         }
 
-
+        if(childrens3 == 0 && curitas == 3 && curandose == true)
+        {
+            samaMov.attacking = false;
+            curandose = false;
+            anim.Play("Movement");
+            
+            rgbd.useGravity = true;
+            rgbd.isKinematic = false;
+        }
     }
 
-    public void SpawnerAleatorio()
+    
+    public void InicioDeCura() // Metodo puesto para animacion.
     {
-        // Posiciones aleatorias para cada enemigo (si no spawnean en el mismo sitio)
-        Vector3 randomSpawnPositionA = new Vector3(UnityEngine.Random.Range(-10, 11), 1, UnityEngine.Random.Range(-10, 11)); //CAMBIAR POR LAS DIMENSIONES DE LA SALA DE YALDA
-        Vector3 randomSpawnPositionB = new Vector3(UnityEngine.Random.Range(-10, 11), 1, UnityEngine.Random.Range(-10, 11)); //CAMBIAR POR LAS DIMENSIONES DE LA SALA DE YALDA
-        Vector3 randomSpawnPositionV = new Vector3(UnityEngine.Random.Range(-10, 11), 1, UnityEngine.Random.Range(-10, 11)); //CAMBIAR POR LAS DIMENSIONES DE LA SALA DE YALDA
-
-        // Max cantidad de agitadores spawneados = 9
-        if (agitador.Count <= 8 && cooldownToSpawnA <= 0)
-        {
-            cooldownToSpawnA = cooldownGeneral;
-            Instantiate(agitadorPrefab, randomSpawnPositionA, Quaternion.identity);
-            agitador.Add(agitadorPrefab);
-        }
-
-        // Max cantidad de buscadores spawneados = 3
-        if (buscador.Count <= 2 && cooldownToSpawnB <= 0)
-        {
-            cooldownToSpawnB = cooldownGeneral;
-            Instantiate(buscadorPrefab, randomSpawnPositionB, Quaternion.identity);
-            buscador.Add(buscadorPrefab);
-        }
-
-        // Max cantidad de verdugos spawneados = 2
-        if (verdugo.Count <= 1 && cooldownToSpawnV <= 0)
-        {
-            cooldownToSpawnV = cooldownGeneral;
-            Instantiate(verdugoPrefab, randomSpawnPositionV, Quaternion.identity);
-            verdugo.Add(verdugoPrefab);
-        }
+        samaMov.attacking = true;
+        samaMov.ResetOfTriggersAnim();
+        rgbd.useGravity = false;
+        rgbd.isKinematic = true;
     }
+
+    public void Cura() // Metodo puesto para animacion.
+    {
+        samaVida.vida++; //Aumenta su vida en 1.
+    }
+
+    public void FinDeCura() // Metodo puesto para animacion.
+    {
+        samaMov.attacking = false;
+        curandose = false; // Termina su estado de curación.
+        rgbd.useGravity = true;
+        rgbd.isKinematic = false;
+    } 
 }

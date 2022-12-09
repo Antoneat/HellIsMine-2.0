@@ -17,6 +17,8 @@ public class PlayerDash : MonoBehaviour
     public bool DashPotente1;
     public bool DashPotente2;
     public bool MaestroDelMovimieto;
+    public CambioColorMejoraTienda cambioColorMejoraTienda;
+    public EstadoMejora[] estadoMejoras;
 
     [Header("Componentes")]
     [SerializeField] private Animator anim;
@@ -52,6 +54,8 @@ public class PlayerDash : MonoBehaviour
             if(DashOfensivo == true)
             {
                 hitboxDmgDash.dmg = 0.1f;
+                cambioColorMejoraTienda.DO = true;
+                estadoMejoras[5].bought = true; 
             }
 
             if(DashAfilado1 == true && DashAfilado2 == false && MaestroDelMovimieto == false)
@@ -60,6 +64,8 @@ public class PlayerDash : MonoBehaviour
                 anim.SetFloat("VelocidadAnimacionDash", 0.9f);
                 sphereCollider.radius = 0.625f;
                 dashNewSpeed = 19.437f;
+                cambioColorMejoraTienda.DA1 = true;
+                estadoMejoras[6].bought = true; 
             }
             if(DashAfilado1 == true && DashAfilado2 == true && MaestroDelMovimieto == false)
             {
@@ -67,6 +73,8 @@ public class PlayerDash : MonoBehaviour
                 anim.SetFloat("VelocidadAnimacionDash", 0.8f);
                 sphereCollider.radius = 0.375f;
                 dashNewSpeed = 21.204f;
+                cambioColorMejoraTienda.DA2 = true;
+                estadoMejoras[7].bought = true; 
             }
 
             if(DashPotente1 == true && DashPotente2 == false && MaestroDelMovimieto == false)
@@ -75,6 +83,8 @@ public class PlayerDash : MonoBehaviour
                 anim.SetFloat("VelocidadAnimacionDash", 1.1f);
                 sphereCollider.radius = 1f;
                 dashNewSpeed = 16.7865f;
+                cambioColorMejoraTienda.DP1 = true;
+                estadoMejoras[8].bought = true; 
             }
             if(DashPotente1 == true && DashPotente2 == true && MaestroDelMovimieto == false)
             {
@@ -82,6 +92,8 @@ public class PlayerDash : MonoBehaviour
                 anim.SetFloat("VelocidadAnimacionDash", 1.2f);
                 sphereCollider.radius = 1.5f;
                 dashNewSpeed = 15.903f;
+                cambioColorMejoraTienda.DP2 = true;
+                estadoMejoras[9].bought = true; 
             }
 
             if(MaestroDelMovimieto == true)
@@ -89,6 +101,8 @@ public class PlayerDash : MonoBehaviour
                 hitboxDmgDash.dmg = 0.4f;
                 anim.SetFloat("VelocidadAnimacionDash", 1.3f);
                 sphereCollider.radius = 1.5f;
+                cambioColorMejoraTienda.DMDM = true;
+                estadoMejoras[10].bought = true; 
             }
 
             ResetAttacks();

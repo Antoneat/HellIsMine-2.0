@@ -22,6 +22,8 @@ public class PlayerAttackCombo : MonoBehaviour
     public bool CortesTenaces2;
 
     public bool CortesPerfectos;
+    public CambioColorMejoraTienda cambioColorMejoraTienda;
+    public EstadoMejora[] estadoMejoras;
 
     [Header("Components")]
     public Animator anim;
@@ -88,7 +90,7 @@ public class PlayerAttackCombo : MonoBehaviour
     
         #region MejorasAtaques
     
-        if(CortesAgiles1 == false && CortesTenaces1 == false && CortesPerfectos == false)
+        if(CortesAgiles1 == false && CortesTenaces1 == false && CortesPerfectos == false) // Corte Agil 1
         {
             anim.SetFloat("VelocidadAnimacion", 1f);
             hitboxDmg1.modifier = 1f;
@@ -98,40 +100,48 @@ public class PlayerAttackCombo : MonoBehaviour
         }
 
 
-        if(CortesAgiles1 == true && CortesAgiles2 == false && CortesPerfectos == false)
+        if(CortesAgiles1 == true && CortesAgiles2 == false && CortesPerfectos == false) // Corte Agil 2
         {
             hitboxDmg1.modifier = 0.85f;
             hitboxDmg2.modifier = 0.85f;
             hitboxDmg3.modifier = 0.85f;
             hitboxDmg4.modifier = 0.85f;
+            cambioColorMejoraTienda.CA1 = true;
+            estadoMejoras[0].bought = true;
             //anim.SetFloat("VelocidadAnimacion", 1.2f);
         }
         
-        if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false)
+        if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false) // Corte Potente 1
         {
             hitboxDmg1.modifier = 0.67f;
             hitboxDmg2.modifier = 0.67f;
             hitboxDmg3.modifier = 0.67f;
             hitboxDmg4.modifier = 0.67f;
+            cambioColorMejoraTienda.CA2 = true;
+            estadoMejoras[1].bought = true;
             //anim.SetFloat("VelocidadAnimacion", 1.4f);
         }
 
 
-        if(CortesTenaces1 == true && CortesTenaces2 == false && CortesPerfectos == false)
+        if(CortesTenaces1 == true && CortesTenaces2 == false && CortesPerfectos == false) // Corte Potente 2
         {
             hitboxDmg1.modifier = 1.15f;
             hitboxDmg2.modifier = 1.15f;
             hitboxDmg3.modifier = 1.15f;
             hitboxDmg4.modifier = 1.15f;
+            cambioColorMejoraTienda.CT1 = true;
+            estadoMejoras[2].bought = true;
             //anim.SetFloat("VelocidadAnimacion", 0.8f);
         }
         
-        if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false)
+        if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false) // Corte Perfecto
         {
             hitboxDmg1.modifier = 1.33f;
             hitboxDmg2.modifier = 1.33f;
             hitboxDmg3.modifier = 1.33f;
             hitboxDmg4.modifier = 1.33f;
+            cambioColorMejoraTienda.CT2 = true;
+            estadoMejoras[3].bought = true;
             //anim.SetFloat("VelocidadAnimacion", 0.6f);
         }
 
@@ -142,6 +152,8 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier += (hitboxDmg2.modifier * 0.33f);
             hitboxDmg3.modifier += (hitboxDmg3.modifier * 0.33f);
             hitboxDmg4.modifier += (hitboxDmg4.modifier * 0.33f);
+            cambioColorMejoraTienda.CP = true;
+            estadoMejoras[4].bought = true;
             //anim.SetFloat("VelocidadAnimacion", 1.4f);
         }
 

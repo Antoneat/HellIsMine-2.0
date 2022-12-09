@@ -5,12 +5,15 @@ using TMPro;
 
 public class TiendaInteracion : MonoBehaviour
 {
+    public PlayerAttackCombo playerAttackCombo;
     public GameObject panelInicial, panelTiendaMejoras,panelMaster;
 
     public GameObject MejorasAtaque, MejorasDash;
 
     public TMP_Text tmpTitulo;
     public TMP_Text tmpDescripcion;
+    public GameObject soulIMG;
+    public TMP_Text tmpPrecio;
 
     public GameObject DialogoTienda;
 
@@ -30,6 +33,8 @@ public class TiendaInteracion : MonoBehaviour
     {
         panelInicial.SetActive(true);
         panelTiendaMejoras.SetActive(false);
+        soulIMG.SetActive(false);
+        tmpPrecio.text = "";
     }
     #endregion
 
@@ -48,7 +53,8 @@ public class TiendaInteracion : MonoBehaviour
         CP = false;
         tmpTitulo.text = "Cortes Ágiles I";
         tmpDescripcion.text = "Daño: -  Duración: +";
-        Debug.Log("Boton seleccionado1");
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[0].price.ToString();
     }
 
     public void BtnCA2()
@@ -61,6 +67,8 @@ public class TiendaInteracion : MonoBehaviour
         CP = false;
         tmpTitulo.text = "Cortes Ágiles II";
         tmpDescripcion.text = "Daño: --  Duración: ++";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[1].price.ToString();
     }
 
     #endregion
@@ -80,6 +88,8 @@ public class TiendaInteracion : MonoBehaviour
         CP = false;
         tmpTitulo.text = "Cortes Tenaces I";
         tmpDescripcion.text = "Daño: +  Duración: -";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[2].price.ToString();
     }
     public void BtnCT2()
     {
@@ -91,6 +101,8 @@ public class TiendaInteracion : MonoBehaviour
         CP = false;
         tmpTitulo.text = "Cortes Tenaces II";
         tmpDescripcion.text = "Daño: ++  Duración: --";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[3].price.ToString();
     }
 
     #endregion
@@ -109,6 +121,8 @@ public class TiendaInteracion : MonoBehaviour
         CT2 = false;
         tmpTitulo.text = "Cortes Perfectos";
         tmpDescripcion.text = "Daño: ++  Duración: ++";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[4].price.ToString();
     }
     
     #endregion
@@ -128,6 +142,8 @@ public class TiendaInteracion : MonoBehaviour
         DMDM = false;
         tmpTitulo.text = "Dash Ofensivo";
         tmpDescripcion.text = "Daño: +";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[5].price.ToString();
     }
 
     #endregion
@@ -148,6 +164,8 @@ public class TiendaInteracion : MonoBehaviour
         DMDM = false;
         tmpTitulo.text = "Dash Afilado I";
         tmpDescripcion.text = "Daño: +  Alcance: - Velocidad: +";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[6].price.ToString();
     }
 
     public void BtnDA2()
@@ -161,6 +179,8 @@ public class TiendaInteracion : MonoBehaviour
         DMDM = false;
         tmpTitulo.text = "Dash Afilado II";
         tmpDescripcion.text = "Daño: ++ Alcance: -- Velocidad: ++";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[7].price.ToString();
     }
 
     #endregion
@@ -181,6 +201,8 @@ public class TiendaInteracion : MonoBehaviour
         DMDM = false;
         tmpTitulo.text = "Dash Potente I";
         tmpDescripcion.text = "Daño: +++ Alcance: + Velocidad: -";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[8].price.ToString();
     }
 
     public void BtnDP2()
@@ -194,6 +216,8 @@ public class TiendaInteracion : MonoBehaviour
         DMDM = false;
         tmpTitulo.text = "Dash Potente II";
         tmpDescripcion.text = "Daño: ++++ Alcance: ++ Velocidad: --";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[9].price.ToString();
     }
 
     #endregion
@@ -213,6 +237,8 @@ public class TiendaInteracion : MonoBehaviour
         DO = false;
         tmpTitulo.text = "Maestro del Movimiento";
         tmpDescripcion.text = "Daño: ++++++ ";
+        soulIMG.SetActive(true);
+        tmpPrecio.text = playerAttackCombo.estadoMejoras[10].price.ToString();
     }
 
     #endregion
@@ -226,6 +252,10 @@ public class TiendaInteracion : MonoBehaviour
         CP = false;
         MejorasAtaque.SetActive(false);
         MejorasDash.SetActive(true);
+        tmpTitulo.text = "";
+        tmpDescripcion.text = "";
+        soulIMG.SetActive(false);
+        tmpPrecio.text = "";
     }
 
     public void MejorasDeDashOFF()
@@ -238,6 +268,10 @@ public class TiendaInteracion : MonoBehaviour
         DMDM = false;
         MejorasAtaque.SetActive(true);
         MejorasDash.SetActive(false);
+        tmpTitulo.text = "";
+        tmpDescripcion.text = "";
+        soulIMG.SetActive(false);
+        tmpPrecio.text = "";
     }
 
     public void ExitTienda()
