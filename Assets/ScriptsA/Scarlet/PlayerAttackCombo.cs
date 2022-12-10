@@ -97,6 +97,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg2.modifier = 1f;
             hitboxDmg3.modifier = 1f;
             hitboxDmg4.modifier = 1f;
+            //playerMovement.maxSpeed = 7.5f;
         }
 
 
@@ -108,6 +109,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 0.85f;
             cambioColorMejoraTienda.CA1 = true;
             estadoMejoras[0].bought = true;
+            //playerMovement.maxSpeed = 8f;
             //anim.SetFloat("VelocidadAnimacion", 1.2f);
         }
         
@@ -119,6 +121,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 0.67f;
             cambioColorMejoraTienda.CA2 = true;
             estadoMejoras[1].bought = true;
+            //playerMovement.maxSpeed = 6.8f;
             //anim.SetFloat("VelocidadAnimacion", 1.4f);
         }
 
@@ -131,6 +134,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 1.15f;
             cambioColorMejoraTienda.CT1 = true;
             estadoMejoras[2].bought = true;
+            //playerMovement.maxSpeed = 6.5f;
             //anim.SetFloat("VelocidadAnimacion", 0.8f);
         }
         
@@ -148,12 +152,13 @@ public class PlayerAttackCombo : MonoBehaviour
 
         if(CortesPerfectos== true)
         {
-            hitboxDmg1.modifier += (hitboxDmg1.modifier * 0.33f);
-            hitboxDmg2.modifier += (hitboxDmg2.modifier * 0.33f);
-            hitboxDmg3.modifier += (hitboxDmg3.modifier * 0.33f);
-            hitboxDmg4.modifier += (hitboxDmg4.modifier * 0.33f);
+            hitboxDmg1.modifier += 1.33f;
+            hitboxDmg2.modifier += 1.33f;
+            hitboxDmg3.modifier += 1.33f;
+            hitboxDmg4.modifier += 1.33f;
             cambioColorMejoraTienda.CP = true;
             estadoMejoras[4].bought = true;
+            //playerMovement.maxSpeed = 8f;
             //anim.SetFloat("VelocidadAnimacion", 1.4f);
         }
 

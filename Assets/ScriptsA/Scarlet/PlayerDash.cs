@@ -61,7 +61,7 @@ public class PlayerDash : MonoBehaviour
             if(DashAfilado1 == true && DashAfilado2 == false && MaestroDelMovimieto == false)
             {
                 hitboxDmgDash.dmg = 0.2f;
-                anim.SetFloat("VelocidadAnimacionDash", 0.9f);
+                //anim.SetFloat("VelocidadAnimacionDash", 0.9f);
                 sphereCollider.radius = 0.625f;
                 dashNewSpeed = 19.437f;
                 cambioColorMejoraTienda.DA1 = true;
@@ -70,7 +70,7 @@ public class PlayerDash : MonoBehaviour
             if(DashAfilado1 == true && DashAfilado2 == true && MaestroDelMovimieto == false)
             {
                 hitboxDmgDash.dmg = 0.4f;
-                anim.SetFloat("VelocidadAnimacionDash", 0.8f);
+                //anim.SetFloat("VelocidadAnimacionDash", 0.8f);
                 sphereCollider.radius = 0.375f;
                 dashNewSpeed = 21.204f;
                 cambioColorMejoraTienda.DA2 = true;
@@ -80,7 +80,7 @@ public class PlayerDash : MonoBehaviour
             if(DashPotente1 == true && DashPotente2 == false && MaestroDelMovimieto == false)
             {
                 hitboxDmgDash.dmg = 1f;
-                anim.SetFloat("VelocidadAnimacionDash", 1.1f);
+                //anim.SetFloat("VelocidadAnimacionDash", 1.1f);
                 sphereCollider.radius = 1f;
                 dashNewSpeed = 16.7865f;
                 cambioColorMejoraTienda.DP1 = true;
@@ -89,7 +89,7 @@ public class PlayerDash : MonoBehaviour
             if(DashPotente1 == true && DashPotente2 == true && MaestroDelMovimieto == false)
             {
                 hitboxDmgDash.dmg = 2f;
-                anim.SetFloat("VelocidadAnimacionDash", 1.2f);
+                //anim.SetFloat("VelocidadAnimacionDash", 1.2f);
                 sphereCollider.radius = 1.5f;
                 dashNewSpeed = 15.903f;
                 cambioColorMejoraTienda.DP2 = true;
@@ -99,7 +99,7 @@ public class PlayerDash : MonoBehaviour
             if(MaestroDelMovimieto == true)
             {
                 hitboxDmgDash.dmg = 0.4f;
-                anim.SetFloat("VelocidadAnimacionDash", 1.3f);
+                //anim.SetFloat("VelocidadAnimacionDash", 1.3f);
                 sphereCollider.radius = 1.5f;
                 cambioColorMejoraTienda.DMDM = true;
                 estadoMejoras[10].bought = true; 

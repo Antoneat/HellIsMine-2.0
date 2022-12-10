@@ -158,7 +158,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
             mejoras[0].SetActive(true); // Mejora de ataque basico.
             mejoras[1].SetActive(false);
         }
-        else if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras < 0) // Para las mejoras de el dash
+        if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras < 0) // Para las mejoras de el dash
         {
             tiendaInteracion.OpenTiendaUI();
             mejoras[0].SetActive(false); 
@@ -171,7 +171,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
             mejoras[0].SetActive(true); // Mejora de ataque basico.
             mejoras[1].SetActive(false);
         }
-        else if(sentence == "¡Esto podría servirte!" && mejoraMejoras < 0)
+        if(sentence == "¡Esto podría servirte!" && mejoraMejoras < 0)
         {
             tiendaInteracion.OpenTiendaUI();
             mejoras[0].SetActive(false); 
@@ -187,7 +187,6 @@ public class DialogueManagerTIENDA : MonoBehaviour
                 BotonContinuar.SetActive(false);
             }
         }
-        else return;
     }
 
     public void ToggleMecanicasScarlet(bool toggle)
@@ -202,7 +201,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
             playerDash.canDash = toggle;
             playerDash.ResetAttacks();
         }
-        playerDash.enabled = toggle;
+        playerDash.canDash = toggle;
     }
     public void WeirdRunAnimForDialogues()
     {

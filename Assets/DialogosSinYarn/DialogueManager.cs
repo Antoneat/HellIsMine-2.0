@@ -93,7 +93,11 @@ public class DialogueManager : MonoBehaviour
         activeMessage++;
         timer = 0;
         messageDone = false;
-        actorImage.SetActive(false);
+
+        if (actorImage != null)
+        {
+            actorImage.SetActive(false);
+        }
 
         if (activeMessage < currentMessages.Length)
         {

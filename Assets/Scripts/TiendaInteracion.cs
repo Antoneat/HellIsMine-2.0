@@ -52,9 +52,9 @@ public class TiendaInteracion : MonoBehaviour
         CT2 = false;
         CP = false;
         tmpTitulo.text = "Cortes Ágiles I";
-        tmpDescripcion.text = "Daño: -  Duración: +";
+        tmpDescripcion.text = "Daño: -  Movilidad: +";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[0].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[0].price.ToString();
     }
 
     public void BtnCA2()
@@ -66,9 +66,9 @@ public class TiendaInteracion : MonoBehaviour
         CT2 = false;
         CP = false;
         tmpTitulo.text = "Cortes Ágiles II";
-        tmpDescripcion.text = "Daño: --  Duración: ++";
+        tmpDescripcion.text = "Daño: --  Movilidad: ++";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[1].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[1].price.ToString();
     }
 
     #endregion
@@ -87,9 +87,9 @@ public class TiendaInteracion : MonoBehaviour
         CT2 = false;
         CP = false;
         tmpTitulo.text = "Cortes Tenaces I";
-        tmpDescripcion.text = "Daño: +  Duración: -";
+        tmpDescripcion.text = "Daño: +  Movilidad: -";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[2].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[2].price.ToString();
     }
     public void BtnCT2()
     {
@@ -100,9 +100,9 @@ public class TiendaInteracion : MonoBehaviour
         CT1 = false;
         CP = false;
         tmpTitulo.text = "Cortes Tenaces II";
-        tmpDescripcion.text = "Daño: ++  Duración: --";
+        tmpDescripcion.text = "Daño: ++  Movilidad: --";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[3].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[3].price.ToString();
     }
 
     #endregion
@@ -120,9 +120,9 @@ public class TiendaInteracion : MonoBehaviour
         CT1 = false;
         CT2 = false;
         tmpTitulo.text = "Cortes Perfectos";
-        tmpDescripcion.text = "Daño: ++  Duración: ++";
+        tmpDescripcion.text = "Daño: ++  Movilidad: ++";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[4].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[4].price.ToString();
     }
     
     #endregion
@@ -140,10 +140,10 @@ public class TiendaInteracion : MonoBehaviour
         DP1 = false;
         DP2 = false;
         DMDM = false;
-        tmpTitulo.text = "Dash Ofensivo";
+        tmpTitulo.text = "Desplazamieto Espectral";
         tmpDescripcion.text = "Daño: +";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[5].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[5].price.ToString();
     }
 
     #endregion
@@ -162,10 +162,10 @@ public class TiendaInteracion : MonoBehaviour
         DP1 = false;
         DP2 = false;
         DMDM = false;
-        tmpTitulo.text = "Dash Afilado I";
+        tmpTitulo.text = "Sombra de Belecebú";
         tmpDescripcion.text = "Daño: +  Alcance: - Velocidad: +";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[6].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[6].price.ToString();
     }
 
     public void BtnDA2()
@@ -177,10 +177,10 @@ public class TiendaInteracion : MonoBehaviour
         DP1 = false;
         DP2 = false;
         DMDM = false;
-        tmpTitulo.text = "Dash Afilado II";
+        tmpTitulo.text = "Sombra de Lucifer";
         tmpDescripcion.text = "Daño: ++ Alcance: -- Velocidad: ++";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[7].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[7].price.ToString();
     }
 
     #endregion
@@ -199,10 +199,10 @@ public class TiendaInteracion : MonoBehaviour
         DO = false;
         DP2 = false;
         DMDM = false;
-        tmpTitulo.text = "Dash Potente I";
+        tmpTitulo.text = "Siega Demoniaca";
         tmpDescripcion.text = "Daño: +++ Alcance: + Velocidad: -";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[8].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[8].price.ToString();
     }
 
     public void BtnDP2()
@@ -214,10 +214,10 @@ public class TiendaInteracion : MonoBehaviour
         DP1 = false;
         DO = false;
         DMDM = false;
-        tmpTitulo.text = "Dash Potente II";
+        tmpTitulo.text = "Siega Infernal";
         tmpDescripcion.text = "Daño: ++++ Alcance: ++ Velocidad: --";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[9].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[9].price.ToString();
     }
 
     #endregion
@@ -238,7 +238,7 @@ public class TiendaInteracion : MonoBehaviour
         tmpTitulo.text = "Maestro del Movimiento";
         tmpDescripcion.text = "Daño: ++++++ ";
         soulIMG.SetActive(true);
-        tmpPrecio.text = playerAttackCombo.estadoMejoras[10].price.ToString();
+        tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[10].price.ToString();
     }
 
     #endregion
