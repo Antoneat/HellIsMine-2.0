@@ -14,40 +14,14 @@ public class MainMenuControllerAnt : MonoBehaviour
 
     public GameObject[] trofeosInfo;
 
-    void Start()
-    {
-        //AudioManager.instance.Play("MenuSong");
-        //clear selected object
-        //EventSystem.current.SetSelectedGameObject(null);
-        //Set a new selected object
-        //EventSystem.current.SetSelectedGameObject(menuFirstButton);
-    }
-
-    private void Update()
-    {
-        //if(Input.GetMouseButtonDown(0))
-        //{
-        //    if (EventSystem.current.IsPointerOverGameObject())
-        //        return;
-        //}
-    }
-
-
     public void OpenOptions()
     {
         movimientoMenu.currentView = movimientoMenu.viewsMp[2];
-
-        //optionsMainMenu.SetActive(true);
     }
 
     public void CloseOptions()
     {
-        //optionsMainMenu.SetActive(false);
         movimientoMenu.currentView = movimientoMenu.viewsMp[1];
-        //clear selected object
-        //EventSystem.current.SetSelectedGameObject(null);
-        //Set a new selected object
-        //EventSystem.current.SetSelectedGameObject(menuFirstButton);
     }
     public void OpenSalaTrofeos()
     {
@@ -56,12 +30,7 @@ public class MainMenuControllerAnt : MonoBehaviour
 
     public void CloseSalaTrofeos()
     {
-        //optionsMainMenu.SetActive(false);
         movimientoMenu.currentView = movimientoMenu.viewsMp[1];
-        //clear selected object
-        //EventSystem.current.SetSelectedGameObject(null);
-        //Set a new selected object
-        //EventSystem.current.SetSelectedGameObject(menuFirstButton);
     }
 
     //ver a los trofeos views 8 - 12
@@ -89,7 +58,7 @@ public class MainMenuControllerAnt : MonoBehaviour
     }
     public void CloseInfo()
     {
-        movimientoMenu.currentView = movimientoMenu.viewsMp[1];
+        movimientoMenu.currentView = movimientoMenu.viewsMp[3];
     }
 
 }
