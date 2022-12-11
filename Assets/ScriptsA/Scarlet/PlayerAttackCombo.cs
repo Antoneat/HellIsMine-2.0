@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerAttackCombo : MonoBehaviour
 {
+    public bool canBasicAttack;
     public bool isAttacking;
 
     public bool canImpulse;
@@ -22,6 +23,7 @@ public class PlayerAttackCombo : MonoBehaviour
     public bool CortesTenaces2;
 
     public bool CortesPerfectos;
+    public float movNewSpeed;
     public CambioColorMejoraTienda cambioColorMejoraTienda;
     public EstadoMejora[] estadoMejoras;
 
@@ -47,6 +49,7 @@ public class PlayerAttackCombo : MonoBehaviour
         isAttacking = false;
         continueAttack = false;
         nextAttack = false;
+        canBasicAttack = true;
 
         anim = GetComponent<Animator>();
         tiendaInteracion = GameObject.FindGameObjectWithTag("CANVAS").GetComponent<TiendaInteracion>();
@@ -81,8 +84,16 @@ public class PlayerAttackCombo : MonoBehaviour
         if (nextAttack == false && playerDash.isDashing == false && isAttacking == false && playerHardAttack.isHardAttacking == false)
         {
             playerMovement.speedLimiter = 1;
-            playerMovement.maxSpeed = 7.2f;
+            if(movNewSpeed == 0)
+            {
+                playerMovement.maxSpeed = 7.2f;
+            }
+            else
+            {
+                playerMovement.maxSpeed = movNewSpeed;
+            }
         }
+
         if(canImpulse)
 		{
             ForceMovement();
@@ -90,18 +101,17 @@ public class PlayerAttackCombo : MonoBehaviour
     
         #region MejorasAtaques
     
-        if(CortesAgiles1 == false && CortesTenaces1 == false && CortesPerfectos == false) // Corte Agil 1
+        if(CortesAgiles1 == false && CortesTenaces1 == false && CortesPerfectos == false) // Nada Aplicado
         {
             anim.SetFloat("VelocidadAnimacion", 1f);
             hitboxDmg1.modifier = 1f;
             hitboxDmg2.modifier = 1f;
             hitboxDmg3.modifier = 1f;
             hitboxDmg4.modifier = 1f;
-            //playerMovement.maxSpeed = 7.5f;
         }
 
 
-        if(CortesAgiles1 == true && CortesAgiles2 == false && CortesPerfectos == false) // Corte Agil 2
+        if(CortesAgiles1 == true && CortesAgiles2 == false && CortesPerfectos == false) // Corte Agil 1
         {
             hitboxDmg1.modifier = 0.85f;
             hitboxDmg2.modifier = 0.85f;
@@ -109,11 +119,10 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 0.85f;
             cambioColorMejoraTienda.CA1 = true;
             estadoMejoras[0].bought = true;
-            //playerMovement.maxSpeed = 8f;
-            //anim.SetFloat("VelocidadAnimacion", 1.2f);
+            movNewSpeed = 7.5f;
         }
         
-        if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false) // Corte Potente 1
+        if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false) // Corte Agil 2
         {
             hitboxDmg1.modifier = 0.67f;
             hitboxDmg2.modifier = 0.67f;
@@ -121,12 +130,11 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 0.67f;
             cambioColorMejoraTienda.CA2 = true;
             estadoMejoras[1].bought = true;
-            //playerMovement.maxSpeed = 6.8f;
-            //anim.SetFloat("VelocidadAnimacion", 1.4f);
+            movNewSpeed = 8f;
         }
 
 
-        if(CortesTenaces1 == true && CortesTenaces2 == false && CortesPerfectos == false) // Corte Potente 2
+        if(CortesTenaces1 == true && CortesTenaces2 == false && CortesPerfectos == false) // Corte Potente 1
         {
             hitboxDmg1.modifier = 1.15f;
             hitboxDmg2.modifier = 1.15f;
@@ -134,11 +142,10 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 1.15f;
             cambioColorMejoraTienda.CT1 = true;
             estadoMejoras[2].bought = true;
-            //playerMovement.maxSpeed = 6.5f;
-            //anim.SetFloat("VelocidadAnimacion", 0.8f);
+            movNewSpeed = 6.8f;
         }
         
-        if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false) // Corte Perfecto
+        if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false) // Corte Potente 2
         {
             hitboxDmg1.modifier = 1.33f;
             hitboxDmg2.modifier = 1.33f;
@@ -146,11 +153,11 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 1.33f;
             cambioColorMejoraTienda.CT2 = true;
             estadoMejoras[3].bought = true;
-            //anim.SetFloat("VelocidadAnimacion", 0.6f);
+            movNewSpeed = 6.5f;
         }
 
 
-        if(CortesPerfectos== true)
+        if(CortesPerfectos== true) // Corte Perfecto
         {
             hitboxDmg1.modifier += 1.33f;
             hitboxDmg2.modifier += 1.33f;
@@ -158,8 +165,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier += 1.33f;
             cambioColorMejoraTienda.CP = true;
             estadoMejoras[4].bought = true;
-            //playerMovement.maxSpeed = 8f;
-            //anim.SetFloat("VelocidadAnimacion", 1.4f);
+            movNewSpeed = 8f;
         }
 
         #endregion
@@ -190,8 +196,9 @@ public class PlayerAttackCombo : MonoBehaviour
 
     public void Combo()
     {
-        if (Input.GetMouseButtonDown(0) && isAttacking == false && playerHardAttack.isHardAttacking == false && playerDash.isDashing == false)
+        if (Input.GetMouseButtonDown(0) && isAttacking == false && playerHardAttack.isHardAttacking == false && playerDash.isDashing == false && canBasicAttack == true)
         {
+            canBasicAttack = false;
             direction = (mousePos.transform.position - transform.position).normalized;
 
             playerMovement.lastTransform = new Vector3(mousePos.transform.position.x, 0, mousePos.transform.position.z);
@@ -248,12 +255,14 @@ public class PlayerAttackCombo : MonoBehaviour
     public void AfterAttacking()
     {
         nextAttack = false;
+        canBasicAttack = true;
 
         anim.ResetTrigger("StartCombo");
     }
     
     public void FinalBasicAttack()
     {
+        canBasicAttack = true;
         nextAttack = false;
         isAttacking = false;
         continueAttack = false;

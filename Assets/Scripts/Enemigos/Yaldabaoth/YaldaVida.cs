@@ -21,6 +21,7 @@ public class YaldaVida : MonoBehaviour
     public AudioSource DeadSource;
     public AudioClip MuertePista;
 
+    public DialogueTrigger dialogueTrigger;
     //public ParticleSystem almas;
 
     void OnEnable() // Cuando aparezca Yalda en escena, se mostrara la barra de vida
@@ -50,13 +51,23 @@ public class YaldaVida : MonoBehaviour
             barraDeVidaYalda.SetActive(false);
             yaldaMov.enabled = false;
             anim.SetTrigger("Muerte");
+            ForDialogueND3();
         }
+    }
+
+    public void ForDialogueND3()
+    {
+        dialogueTrigger.EmpezarDialogo();
+    }
+
+    public void DeadBeforeDialogue()
+    {
+        Destroy(gameObject);
     }
 
     public void Muerte()
     {   
         Destroy(yaldaPasiva.oleada1);
         Destroy(yaldaPasiva.oleada2);
-        Destroy(gameObject);
     }
 }

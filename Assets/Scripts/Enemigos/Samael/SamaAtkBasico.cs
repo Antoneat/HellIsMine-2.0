@@ -16,6 +16,7 @@ public class SamaAtkBasico : MonoBehaviour
 	public AudioSource Source;
 	public AudioClip GolpeBasico;
 		
+	public DialogueTrigger dialogueTriggerBD15;
 
 	void Start()
 	{
@@ -39,6 +40,12 @@ public class SamaAtkBasico : MonoBehaviour
 		anim.ResetTrigger("Samael_Ataque_1");
 		anim.ResetTrigger("Samael_Ataque_Especial");
 		anim.ResetTrigger("Samael_Prepara_Embestida");
+
+		if(dialogueTriggerBD15 != null)
+		{
+			dialogueTriggerBD15.EmpezarDialogo();
+		}
+		
 	}
 
 	public void EndOfBasicAttack() //Evento cuando termina la anim de basicAttack

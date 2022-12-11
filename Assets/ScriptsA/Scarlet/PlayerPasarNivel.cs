@@ -49,7 +49,7 @@ public class PlayerPasarNivel : MonoBehaviour
         if(terrenoValor == 1)
         {
             ChargeLevel2();
-            StartCoroutine("Terreno2");
+            //StartCoroutine("Terreno2");
         }
         if(terrenoValor == 2)
         {
@@ -100,7 +100,7 @@ public class PlayerPasarNivel : MonoBehaviour
             // StartCoroutine("Terreno2");
             // ChargeLevel2();
 
-            GoToLvl2();
+            GoToLvl2Jugable();
         }
         
         if (other.gameObject.CompareTag("Nivel 2"))
@@ -108,7 +108,7 @@ public class PlayerPasarNivel : MonoBehaviour
             // StartCoroutine("Terreno3");
             // ChargeLevel3();
 
-            GoToLvl3();
+            GoToLvl3Jugable();
         }
     }
 
@@ -206,7 +206,14 @@ public class PlayerPasarNivel : MonoBehaviour
         RestartLevel();
     }
 
-    public void GoToLvl2()
+    public void GoToLvl2() // Consola
+    {
+        //StartCoroutine("Terreno2");
+        //ChargeLevel2();
+        terrenoValor = 1;
+        LevelPassed();
+    }
+    public void GoToLvl2Jugable() // InGame
     {
         //StartCoroutine("Terreno2");
         //ChargeLevel2();
@@ -214,7 +221,14 @@ public class PlayerPasarNivel : MonoBehaviour
         RestartLevel();
     }
 
-    public void GoToLvl3()
+    public void GoToLvl3() // Consola
+    {
+        //StartCoroutine("Terreno3");   
+        //ChargeLevel3();
+        terrenoValor = 2;
+        LevelPassed();
+    }
+    public void GoToLvl3Jugable() // InGame
     {
         //StartCoroutine("Terreno3");   
         //ChargeLevel3();
@@ -236,6 +250,12 @@ public class PlayerPasarNivel : MonoBehaviour
 
     // Metodo para el boton de "Reiniciar nivel"
     public void RestartLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    // Metodo para Cuando muera Scarlet o Pase de nivel
+    public void LevelPassed()
     {
         playerDmg.actualSouls -= restaDeAlmas;
         SceneManager.LoadScene(1);

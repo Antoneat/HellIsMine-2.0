@@ -19,6 +19,10 @@ public class SamaVida : MonoBehaviour
 
     //public ParticleSystem almas;
 
+    [Header("Dialagos")]
+    public DialogueTrigger dialogueTriggerBD14; 
+    public DialogueTrigger dialogueTriggerBD19;
+
     void OnEnable() // Cuando aparezca Yalda en escena, se mostrara la barra de vida
     {
         barraDeVida.SetActive(true);
@@ -29,6 +33,7 @@ public class SamaVida : MonoBehaviour
         Mov = GetComponent<SamaMov>();
         Pasiva = GetComponent<SamaPasiva>();
         vida = maxVida;
+        dialogueTriggerBD14.EmpezarDialogo(); // DialogoBD14
     }
 
     public void TakeDmg(float dmg) //Metodo el cual recibe da�o
@@ -48,6 +53,7 @@ public class SamaVida : MonoBehaviour
             barraDeVida.SetActive(false);
             Mov.enabled = false;
             anim.SetTrigger("Muerte");
+            dialogueTriggerBD19.EmpezarDialogo();
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueTriggerTIENDA : MonoBehaviour
 {
@@ -84,6 +85,7 @@ public class MessageTIENDA
     public int actorIdTIENDA;
     public string messageTIENDA;
     public AudioClip audioClipTIENDA;
+    public UnityEvent unityEventTIENDA;
 }
 
 [System.Serializable]

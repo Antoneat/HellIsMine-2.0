@@ -8,6 +8,7 @@ public class ScarletData : MonoBehaviour
 
     #region PlayerDmg
 
+    [Header("PlayerDmg")]
     public float actualvida;
     public int actualSouls;
 
@@ -15,6 +16,7 @@ public class ScarletData : MonoBehaviour
 
     #region PlayerAttackCombo
 
+    [Header("Mejoras Ataque Basico")]
     public bool CortesAgiles1;
     public bool CortesAgiles2;
 
@@ -27,6 +29,7 @@ public class ScarletData : MonoBehaviour
 
     #region PlayerDash
 
+    [Header("Mejoras Dash")]
     public bool DashOfensivo;
     public bool DashAfilado1;
     public bool DashAfilado2;
@@ -38,9 +41,19 @@ public class ScarletData : MonoBehaviour
 
     #region PlayerPasarNivel
 
+    [Header("Nivel Actual")]
     public int terrenoValor;
 
     #endregion
+
+    #region DialogueManagerTienda
+
+    [Header("Reputacion en Tienda")]
+    public int mejorasMejoras;
+
+    #endregion
+
+
 
     private void Awake()
     {

@@ -7,6 +7,7 @@ public class TiendaInteracion : MonoBehaviour
 {
     public PlayerAttackCombo playerAttackCombo;
     public GameObject panelInicial, panelTiendaMejoras,panelMaster;
+    public GameObject confirmar;
 
     public GameObject MejorasAtaque, MejorasDash;
 
@@ -15,7 +16,7 @@ public class TiendaInteracion : MonoBehaviour
     public GameObject soulIMG;
     public TMP_Text tmpPrecio;
 
-    public GameObject DialogoTienda;
+    public DialogoTienda DialogoTienda;
 
     public DialogueManagerTIENDA dialogueManagerTIENDA;
     
@@ -23,7 +24,7 @@ public class TiendaInteracion : MonoBehaviour
     #region TiendaUI
     public void OpenTiendaUI()
     {
-        if(DialogoTienda == null)
+        if(DialogoTienda.dialogoTienda[0] == null || DialogoTienda.dialogoTienda[1] == null || DialogoTienda.dialogoTienda[2] == null)
         {
             panelInicial.SetActive(false);
             panelTiendaMejoras.SetActive(true);
@@ -36,6 +37,11 @@ public class TiendaInteracion : MonoBehaviour
         soulIMG.SetActive(false);
         tmpPrecio.text = "";
     }
+
+    public void WhenIsTalking(bool toggle)
+    {
+        panelInicial.SetActive(toggle);
+    }
     #endregion
 
     #region Cortes Agiles 1 y 2
@@ -45,6 +51,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnCA1()
     {
+        confirmar.SetActive(true);
         CA1 = true;
 
         CA2 = false;
@@ -59,6 +66,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnCA2()
     {
+        confirmar.SetActive(true);
         CA2 = true;
 
         CA1 = false;
@@ -80,6 +88,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnCT1()
     {
+        confirmar.SetActive(true);
         CT1 = true;
 
         CA1 = false;
@@ -93,6 +102,7 @@ public class TiendaInteracion : MonoBehaviour
     }
     public void BtnCT2()
     {
+        confirmar.SetActive(true);
         CT2 = true;
 
         CA1 = false;
@@ -113,6 +123,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnCP()
     {
+        confirmar.SetActive(true);
         CP = true;
 
         CA1 = false;
@@ -133,6 +144,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnDO()
     {
+        confirmar.SetActive(true);
         DO = true;
         
         DA1 = false;
@@ -155,6 +167,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnDA1()
     {
+        confirmar.SetActive(true);
         DA1 = true;
 
         DO = false;
@@ -170,6 +183,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnDA2()
     {
+        confirmar.SetActive(true);
         DA2 = true;
 
         DA1 = false;
@@ -192,6 +206,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnDP1()
     {
+        confirmar.SetActive(true);
         DP1 = true;
 
         DA1 = false;
@@ -207,6 +222,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnDP2()
     {
+        confirmar.SetActive(true);
         DP2 = true;
 
         DA1 = false;
@@ -228,6 +244,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void BtnDMDM()
     {
+        confirmar.SetActive(true);
         DMDM = true;
 
         DA1 = false;
@@ -245,6 +262,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void MejorasDeAtaqueBasicoOFF()
     {
+        confirmar.SetActive(false);
         CA1 = false;
         CA2 = false;
         CT1 = false;
@@ -260,6 +278,7 @@ public class TiendaInteracion : MonoBehaviour
 
     public void MejorasDeDashOFF()
     {
+        confirmar.SetActive(false);
         DO = false;
         DA1 = false;
         DA2 = false;

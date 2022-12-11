@@ -13,6 +13,12 @@ public class SamaPasiva : MonoBehaviour
     public bool curandose;
 
 
+    [Header("Dialogos")]
+    public DialogueTrigger dialogueTriggerBD16;
+    public DialogueTrigger dialogueTriggerBD17;
+    public DialogueTrigger dialogueTriggerBD18;
+
+
     [Header("Enemigos")]
     public GameObject oleada1, oleada2, oleada3; // Oleadas a activar cuando esté por 50 o 20 de vida.
     public int childrens1, childrens2, childrens3; // Agarra la cantidad de hijos que tienen las oleadas.
@@ -40,14 +46,17 @@ public class SamaPasiva : MonoBehaviour
             if(curitas == 1) // Activa la 1ra oleada cuando esté curandose por 1ra vez. 
             {
                 oleada1.SetActive(true);
+                dialogueTriggerBD16.EmpezarDialogo();
             }
             if(curitas == 2) // Activa la 2da oleada cuando esté curandose por 2da vez.
             {
                 oleada2.SetActive(true);
+                dialogueTriggerBD17.EmpezarDialogo();
             }
             if(curitas == 3)
             {
                 oleada2.SetActive(true);
+                dialogueTriggerBD18.EmpezarDialogo();
             }
         }
 
