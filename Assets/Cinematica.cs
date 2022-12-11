@@ -23,11 +23,12 @@ public class Cinematica : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_hasSkipped && (Input.anyKey||Input.GetMouseButtonDown(0)))
+      /*  if (!_hasSkipped && (Input.anyKey||Input.GetMouseButtonDown(0)))
         {
             _hasSkipped = true;
             SceneManager.LoadScene(1);
         }
+      */
 
         if ((_videoPlayer.frame) > 0 && (_videoPlayer.isPlaying == false))
         {
