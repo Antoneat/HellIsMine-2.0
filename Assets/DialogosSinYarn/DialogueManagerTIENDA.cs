@@ -156,57 +156,6 @@ public class DialogueManagerTIENDA : MonoBehaviour
             }
         }
 
-        // //Dialogos Nivel1
-        // if(sentence == "¿Así que por eso deseas salir de aquí? Me da igual siempre y cuando me alimentes ¡Jajaja!")
-        // {
-        //     mejoraMejoras++;
-        // }
-        // if(sentence == "Volveré y los mataré yo misma.")
-        // {
-        //     mejoraMejoras--;
-        // }
-        // //Dialogos Nivel2
-        // if(sentence == "Mis años como asesina harán su trabajo con ella.")
-        // {
-        //     mejoraMejoras += 2;
-        // }
-        // if(sentence == "Esta guadaña asesinó a su padre, solo terminaré lo que se empezó.")
-        // {
-        //     mejoraMejoras -= 2;
-        // }
-        // //Dialogos Nivel3
-
-
-        // //Tienda Nivel1
-        // if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras > 0) // Para las mejoras de el ataque basico
-        // {
-        //     tiendaInteracion.OpenTiendaUI();
-        //     mejoras[0].SetActive(true); // Mejora de ataque basico.
-        //     mejoras[1].SetActive(false);
-        //     Debug.Log("Muestra rama Ataques basicos.");
-        // }
-        // if(sentence == "Bueno, te recomiendo esto." && mejoraMejoras < 0) // Para las mejoras de el dash
-        // {
-        //     tiendaInteracion.OpenTiendaUI();
-        //     mejoras[0].SetActive(false); 
-        //     mejoras[1].SetActive(true); // Mejora de Dash.
-            
-        //     Debug.Log("Muestra rama Dash.");
-        // }
-        // //Tienda Nivel2
-        // if(sentence == "¡Esto podría servirte!" && mejoraMejoras > 0)
-        // {
-        //     tiendaInteracion.OpenTiendaUI();
-        //     mejoras[0].SetActive(true); // Mejora de ataque basico.
-        //     mejoras[1].SetActive(false);
-        // }
-        // if(sentence == "¡Esto podría servirte!" && mejoraMejoras < 0)
-        // {
-        //     tiendaInteracion.OpenTiendaUI();
-        //     mejoras[0].SetActive(false); 
-        //     mejoras[1].SetActive(true); // Mejora de Dash.
-        // }
-
         if(currentOpcionesTIENDA.Length != 0) // Si la conversacion no tiene opciones, no hace nada este if
         {
             if (currentMessagesTIENDA.Length == activeMessage + 1 ) // si tiene opciones, va a verificar si es el ultimo dialogo para mostrar las opciones
@@ -268,7 +217,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
             playerDash.canDash = toggle;
             playerDash.ResetAttacks();
         }
-        Invoke(nameof(ForFckSake), 0.5f);
+        Invoke(nameof(ForFckSake), 0.4f);
     }
 
     public void ForFckSake()

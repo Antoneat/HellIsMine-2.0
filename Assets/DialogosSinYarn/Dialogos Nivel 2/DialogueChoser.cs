@@ -15,10 +15,28 @@ public class DialogueChoser : MonoBehaviour
             if(dialogueManagerTIENDA.mejoraMejoras > 0)
             {
                 dialogueTriggerA.EmpezarDialogo();
+                Destroy(gameObject);
             }
             else if(dialogueManagerTIENDA.mejoraMejoras < 0)
             {
                 dialogueTriggerB.EmpezarDialogo();
+                Destroy(gameObject);
+            }
+        }
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+            if(dialogueManagerTIENDA.mejoraMejoras > 0)
+            {
+                dialogueTriggerA.EmpezarDialogo();
+                Destroy(gameObject);
+            }
+            else if(dialogueManagerTIENDA.mejoraMejoras < 0)
+            {
+                dialogueTriggerB.EmpezarDialogo();
+                Destroy(gameObject);
             }
         }
     }
