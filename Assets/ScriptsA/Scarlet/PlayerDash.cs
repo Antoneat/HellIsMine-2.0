@@ -53,53 +53,79 @@ public class PlayerDash : MonoBehaviour
 
             ResetAttacks();
         }
-        if(DashOfensivo == true)
+        if(DashOfensivo == true) // Dash Ofensivo
         {
-            hitboxDmgDash.dmg = 0.1f;
+            hitboxDmgDash.dmg = 0.25f;
             cambioColorMejoraTienda.DO = true;
             estadoMejoras[5].bought = true; 
         }
 
-        if(DashAfilado1 == true && DashAfilado2 == false && MaestroDelMovimieto == false)
+        if(DashAfilado1 == true && DashAfilado2 == false && MaestroDelMovimieto == false) // Dash Afilado I
         {
             hitboxDmgDash.dmg = 0.2f;
             sphereCollider.radius = 0.625f;
             dashNewSpeed = 19.437f;
             cambioColorMejoraTienda.DA1 = true;
-            estadoMejoras[6].bought = true; 
+            estadoMejoras[6].bought = true;
         }
-        if(DashAfilado1 == true && DashAfilado2 == true && MaestroDelMovimieto == false)
+        if(DashAfilado1 == true && DashAfilado2 == true && MaestroDelMovimieto == false) // Dash Afilado II
         {
             hitboxDmgDash.dmg = 0.4f;
             sphereCollider.radius = 0.375f;
             dashNewSpeed = 21.204f;
             cambioColorMejoraTienda.DA2 = true;
-            estadoMejoras[7].bought = true; 
+            estadoMejoras[7].bought = true;
+
+            cambioColorMejoraTienda.DA1 = true;
+            estadoMejoras[6].bought = true;
         }
 
-        if(DashPotente1 == true && DashPotente2 == false && MaestroDelMovimieto == false)
+        if(DashPotente1 == true && DashPotente2 == false && MaestroDelMovimieto == false) // Dash Potente I
         {
-            hitboxDmgDash.dmg = 1f;
+            hitboxDmgDash.dmg = 0.75f;
             sphereCollider.radius = 1f;
             dashNewSpeed = 16.7865f;
             cambioColorMejoraTienda.DP1 = true;
             estadoMejoras[8].bought = true; 
         }
-        if(DashPotente1 == true && DashPotente2 == true && MaestroDelMovimieto == false)
+        if(DashPotente1 == true && DashPotente2 == true && MaestroDelMovimieto == false) // Dash Potente II
         {
-            hitboxDmgDash.dmg = 2f;
+            hitboxDmgDash.dmg = 1.5f;
             sphereCollider.radius = 1.5f;
             dashNewSpeed = 15.903f;
             cambioColorMejoraTienda.DP2 = true;
-            estadoMejoras[9].bought = true; 
+            estadoMejoras[9].bought = true;
+
+            cambioColorMejoraTienda.DP1 = true;
+            estadoMejoras[8].bought = true;
         }
 
-        if(MaestroDelMovimieto == true)
+        if(MaestroDelMovimieto == true && DashAfilado1 == true && DashAfilado2 == true && DashOfensivo == true) // Maestro del movimiento RAMA AFILADO
         {
-            hitboxDmgDash.dmg = 0.4f;
+            hitboxDmgDash.dmg = 1.5f;
             sphereCollider.radius = 1.5f;
             cambioColorMejoraTienda.DMDM = true;
-            estadoMejoras[10].bought = true; 
+            estadoMejoras[10].bought = true;
+
+            cambioColorMejoraTienda.DA1 = true;
+            estadoMejoras[6].bought = true;
+
+            cambioColorMejoraTienda.DA2 = true;
+            estadoMejoras[7].bought = true;
+        }
+
+        if(MaestroDelMovimieto == true && DashAfilado1 == true && DashAfilado2 == true && DashOfensivo == true) // Mestro del movimiento RAMA POTENTE
+        {
+            hitboxDmgDash.dmg = 1.5f;
+            sphereCollider.radius = 1.5f;
+            cambioColorMejoraTienda.DMDM = true;
+            estadoMejoras[10].bought = true;
+
+            cambioColorMejoraTienda.DP1 = true;
+            estadoMejoras[8].bought = true; 
+
+            cambioColorMejoraTienda.DP2 = true;
+            estadoMejoras[9].bought = true;
         }
 
         if(cooldown <= maxCooldown) cooldown -= Time.deltaTime;

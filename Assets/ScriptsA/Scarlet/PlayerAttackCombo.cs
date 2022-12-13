@@ -119,7 +119,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 0.85f;
             cambioColorMejoraTienda.CA1 = true;
             estadoMejoras[0].bought = true;
-            movNewSpeed = 7.5f;
+            movNewSpeed = 8.3f;
         }
         
         if (CortesAgiles1 == true && CortesAgiles2 == true && CortesPerfectos == false) // Corte Agil 2
@@ -130,7 +130,10 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 0.67f;
             cambioColorMejoraTienda.CA2 = true;
             estadoMejoras[1].bought = true;
-            movNewSpeed = 8f;
+            movNewSpeed = 9f;
+
+            cambioColorMejoraTienda.CA1 = true;
+            estadoMejoras[0].bought = true;
         }
 
 
@@ -142,7 +145,7 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 1.15f;
             cambioColorMejoraTienda.CT1 = true;
             estadoMejoras[2].bought = true;
-            movNewSpeed = 6.8f;
+            movNewSpeed = 6.7f;
         }
         
         if (CortesTenaces1 == true && CortesTenaces2 == true && CortesPerfectos == false) // Corte Potente 2
@@ -153,11 +156,14 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier = 1.33f;
             cambioColorMejoraTienda.CT2 = true;
             estadoMejoras[3].bought = true;
-            movNewSpeed = 6.5f;
+            movNewSpeed = 6f;
+
+            cambioColorMejoraTienda.CT1 = true;
+            estadoMejoras[2].bought = true;
         }
 
 
-        if(CortesPerfectos== true) // Corte Perfecto
+        if(CortesPerfectos== true && CortesAgiles1 == true && CortesAgiles2 == true) // Corte Perfecto RAMA AGILES
         {
             hitboxDmg1.modifier += 1.33f;
             hitboxDmg2.modifier += 1.33f;
@@ -165,6 +171,31 @@ public class PlayerAttackCombo : MonoBehaviour
             hitboxDmg4.modifier += 1.33f;
             cambioColorMejoraTienda.CP = true;
             estadoMejoras[4].bought = true;
+
+            cambioColorMejoraTienda.CA1 = true;
+            estadoMejoras[0].bought = true;
+
+            cambioColorMejoraTienda.CA2 = true;
+            estadoMejoras[1].bought = true;
+
+            movNewSpeed = 9f;
+        }
+
+        if(CortesPerfectos== true && CortesTenaces1 == true && CortesTenaces2 == true) // Corte Perfecto RAMA TENACES
+        {
+            hitboxDmg1.modifier += 1.33f;
+            hitboxDmg2.modifier += 1.33f;
+            hitboxDmg3.modifier += 1.33f;
+            hitboxDmg4.modifier += 1.33f;
+            cambioColorMejoraTienda.CP = true;
+            estadoMejoras[4].bought = true;
+
+            cambioColorMejoraTienda.CT1 = true;
+            estadoMejoras[2].bought = true;
+
+            cambioColorMejoraTienda.CT2 = true;
+            estadoMejoras[3].bought = true;
+
             movNewSpeed = 8f;
         }
 
@@ -181,7 +212,7 @@ public class PlayerAttackCombo : MonoBehaviour
         ScarletData.instance.CortesAgiles1 = CortesAgiles1;
         ScarletData.instance.CortesAgiles2 = CortesAgiles2;
         ScarletData.instance.CortesTenaces1 = CortesTenaces1;
-        ScarletData.instance.CortesTenaces1 = CortesTenaces2;
+        ScarletData.instance.CortesTenaces2 = CortesTenaces2;
         ScarletData.instance.CortesPerfectos = CortesPerfectos;
     }
 

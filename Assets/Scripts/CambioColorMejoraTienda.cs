@@ -20,29 +20,30 @@ public class CambioColorMejoraTienda : MonoBehaviour
 
     void Update()
     {
-        if(playerDmg.actualSouls < 30)
+        for (int i = 0; i < imageGeneral.Length; i++)
         {
-            for (int i = 0; i < imageGeneral.Length; i++)
+            if(playerDmg.actualSouls < estadoMejoras[i].price)
             {
                 if(estadoMejoras[i].bought == false)
-                {
+                {   
                     imageGeneral[i].sprite = Resources.Load<Sprite>("ImgTienda/BolaUnvailable");
                     Debug.Log("No se puede comprar");
                 }
             }
         }
-        if(playerDmg.actualSouls >= 30)
-        {
-            for (int i = 0; i < imageGeneral.Length; i++)
-            {   
+
+
+        for (int i = 0; i < imageGeneral.Length; i++)
+        {   
+            if(playerDmg.actualSouls >= estadoMejoras[i].price)
+            {
                 if(estadoMejoras[i].bought == false)
                 {
                     imageGeneral[i].sprite = Resources.Load<Sprite>("ImgTienda/BolaAvailable");
                     Debug.Log("Ya se puede comprar");
-                }            
-            }
+                }   
+            }     
         }
-
 
         if(CA1 == true)
         {
