@@ -82,7 +82,7 @@ public class ArenaAlmas : MonoBehaviour
     private void BajarVida()
     {
         playerDmg.actualvida -= danoArena;
-       
+        StartCoroutine(playerDmg.LifeLose());
     }
 
     private void ChangeDanoArena()

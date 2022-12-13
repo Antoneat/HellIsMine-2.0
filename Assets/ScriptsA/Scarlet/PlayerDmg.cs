@@ -133,7 +133,7 @@ public class PlayerDmg : MonoBehaviour
         StartCoroutine(LifeLose());
     }
 
-    IEnumerator LifeLose()
+    public IEnumerator LifeLose()
 	{
         DamageAnim.SetTrigger("Damage");
         DamageAnimCam.SetTrigger("Damage");
