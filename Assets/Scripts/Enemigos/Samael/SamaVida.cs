@@ -23,6 +23,10 @@ public class SamaVida : MonoBehaviour
     public DialogueTrigger dialogueTriggerBD14; 
     public DialogueTrigger dialogueTriggerBD19;
 
+    [Header("FinDelJuego")]
+    public Animator animFinal;
+
+
     void OnEnable() // Cuando aparezca Yalda en escena, se mostrara la barra de vida
     {
         barraDeVida.SetActive(true);
@@ -54,12 +58,18 @@ public class SamaVida : MonoBehaviour
             Mov.enabled = false;
             anim.SetTrigger("Muerte");
             dialogueTriggerBD19.EmpezarDialogo();
+            Invoke(nameof(ImgFinal), 1f);
         }
     }
 
     public void Muerte()
     {
         Destroy(gameObject);
+    }
+
+    void ImgFinal()
+    {
+        animFinal.Play("FadeIn");
     }
 }
 
