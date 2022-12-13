@@ -175,7 +175,7 @@ public class TiendaInteracion : MonoBehaviour
         DP1 = false;
         DP2 = false;
         DMDM = false;
-        tmpTitulo.text = "Sombra de Belecebú";
+        tmpTitulo.text = "Sombra de Belcebú";
         tmpDescripcion.text = "Daño: +  Alcance: - Velocidad: +";
         soulIMG.SetActive(true);
         tmpPrecio.text = "-" + playerAttackCombo.estadoMejoras[6].price.ToString();
