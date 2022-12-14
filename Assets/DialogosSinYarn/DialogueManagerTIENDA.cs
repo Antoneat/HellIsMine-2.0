@@ -52,7 +52,7 @@ public class DialogueManagerTIENDA : MonoBehaviour
 
     void OnDestroy()
     {
-        SaveData();    
+        SaveData();
     }
 
     private void SaveData()

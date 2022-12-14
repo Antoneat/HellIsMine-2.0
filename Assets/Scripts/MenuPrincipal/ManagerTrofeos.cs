@@ -39,56 +39,126 @@ public class ManagerTrofeos : MonoBehaviour
     {
         if (cuchilloComp == 1)
         {
-            cuchilloButton.SetActive(true);
+            if (cuchilloButton)
+            {
+                cuchilloButton.SetActive(true);
+            }
+            else
+			{
+                Debug.Log("Manager trofeos");
+			}
             
         }
         else
         {
-            cuchilloButton.SetActive(false);
+            if (cuchilloButton)
+            {
+                cuchilloButton.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         //////////////////////
         ///
 
         if (cartaComp == 1)
         {
-            cartaButton.SetActive(true);
+            if (cartaButton)
+            {
+                cartaButton.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         else
         {
-            cartaButton.SetActive(false);
+            if (cartaButton)
+            {
+                cartaButton.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         //////////////////////
         ///
 
         if (colmilloComp == 1)
         {
-            colmilloButton.SetActive(true);
+            if (colmilloButton)
+            {
+                colmilloButton.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         else
         {
-            colmilloButton.SetActive(false);
+            if (colmilloButton)
+            {
+                colmilloButton.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         //////////////////////
         ///
 
         if (armaduraComp == 1)
         {
-            armaduraButton.SetActive(true);
+            if (armaduraButton)
+            {
+                armaduraButton.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         else
         {
-            armaduraButton.SetActive(false);
+            if (armaduraButton)
+            {
+                armaduraButton.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         //////////////////////
         ///
 
         if (tumbaComp == 1)
         {
-            tumbaButton.SetActive(true);
+            if (tumbaButton)
+            {
+                tumbaButton.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         else
         {
-            tumbaButton.SetActive(false);
+            if (tumbaButton)
+            {
+                tumbaButton.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
 
         //////////////////////
@@ -96,11 +166,25 @@ public class ManagerTrofeos : MonoBehaviour
 
         if (cuchilloComp == 1 || cartaComp == 1 || colmilloComp == 1 || armaduraComp == 1 || tumbaComp == 1)
         {
-            mensajeTrofeos.SetActive(false);
+            if (mensajeTrofeos)
+            {
+                mensajeTrofeos.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
         else
         {
-            mensajeTrofeos.SetActive(true);
+            if (mensajeTrofeos)
+            {
+                mensajeTrofeos.SetActive(true);
+            }
+            else
+            {
+                Debug.Log("Manager trofeos");
+            }
         }
     }
 

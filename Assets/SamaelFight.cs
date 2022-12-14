@@ -7,6 +7,9 @@ public class SamaelFight : MonoBehaviour
     public float time;
     [SerializeField] GameObject Samael;
     [SerializeField] GameObject Puertas;
+    public GameObject calmTheme;
+    public GameObject combatTheme;
+    public GameObject bossTheme;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +17,9 @@ public class SamaelFight : MonoBehaviour
         {
             Samael.SetActive(true);
             Puertas.SetActive(true);
+            calmTheme.GetComponent<Animator>().SetBool("InBattle", true);
+            combatTheme.GetComponent<Animator>().SetBool("InBattle", false);
+            bossTheme.GetComponent<Animator>().SetBool("InBattle", true);   
         }
     }
     public void SamaelActivator()
@@ -26,6 +32,9 @@ public class SamaelFight : MonoBehaviour
         yield return new WaitForSeconds(time);
 
         Samael.SetActive(true);
-        Puertas.SetActive(true);
+        Puertas.SetActive(true); 
+        calmTheme.GetComponent<Animator>().SetBool("InBattle", true);
+        combatTheme.GetComponent<Animator>().SetBool("InBattle", false);
+        bossTheme.GetComponent<Animator>().SetBool("InBattle", true);
     }
 }

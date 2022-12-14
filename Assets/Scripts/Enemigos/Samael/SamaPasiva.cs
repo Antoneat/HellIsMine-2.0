@@ -55,7 +55,7 @@ public class SamaPasiva : MonoBehaviour
             }
             if(curitas == 3)
             {
-                oleada2.SetActive(true);
+                oleada3.SetActive(true);
                 dialogueTriggerBD18.EmpezarDialogo();
             }
         }
